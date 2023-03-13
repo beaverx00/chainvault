@@ -1,4 +1,4 @@
-# 18 - [Cryptography](Cryptography.md)
+# 18 - [Cryptography](content/1.%20Ethereum101/Cryptography.md)
 
 Ethereum uses public key cryptography to create Public–[Private Key](Private%20Key.md) pairs (considered a "pair" because the [Public Key](Public%20Key.md) is derived from the private key) which are not used for encryption but for digital signatures.
 
