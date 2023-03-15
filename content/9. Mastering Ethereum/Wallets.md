@@ -1,6 +1,6 @@
-# Wallets
+# Chapter 5 - [Wallets](content/9.%20Mastering%20Ethereum/Wallets.md)
 
-<span class="indexterm"></span>The word "wallet" is used to describe a
+The word "wallet" is used to describe a
 few different things in Ethereum.
 
 At a high level, a wallet is a software application that serves as the
@@ -9,7 +9,7 @@ user’s money, managing keys and addresses, tracking the balance, and
 creating and signing transactions. In addition, some Ethereum wallets
 can also interact with contracts, such as ERC20 tokens.
 
-<span class="indexterm"></span> <span class="indexterm"></span>More
+ More
 narrowly, from a programmer’s perspective, the word *wallet* refers to
 the system used to store and manage a user’s keys. Every wallet has a
 key-management component. For some wallets, that’s all there is. Other
@@ -25,7 +25,7 @@ and as systems for managing these keys.
 
 ## Wallet Technology Overview
 
-<span class="indexterm"></span> <span class="indexterm"></span>In this
+ In this
 section we summarize the various technologies used to construct
 user-friendly, secure, and flexible Ethereum wallets.
 
@@ -42,7 +42,7 @@ A common misconception about Ethereum is that Ethereum wallets contain
 ether or tokens. In fact, very strictly speaking, the wallet holds only
 keys. The ether or other tokens are recorded on the Ethereum blockchain.
 Users control the tokens on the network by signing transactions with the
-keys in their wallets. <span class="indexterm"></span>In a sense, an
+keys in their wallets. In a sense, an
 Ethereum wallet is a *keychain*. Having said that, given that the keys
 held by the wallet are the only things that are needed to transfer ether
 or tokens to others, in practice this distinction is fairly irrelevant.
@@ -71,26 +71,26 @@ The ether is stored on the blockchain.
 There are two primary types of wallets, distinguished by whether the
 keys they contain are related to each other or not.
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The first type is a *nondeterministic
+
+The first type is a *nondeterministic
 wallet*, where each key is independently generated from a different
 random number. The keys are not related to each other.
-<span class="indexterm"></span>This type of wallet is also known as a
+This type of wallet is also known as a
 JBOK wallet, from the phrase "Just a Bunch of Keys.”
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The second type of wallet is a
+
+
+The second type of wallet is a
 *deterministic wallet*, where all the keys are derived from a single
 master key, known as the *seed*. All the keys in this type of wallet are
 related to each other and can be generated again if one has the original
-seed. <span class="indexterm"></span>There are a number of different
+seed. There are a number of different
 *key derivation* methods used in deterministic wallets. The most
 commonly used derivation method uses a tree-like structure, as described
 in [Hierarchical Deterministic Wallets (BIP-32/BIP-44)](#hd_wallets).
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>To make deterministic wallets slightly
+
+To make deterministic wallets slightly
 more secure against data-loss accidents, such as having your phone
 stolen or dropping it in the toilet, the seeds are often encoded as a
 list of words (in English or another language) for you to write down and
@@ -124,7 +124,7 @@ funds and smart contracts. The "type 0" nondeterministic wallets are the
 hardest to deal with, because they create a new wallet file for every
 new address in a "just in time" manner.
 
-<span class="indexterm"></span>Nevertheless, many Ethereum clients
+Nevertheless, many Ethereum clients
 (including `geth`) use a *keystore* file, which is a JSON-encoded file
 that contains a single (randomly generated) private key, encrypted by a
 passphrase for extra security. The JSON file’s contents look like this:
@@ -155,7 +155,7 @@ passphrase for extra security. The JSON file’s contents look like this:
 }
 ```
 
-<span class="indexterm"></span><span class="indexterm"></span>The
+The
 keystore format uses a *key derivation function* (KDF), also known as a
 password stretching algorithm, which protects against brute-force,
 dictionary, and rainbow table attacks. In simple terms, the private key
@@ -177,15 +177,15 @@ The use of nondeterministic wallets is discouraged for anything other
 than simple tests. They are too cumbersome to back up and use for
 anything but the most basic of situations. Instead, use an
 industry-standard–based HD wallet with a mnemonic seed for
-backup.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+backup.
 
 </div>
 
 ### Deterministic (Seeded) Wallets
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Deterministic or "seeded" wallets are
+
+
+Deterministic or "seeded" wallets are
 wallets that contain private keys that are all derived from a single
 master key, or seed. The seed is a randomly generated number that is
 combined with other data, such as an index number or "chain code" (see
@@ -204,8 +204,8 @@ be seen as an advantage.
 
 ### Hierarchical Deterministic Wallets (BIP-32/BIP-44)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Deterministic
+
+Deterministic
 wallets were developed to make it easy to derive many keys from a single
 seed. Currently, the most advanced form of deterministic wallet is the
 *hierarchical deterministic* (HD) wallet defined by Bitcoin’s [*BIP-32
@@ -237,11 +237,11 @@ private keys that can spend the funds.
 
 ### Seeds and Mnemonic Codes (BIP-39)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There are many ways to encode a private
+
+
+
+
+There are many ways to encode a private
 key for secure backup and retrieval. The currently preferred method is
 using a sequence of words that, when taken together in the correct
 order, can uniquely recreate the private key. This is sometimes known as
@@ -287,11 +287,11 @@ earlier advice to back up with pen and paper.
 In summary, the use of a recovery word list to encode the seed for an HD
 wallet makes for the easiest way to safely export, transcribe, record on
 paper, read without error, and import a private key set into another
-wallet.<span class="indexterm"></span>
+wallet.
 
 ## Wallet Best Practices
 
-<span class="indexterm"></span> <span class="indexterm"></span>As
+ As
 cryptocurrency wallet technology has matured, certain common industry
 standards have emerged that make wallets broadly interoperable, easy to
 use, secure, and flexible. These standards also allow wallets to derive
@@ -318,7 +318,7 @@ another wallet, recovering all keys and addresses.
 
 Some examples of software wallets supporting these standards include
 (listed alphabetically) Jaxx, MetaMask, MyCrypto, and MyEtherWallet
-(MEW). <span class="indexterm"></span>Examples of hardware wallets
+(MEW). Examples of hardware wallets
 supporting these standards include Keepkey, Ledger, and Trezor.
 
 The following sections examine each of these technologies in detail.
@@ -334,10 +334,10 @@ following sections.
 
 ### Mnemonic Code Words (BIP-39)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Mnemonic code words are word sequences
+
+
+
+Mnemonic code words are word sequences
 that encode a random number used as a seed to derive a deterministic
 wallet. The sequence of words is sufficient to recreate the seed, and
 from there recreate the wallet and all the derived keys. A wallet
@@ -351,7 +351,7 @@ correctly transcribe.
 
 <div class="note">
 
-<span class="indexterm"></span>Mnemonic words are often confused with
+Mnemonic words are often confused with
 "brainwallets." They are not the same. The primary difference is that a
 brainwallet consists of words chosen by the user, whereas mnemonic words
 are created randomly by the wallet and presented to the user. This
@@ -382,10 +382,10 @@ words](#generating_mnemonic_words) and steps 7 through 9 are shown in
 
 #### Generating mnemonic words
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Mnemonic words are generated
+
+
+
+Mnemonic words are generated
 automatically by the wallet using the standardized process defined in
 BIP-39. The wallet starts from a source of entropy, adds a checksum, and
 then maps the entropy to a word list:
@@ -433,15 +433,15 @@ mnemonic words</figcaption>
 
 #### From mnemonic to seed
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The mnemonic words represent entropy with
+
+
+The mnemonic words represent entropy with
 a length of 128 to 256 bits. The entropy is then used to derive a longer
 (512-bit) seed through the use of the key-stretching function
-<span class="indexterm"></span>PBKDF2. The seed produced is used to
+PBKDF2. The seed produced is used to
 build a deterministic wallet and derive its keys.
 
-<span class="indexterm"></span><span class="indexterm"></span>The
+The
 key-stretching function takes two parameters: the mnemonic and a *salt*.
 The purpose of a salt in a key-stretching function is to make it
 difficult to build a lookup table enabling a brute-force attack. In the
@@ -517,10 +517,10 @@ seeds they produce.
 
 #### Optional passphrase in BIP-39
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The BIP-39 standard allows the use of an
+
+
+
+The BIP-39 standard allows the use of an
 optional passphrase in the derivation of the seed. If no passphrase is
 used, the mnemonic is stretched with a salt consisting of the constant
 string `"mnemonic"`, producing a specific 512-bit seed from any given
@@ -546,8 +546,8 @@ The optional passphrase creates two important features:
 - A second factor (something memorized) that makes a mnemonic useless on
   its own, protecting mnemonic backups from compromise by a thief.
 
-- <span class="indexterm"></span><span class="indexterm"></span>
-  <span class="indexterm"></span>A form of plausible deniability or
+- 
+  A form of plausible deniability or
   "duress wallet," where a chosen passphrase leads to a wallet with a
   small amount of funds, used to distract an attacker from the "real"
   wallet that contains the majority of funds.
@@ -569,9 +569,9 @@ recover the cryptocurrency.
 
 #### Working with mnemonic codes
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>BIP-39 is implemented as a library in
+
+
+BIP-39 is implemented as a library in
 many different programming languages. For example:
 
 [python-mnemonic](https://github.com/trezor/python-mnemonic)  
@@ -591,7 +591,7 @@ page](#a_bip39_generator_as_a_standalone_web_page)), which is extremely
 useful for testing and experimentation. The [Mnemonic Code
 Converter](https://iancoleman.io/bip39/) generates mnemonics, seeds, and
 extended private keys. It can be used offline in a browser, or accessed
-online.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+online.
 
 <figure id="a_bip39_generator_as_a_standalone_web_page">
 <img src="images/bip39_web.png" alt="BIP-39 generator web-page" />
@@ -600,9 +600,9 @@ online.<span class="indexterm"></span><span class="indexterm"></span><span class
 
 ### Creating an HD Wallet from the Seed
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>HD wallets are created from a single
+
+
+HD wallets are created from a single
 *root seed*, which is a 128-, 256-, or 512-bit random number. Most
 commonly, this seed is generated from a mnemonic as detailed in the
 previous section.
@@ -616,10 +616,10 @@ derived.
 
 ### HD Wallets (BIP-32) and Paths (BIP-43/44)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Most HD wallets follow the
-<span class="indexterm"></span> <span class="indexterm"></span>BIP-32
+
+
+Most HD wallets follow the
+ BIP-32
 standard, which has become a *de facto* industry standard for
 deterministic key generation.
 
@@ -653,20 +653,20 @@ should not use the keys produced by this site with real funds.
 
 #### Extended public and private keys
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In BIP-32 terminology, keys can be
+
+
+
+In BIP-32 terminology, keys can be
 "extended.” With the right mathematical operations, these extended
 "parent" keys can be used to derive "child" keys, thus producing the
 hierarchy of keys and addresses described earlier. A parent key doesn’t
 have to be at the top of the tree. It can be picked out from anywhere in
-the tree hierarchy. <span class="indexterm"></span>Extending a key
+the tree hierarchy. Extending a key
 involves taking the key itself and appending a special *chain code* to
 it. A chain code is a 256-bit binary string that is mixed with each key
 to produce child keys.
 
-<span class="indexterm"></span> <span class="indexterm"></span>If the
+ If the
 key is a private key, it becomes an *extended private key* distinguished
 by the prefix `xprv`:
 
@@ -674,7 +674,7 @@ by the prefix `xprv`:
 xprv9s21ZrQH143K2JF8RafpqtKiTbsbaxEeUaMnNHsm5o6wCW3z8ySyH4UxFVSfZ8n7ESu7fgir8i...
 ```
 
-<span class="indexterm"></span> <span class="indexterm"></span>An
+ An
 *extended public key* is distinguished by the prefix `xpub`:
 
 ```
@@ -709,10 +709,10 @@ the ecommerce server. That approach is cumbersome and requires constant
 maintenance to ensure that the server doesn’t run out of keys, hence the
 preference to use extended public keys from HD wallets.
 
-<span class="indexterm"></span>Another common application of this
+Another common application of this
 solution is for
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>cold-storage or hardware wallets. In that
+
+cold-storage or hardware wallets. In that
 scenario, the extended private key can be stored in a hardware wallet,
 while the extended public key can be kept online. The user can create
 "receive" addresses at will, while the private keys are safely stored
@@ -722,11 +722,11 @@ hardware wallet device.
 
 #### Hardened child key derivation
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The ability to derive a branch of public
+
+
+
+
+The ability to derive a branch of public
 keys from an extended public key, or *xpub*, is very useful, but it
 comes with a potential risk. Access to an xpub does not give access to
 child private keys. However, because the xpub contains the chain code
@@ -754,7 +754,7 @@ compromise of the master keys.
 
 #### Index numbers for normal and hardened derivation
 
-<span class="indexterm"></span> <span class="indexterm"></span>It is
+ It is
 clearly desirable to be able to derive more than one child key from a
 given parent key. To manage this, an index number is used. Each index
 number, when combined with a parent key using the special child
@@ -777,13 +777,13 @@ whereas the first hardened child (index `0x80000000`) is displayed as
 `0'`. In sequence, then, the second hardened key would have index of
 `0x80000001` and would be displayed as `1'`, and so on. When you see an
 HD wallet index `i'`, that means 2<sup>31</sup> +
-`i`.<span class="indexterm"></span>
+`i`.
 
 #### HD wallet key identifier (path)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Keys in an HD wallet are identified using
+
+
+Keys in an HD wallet are identified using
 a "path" naming convention, with each level of the tree separated by a
 slash (/) character (see [HD wallet path examples](#hd_path_table)).
 Private keys derived from the master private key start with `m`. Public
@@ -809,8 +809,8 @@ HD wallet path examples
 
 #### Navigating the HD wallet tree structure
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The HD
+
+The HD
 wallet tree structure is tremendously flexible. The flip side of this is
 that it also allows for unbounded complexity: each parent extended key
 can have 4 billion children: 2 billion normal children and 2 billion
@@ -821,7 +821,7 @@ can become quite difficult to navigate these very large trees.
 
 Two BIPs offer a way to manage this potential complexity by creating
 standards for the structure of HD wallet trees.
-<span class="indexterm"></span>BIP-43 proposes the use of the first
+BIP-43 proposes the use of the first
 hardened child index as a special identifier that signifies the
 "purpose" of the tree structure. Based on BIP-43, an HD wallet should
 use only one level-1 branch of the tree, with the index number defining
@@ -830,7 +830,7 @@ the rest of the tree. More specifically, an HD wallet using only branch
 `m/i'/…` is intended to signify a specific purpose and that purpose is
 identified by index number `i`.
 
-<span class="indexterm"></span>Extending that specification, BIP-44
+Extending that specification, BIP-44
 proposes a multicurrency multiaccount structure signified by setting the
 "purpose" number to `44'`. All HD wallets following the BIP-44 structure
 are identified by the fact that they only use one branch of the tree:
@@ -872,7 +872,7 @@ tree the `address_index`. For example, the third receiving address for
 Ethereum payments in the primary account would be `M/44'/60'/0'/0/2`.
 [BIP-44 HD wallet structure examples](#bip44_path_examples) shows a few
 more
-examples<span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span>
+examples.
 
 | HD path            | Key described                                                                        |
 |--------------------|--------------------------------------------------------------------------------------|
@@ -888,4 +888,4 @@ Wallets are the foundation of any user-facing blockchain application.
 They allow users to manage collections of keys and addresses. Wallets
 also allow users to demonstrate their ownership of ether, and authorize
 transactions, by applying digital signatures, as we will see in
-[???](#tx_chapter).<span class="indexterm"></span>
+[???](#tx_chapter).

@@ -2,7 +2,7 @@
 
 # Description
 
-<span class="indexterm"></span> <span class="indexterm"></span>This
+ This
 tutorial is based on <web3@1.0.0-beta.29> web3.js. It is intended as an
 introduction to web3.js.
 
@@ -18,7 +18,7 @@ API](https://alchemyapi.io) and [Infura](https://infura.io).
 
 # web3.js Contract Basic Interaction in a Nonblocked (Async) Fashion
 
-<span class="indexterm"></span> <span class="indexterm"></span>Check you
+ Check you
 have a valid `npm` version:
 
 \$
@@ -52,7 +52,7 @@ dependencies.
 
 ## Node.js Script Execution
 
-<span class="indexterm"></span> <span class="indexterm"></span>Basic
+ Basic
 execution:
 
 \$
@@ -80,7 +80,7 @@ command-line argument to the actual command.
 
 # Reviewing the Demo Script
 
-<span class="indexterm"></span> <span class="indexterm"></span>Next,
+ Next,
 let’s review our demo script, *web3-contract-basic-interaction*.
 
 We use the `Web3` object to obtain a basic web3 provider:
@@ -116,7 +116,7 @@ web3.eth.getBlockNumber().then(function(blockNumber) {
 
 # Contract Interaction
 
-<span class="indexterm"></span> <span class="indexterm"></span>Now let’s
+ Now let’s
 try some basic interactions with a contract. For these examples, we’ll
 use the [`WETH9_` contract](https://bit.ly/2MPZZLx) on the Kovan
 testnet.
@@ -233,7 +233,7 @@ our_contract.methods.totalSupply().call(function(err, totalSupply) {
 ```
 
 Or we can use the returned promise instead of passing in the
-callback:<span class="indexterm"></span>
+callback:
 
 ``` solidity
 our_contract.methods.totalSupply().call().then(function(totalSupply){
@@ -245,11 +245,11 @@ our_contract.methods.totalSupply().call().then(function(totalSupply){
 
 # Asynchronous Operation with Await
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Now that you’ve seen the basic tutorial,
+
+Now that you’ve seen the basic tutorial,
 you can try the same interactions using an asynchronous `await`
 construct. Review the *web3-contract-basic-interaction-async-await.js*
 script in [*code/web3js*](http://bit.ly/2ABrFkl) and compare it to this
 tutorial to see how they differ. Async-await is easier to read, as it
 makes the asynchronous interaction behave more like a sequence of
-blocking calls.<span class="indexterm"></span>
+blocking calls.

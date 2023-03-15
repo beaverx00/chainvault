@@ -2,11 +2,11 @@
 
 # Ethereum Improvement Proposals (EIPs)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Ethereum Improvement Proposal
+
+
+The Ethereum Improvement Proposal
 repository is located at <https://github.com/ethereum/EIPs/>.
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 workflow is illustrated in [Ethereum Improvement Proposal
 workflow](#eip_workflow).
 

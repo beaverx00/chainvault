@@ -1,7 +1,7 @@
 # Ethereum Fork History
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Most
+
+Most
 hard forks are planned as part of an upgrade roadmap and consist of
 updates that the community generally agrees to (i.e., there is social
 consensus). However, some hard forks lack consensus, which leads to
@@ -11,10 +11,10 @@ this appendix.
 
 # Ethereum Classic (ETC)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum Classic came to be after members
+
+
+
+Ethereum Classic came to be after members
 of the Ethereum community implemented a time-sensitive hard fork
 (codenamed “DAO”). On July 20, 2016, at a block height of 1.92 million,
 Ethereum introduced an irregular state change via a hard fork in an
@@ -35,9 +35,9 @@ entities.
 
 # The Decentralized Autonomous Organization (The DAO)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The <span class="indexterm"></span>DAO
+
+
+The DAO
 was created by Slock.it, with the aim of providing community-based
 funding and governance for projects. The core idea was that proposals
 would be submitted, curators would manage proposals, funds would be
@@ -57,8 +57,8 @@ time.
 
 # The Reentrancy Bug
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>On June 9,
+
+On June 9,
 2016, developers Peter Vessenes and Chriseth reported that most
 Ethereum-based contracts that managed funds were potentially [vulnerable
 to an exploit](http://bit.ly/2AAaDmA) that could empty contract funds. A
@@ -83,7 +83,7 @@ secure the bulk of the community’s ether.
 
 ## Technical Details
 
-<span class="indexterm"></span> <span class="indexterm"></span>While a
+ While a
 more detailed and thorough explanation of the bug is given by [Phil
 Daian](http://bit.ly/2EQaLCI), the short explanation is that a crucial
 function in the DAO had two lines of code in the wrong order, meaning
@@ -94,7 +94,7 @@ withdrawal was completed. This type of vulnerability is described in
 
 ## Attack Flow
 
-<span class="indexterm"></span> <span class="indexterm"></span>Imagine
+ Imagine
 you had \$100 in your bank account and you could bring your bank teller
 any number of withdrawal slips. The teller would give you money for each
 slip in order, and only after processing all the slips would they record
@@ -115,9 +115,9 @@ The DAO attack worked like this:
 
 # The DAO Hard Fork
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Fortunately,
+
+
+Fortunately,
 there were several safeguards built into The DAO: notably, all
 withdrawal requests were subject to a 28-day delay. This gave the
 community a little while to discuss what to do about the exploit,
@@ -162,7 +162,7 @@ On July 20, at block height [1,920,000](http://bit.ly/2zfaIKB), Ethereum
 Ethereum networks were created: one including the state change, and the
 other ignoring it.
 
-<span class="indexterm"></span> <span class="indexterm"></span>When the
+ When the
 DAO hard-forked Ethereum (present-day Ethereum) gained a majority of the
 mining power, many assumed that consensus was achieved and the minority
 chain would fade away, as in previous forks. Despite this, a sizable
@@ -251,16 +251,16 @@ established with [Poloniex](http://bit.ly/2qhuNvP) listing ETC on July
   replay issues; the chains are now functionally separate.
 
 - February 20, 2017: The ETCDEVTeam forms, led by early ETC developer
-  Igor Artamonov<span class="indexterm"></span>
-  (splix).<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+  Igor Artamonov
+  (splix).
 
 # Ethereum and Ethereum Classic
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>While the initial split was centered
+
+
+
+
+While the initial split was centered
 around The DAO, the two networks, Ethereum and Ethereum Classic, are now
 separate projects, although most development is still done by the
 Ethereum community and simply ported to Ethereum Classic codebases.
@@ -272,7 +272,7 @@ next.
 
 ## The EVM
 
-<span class="indexterm"></span>For the most part (at the time of
+For the most part (at the time of
 writing), the two networks remain highly compatible: contract code
 produced for one chain runs as expected on the other; but there are some
 small differences in EVM OPCODES (see EIPs [140](http://bit.ly/2yIajkF),
@@ -289,7 +289,7 @@ On Ethereum Classic, it’s done by ETCDEV, IOHK, and volunteers.
 
 # Other Notable Ethereum Forks
 
-<span class="indexterm"></span>[Ellaism](https://ellaism.org/about/) is
+[Ellaism](https://ellaism.org/about/) is
 an Ethereum-based network that intends to use PoW exclusively to secure
 the blockchain. It has no pre-mine and no mandatory developer fees, with
 all support and development donated freely by the community. Its
@@ -337,7 +337,7 @@ life of Ethereum.
 
 There are also several other projects that claim to be Ethereum forks
 but are actually based on ERC20 tokens and run on the Ethereum network.
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Two
+Two
 examples of these are EtherBTC (ETHB) and Ethereum Modification (EMOD).
 These are not forks in the traditional sense, and may sometimes be
 called “airdrops.”
@@ -345,7 +345,7 @@ called “airdrops.”
 Here’s a brief rundown of some of the more notable forks that have
 occurred:
 
-- <span class="indexterm"></span>*Expanse* was the first fork of the
+- *Expanse* was the first fork of the
   Ethereum blockchain to gain traction. It was announced via the Bitcoin
   Talk forum on September 7, 2015. The actual fork occurred a week later
   on September 14, 2015, at a block height of 800,000. It was originally
@@ -353,14 +353,14 @@ occurred:
   was to create an advanced chain for: "identity, governance, charity,
   commerce, and equity".
 
-- <span class="indexterm"></span><span class="indexterm"></span>*EthereumFog*
+- *EthereumFog*
   (ETF) was launched on December 14, 2017, and forked at a block height
   of 4,730,660. The project’s stated aim is to develop "world
   decentralized fog computing" by focusing on fog computing and
   decentralized storage. There is still little information on what this
   will actually entail.
 
-- *EtherZero* (ETZ) <span class="indexterm"></span>was launched on
+- *EtherZero* (ETZ) was launched on
   January 19, 2018, at a block height of 4,936,270. Its notable
   innovations were the introduction of a masternode architecture and the
   removal of transaction fees for smart contracts to enable a wider
@@ -369,7 +369,7 @@ occurred:
   the lack of clarity surrounding development and some accusations of
   possible phishing.
 
-- <span class="indexterm"></span><span class="indexterm"></span>*EtherInc*
+- *EtherInc*
   (ETI) was launched on February 13, 2018, at a block height of
   5,078,585, with a focus on building decentralized organizations.
   Stated goals include the reduction of block times, increased miner
@@ -377,4 +377,4 @@ occurred:
   coins. EtherInc uses the same private keys as Ethereum and has
   implemented replay protection to protect ether on the original
   non-forked
-  chain.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+  chain.

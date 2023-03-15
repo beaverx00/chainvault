@@ -1,8 +1,8 @@
 # Ethereum EVM Opcodes and Gas Consumption
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>This appendix is based on the
+
+
+This appendix is based on the
 consolidation work done by the people of
 <https://github.com/trailofbits/evm-opcodes> as a reference for Ethereum
 VM (EVM) opcodes and instruction information licensed under the [Apache

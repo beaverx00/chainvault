@@ -78,7 +78,7 @@ and the relevant sections with ease, by keyword.
 
 ## Intended Audience
 
-<span class="indexterm"></span>This book is mostly intended for coders.
+This book is mostly intended for coders.
 If you can use a programming language, this book will teach you how
 smart contract blockchains work, how to use them, and how to develop
 smart contracts and decentralized applications with them. The first few
@@ -87,7 +87,7 @@ noncoders.
 
 ## Conventions Used in This Book
 
-<span class="indexterm"></span>The following typographical conventions
+The following typographical conventions
 are used in this book:
 
 *Italic*  
@@ -126,7 +126,7 @@ This icon indicates a warning or caution.
 
 ## Code Examples
 
-<span class="indexterm"></span>The examples are illustrated in Solidity,
+The examples are illustrated in Solidity,
 Vyper, and JavaScript, and using the command line of a Unix-like
 operating system. All code snippets are available in the GitHub
 repository under the *code* subdirectory. Fork the book code, try the
@@ -166,13 +166,13 @@ citing this book and quoting example code does not require permission.
 Incorporating a significant amount of example code from this book into
 your product’s documentation does require permission.
 
-<span class="indexterm"></span>We appreciate, but do not require,
+We appreciate, but do not require,
 attribution. An attribution usually includes the title, author,
 publisher, ISBN, and copyright. For example: “*Mastering Ethereum* by
 Andreas M. Antonopoulos and Dr. Gavin Wood (O’Reilly). Copyright 2019
 The Ethereum Book LLC and Gavin Wood, 978-1-491-97194-9."
 
-<span class="indexterm"></span>*Mastering Ethereum* is offered under the
+*Mastering Ethereum* is offered under the
 Creative Commons Attribution-Noncommercial-No Derivative Works 4.0
 International License (CC BY-NC-ND 4.0).
 
@@ -190,16 +190,16 @@ this book. Use them at your own risk!
 
 ## Ethereum Addresses and Transactions in this Book
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Ethereum addresses, transactions,
+
+
+
+The Ethereum addresses, transactions,
 keys, QR codes, and blockchain data used in this book are, for the most
 part, real. That means you can browse the blockchain, look at the
 transactions offered as examples, retrieve them with your own scripts or
 programs, etc.
 
-<span class="indexterm"></span> <span class="indexterm"></span>However,
+ However,
 note that the private keys used to construct the addresses printed in
 this book have been "burned." This means that if you send money to any
 of these addresses, the money will either be lost forever or (more
@@ -239,7 +239,7 @@ For more information, please visit http://oreilly.com/safari.
 Information about *Mastering Ethereum* is available at
 <https://ethereumbook.info/>.
 
-<span class="indexterm"></span><span class="indexterm"></span>Please
+Please
 address comments and questions concerning this book to the publisher:
 
 O'Reilly Media, Inc.
@@ -734,19 +734,19 @@ Ethereum. These terms are used throughout the book, so bookmark this for
 quick reference.
 
 Account  
-<span class="indexterm"></span> <span class="indexterm"></span>An object
+ An object
 containing an address, balance, nonce, and optional storage and code. An
 account can be a contract account or an externally owned account (EOA).
 
 Address  
-<span class="indexterm"></span> <span class="indexterm"></span>Most
+ Most
 generally, this represents an EOA or contract that can receive
 (destination address) or send (source address) transactions on the
 blockchain. More specifically, it is the rightmost 160 bits of a Keccak
 hash of an ECDSA public key.
 
 Assert  
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 Solidity, `assert(false)` compiles to `0xfe`, an invalid opcode, which
 uses up all remaining gas and reverts all changes. When an `assert()`
 statement fails, something very wrong and unexpected is happening, and
@@ -754,79 +754,79 @@ you will need to fix your code. You should use `assert()` to avoid
 conditions that should never, ever occur.
 
 Big-endian  
-<span class="indexterm"></span>A positional number representation where
+A positional number representation where
 the most significant digit is first. The opposite of little-endian,
 where the least significant digit is first.
 
 BIPs  
-<span class="indexterm"></span>Bitcoin Improvement Proposals. A set of
+Bitcoin Improvement Proposals. A set of
 proposals that members of the Bitcoin community have submitted to
 improve Bitcoin. For example, BIP-21 is a proposal to improve the
 Bitcoin uniform resource identifier (URI) scheme.
 
 Block  
-<span class="indexterm"></span>A collection of required information (a
+A collection of required information (a
 block header) about the comprised transactions, and a set of other block
 headers known as ommers. Blocks are added to the Ethereum network by
 miners.
 
 Blockchain  
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 Ethereum, a sequence of blocks validated by the proof-of-work system,
 each linking to its predecessor all the way to the genesis block. This
 varies from the Bitcoin protocol in that it does not have a block size
 limit; it instead uses varying gas limits.
 
 Bytecode  
-<span class="indexterm"></span>An abstract instruction set designed for
+An abstract instruction set designed for
 efficient execution by a software interpreter or a virtual machine.
 Unlike human-readable source code, bytecode is expressed in numeric
 format.
 
 Byzantium fork  
-<span class="indexterm"></span>The first of two hard forks for the
+The first of two hard forks for the
 Metropolis development stage. It included EIP-649: Metropolis Difficulty
 Bomb Delay and Block Reward Reduction, where the Ice Age (see below) was
 delayed by 1 year and the block reward was reduced from 5 to 3 ether.
 
 Compiling  
-<span class="indexterm"></span>
-<span class="indexterm"></span>Converting code written in a high-level
+
+Converting code written in a high-level
 programming language (e.g., Solidity) into a lower-level language (e.g.,
 EVM bytecode).
 
 Consensus  
-<span class="indexterm"></span> <span class="indexterm"></span>When
+ When
 numerous nodes—usually most nodes on the network—all have the same
 blocks in their locally validated best blockchain. Not to be confused
 with consensus rules.
 
 Consensus rules  
-<span class="indexterm"></span>The block validation rules that full
+The block validation rules that full
 nodes follow to stay in consensus with other nodes. Not to be confused
 with consensus.
 
 Constantinople fork  
-<span class="indexterm"></span>The second part of the Metropolis stage,
+The second part of the Metropolis stage,
 originally planned for mid-2018. Expected to include a switch to a
 hybrid proof-of-work/proof-of-stake consensus algorithm, among other
 changes.
 
 Contract account  
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>An account containing code that executes
+
+
+An account containing code that executes
 whenever it receives a transaction from another account (EOA or
 contract).
 
 Contract creation transaction  
-<span class="indexterm"></span>A special transaction, with the "zero
+A special transaction, with the "zero
 address" as the recipient, that is used to register a contract and
 record it on the Ethereum blockchain (see "zero address").
 
 DAO  
-<span class="indexterm"></span>
-<span class="indexterm"></span>Decentralized Autonomous Organization. A
+
+Decentralized Autonomous Organization. A
 company or other organization that operates without hierarchical
 management. Also may refer to a contract named "The DAO" launched on
 April 30, 2016, which was then hacked in June 2016; this ultimately
@@ -835,27 +835,27 @@ reversed the hacked DAO contract and caused Ethereum and Ethereum
 Classic to split into two competing systems.
 
 DApp  
-<span class="indexterm"></span>
-<span class="indexterm"></span>Decentralized application. At a minimum,
+
+Decentralized application. At a minimum,
 it is a smart contract and a web user interface. More broadly, a DApp is
 a web application that is built on top of open, decentralized,
 peer-to-peer infrastructure services. In addition, many DApps include
 decentralized storage and/or a message protocol and platform.
 
 Deed  
-<span class="indexterm"></span>
-<span class="indexterm"></span>Non-fungible token (NFT) standard
+
+Non-fungible token (NFT) standard
 introduced by the ERC721 proposal. Unlike ERC20 tokens, deeds prove
 ownership and are not interchangeable, though they are not recognized as
 legal documents in any jurisdiction—at least not currently (see also
 "NFT").
 
 Difficulty  
-<span class="indexterm"></span>A network-wide setting that controls how
+A network-wide setting that controls how
 much computation is required to produce a proof of work.
 
 Digital signature  
-<span class="indexterm"></span> <span class="indexterm"></span>A short
+ A short
 string of data a user produces for a document using a private key such
 that anyone with the corresponding public key, the signature, and the
 document can verify that (1) the document was "signed" by the owner of
@@ -863,57 +863,57 @@ that particular private key, and (2) the document was not changed after
 it was signed.
 
 ECDSA  
-<span class="indexterm"></span> <span class="indexterm"></span>Elliptic
+ Elliptic
 Curve Digital Signature Algorithm. A cryptographic algorithm used by
 Ethereum to ensure that funds can only be spent by their owners.
 
 EIP  
-<span class="indexterm"></span> <span class="indexterm"></span>Ethereum
+ Ethereum
 Improvement Proposal. A design document providing information to the
 Ethereum community, describing a proposed new feature or its processes
 or environment. For more information, see
 <https://github.com/ethereum/EIPs> (see also "ERC").
 
 ENS  
-<span class="indexterm"></span>Ethereum Name Service. For more
+Ethereum Name Service. For more
 information, see <https://github.com/ethereum/ens/>.
 
 Entropy  
-<span class="indexterm"></span> <span class="indexterm"></span>In the
+ In the
 context of cryptography, lack of predictability or level of randomness.
 When generating secret information, such as private keys, algorithms
 usually rely on a source of high entropy to ensure the output is
 unpredictable.
 
 EOA  
-<span class="indexterm"></span>
-<span class="indexterm"></span>Externally Owned Account. An account
+
+Externally Owned Account. An account
 created by or for human users of the Ethereum network.
 
 ERC  
-<span class="indexterm"></span>Ethereum Request for Comments. A label
+Ethereum Request for Comments. A label
 given to some EIPs that attempt to define a specific standard of
 Ethereum usage.
 
 Ethash  
-<span class="indexterm"></span>A proof-of-work algorithm for Ethereum
+A proof-of-work algorithm for Ethereum
 1.0. For more information, see
 <https://github.com/ethereum/wiki/wiki/Ethash>.
 
 Ether  
-<span class="indexterm"></span>The native cryptocurrency used by the
+The native cryptocurrency used by the
 Ethereum ecosystem, which covers gas costs when executing smart
 contracts. Its symbol is Ξ, the Greek uppercase Xi character.
 
 Event  
-<span class="indexterm"></span> <span class="indexterm"></span>Allows
+ Allows
 the use of EVM logging facilities. DApps can listen for events and use
 them to trigger JavaScript callbacks in the user interface. For more
 information, see
 <http://solidity.readthedocs.io/en/develop/contracts.html#events>.
 
 EVM  
-<span class="indexterm"></span> <span class="indexterm"></span>Ethereum
+ Ethereum
 Virtual Machine. A stack-based virtual machine that executes bytecode.
 In Ethereum, the execution model specifies how the system state is
 altered given a series of bytecode instructions and a small tuple of
@@ -921,86 +921,86 @@ environmental data. This is specified through a formal model of a
 virtual state machine.
 
 EVM assembly language  
-<span class="indexterm"></span>A human-readable form of EVM bytecode.
+A human-readable form of EVM bytecode.
 
 Fallback function  
-<span class="indexterm"></span>A default function called in the absence
+A default function called in the absence
 of data or a declared function name.
 
 Faucet  
-<span class="indexterm"></span>A service that dispenses funds in the
+A service that dispenses funds in the
 form of free test ether that can be used on a testnet.
 
 Finney  
-<span class="indexterm"></span>A denomination of ether. 1 finney =
+A denomination of ether. 1 finney =
 10<sup>15</sup> wei, 10<sup>3</sup> finney = 1 ether.
 
 Fork  
-<span class="indexterm"></span>A change in protocol causing the creation
+A change in protocol causing the creation
 of an alternative chain, or a temporal divergence in two potential block
 paths during mining.
 
 Frontier  
-<span class="indexterm"></span>The initial test development stage of
+The initial test development stage of
 Ethereum, which lasted from July 2015 to March 2016.
 
 Ganache  
-<span class="indexterm"></span> <span class="indexterm"></span>A
+ A
 personal Ethereum blockchain that you can use to run tests, execute
 commands, and inspect state while controlling how the chain operates.
 
 Gas  
-<span class="indexterm"></span> <span class="indexterm"></span>A virtual
+ A virtual
 fuel used in Ethereum to execute smart contracts. The EVM uses an
 accounting mechanism to measure the consumption of gas and limit the
 consumption of computing resources (see "Turing complete").
 
 Gas limit  
-<span class="indexterm"></span>The maximum amount of gas a transaction
+The maximum amount of gas a transaction
 or block may consume.
 
 Gavin Wood  
-<span class="indexterm"></span>A British programmer who is the cofounder
+A British programmer who is the cofounder
 and former CTO of Ethereum. In August 2014 he proposed Solidity, a
 contract-oriented programming language for writing smart contracts.
 
 Genesis block  
-<span class="indexterm"></span>The first block in a blockchain, used to
+The first block in a blockchain, used to
 initialize a particular network and its cryptocurrency.
 
 Geth  
-<span class="indexterm"></span> <span class="indexterm"></span>Go
+ Go
 Ethereum. One of the most prominent implementations of the Ethereum
 protocol, written in Go.
 
 Hard fork  
-<span class="indexterm"></span>A permanent divergence in the blockchain;
+A permanent divergence in the blockchain;
 also known as a hard-forking change. One commonly occurs when
 nonupgraded nodes can’t validate blocks created by upgraded nodes that
 follow newer consensus rules. Not to be confused with a fork, soft fork,
 software fork, or Git fork.
 
 Hash  
-<span class="indexterm"></span>A fixed-length fingerprint of
+A fixed-length fingerprint of
 variable-size input, produced by a hash function.
 
 HD wallet  
-<span class="indexterm"></span> <span class="indexterm"></span>A wallet
+ A wallet
 using the hierarchical deterministic (HD) key creation and transfer
 protocol (BIP-32).
 
 HD wallet seed  
-<span class="indexterm"></span><span class="indexterm"></span>A value
+A value
 used to generate the master private key and master chain code for an HD
 wallet. The wallet seed can be represented by mnemonic words, making it
 easier for humans to copy, back up, and restore private keys.
 
 Homestead  
-<span class="indexterm"></span>The second development stage of Ethereum,
+The second development stage of Ethereum,
 launched in March 2016 at block \#1,150,000.
 
 ICAP  
-<span class="indexterm"></span><span class="indexterm"></span>Inter-exchange
+Inter-exchange
 Client Address Protocol. An Ethereum address encoding that is partly
 compatible with the International Bank Account Number (IBAN) encoding,
 offering a versatile, checksummed, and interoperable encoding for
@@ -1009,93 +1009,93 @@ XE, standing for "eXtended Ethereum," as used in nonjurisdictional
 currencies (e.g., XBT, XRP, XCP).
 
 Ice Age  
-<span class="indexterm"></span>A hard fork of Ethereum at block
+A hard fork of Ethereum at block
 \#200,000 to introduce an exponential difficulty increase (aka
 Difficulty Bomb), motivating a transition to proof of stake.
 
 IDE  
-<span class="indexterm"></span><span class="indexterm"></span>Integrated
+Integrated
 Development Environment. A user interface that typically combines a code
 editor, compiler, runtime, and debugger.
 
 Immutable deployed code problem  
-<span class="indexterm"></span>Once a contract’s (or library’s) code is
+Once a contract’s (or library’s) code is
 deployed, it becomes immutable. Standard software development practices
 rely on being able to fix possible bugs and add new features, so this
 represents a challenge for smart contract development.
 
 Internal transaction (also "message")  
-<span class="indexterm"></span>A transaction sent from a contract
+A transaction sent from a contract
 account to another contract account or an EOA.
 
 IPFS  
-<span class="indexterm"></span>InterPlanetary File System. A protocol,
+InterPlanetary File System. A protocol,
 network, and open source project designed to create a
 content-addressable, peer-to-peer method of storing and sharing
 hypermedia in a distributed filesystem.
 
 KDF  
-<span class="indexterm"></span>Key Derivation Function. Also known as a
+Key Derivation Function. Also known as a
 "password stretching algorithm," it is used by keystore formats to
 protect against brute-force, dictionary, and rainbow table attacks on
 passphrase encryption, by repeatedly hashing the passphrase.
 
 Keccak-256  
-<span class="indexterm"></span>Cryptographic hash function used in
+Cryptographic hash function used in
 Ethereum. Keccak-256 was standardized as SHA-3.
 
 Keystore file  
-<span class="indexterm"></span>A JSON-encoded file that contains a
+A JSON-encoded file that contains a
 single (randomly generated) private key, encrypted by a passphrase for
 extra security.
 
 LevelDB  
-<span class="indexterm"></span>An open source on-disk key–value store,
+An open source on-disk key–value store,
 implemented as a lightweight, single-purpose library, with bindings to
 many platforms.
 
 Library  
-<span class="indexterm"></span>A special type of contract that has no
+A special type of contract that has no
 payable functions, no fallback function, and no data storage. Therefore,
 it cannot receive or hold ether, or store data. A library serves as
 previously deployed code that other contracts can call for read-only
 computation.
 
 Lightweight client  
-<span class="indexterm"></span>An Ethereum client that does not store a
+An Ethereum client that does not store a
 local copy of the blockchain, or validate blocks and transactions. It
 offers the functions of a wallet and can create and broadcast
 transactions.
 
 Merkle Patricia Tree  
-<span class="indexterm"></span>A data structure used in Ethereum to
+A data structure used in Ethereum to
 efficiently store key–value pairs.
 
 Message  
-<span class="indexterm"></span>An internal transaction that is never
+An internal transaction that is never
 serialized and only sent within the EVM.
 
 Message call  
-<span class="indexterm"></span>The act of passing a message from one
+The act of passing a message from one
 account to another. If the destination account is associated with EVM
 code, then the VM will be started with the state of that object and the
 message acted upon.
 
 METoken  
-<span class="indexterm"></span> <span class="indexterm"></span>Mastering
+ Mastering
 Ethereum Token. An ERC20 token used for demonstration in this book.
 
 Metropolis  
-<span class="indexterm"></span>The third development stage of Ethereum,
+The third development stage of Ethereum,
 launched in October 2017.
 
 Miner  
-<span class="indexterm"></span>A network node that finds valid proof of
+A network node that finds valid proof of
 work for new blocks, by repeated hashing.
 
 Mist  
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The first Ethereum-enabled browser, built
+
+The first Ethereum-enabled browser, built
 by the Ethereum Foundation. It contains a browser-based wallet that was
 the first implementation of the ERC20 token standard (Fabian
 Vogelsteller, author of ERC20, was also the main developer of Mist).
@@ -1105,14 +1105,14 @@ Mist was also the first wallet to introduce the camelCase checksum
 with support for Swarm-based storage and ENS addresses.
 
 Network  
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Referring to the Ethereum network, a
+
+
+Referring to the Ethereum network, a
 peer-to-peer network that propagates transactions and blocks to every
 Ethereum node (network participant).
 
 NFT  
-<span class="indexterm"></span> <span class="indexterm"></span>A
+ A
 non-fungible token (also known as a "deed"). This is a token standard
 introduced by the ERC721 proposal. NFTs can be tracked and traded, but
 each token is unique and distinct; they are not interchangeable like
@@ -1120,11 +1120,11 @@ ERC20 tokens. NFTs can represent ownership of digital or physical
 assets.
 
 Node  
-<span class="indexterm"></span> <span class="indexterm"></span>A
+ A
 software client that participates in the network.
 
 Nonce  
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 cryptography, a value that can only be used once. There are two types of
 nonce used in Ethereum: an account nonce is a transaction counter in
 each account, which is used to prevent replay attacks; a proof-of-work
@@ -1132,7 +1132,7 @@ nonce is the random value in a block that was used to satisfy the proof
 of work.
 
 Ommer  
-<span class="indexterm"></span>A child block of an ancestor that is not
+A child block of an ancestor that is not
 itself an ancestor. When a miner finds a valid block, another miner may
 have published a competing block which is added to the tip of the
 blockchain. Unlike with Bitcoin, orphaned blocks in Ethereum can be
@@ -1141,7 +1141,7 @@ The term "ommer" is the preferred gender-neutral term for the sibling of
 a parent block, but this is also sometimes referred to as an "uncle."
 
 Parity  
-<span class="indexterm"></span> <span class="indexterm"></span>One of
+ One of
 the most prominent interoperable implementations of the Ethereum client
 software.
 
@@ -1149,32 +1149,32 @@ Private key
 See “secret key.”
 
 Proof of stake (PoS)  
-<span class="indexterm"></span> <span class="indexterm"></span>A method
+ A method
 by which a cryptocurrency blockchain protocol aims to achieve
 distributed consensus. PoS asks users to prove ownership of a certain
 amount of cryptocurrency (their "stake" in the network) in order to be
 able to participate in the validation of transactions.
 
 Proof of work (PoW)  
-<span class="indexterm"></span> <span class="indexterm"></span>A piece
+ A piece
 of data (the proof) that requires significant computation to find. In
 Ethereum, miners must find a numeric solution to the Ethash algorithm
 that meets a network-wide difficulty target.
 
 Public key  
-<span class="indexterm"></span> <span class="indexterm"></span>A number,
+ A number,
 derived via a one-way function from a private key, which can be shared
 publicly and used by anyone to verify a digital signature made with the
 corresponding private key.
 
 Receipt  
-<span class="indexterm"></span>Data returned by an Ethereum client to
+Data returned by an Ethereum client to
 represent the result of a particular transaction, including a hash of
 the transaction, its block number, the amount of gas used, and, in case
 of deployment of a smart contract, the address of the contract.
 
 Re-entrancy attack  
-<span class="indexterm"></span> <span class="indexterm"></span>An attack
+ An attack
 that consists of an attacker contract calling a victim contract function
 in such a way that during execution the victim calls the attacker
 contract again, recursively. This can result, for example, in the theft
@@ -1182,102 +1182,102 @@ of funds by skipping parts of the victim contract that update balances
 or count withdrawal amounts.
 
 Reward  
-<span class="indexterm"></span>An amount of ether included in each new
+An amount of ether included in each new
 block as a reward by the network to the miner who found the
 proof-of-work solution.
 
 RLP  
-<span class="indexterm"></span><span class="indexterm"></span>Recursive
+Recursive
 Length Prefix. An encoding standard designed by the Ethereum developers
 to encode and serialize objects (data structures) of arbitrary
 complexity and length.
 
 Satoshi Nakamoto  
-<span class="indexterm"></span>The name used by the person or people who
+The name used by the person or people who
 designed Bitcoin, created its original reference implementation, and
 were the first to solve the double-spend problem for digital currency.
 Their real identity remains unknown.
 
 Secret key (aka private key)  
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The secret
+
+The secret
 number that allows Ethereum users to prove ownership of an account or
 contracts, by producing a digital signature (see “public key,”
 “address,” “ECDSA”).
 
 Serenity  
-<span class="indexterm"></span>The fourth and final development stage of
+The fourth and final development stage of
 Ethereum. Serenity does not yet have a planned release date.
 
 Serpent  
-<span class="indexterm"></span>A procedural (imperative) smart contract
+A procedural (imperative) smart contract
 programming language with syntax similar to Python.
 
 SHA  
-<span class="indexterm"></span>Secure Hash Algorithm. A family of
+Secure Hash Algorithm. A family of
 cryptographic hash functions published by the National Institute of
 Standards and Technology (NIST).
 
 Singleton  
-<span class="indexterm"></span>A computer programming term that
+A computer programming term that
 describes an object of which only a single instance can exist.
 
 Smart contract  
-<span class="indexterm"></span> <span class="indexterm"></span>A program
+ A program
 that executes on the Ethereum computing infrastructure.
 
 Solidity  
-<span class="indexterm"></span> <span class="indexterm"></span>A
+ A
 procedural (imperative) programming language with syntax that is similar
 to JavaScript, C++, or Java. The most popular and most frequently used
 language for Ethereum smart contracts. Created by Dr. Gavin Wood
 (coauthor of this book).
 
 Solidity inline assembly  
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>EVM
+
+EVM
 assembly language in a Solidity program. Solidity’s support for inline
 assembly makes it easier to write certain operations.
 
 Spurious Dragon  
-<span class="indexterm"></span>A hard fork of the Ethereum blockchain,
+A hard fork of the Ethereum blockchain,
 which occurred at block \#2,675,000 to address more denial-of-service
 attack vectors and clear state (see also "Tangerine Whistle"). Also, a
 replay attack protection mechanism.
 
 Swarm  
-<span class="indexterm"></span> <span class="indexterm"></span>A
+ A
 decentralized (P2P) storage network, used along with Web3 and Whisper to
 build DApps.
 
 Szabo  
-<span class="indexterm"></span>A denomination of ether. 1 szabo =
+A denomination of ether. 1 szabo =
 10<sup>12</sup> wei, 10<sup>6</sup> szabo = 1 ether.
 
 Tangerine Whistle  
-<span class="indexterm"></span>A hard fork of the Ethereum blockchain,
+A hard fork of the Ethereum blockchain,
 which occurred at block \#2,463,000 to change the gas calculation for
 certain I/O-intensive operations and to clear the accumulated state from
 a denial-of-service attack, which exploited the low gas cost of those
 operations.
 
 Testnet  
-<span class="indexterm"></span> <span class="indexterm"></span>Short for
+ Short for
 "test network," a network used to simulate the behavior of the main
 Ethereum network.
 
 Transaction  
-<span class="indexterm"></span> <span class="indexterm"></span>Data
+ Data
 committed to the Ethereum Blockchain signed by an originating account,
 targeting a specific address. The transaction contains metadata such as
 the gas limit for that transaction.
 
 Truffle  
-<span class="indexterm"></span> <span class="indexterm"></span>One of
+ One of
 the most commonly used Ethereum development frameworks.
 
 Turing complete  
-<span class="indexterm"></span> <span class="indexterm"></span>A concept
+ A concept
 named after English mathematician and computer scientist Alan Turing: a
 system of data-manipulation rules (such as a computer’s instruction set,
 a programming language, or a cellular automaton) is said to be "Turing
@@ -1285,17 +1285,17 @@ complete" or "computationally universal" if it can be used to simulate
 any Turing machine.
 
 Vitalik Buterin  
-<span class="indexterm"></span>A Russian–Canadian programmer and writer
+A Russian–Canadian programmer and writer
 primarily known as the cofounder of Ethereum and of *Bitcoin Magazine*.
 
 Vyper  
-<span class="indexterm"></span> <span class="indexterm"></span>A
+ A
 high-level programming language, similar to Serpent, with Python-like
 syntax. Intended to get closer to a pure functional language. Created by
 Vitalik Buterin.
 
 Wallet  
-<span class="indexterm"></span> <span class="indexterm"></span>Software
+ Software
 that holds secret keys. Used to access and control Ethereum accounts and
 interact with smart contracts. Keys need not be stored in a wallet, and
 can instead be retrieved from offline storage (e.g., a memory card or
@@ -1303,28 +1303,28 @@ paper) for improved security. Despite the name, wallets never store the
 actual coins or tokens.
 
 Web3  
-<span class="indexterm"></span>The third version of the web. First
+The third version of the web. First
 proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for
 web applications: from centrally owned and managed applications, to
 applications built on decentralized protocols.
 
 Wei  
-<span class="indexterm"></span>The smallest denomination of ether.
+The smallest denomination of ether.
 10<sup>18</sup> wei = 1 ether.
 
 Whisper  
-<span class="indexterm"></span>A decentralized (P2P) messaging service.
+A decentralized (P2P) messaging service.
 It is used along with Web3 and Swarm to build DApps.
 
 Zero address  
-<span class="indexterm"></span> <span class="indexterm"></span>A special
+ A special
 Ethereum address, composed entirely of zeros, that is specified as the
 destination address of a contract creation transaction.
 
 # What Is Ethereum?
 
-<span class="indexterm"></span> <span class="indexterm"></span>Ethereum
-<span class="indexterm"></span>is often described as "the world
+ Ethereum
+is often described as "the world
 computer.” But what does that mean? Let’s start with a computer
 science–focused description, and then try to decipher that with a more
 practical analysis of Ethereum’s capabilities and characteristics, while
@@ -1349,9 +1349,9 @@ reduces or eliminates censorship and reduces certain counterparty risks.
 
 ## Compared to Bitcoin
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Many people will come to Ethereum with
+
+
+Many people will come to Ethereum with
 some prior experience of cryptocurrencies, specifically Bitcoin.
 Ethereum shares many common elements with other open blockchains: a
 peer-to-peer network connecting participants, a Byzantine fault–tolerant
@@ -1363,9 +1363,9 @@ Yet in many ways, both the purpose and construction of Ethereum are
 strikingly different from those of the open blockchains that preceded
 it, including Bitcoin.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum’s purpose is not primarily to be
-a digital currency payment network. <span class="indexterm"></span>While
+
+Ethereum’s purpose is not primarily to be
+a digital currency payment network. While
 the digital currency ether is both integral to and necessary for the
 operation of Ethereum, ether is intended as a *utility currency* to pay
 for use of the Ethereum platform as the world computer.
@@ -1380,9 +1380,9 @@ straightforwardly function as a general-purpose computer.
 
 ## Components of a Blockchain
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The components of an open, public
+
+
+The components of an open, public
 blockchain are (usually):
 
 - A peer-to-peer (P2P) network connecting participants and propagating
@@ -1413,11 +1413,11 @@ blockchain are (usually):
 
 All or most of these components are usually combined in a single
 software client. For example, in
-<span class="indexterm"></span><span class="indexterm"></span>Bitcoin,
+Bitcoin,
 the reference implementation is developed by the *Bitcoin Core* open
 source project and implemented as the *bitcoind* client. In Ethereum,
 rather than a reference implementation there is a
-<span class="indexterm"></span>*reference specification*, a mathematical
+*reference specification*, a mathematical
 description of the system in the Yellow Paper (see [Further
 Reading](#references)). There are a number of clients, which are built
 according to the reference specification.
@@ -1441,13 +1441,13 @@ exhibits the characteristics of being *open, public*, etc.
 
 ## The Birth of Ethereum
 
-<span class="indexterm"></span> <span class="indexterm"></span>All great
+ All great
 innovations solve real problems, and Ethereum is no exception. Ethereum
 was conceived at a time when people recognized the power of the Bitcoin
 model, and were trying to move beyond cryptocurrency applications. But
 developers faced a conundrum: they either needed to build on top of
-Bitcoin or start a new blockchain. <span class="indexterm"></span>
-<span class="indexterm"></span>Building upon Bitcoin meant living within
+Bitcoin or start a new blockchain. 
+Building upon Bitcoin meant living within
 the intentional constraints of the network and trying to find
 workarounds. The limited set of transaction types, data types, and sizes
 of data storage seemed to limit the sorts of applications that could run
@@ -1458,7 +1458,7 @@ staying on-chain, a new blockchain was the only option. But that meant a
 lot of work: bootstrapping all the infrastructure elements, exhaustive
 testing, etc.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Toward
+ Toward
 the end of 2013, Vitalik Buterin, a young programmer and Bitcoin
 enthusiast, started thinking about further extending the capabilities of
 Bitcoin and Mastercoin (an overlay protocol that extended Bitcoin to
@@ -1481,8 +1481,8 @@ blockchain to enforce consensus rules on smart contract execution and
 the implications of a Turing-complete language. Andreas continued to
 follow Ethereum’s progress with great interest but was in the early
 stages of writing his book *Mastering Bitcoin*, and did not participate
-directly in Ethereum until much later. <span class="indexterm"></span>
-<span class="indexterm"></span>Dr. Gavin Wood, however, was one of the
+directly in Ethereum until much later. 
+Dr. Gavin Wood, however, was one of the
 first people to reach out to Vitalik and offer to help with his C++
 programming skills. Gavin became Ethereum’s cofounder, codesigner, and
 CTO.
@@ -1539,10 +1539,10 @@ You can read it at
 
 ## Ethereum’s Four Stages of Development
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum’s development was planned over
+
+Ethereum’s development was planned over
 four distinct stages, with major changes occurring at each stage.
-<span class="indexterm"></span>A stage may include subreleases, known as
+A stage may include subreleases, known as
 "hard forks," that change functionality in a way that is not backward
 compatible.
 
@@ -1555,57 +1555,57 @@ intermediate hard forks are shown on the following timeline, which is
 "dated" by block number:
 
 Block \#0  
-<span class="indexterm"></span>*Frontier*—The initial stage of Ethereum,
+*Frontier*—The initial stage of Ethereum,
 lasting from July 30, 2015, to March 2016.
 
 Block \#200,000  
-<span class="indexterm"></span>*Ice Age*—A hard fork to introduce an
+*Ice Age*—A hard fork to introduce an
 exponential difficulty increase, to motivate a transition to PoS when
 ready.
 
 Block \#1,150,000  
-<span class="indexterm"></span>*Homestead*—The second stage of Ethereum,
+*Homestead*—The second stage of Ethereum,
 launched in March 2016.
 
 Block \#1,192,000  
-<span class="indexterm"></span>*DAO*—A hard fork that reimbursed victims
+*DAO*—A hard fork that reimbursed victims
 of the hacked DAO contract and caused Ethereum and Ethereum Classic to
 split into two competing systems.
 
 Block \#2,463,000  
-<span class="indexterm"></span>*Tangerine Whistle*—A hard fork to change
+*Tangerine Whistle*—A hard fork to change
 the gas calculation for certain I/O-heavy operations and to clear the
 accumulated state from a denial-of-service (DoS) attack that exploited
 the low gas cost of those operations.
 
 Block \#2,675,000  
-<span class="indexterm"></span>*Spurious Dragon*—A hard fork to address
+*Spurious Dragon*—A hard fork to address
 more DoS attack vectors, and another state clearing. Also, a replay
 attack protection mechanism.
 
 Block \#4,370,000  
-<span class="indexterm"></span><span class="indexterm"></span>*Metropolis
+*Metropolis
 Byzantium*—Metropolis is the third stage of Ethereum. Launched in
 October 2017, Byzantium is the first part of Metropolis, adding
 low-level functionalities and adjusting the block reward and difficulty.
 
 Block \#7,280,000  
-<span class="indexterm"></span><span class="indexterm"></span>*Constantinople
+*Constantinople
 / St. Petersburg*—Constantinople was planned to be the second part of
 Metropolis with similar improvements. A few hours before its activation,
 a [critical bug](https://bit.ly/2Ast7rz) was discovered. The hard fork
 was therefore postponed and renamed St. Petersburg.
 
 Block \#9,069,000  
-<span class="indexterm"></span>*Istanbul*—An additional hard fork with
+*Istanbul*—An additional hard fork with
 the same approach, and naming convention, as for the prior two.
 
 Block \#9,200,000  
-<span class="indexterm"></span>*Muir Glacier*—A hard fork whose sole
+*Muir Glacier*—A hard fork whose sole
 purpose was to adjust the difficulty again due to the exponential
 increase introduced by Ice Age.
 
-<span class="indexterm"></span><span class="indexterm"></span>Two hard
+Two hard
 forks, Berlin and London, have also been announced, and we are now in
 the final stage of Ethereum development, codenamed Serenity. Serenity
 involves a profound reorganization of the infrastructure that will make
@@ -1614,11 +1614,11 @@ presented as the second version of Ethereum, "Ethereum 2.0".
 
 ## Ethereum: A General-Purpose Blockchain
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The original blockchain, namely Bitcoin’s
+
+
+The original blockchain, namely Bitcoin’s
 blockchain, tracks the state of units of bitcoin and their ownership.
-<span class="indexterm"></span>You can think of Bitcoin as a distributed
+You can think of Bitcoin as a distributed
 consensus *state machine*, where transactions cause a global *state
 transition*, altering the ownership of coins. The state transitions are
 constrained by the rules of consensus, allowing all participants to
@@ -1627,7 +1627,7 @@ several blocks are mined.
 
 Ethereum is also a distributed state machine. But instead of tracking
 only the state of currency ownership,
-<span class="indexterm"></span>Ethereum tracks the state transitions of
+Ethereum tracks the state transitions of
 a general-purpose data store, i.e., a store that can hold any data
 expressible as a *key–value tuple*. A key–value data store holds
 arbitrary values, each referenced by some key; for example, the value
@@ -1647,9 +1647,9 @@ operating under consensus?"
 
 ## Ethereum’s Components
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In Ethereum, the components of a
+
+
+In Ethereum, the components of a
 blockchain system described in [Components of a
 Blockchain](#blockchain_components) are, more specifically:
 
@@ -1726,14 +1726,14 @@ technologies mentioned here:
 
 ## Ethereum and Turing Completeness
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As soon as you start reading about
+
+
+As soon as you start reading about
 Ethereum, you will immediately encounter the term "Turing complete."
 Ethereum, they say, unlike Bitcoin, is Turing complete. What exactly
 does that mean?
 
-<span class="indexterm"></span>The term refers to English mathematician
+The term refers to English mathematician
 Alan Turing, who is considered the father of computer science. In 1936
 he created a mathematical model of a computer consisting of a state
 machine that manipulates symbols by reading and writing them on
@@ -1742,12 +1742,12 @@ construct, Turing went on to provide a mathematical foundation to answer
 (in the negative) questions about *universal computability*, meaning
 whether all problems are solvable. He proved that there are classes of
 problems that are uncomputable.
-<span class="indexterm"></span>Specifically, he proved that the *halting
+Specifically, he proved that the *halting
 problem* (whether it is possible, given an arbitrary program and its
 input, to determine whether the program will eventually stop running) is
 not solvable.
 
-<span class="indexterm"></span><span class="indexterm"></span>Alan
+Alan
 Turing further defined a system to be *Turing complete* if it can be
 used to simulate any Turing machine. Such a system is called a
 *Universal Turing machine* (UTM).
@@ -1766,7 +1766,7 @@ state that is secured by the rules of consensus.
 
 ### Turing Completeness as a "Feature"
 
-<span class="indexterm"></span> <span class="indexterm"></span>Hearing
+ Hearing
 that Ethereum is Turing complete, you might arrive at the conclusion
 that this is a *feature* that is somehow lacking in a system that is
 Turing incomplete. Rather, it is the opposite. Turing completeness is
@@ -1788,11 +1788,11 @@ with a public blockchain.
 
 ### Implications of Turing Completeness
 
-<span class="indexterm"></span> <span class="indexterm"></span>Turing
+ Turing
 proved that you cannot predict whether a program will terminate by
 simulating it on a computer. In simple terms, we cannot predict the path
 of a program without running it.
-<span class="indexterm"></span>Turing-complete systems can run in
+Turing-complete systems can run in
 "infinite loops," a term used (in oversimplification) to describe a
 program that does not terminate. It is trivial to create a program that
 runs a loop that never ends. But unintended never-ending loops can arise
@@ -1812,9 +1812,9 @@ gets to abuse the world’s resources. How does Ethereum constrain the
 resources used by a smart contract if it cannot predict resource use in
 advance?
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>To answer this challenge, Ethereum
+
+
+To answer this challenge, Ethereum
 introduces a metering mechanism called *gas*. As the EVM executes a
 smart contract, it carefully accounts for every instruction
 (computation, data access, etc.). Each instruction has a predetermined
@@ -1828,7 +1828,7 @@ any program can consume.
 
 The next question is, *how does one get gas to pay for computation on
 the Ethereum world computer?* You won’t find gas on any exchanges.
-<span class="indexterm"></span> <span class="indexterm"></span>It can
+ It can
 only be purchased as part of a transaction, and can only be bought with
 ether. Ether needs to be sent along with a transaction and it needs to
 be explicitly earmarked for the purchase of gas, along with an
@@ -1839,9 +1839,9 @@ transaction.
 
 ## From General-Purpose Blockchains to Decentralized Applications (DApps)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum started as a way to make a
+
+
+Ethereum started as a way to make a
 general-purpose blockchain that could be programmed for a variety of
 uses. But very quickly, Ethereum’s vision expanded to become a platform
 for programming DApps. DApps represent a broader perspective than smart
@@ -1872,9 +1872,9 @@ entity `eth` (or decimal entity `#208`).
 
 ## The Third Age of the Internet
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>In 2004
+
+
+In 2004
 the term "Web 2.0" came to prominence, describing an evolution of the
 web toward user-generated content, responsive interfaces, and
 interactivity. Web 2.0 is not a technical specification, but rather a
@@ -1884,8 +1884,8 @@ The concept of DApps is meant to take the World Wide Web to its next
 natural evolutionary stage, introducing decentralization with
 peer-to-peer protocols into every aspect of a web application. The term
 used to describe this evolution is *web3*, meaning the third "version"
-of the web. <span class="indexterm"></span>
-<span class="indexterm"></span>First proposed by Dr. Gavin Wood, web3
+of the web. 
+First proposed by Dr. Gavin Wood, web3
 represents a new vision and focus for web applications: from centrally
 owned and managed applications, to applications built on decentralized
 protocols.
@@ -1900,20 +1900,20 @@ development suite that allows them to build web3 DApps.
 
 ## Ethereum’s Development Culture
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>So far we’ve talked about how Ethereum’s
+
+So far we’ve talked about how Ethereum’s
 goals and technology differ from those of other blockchains that
 preceded it, like Bitcoin. Ethereum also has a very different
 development culture.
 
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 Bitcoin, development is guided by conservative principles: all changes
 are carefully studied to ensure that none of the existing systems are
 disrupted. For the most part, changes are only implemented if they are
 backward compatible. Existing clients are allowed to opt-in, but will
 continue to operate if they decide not to upgrade.
 
-<span class="indexterm"></span>In Ethereum, by comparison, the
+In Ethereum, by comparison, the
 community’s development culture is focused on the future rather than the
 past. The (not entirely serious) mantra is "move fast and break things."
 If a change is needed, it is implemented, even if that means
@@ -1954,9 +1954,9 @@ for you.
 
 ## Why Learn Ethereum?
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Blockchains have a very steep learning
+
+
+Blockchains have a very steep learning
 curve, as they combine multiple disciplines into one domain:
 programming, information security, cryptography, economics, distributed
 systems, peer-to-peer networks, etc. Ethereum makes this learning curve
@@ -1986,25 +1986,25 @@ system.
 You will learn not only how to use Ethereum—how it works—but also why it
 is designed the way it is. You will be able to understand how each of
 the pieces works, and how they fit together and
-why.<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>
+why.
+
+
+
+
+
+
+
 
 # Ethereum Basics
 
-<span class="indexterm"></span> <span class="indexterm"></span>In this
+ In this
 chapter we will start exploring Ethereum, learning how to use wallets,
 how to create transactions, and also how to run a basic smart contract.
 
 ## Ether Currency Units
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum’s currency unit is called
+
+Ethereum’s currency unit is called
 *ether*, identified also as "ETH" or with the symbols Ξ (from the Greek
 letter "Xi" that looks like a stylized capital E) or, less often, ♦: for
 example, 1 ether, or 1 ETH, or Ξ1, or ♦1.
@@ -2051,10 +2051,10 @@ Ether denominations and unit names
 
 ## Choosing an Ethereum Wallet
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The term "wallet" has come to mean many
+
+
+
+The term "wallet" has come to mean many
 things, although they are all related and on a day-to-day basis boil
 down to pretty much the same thing. We will use the term "wallet" to
 mean a software application that helps you manage your Ethereum account.
@@ -2080,7 +2080,7 @@ range of complexity and features. However, the selection of these
 wallets is not an endorsement of their quality or security. They are
 simply a good starting place for demonstrations and testing.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Remember
+ Remember
 that for a wallet application to work, it must have access to your
 private keys, so it is vital that you only download and use wallet
 applications from sources you trust. Fortunately, in general, the more
@@ -2092,31 +2092,31 @@ wallets.
 The following are some good starter wallets:
 
 MetaMask  
-<span class="indexterm"></span>MetaMask is a browser extension wallet
+MetaMask is a browser extension wallet
 that runs in your browser (Chrome, Firefox, Opera, or Brave Browser). It
 is easy to use and convenient for testing, as it is able to connect to a
 variety of Ethereum nodes and test blockchains. MetaMask is a web-based
 wallet that also includes mobile apps for both iOS and Android.
 
 Jaxx  
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Jaxx is a multiplatform and multicurrency
+
+Jaxx is a multiplatform and multicurrency
 wallet that runs on a variety of operating systems, including Android,
 iOS, Windows, macOS, and Linux. It is often a good choice for new users
 as it is designed for simplicity and ease of use. Jaxx is either a
 mobile or a desktop wallet, depending on where you install it.
 
 MyEtherWallet (MEW)  
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>MyEtherWallet is primarily a web-based
+
+MyEtherWallet is primarily a web-based
 wallet that runs in any browser. It is also available on Android and
 iOS. It has multiple sophisticated features we will explore in many of
 our examples.
 
 Emerald Wallet  
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Emerald
+
+
+Emerald
 Wallet is designed to work with the Ethereum Classic blockchain, but is
 compatible with other Ethereum-based blockchains. It’s an open source
 desktop application and works under Windows, macOS, and Linux. Emerald
@@ -2129,7 +2129,7 @@ discuss controlling and managing keys.
 
 ## Control and Responsibility
 
-<span class="indexterm"></span> <span class="indexterm"></span>Open
+ Open
 blockchains like Ethereum are important because they operate as a
 *decentralized* system. That means lots of things, but one crucial
 aspect is that each user of Ethereum can—and should—control their own
@@ -2161,7 +2161,7 @@ you manage this responsibility:
   Fortunately, most user interfaces today won’t even let you see the raw
   private key.
 
-- <span class="indexterm"></span> <span class="indexterm"></span>Private
+-  Private
   keys can be stored in an encrypted form, as a digital "keystore" file.
   Being encrypted, they need a password to unlock. When you are prompted
   to choose a password, make it strong (i.e., long and random), back it
@@ -2202,13 +2202,13 @@ you manage this responsibility:
 
 Now that we’ve covered some basic best practices for key management and
 security, let’s get to work using
-MetaMask\!<span class="indexterm"></span>
+MetaMask\!
 
 ## Getting Started with MetaMask
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Open the Google Chrome browser and
+
+
+Open the Google Chrome browser and
 navigate to <https://chrome.google.com/webstore/category/extensions>.
 
 Search for "MetaMask" and click on the logo of a fox. You should see
@@ -2238,7 +2238,7 @@ Chrome" to install it.
 
 ### Creating a Wallet
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once
+ Once
 MetaMask is installed you should see a new icon (the head of a fox) in
 your browser’s toolbar. Click on it to get started. You will be asked to
 accept the terms and conditions and then to create your new Ethereum
@@ -2258,7 +2258,7 @@ anyone with access to your browser.
 
 </div>
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once
+ Once
 you’ve set a password, MetaMask will generate a wallet for you and show
 you a *mnemonic backup* consisting of 12 English words (see [The
 mnemonic backup of your wallet, created by
@@ -2286,7 +2286,7 @@ MetaMask</figcaption>
 Once you have confirmed that you have stored the mnemonic securely,
 you’ll be able to see the details of your Ethereum account, as shown in
 [Your Ethereum account in
-MetaMask](#metamask_account).<span class="indexterm"></span>
+MetaMask](#metamask_account).
 
 <figure id="metamask_account">
 <img src="images/metamask_account.png" alt="MetaMask Account Page" />
@@ -2300,11 +2300,11 @@ accounts. At the top of the account page, you can see which Ethereum
 network you are currently working on ("Main Network" in the example).
 
 Congratulations! You have set up your first Ethereum
-wallet.<span class="indexterm"></span>
+wallet.
 
 ### Switching Networks
 
-<span class="indexterm"></span> <span class="indexterm"></span>As you
+ As you
 can see on the MetaMask account page, you can choose between multiple
 Ethereum networks. By default, MetaMask will try to connect to the main
 network. The other choices are public testnets, any Ethereum node of
@@ -2352,17 +2352,17 @@ and contracts on Ropsten, for example, but not on the main network.
 
 ### Getting Some Test Ether
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Your first task is to get your wallet
+
+
+
+
+
+Your first task is to get your wallet
 funded. You won’t be doing that on the main network because real ether
 costs money and handling it requires a bit more experience. For now,
 you’ll load your wallet with some testnet ether.
 
-<span class="indexterm"></span>Switch MetaMask to the *Ropsten Test
+Switch MetaMask to the *Ropsten Test
 Network*. Click Deposit, then click Ropsten Test Faucet. MetaMask will
 open a new web page, as shown in [MetaMask Ropsten Test
 Faucet](#metamask_ropsten_faucet).
@@ -2416,9 +2416,9 @@ Try visiting that link, or entering the transaction hash into the
 
 ### Sending Ether from MetaMask
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Once you’ve received your first test
+
+
+Once you’ve received your first test
 ether from the Ropsten Test Faucet, you can experiment with sending
 ether by trying to send some back to the faucet. As you can see on the
 Ropsten Test Faucet page, there is an option to "donate" 1 ETH to the
@@ -2446,7 +2446,7 @@ says you have an insufficient balance. At first glance this may seem
 confusing: you have 1 ETH, you want to send 1 ETH, so why is MetaMask
 saying you have insufficient funds?
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 answer is because of the cost of *gas*. Every Ethereum transaction
 requires payment of a fee, which is collected by the miners to validate
 the transaction. The fees in Ethereum are charged in a virtual currency
@@ -2454,7 +2454,7 @@ called gas. You pay for the gas with ether, as part of the transaction.
 
 <div class="note">
 
-<span class="indexterm"></span> <span class="indexterm"></span>Fees are
+ Fees are
 required on the test networks too. Without fees, a test network would
 behave differently from the main network, making it an inadequate
 testing platform. Fees also protect the test networks from DoS attacks
@@ -2488,13 +2488,13 @@ click the orange "1 ether" donation button, you have sufficient balance
 to complete the transaction. Click Submit when MetaMask pops up the
 payment window. After all of this, you should see a balance of 0.999937
 ETH because you sent 1 ETH to the faucet with 0.000063 ETH in
-gas.<span class="indexterm"></span><span class="indexterm"></span>
+gas.
 
 ### Exploring the Transaction History of an Address
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>By now you have become an expert in using
+
+
+By now you have become an expert in using
 MetaMask to send and receive test ether. Your wallet has received at
 least two payments and sent at least one. You can view all these
 transactions using the *ropsten.etherscan.io* block explorer. You can
@@ -2535,18 +2535,18 @@ more transactions. Before long you will be lost in the maze of
 interconnected data. Public blockchains contain an enormous wealth of
 information, all of which can be explored programmatically, as we will
 see in future
-examples<span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+examples.
 
 ## Introducing the World Computer
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>You’ve now
+
+
+You’ve now
 created a wallet and sent and received ether. So far, we’ve treated
 Ethereum as a cryptocurrency. But Ethereum is much, much more. In fact,
 the cryptocurrency function is subservient to Ethereum’s function as a
-decentralized world computer. <span class="indexterm"></span>
-<span class="indexterm"></span>Ether is meant to be used to pay for
+decentralized world computer. 
+Ether is meant to be used to pay for
 running *smart contracts*, which are computer programs that run on an
 emulated computer called the *Ethereum Virtual Machine* (EVM).
 
@@ -2560,10 +2560,10 @@ Machine](#evm_chapter).
 
 ## Externally Owned Accounts (EOAs) and Contracts
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The type of account you created in the
+
+
+
+The type of account you created in the
 MetaMask wallet is called an *externally owned account* (EOA).
 Externally owned accounts are those that have a private key; having the
 private key means control over access to funds or contracts. Now, you’re
@@ -2599,20 +2599,20 @@ wallet and test ether on the Ropsten test network.
 
 ## A Simple Contract: A Test Ether Faucet
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum has many different high-level
+
+
+Ethereum has many different high-level
 languages, all of which can be used to write a contract and produce EVM
 bytecode. You can read about many of the most prominent and interesting
 ones in [Introduction to Ethereum High-Level
 Languages](#high_level_languages). One high-level language is by far the
 dominant choice for smart contract programming: Solidity.
-<span class="indexterm"></span> <span class="indexterm"></span>Solidity
+ Solidity
 was created by Dr. Gavin Wood, the coauthor of this book, and has become
 the most widely used language in Ethereum (and beyond). We’ll use
 Solidity to write our first contract.
 
-<span class="indexterm"></span> <span class="indexterm"></span>For our
+ For our
 first example ([example_title](#solidity_faucet_example)), we will write
 a contract that controls a *faucet*. You’ve already used a faucet to get
 test ether on the Ropsten test network. A faucet is a relatively simple
@@ -2671,7 +2671,7 @@ Next, we enable the contract to accept any incoming amount:
 receive () external payable {}
 ```
 
-<span class="indexterm"></span>The receive function is called if the
+The receive function is called if the
 transaction that triggered the contract didn’t name any of the declared
 functions in the contract, or didn’t contain data and thus was a plain
 Ether transfer. Contracts can have one such receive function (without a
@@ -2734,13 +2734,13 @@ definition of our `withdraw` function.
 
 Right below our default function is the final closing curly brace, which
 closes the definition of the contract `Faucet`. That’s
-it\!<span class="indexterm"></span><span class="indexterm"></span>
+it\!
 
 ## Compiling the Faucet Contract
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Now that we have our first example
+
+
+Now that we have our first example
 contract, we need to use a Solidity compiler to convert the Solidity
 code into EVM bytecode so it can be executed by the EVM on the
 blockchain itself.
@@ -2750,7 +2750,7 @@ various frameworks, and bundled in Integrated Development Environments
 (IDEs). To keep things simple, we will use one of the more popular IDEs,
 called *Remix*.
 
-<span class="indexterm"></span>Use your Chrome browser (with the
+Use your Chrome browser (with the
 MetaMask wallet you installed earlier) to navigate to the Remix IDE at
 <https://remix.ethereum.org>.
 
@@ -2815,19 +2815,19 @@ PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DU
 
 Aren’t you glad you are using a high-level language like Solidity
 instead of programming directly in EVM bytecode? Me
-too\!<span class="indexterm"></span><span class="indexterm"></span>
+too\!
 
 ## Creating the Contract on the Blockchain
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>So, we have a contract. We’ve compiled it
+
+
+So, we have a contract. We’ve compiled it
 into bytecode. Now, we need to "register" the contract on the Ethereum
 blockchain. We will be using the Ropsten testnet to test our contract,
 so that’s the blockchain we want to submit it to.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Registering a contract on the blockchain
+
+Registering a contract on the blockchain
 involves creating a special transaction whose destination is the address
 `0x0000000000000000000000000000000000000000`, also known as the *zero
 address*. The zero address is a special address that tells the Ethereum
@@ -2835,7 +2835,7 @@ blockchain that you want to register a contract. Fortunately, the Remix
 IDE will handle all of that for you and send the transaction to
 MetaMask.
 
-<span class="indexterm"></span>First, switch to the Run tab and select
+First, switch to the Run tab and select
 Injected Web3 in the Environment drop-down selection box. This connects
 the Remix IDE to the MetaMask wallet, and through MetaMask to the
 Ropsten test network. Once you do that, you can see Ropsten under
@@ -2888,11 +2888,11 @@ shows it as “Faucet at 0x72e…c7829” (although your address, the random
 letters and numbers, will be different). The small clipboard symbol to
 the right allows you to copy the contract address to your clipboard. We
 will use that in the next
-section.<span class="indexterm"></span><span class="indexterm"></span>
+section.
 
 ## Interacting with the Contract
 
-<span class="indexterm"></span> <span class="indexterm"></span>Let’s
+ Let’s
 recap what we’ve learned so far: Ethereum contracts are programs that
 control money, which run inside a virtual machine called the EVM. They
 are created by a special transaction that submits their bytecode to be
@@ -2907,7 +2907,7 @@ to the function.
 
 ### Viewing the Contract Address in a Block Explorer
 
-<span class="indexterm"></span> <span class="indexterm"></span>We now
+ We now
 have a contract recorded on the blockchain, and we can see it has an
 Ethereum address. Let’s check it out in the *ropsten.etherscan.io* block
 explorer and see what a contract looks like. In the Remix IDE, copy the
@@ -2925,7 +2925,7 @@ Keep Remix open; we’ll come back to it again later. Now, navigate your
 browser to *ropsten.etherscan.io* and paste the address into the search
 box. You should see the contract’s Ethereum address history, as shown in
 [View the Faucet contract address in the Etherscan block
-explorer](#etherscan_contract_address).<span class="indexterm"></span>
+explorer](#etherscan_contract_address).
 
 <figure id="etherscan_contract_address">
 <img src="images/etherscan_contract_address.png"
@@ -2936,7 +2936,7 @@ explorer</figcaption>
 
 ### Funding the Contract
 
-<span class="indexterm"></span> <span class="indexterm"></span>For now,
+ For now,
 the contract only has one transaction in its history: the contract
 creation transaction. As you can see, the contract also has no ether
 (zero balance). That’s because we didn’t send any ether to the contract
@@ -2970,12 +2970,12 @@ specifying which function to call, it called this default function.
 Because we declared it as `payable`, it accepted and deposited the 1
 ether into the contract’s account balance. Your transaction caused the
 contract to run in the EVM, updating its balance. You have funded your
-faucet\!<span class="indexterm"></span>
+faucet\!
 
 ### Withdrawing from Our Contract
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Next,
+
+Next,
 let’s withdraw some funds from the faucet. To withdraw, we have to
 construct a transaction that calls the `withdraw` function and passes a
 `withdraw_amount` argument to it. To keep things simple for now, Remix
@@ -3056,7 +3056,7 @@ see an "OUT" transaction in the *contract address history*.
 
 Where’s the outgoing withdrawal? A new tab has appeared on the
 contract’s address history page, named Internal Transactions.
-<span class="indexterm"></span>Because the 0.1 ether transfer originated
+Because the 0.1 ether transfer originated
 from the contract code, it is an internal transaction (also called a
 *message*). Click on that tab to see it (see [Etherscan shows the
 internal transaction transferring ether out from the
@@ -3080,7 +3080,7 @@ function to send you the ether. Running the `transfer` function
 generated an internal transaction that deposited 0.1 ether into your
 wallet address, from the contract’s balance. That’s the one shown on the
 Internal Transactions tab in
-Etherscan<span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span>
+Etherscan.
 
 <figure id="etherscan_withdrawal_internal">
 <img src="images/etherscan_withdrawal_internal.png"
@@ -3110,11 +3110,11 @@ software that controls money on a decentralized world computer.
 We will do a lot more smart contract programming in [Smart Contracts and
 Solidity](#smart_contracts_chapter) and learn about best practices and
 security considerations in [Smart Contract
-Security](#smart_contract_security).<span class="indexterm"></span>
+Security](#smart_contract_security).
 
 # Ethereum Clients
 
-<span class="indexterm"></span>An Ethereum client is a software
+An Ethereum client is a software
 application that implements the Ethereum specification and communicates
 over the peer-to-peer network with other Ethereum clients. Different
 Ethereum clients *interoperate* if they comply with the reference
@@ -3131,11 +3131,11 @@ simply free to use, though. It also means that Ethereum is developed by
 an open community of volunteers and can be modified by anyone. More eyes
 means more trustworthy code.
 
-<span class="indexterm"></span>Ethereum is defined by a formal
+Ethereum is defined by a formal
 specification called the "Yellow Paper" (see [Further
 Reading](#references)).
 
-<span class="indexterm"></span> <span class="indexterm"></span>This is
+ This is
 in contrast to, for example, Bitcoin, which is not defined in any formal
 way. Where Bitcoin’s "specification" is the reference implementation
 Bitcoin Core, Ethereum’s specification is documented in a paper that
@@ -3157,9 +3157,9 @@ while other clients keep the network running almost unaffected.
 
 ## Ethereum Networks
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There exist a variety of Ethereum-based
+
+
+There exist a variety of Ethereum-based
 networks that largely conform to the formal specification defined in the
 Ethereum Yellow Paper, but which may or may not interoperate with each
 other.
@@ -3194,9 +3194,9 @@ interfaces (APIs).
 
 ### Should I Run a Full Node?
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The health, resilience, and censorship
+
+
+The health, resilience, and censorship
 resistance of blockchains depend on them having many independently
 operated and geographically dispersed full nodes. Each full node can
 help other new nodes obtain the block data to bootstrap their operation,
@@ -3226,14 +3226,14 @@ blockchain. In practice, you will likely use a remote client such as
 MetaMask, Emerald Wallet, MyEtherWallet, or MyCrypto as a convenient way
 to switch between all of the different node options.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The terms "remote client" and "wallet"
+
+
+The terms "remote client" and "wallet"
 are used interchangeably, though there are some differences. Usually, a
 remote client offers an API (such as the web3.js API) in addition to the
 transaction functionality of a wallet.
 
-<span class="indexterm"></span>Do not confuse the concept of a remote
+Do not confuse the concept of a remote
 wallet in Ethereum with that of a *light client* (which is analogous to
 a Simplified Payment Verification client in Bitcoin). Light clients
 validate block headers and use Merkle proofs to validate the inclusion
@@ -3246,7 +3246,7 @@ mitigate these problems by using a full client you run yourself.
 
 ### Full Node Advantages and Disadvantages
 
-<span class="indexterm"></span> <span class="indexterm"></span>Choosing
+ Choosing
 to run a full node helps with the operation of the networks you connect
 it to, but also incurs some mild to moderate costs for you. Let’s look
 at some of the advantages and disadvantages.
@@ -3277,13 +3277,13 @@ at some of the advantages and disadvantages.
 - May require several days to fully sync when first started
 
 - Must be maintained, upgraded, and kept online to remain
-  synced<span class="indexterm"></span><span class="indexterm"></span>
+  synced
 
 ### Public Testnet Advantages and Disadvantages
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Whether or not you choose to run a full
+
+
+Whether or not you choose to run a full
 node, you will probably want to run a public testnet node. Let’s look at
 some of the advantages and disadvantages of using a public testnet.
 
@@ -3314,9 +3314,9 @@ some of the advantages and disadvantages of using a public testnet.
 
 ### Local Blockchain Simulation Advantages and Disadvantages
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>For
+
+
+For
 many testing purposes, the best option is to launch a single-instance
 private blockchain. Ganache (formerly named `testrpc`) is one of the
 most popular local blockchain simulations that you can interact with,
@@ -3350,11 +3350,11 @@ disadvantages of the public testnet, but also has some differences.
   an archival node for you to interact with state from blocks that may
   have been pruned otherwise
 
-<span class="indexterm"></span><span class="indexterm"></span>
+
 
 ## Running an Ethereum Client
 
-<span class="indexterm"></span> <span class="indexterm"></span>If you
+ If you
 have the time and resources, you should attempt to run a full node, even
 if only to learn more about the process. In this section we cover how to
 download, compile, and run the Ethereum clients Parity and Geth. This
@@ -3365,9 +3365,9 @@ local private blockchain.
 
 ### Hardware Requirements for a Full Node
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Before we get started, you should ensure
+
+
+Before we get started, you should ensure
 you have a computer with sufficient resources to run an Ethereum full
 node. You will need at least 300 GB of disk space to store a full copy
 of the Ethereum blockchain. If you also want to run a full node on the
@@ -3433,7 +3433,7 @@ These links provide up-to-date estimates of the blockchain size:
 
 ### Software Requirements for Building and Running a Client (Node)
 
-<span class="indexterm"></span> <span class="indexterm"></span>This
+ This
 section covers Parity and Geth client software. It also assumes you are
 using a Unix-like command-line environment. The examples show the
 commands and output as they appear on an Ubuntu GNU/Linux operating
@@ -3446,7 +3446,7 @@ client download.
 
 <div class="tip">
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>In
+In
 many of the examples in this chapter, we will be using the operating
 system’s command-line interface (also known as a "shell"), accessed via
 a "terminal" application. The shell will display a prompt; you type a
@@ -3469,16 +3469,16 @@ examples that follow, you will need to install `git`, the source-code
 management system; `golang`, the Go programming language and standard
 libraries; and Rust, a systems programming language.
 
-<span class="indexterm"></span>Git can be installed by following the
+Git can be installed by following the
 instructions at <https://git-scm.com>.
 
-<span class="indexterm"></span>Go can be installed by following the
+Go can be installed by following the
 instructions at <https://golang.org>, or
 <https://github.com/golang/go/wiki/Ubuntu> if you are using Ubuntu.
 
 <div class="note">
 
-<span class="indexterm"></span>Geth requirements vary, but if you stick
+Geth requirements vary, but if you stick
 with Go version 1.13 or greater you should be able to compile most
 versions of Geth. Of course, you should always refer to the
 documentation for your chosen flavor of Geth.
@@ -3490,7 +3490,7 @@ than 1.13. If so, remove it and install the latest version from
 
 </div>
 
-<span class="indexterm"></span>Rust can be installed by following the
+Rust can be installed by following the
 instructions at <https://www.rustup.rs/>.
 
 <div class="note">
@@ -3499,7 +3499,7 @@ Parity requires Rust version 1.27 or greater.
 
 </div>
 
-<span class="indexterm"></span> <span class="indexterm"></span>Parity
+ Parity
 also requires some software libraries, such as OpenSSL and `libudev`. To
 install these on a Ubuntu or Debian GNU/Linux compatible system, use the
 following command:
@@ -3518,9 +3518,9 @@ installed, let’s get to work!
 
 ### Parity
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Parity is an implementation of a
+
+
+Parity is an implementation of a
 full-node Ethereum client and DApp browser. It was written “from the
 ground up” in Rust, a systems programming language, with the aim of
 building a modular, secure, and scalable Ethereum client. Parity is
@@ -3543,7 +3543,7 @@ yourself.
 
 #### Installing Parity
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 [Parity Wiki](https://wiki.parity.io/Setup) offers instructions for
 building Parity in different environments and containers. We’ll show you
 how to build Parity from source. This assumes you have already installed
@@ -3621,9 +3621,9 @@ started with some basic command-line options.
 
 ### Go-Ethereum (Geth)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Geth is the Go language implementation
+
+
+Geth is the Go language implementation
 that is actively developed by the Ethereum Foundation, so is considered
 the "official" implementation of the Ethereum client. Typically, every
 Ethereum-based blockchain will have its own Geth implementation. If
@@ -3655,7 +3655,7 @@ compiling the software yourself.
 
 #### Cloning the repository
 
-<span class="indexterm"></span> <span class="indexterm"></span>The first
+ The first
 step is to clone the Git repository, to get a copy of the source code.
 
 To make a local clone of your chosen repository, use the `git` command
@@ -3682,7 +3682,7 @@ executable for your platform.
 
 #### Building Geth from source code
 
-<span class="indexterm"></span> <span class="indexterm"></span>To build
+ To build
 Geth, change to the directory where the source code was downloaded and
 use the `make` command:
 
@@ -3730,14 +3730,14 @@ you should see a version report much like the one seen here.
 
 The next sections explains the challenge with the initial
 synchronization of Ethereum’s
-blockchain<span class="indexterm"></span>.<span class="indexterm"></span>
+blockchain.
 
 ## The First Synchronization of Ethereum-Based Blockchains
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Traditionally, when syncing an Ethereum
+
+
+
+Traditionally, when syncing an Ethereum
 blockchain, your client would download and validate every block and
 every transaction since the very start—i.e., from the genesis block.
 
@@ -3765,7 +3765,7 @@ If you are syncing with full validation, your client will slow down and
 may take several days, or perhaps even longer, to validate the blocks
 affected by the DoS attacks.
 
-<span class="indexterm"></span>Fortunately, most Ethereum clients by
+Fortunately, most Ethereum clients by
 default now perform a "fast" synchronization that skips the full
 validation of transactions until it has synced to the tip of the
 blockchain, then resumes full validation.
@@ -3788,10 +3788,10 @@ blockchain data!
 
 ### Running Geth or Parity
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Now that you understand the challenges of
+
+
+
+Now that you understand the challenges of
 the "first sync," you’re ready to start an Ethereum client and sync the
 blockchain. For both Geth and Parity, you can use the `--help` option to
 see all the configuration parameters. The default settings are usually
@@ -3808,9 +3808,9 @@ very fast system with lots of RAM, to several days on a slower system.
 
 ### The JSON-RPC Interface
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Ethereum
+
+
+Ethereum
 clients offer an application programming interface and a set of Remote
 Procedure Call (RPC) commands, which are encoded as JavaScript Object
 Notation (JSON). You will see this referred to as the *JSON-RPC API*.
@@ -3879,7 +3879,7 @@ correlate the context between the two objects.
 
 <div class="tip">
 
-<span class="indexterm"></span>The `id` parameter is used primarily when
+The `id` parameter is used primarily when
 you are making multiple requests in a single JSON-RPC call, a practice
 called *batching*. Batching is used to avoid the overhead of a new HTTP
 and TCP connection for every request. In the Ethereum context, for
@@ -3934,7 +3934,7 @@ wiki](https://github.com/ethereum/wiki/wiki/JSON-RPC).
 Parity has a special "Geth compatibility mode,” where it offers a
 JSON-RPC API that is identical to that offered by Geth. To run Parity in
 this mode, use the `--geth`
-switch<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>:<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+switch:
 
 \$
 
@@ -3942,8 +3942,8 @@ parity --geth
 
 ## Remote Ethereum Clients
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Remote
+
+Remote
 clients offer a subset of the functionality of a full client. They do
 not store the full Ethereum blockchain, so they are faster to set up and
 require far less data storage.
@@ -3983,9 +3983,9 @@ they offer.
 
 ### Mobile (Smartphone) Wallets
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>All mobile wallets are remote clients,
+
+
+All mobile wallets are remote clients,
 because smartphones do not have adequate resources to run a full
 Ethereum client. Light clients are in development and not in general use
 for Ethereum. In the case of Parity, the light client is marked
@@ -3997,35 +3997,35 @@ examples; this is not an endorsement or an indication of the security or
 functionality of these wallets):
 
 [Jaxx](https://jaxx.io)  
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>A multicurrency mobile wallet based on
+
+
+A multicurrency mobile wallet based on
 BIP-39 mnemonic seeds, with support for Bitcoin, Litecoin, Ethereum,
 Ethereum Classic, ZCash, a variety of ERC20 tokens, and many other
 currencies. Jaxx is available on Android and iOS, as a browser plug-in
 wallet, and as a desktop wallet for a variety of operating systems.
 
 [Status](https://status.im)  
-<span class="indexterm"></span>A mobile wallet and DApp browser, with
+A mobile wallet and DApp browser, with
 support for a variety of tokens and popular DApps. Available for iOS and
 Android.
 
 [Trust Wallet](https://trustwalletapp.com/)  
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>A mobile multi-currency wallet that
+
+A mobile multi-currency wallet that
 supports Ethereum and Ethereum Classic as well as ERC20 and ERC223
 tokens. Trust Wallet is available for iOS and Android.
 
 [Cipher Browser](https://www.cipherbrowser.com)  
-<span class="indexterm"></span>A full-featured Ethereum-enabled mobile
+A full-featured Ethereum-enabled mobile
 DApp browser and wallet that allows integration with Ethereum apps and
 tokens. Available for iOS and Android.
 
 ### Browser Wallets
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>A variety of wallets and DApp browsers
+
+
+A variety of wallets and DApp browsers
 are available as plug-ins or extensions of web browsers such as Chrome
 and Firefox. These are remote clients that run inside your browser.
 
@@ -4034,8 +4034,8 @@ MyCrypto.
 
 #### MetaMask
 
-[MetaMask](https://metamask.io/), <span class="indexterm"></span>
-<span class="indexterm"></span>introduced in [Ethereum
+[MetaMask](https://metamask.io/), 
+introduced in [Ethereum
 Basics](#intro_chapter), is a versatile browser-based wallet, RPC
 client, and basic contract explorer. It is available on Chrome, Firefox,
 Opera, and Brave Browser.
@@ -4051,17 +4051,17 @@ RPC gateway for those tools.
 
 #### Jaxx
 
-[Jaxx](https://jaxx.io), <span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>which was introduced as a mobile wallet
+[Jaxx](https://jaxx.io), 
+
+which was introduced as a mobile wallet
 in the previous section, is also available as a Chrome and Firefox
 extension and as a desktop wallet.
 
 #### MyEtherWallet (MEW)
 
 [MyEtherWallet](https://www.myetherwallet.com/)
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>is a browser-based JavaScript remote
+
+is a browser-based JavaScript remote
 client that offers:
 
 - A bridge to popular hardware wallets such as the Trezor and Ledger
@@ -4090,10 +4090,10 @@ access the correct web URL.
 
 #### MyCrypto
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In early 2018, the
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>MyEtherWallet project split into two
+
+In early 2018, the
+
+MyEtherWallet project split into two
 competing implementations, guided by two independent development teams:
 a "fork," as it is called in open source development. The two projects
 are called MyEtherWallet (the original branding) and
@@ -4106,8 +4106,8 @@ similar manner as a hardware wallet.
 #### Mist (Deprecated)
 
 [Mist](https://github.com/ethereum/mist)
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>was the first Ethereum-enabled browser,
+
+was the first Ethereum-enabled browser,
 built by the Ethereum Foundation. It contained a browser-based wallet
 that was the first implementation of the ERC20 token standard (Fabian
 Vogelsteller, author of ERC20, was also the main developer of Mist).
@@ -4121,13 +4121,13 @@ In this chapter we explored Ethereum clients. You downloaded, installed,
 and synchronized a client, becoming a participant in the Ethereum
 network, and contributing to the health and stability of the system by
 replicating the blockchain on your own
-computer.<span class="indexterm"></span>
+computer.
 
 # Cryptography
 
-<span class="indexterm"></span>One of Ethereum’s foundational
-technologies is <span class="indexterm"></span>
-<span class="indexterm"></span>*cryptography*, which is a branch of
+One of Ethereum’s foundational
+technologies is 
+*cryptography*, which is a branch of
 mathematics used extensively in computer security. Cryptography means
 "secret writing" in Greek, but the study of cryptography encompasses
 more than just secret writing, which is referred to as *encryption*.
@@ -4137,7 +4137,7 @@ or to prove the authenticity of data (e.g., with digital fingerprints,
 also known as "hashes"). These types of cryptographic proofs are
 mathematical tools critical to the operation of the Ethereum platform
 (and, indeed, all blockchain systems), and are also extensively used in
-Ethereum applications. <span class="indexterm"></span>
+Ethereum applications. 
 
 Note that, at the time of publication, no part of the Ethereum protocol
 involves encryption; that is to say all communications with the Ethereum
@@ -4156,13 +4156,13 @@ ownership of funds, in the form of private keys and addresses.
 
 ## Keys and Addresses
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>As we saw
+
+
+As we saw
 earlier in the book, Ethereum has two different types of accounts:
 *externally owned accounts* (EOAs) and *contracts*. Ownership of ether
 by EOAs is established through digital *private keys*, *Ethereum
-addresses*, and *digital signatures*. <span class="indexterm"></span>The
+addresses*, and *digital signatures*. The
 private keys are at the heart of all user interaction with Ethereum. In
 fact, account addresses are derived directly from private keys: a
 private key uniquely determines a single Ethereum address, also known as
@@ -4177,7 +4177,7 @@ Ethereum system. For more information on how to keep private keys safe
 and secure, see [Control and Responsibility](#control_responsibility)
 and [Wallets](#wallets_chapter).
 
-<span class="indexterm"></span>Access and control of funds is achieved
+Access and control of funds is achieved
 with digital signatures, which are also created using the private key.
 Ethereum transactions require a valid digital signature to be included
 in the blockchain. Anyone with a copy of a private key has control of
@@ -4186,7 +4186,7 @@ their private key safe, the digital signatures in Ethereum transactions
 prove the true owner of the funds, because they prove ownership of the
 private key.
 
-<span class="indexterm"></span>In public key cryptography–based systems,
+In public key cryptography–based systems,
 such as that used by Ethereum, keys come in pairs consisting of a
 private (secret) key and a public key. Think of the public key as
 similar to a bank account number, and the private key as similar to the
@@ -4213,11 +4213,11 @@ public keys, and addresses.
 
 ## Public Key Cryptography and Cryptocurrency
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Public key
+
+Public key
 cryptography (also called "asymmetric cryptography") is a core part of
 modern-day information security.
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>The
+The
 key exchange protocol, first published in the 1970s by Martin Hellman,
 Whitfield Diffie, and Ralph Merkle, was a monumental breakthrough that
 incited the first big wave of public interest in the field of
@@ -4232,14 +4232,14 @@ and unforgeable digital signatures, which are secured by the laws of
 mathematics.
 
 For example, multiplying two large prime numbers together is trivial.
-<span class="indexterm"></span>But given the product of two large
+But given the product of two large
 primes, it is very difficult to find the prime factors (a problem called
 *prime factorization*). Let’s say we present the number 8,018,009 and
 tell you it is the product of two primes. Finding those two primes is
 much harder for you than it was for me to multiply them to produce
 8,018,009.
 
-<span class="indexterm"></span>Some of these mathematical functions can
+Some of these mathematical functions can
 be inverted easily if you know some secret information. In the preceding
 example, if I tell you that one of the prime factors is 2,003, you can
 trivially find the other one with a simple division: 8,018,009 ÷ 2,003 =
@@ -4247,11 +4247,11 @@ trivially find the other one with a simple division: 8,018,009 ÷ 2,003 =
 are very difficult to invert unless you are given a piece of secret
 information that can be used as a shortcut to reverse the function.
 
-<span class="indexterm"></span>A more advanced category of mathematical
+A more advanced category of mathematical
 functions that is useful in cryptography is based on arithmetic
 operations on an elliptic curve. In elliptic curve arithmetic,
 multiplication modulo a prime is simple but division (the inverse) is
-practically impossible. <span class="indexterm"></span>This is called
+practically impossible. This is called
 the *discrete logarithm problem* and there are currently no known
 trapdoors. *Elliptic curve cryptography* is used extensively in modern
 computer systems and is the basis of Ethereum’s (and other
@@ -4282,8 +4282,8 @@ key is derived from the private key. Together, they represent an
 Ethereum account by providing, respectively, a publicly accessible
 account handle (the address) and private control over access to any
 ether in the account and over any authentication the account needs when
-using smart contracts. <span class="indexterm"></span>
-<span class="indexterm"></span>The private key controls access by being
+using smart contracts. 
+The private key controls access by being
 the unique piece of information needed to create *digital signatures*,
 which are required to sign transactions to spend any funds in the
 account. Digital signatures are also used to authenticate owners or
@@ -4292,7 +4292,7 @@ Solidity](#smart_contracts_chapter).
 
 <div class="tip">
 
-<span class="indexterm"></span>In most wallet implementations, the
+In most wallet implementations, the
 private and public keys are stored together as a *key pair* for
 convenience. However, the public key can be trivially calculated from
 the private key, so storing only the private key is also possible.
@@ -4326,19 +4326,19 @@ There is no encryption as part of the Ethereum protocol—all messages
 that are sent as part of the operation of the Ethereum network can
 (necessarily) be read by everyone. As such, private keys are only used
 to create digital signatures for transaction
-authentication.<span class="indexterm"></span><span class="indexterm"></span>
+authentication.
 
 </div>
 
 ## Private Keys
 
-<span class="indexterm"></span>A private key is simply a number, picked
+A private key is simply a number, picked
 at random. Ownership and control of the private key is the root of user
 control over all funds associated with the corresponding Ethereum
 address, as well as access to contracts that authorize that address. The
 private key is used to create signatures required to spend ether by
 proving ownership of funds used in a transaction.
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 private key must remain secret at all times, because revealing it to
 third parties is equivalent to giving them control over the ether and
 contracts secured by that private key. The private key must also be
@@ -4357,9 +4357,9 @@ key and address can then be generated from the private key.
 
 ### Generating a Private Key from a Random Number
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The first
+
+
+The first
 and most important step in generating keys is to find a secure source of
 entropy, or randomness. Creating an Ethereum private key essentially
 involves picking a number between 1 and 2<sup>256</sup>. The exact
@@ -4426,7 +4426,7 @@ keys.
 
 The following is a randomly generated private key shown in hexadecimal
 format (256 bits shown as 64 hexadecimal digits, each 4
-bits):<span class="indexterm"></span>
+bits):
 
 ```
 f8f8a2f43c8376ccb0871305060d7b27b0554d2cc72bccf41b2705608452f315
@@ -4434,9 +4434,9 @@ f8f8a2f43c8376ccb0871305060d7b27b0554d2cc72bccf41b2705608452f315
 
 ## Public Keys
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>An
+
+
+An
 Ethereum public key is a *point* on an elliptic curve, meaning it is a
 set of *x* and *y* coordinates that satisfy the elliptic curve equation.
 
@@ -4457,7 +4457,7 @@ There are many tools and libraries that will do the math for you.
 The public key is calculated from the private key using elliptic curve
 multiplication, which is practically irreversible: *K* = *k* \* *G*,
 where *k* is the private key, *G* is a constant point called
-<span class="indexterm"></span>the *generator point*, *K* is the
+the *generator point*, *K* is the
 resulting public key, and \* is the special elliptic curve
 "multiplication" operator. Note that elliptic curve multiplication is
 not like normal multiplication. It shares functional attributes with
@@ -4478,7 +4478,7 @@ Cryptocurrency](#pkc).
 
 <div class="note">
 
-<span class="indexterm"></span>Elliptic curve multiplication is a type
+Elliptic curve multiplication is a type
 of function that cryptographers call a "one-way" function: it is easy to
 do in one direction (multiplication) and impossible to do in the reverse
 direction (division). The owner of the private key can easily create the
@@ -4495,9 +4495,9 @@ let’s look at elliptic curve cryptography in a bit more detail.
 
 ### Elliptic Curve Cryptography Explained
 
-<span class="indexterm"></span> <span class="indexterm"></span>Elliptic
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>curve cryptography is a type of
+ Elliptic
+
+curve cryptography is a type of
 asymmetric or public key cryptography based on the discrete logarithm
 problem as expressed by addition and multiplication on the points of an
 elliptic curve.
@@ -4507,7 +4507,7 @@ elliptic curve, similar to that used by Ethereum.
 
 <div class="note">
 
-<span class="indexterm"></span>Ethereum uses the exact same elliptic
+Ethereum uses the exact same elliptic
 curve, called `secp256k1`, as Bitcoin. That makes it possible to reuse
 many of the elliptic curve libraries and tools from Bitcoin.
 
@@ -4622,7 +4622,7 @@ coordinates of a point on the elliptic curve, then they satisfy the
 equation and the result is zero (`0L` is a long integer with value
 zero). Try it yourself, by typing `python` on a command line and copying
 each line (after the prompt `>>>`) from the
-listing<span class="indexterm"></span>.<span class="indexterm"></span>
+listing.
 
 Using Python to confirm that this point is on the elliptic curve
 
@@ -4652,7 +4652,7 @@ y =
 
 ### Elliptic Curve Arithmetic Operations
 
-<span class="indexterm"></span> <span class="indexterm"></span>A lot of
+ A lot of
 elliptic curve math looks and works very much like the integer
 arithmetic we learned at school. Specifically, we can define an addition
 operator, which instead of jumping along the number line is jumping to
@@ -4705,13 +4705,13 @@ standard way that extends addition. For a point *P* on the elliptic
 curve, if *k* is a whole number, then *k* \* *P* = *P* + *P* + *P* + … +
 *P* (*k* times). Note that *k* is sometimes (perhaps confusingly) called
 an "exponent" in this
-case.<span class="indexterm"></span><span class="indexterm"></span>
+case.
 
 ### Generating a Public Key
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Starting with a private key in the form
+
+
+Starting with a private key in the form
 of a randomly generated number *k*, we multiply it by a predetermined
 point on the curve called the *generator point* *G* to produce another
 point somewhere else on the curve, which is the corresponding public key
@@ -4727,7 +4727,7 @@ k
 
 G
 
-<span class="indexterm"></span>The generator point is specified as part
+The generator point is specified as part
 of the `secp256k1` standard; it is the same for all implementations of
 `secp256k1`, and all keys derived from that curve use the same point
 *G*. Because the generator point is always the same for all Ethereum
@@ -4771,7 +4771,7 @@ where:
     x = 6e145ccef1033dea239875dd00dfb4fee6e3348b84985c92f103444683bae07b
     y = 83b5c38e5e2b0c8529d7fa3f64d46daa1ece2d9ac14cab9477d042c84c32ccd0
 
-<span class="indexterm"></span><span class="indexterm"></span>In
+In
 Ethereum you may see public keys represented as a serialization of 130
 hexadecimal characters (65 bytes). This is adopted from a standard
 serialization format proposed by the industry consortium Standards for
@@ -4807,30 +4807,30 @@ c8529d7fa3f64d46daa1ece2d9ac14cab9477d042c84c32ccd0
 
 ### Elliptic Curve Libraries
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>There are
+
+There are
 a couple of implementations of the `secp256k1` elliptic curve that are
 used in cryptocurrency-related projects:
 
-<span class="indexterm"></span>[OpenSSL](https://www.openssl.org/)  
+[OpenSSL](https://www.openssl.org/)  
 The OpenSSL library offers a comprehensive set of cryptographic
 primitives, including a full implementation of `secp256k1`. For example,
 to derive the public key, the function `EC_POINT_mul` can be used.
 
-<span class="indexterm"></span>[libsecp256k1](https://github.com/bitcoin-core/secp256k1)  
+[libsecp256k1](https://github.com/bitcoin-core/secp256k1)  
 Bitcoin Core’s `libsecp256k1` is a C-language implementation of the
 `secp256k1` elliptic curve and other cryptographic primitives. It was
 written from scratch to replace OpenSSL in Bitcoin Core software, and is
 considered superior in both performance and
-security.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+security.
 
 ## Cryptographic Hash Functions
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Cryptographic
+
+Cryptographic
 hash functions are used throughout Ethereum. In fact, hash functions are
 used extensively in almost all cryptographic systems—a fact captured by
-<span class="indexterm"></span>cryptographer [Bruce
+cryptographer [Bruce
 Schneier](http://bit.ly/2Q79qZp), who said, "Much more than encryption
 algorithms, one-way hash functions are the workhorses of modern
 cryptography."
@@ -4839,13 +4839,13 @@ In this section we will discuss hash functions, explore their basic
 properties, and see how those properties make them so useful in so many
 areas of modern cryptography. We address hash functions here because
 they are part of the transformation of Ethereum public keys into
-addresses. <span class="indexterm"></span>They can also be used to
+addresses. They can also be used to
 create *digital fingerprints*, which aid in the verification of data.
 
-<span class="indexterm"></span>In simple terms, a [*hash
+In simple terms, a [*hash
 function*](http://bit.ly/2CR26gD) is “any function that can be used to
 map data of arbitrary size to data of fixed size.”
-<span class="indexterm"></span>The input to a hash function is called a
+The input to a hash function is called a
 *pre-image*, the *message*, or simply the *input data*. The output is
 called the *hash*. [*Cryptographic hash
 functions*](http://bit.ly/2Jrn3jM) are a special subcategory that have
@@ -4861,12 +4861,12 @@ candidate for a matching output; given that the search space is
 virtually infinite, it is easy to understand the practical impossibility
 of the task. Even if you find some input data that creates a matching
 hash, it may not be the original input data: hash functions are
-"many-to-one" functions. <span class="indexterm"></span>Finding two sets
+"many-to-one" functions. Finding two sets
 of input data that hash to the same output is called finding a *hash
 collision*. Roughly speaking, the better the hash function, the rarer
 hash collisions are. For Ethereum, they are effectively impossible.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Let’s
+ Let’s
 take a closer look at the main properties of cryptographic hash
 functions. These include:
 
@@ -4914,25 +4914,25 @@ various layers of the system.
 
 ### Ethereum’s Cryptographic Hash Function: Keccak-256
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Ethereum
+
+Ethereum
 uses the *Keccak-256* cryptographic hash function in many places.
 Keccak-256 was designed as a candidate for the SHA-3 Cryptographic Hash
 Function Competition held in 2007 by the
-<span class="indexterm"></span><span class="indexterm"></span>National
+National
 Institute of Standards and Technology. Keccak was the winning algorithm,
 which became standardized as
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Federal
+Federal
 Information Processing Standard (FIPS) 202 in 2015.
 
 However, during the period when Ethereum was developed, the NIST
 standardization was not yet finalized. NIST adjusted some of the
 parameters of Keccak after the completion of the standards process,
 allegedly to improve its efficiency. This was occurring at the same time
-as heroic whistleblower <span class="indexterm"></span>Edward Snowden
+as heroic whistleblower Edward Snowden
 revealed documents that imply that NIST may have been improperly
 influenced by the National Security Agency to intentionally weaken the
-<span class="indexterm"></span>Dual_EC_DRBG random-number generator
+Dual_EC_DRBG random-number generator
 standard, effectively placing a backdoor in the standard random number
 generator. The result of this controversy was a backlash against the
 proposed changes and a significant delay in the standardization of
@@ -4953,13 +4953,13 @@ FIPS-202 SHA-3 for the same input.
 
 ### Which Hash Function Am I Using?
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>How can
+
+How can
 you tell if the software library you are using implements FIPS-202 SHA-3
 or Keccak-256, if both might be called "SHA-3"?
 
 An easy way to tell is to use a *test vector*, an expected output for a
-given input. <span class="indexterm"></span>The test most commonly used
+given input. The test most commonly used
 for a hash function is the *empty input*. If you run the hash function
 with an empty string as input you should see the following results:
 
@@ -4986,12 +4986,12 @@ all code, opcodes, and libraries to `keccak256`. See
 
 Next, let’s examine the first application of Keccak-256 in Ethereum,
 which is to produce Ethereum addresses from public
-keys.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+keys.
 
 ## Ethereum Addresses
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum addresses are *unique
+
+Ethereum addresses are *unique
 identifiers* that are derived from public keys or contracts using the
 Keccak-256 one-way hash function.
 
@@ -5035,11 +5035,11 @@ indicates they are hexadecimal-encoded, like this:
 
 ### Ethereum Address Formats
 
-<span class="indexterm"></span> <span class="indexterm"></span>Ethereum
+ Ethereum
 addresses are hexadecimal numbers, identifiers derived from the last 20
 bytes of the Keccak-256 hash of the public key.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Unlike
+ Unlike
 Bitcoin addresses, which are encoded in the user interface of all
 clients to include a built-in checksum to protect against mistyped
 addresses, Ethereum addresses are presented as raw hexadecimal without
@@ -5060,11 +5060,11 @@ the encoding options next.
 
 ### Inter Exchange Client Address Protocol
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>The
+
+The
 *Inter exchange Client Address Protocol* (ICAP) is an Ethereum address
 encoding that is partly compatible with the
-<span class="indexterm"></span><span class="indexterm"></span>International
+International
 Bank Account Number (IBAN) encoding, offering a versatile, checksummed,
 and interoperable encoding for Ethereum addresses. ICAP addresses can
 encode Ethereum addresses or common names registered with an Ethereum
@@ -5108,7 +5108,7 @@ an *asset identifier* (e.g., ETH), a name service (e.g., XREG), and a
 `XE##ETHXREGKITTYCATS` (20 characters long), where the `##` should be
 replaced by the two computed checksum characters.
 
-<span class="indexterm"></span><span class="indexterm"></span>We can use
+We can use
 the `helpeth` command-line tool to create ICAP addresses. You can get
 helpeth by installing it with:
 
@@ -5157,14 +5157,14 @@ an IBAN-compatible "Direct" encoded ICAP address.
 </div>
 
 At this time, ICAP is unfortunately only supported by a few
-wallets.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+wallets.
 
 ### Hex Encoding with Checksum in Capitalization (EIP-55)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Due to the slow deployment of ICAP and
+
+
+
+Due to the slow deployment of ICAP and
 name services, a standard was proposed by [Ethereum Improvement Proposal
 55
 (EIP-55)](https://github.com/Ethereum/EIPs/blob/master/EIPS/eip-55.md).
@@ -5240,7 +5240,7 @@ Hash   : 23a69c1653e4ebbb619b0b2cb8a9bad49892a8b9...
 
 #### Detecting an error in an EIP-55 encoded address
 
-<span class="indexterm"></span> <span class="indexterm"></span>Now,
+ Now,
 let’s look at how EIP-55 addresses will help us find an error. Let’s
 assume we have printed out an Ethereum address, which is EIP-55 encoded:
 
@@ -5285,7 +5285,7 @@ capitalized. Remember that the capitalization is the encoding of the
 The capitalization of the address we input doesn’t match the checksum
 just calculated, meaning something has changed in the address, and an
 error has been
-introduced<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+introduced.
 
 ## Conclusions
 
@@ -5296,11 +5296,11 @@ verification of Ethereum addresses. We also looked at digital signatures
 and how they can demonstrate ownership of a private key without
 revealing that private key. In [Wallets](#wallets_chapter), we will put
 these ideas together and look at how wallets can be used to manage
-collections of keys.<span class="indexterm"></span>
+collections of keys.
 
 # Wallets
 
-<span class="indexterm"></span>The word "wallet" is used to describe a
+The word "wallet" is used to describe a
 few different things in Ethereum.
 
 At a high level, a wallet is a software application that serves as the
@@ -5309,7 +5309,7 @@ user’s money, managing keys and addresses, tracking the balance, and
 creating and signing transactions. In addition, some Ethereum wallets
 can also interact with contracts, such as ERC20 tokens.
 
-<span class="indexterm"></span> <span class="indexterm"></span>More
+ More
 narrowly, from a programmer’s perspective, the word *wallet* refers to
 the system used to store and manage a user’s keys. Every wallet has a
 key-management component. For some wallets, that’s all there is. Other
@@ -5325,7 +5325,7 @@ and as systems for managing these keys.
 
 ## Wallet Technology Overview
 
-<span class="indexterm"></span> <span class="indexterm"></span>In this
+ In this
 section we summarize the various technologies used to construct
 user-friendly, secure, and flexible Ethereum wallets.
 
@@ -5342,7 +5342,7 @@ A common misconception about Ethereum is that Ethereum wallets contain
 ether or tokens. In fact, very strictly speaking, the wallet holds only
 keys. The ether or other tokens are recorded on the Ethereum blockchain.
 Users control the tokens on the network by signing transactions with the
-keys in their wallets. <span class="indexterm"></span>In a sense, an
+keys in their wallets. In a sense, an
 Ethereum wallet is a *keychain*. Having said that, given that the keys
 held by the wallet are the only things that are needed to transfer ether
 or tokens to others, in practice this distinction is fairly irrelevant.
@@ -5371,26 +5371,26 @@ The ether is stored on the blockchain.
 There are two primary types of wallets, distinguished by whether the
 keys they contain are related to each other or not.
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The first type is a *nondeterministic
+
+The first type is a *nondeterministic
 wallet*, where each key is independently generated from a different
 random number. The keys are not related to each other.
-<span class="indexterm"></span>This type of wallet is also known as a
+This type of wallet is also known as a
 JBOK wallet, from the phrase "Just a Bunch of Keys.”
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The second type of wallet is a
+
+
+The second type of wallet is a
 *deterministic wallet*, where all the keys are derived from a single
 master key, known as the *seed*. All the keys in this type of wallet are
 related to each other and can be generated again if one has the original
-seed. <span class="indexterm"></span>There are a number of different
+seed. There are a number of different
 *key derivation* methods used in deterministic wallets. The most
 commonly used derivation method uses a tree-like structure, as described
 in [Hierarchical Deterministic Wallets (BIP-32/BIP-44)](#hd_wallets).
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>To make deterministic wallets slightly
+
+To make deterministic wallets slightly
 more secure against data-loss accidents, such as having your phone
 stolen or dropping it in the toilet, the seeds are often encoded as a
 list of words (in English or another language) for you to write down and
@@ -5424,7 +5424,7 @@ funds and smart contracts. The "type 0" nondeterministic wallets are the
 hardest to deal with, because they create a new wallet file for every
 new address in a "just in time" manner.
 
-<span class="indexterm"></span>Nevertheless, many Ethereum clients
+Nevertheless, many Ethereum clients
 (including `geth`) use a *keystore* file, which is a JSON-encoded file
 that contains a single (randomly generated) private key, encrypted by a
 passphrase for extra security. The JSON file’s contents look like this:
@@ -5455,7 +5455,7 @@ passphrase for extra security. The JSON file’s contents look like this:
 }
 ```
 
-<span class="indexterm"></span><span class="indexterm"></span>The
+The
 keystore format uses a *key derivation function* (KDF), also known as a
 password stretching algorithm, which protects against brute-force,
 dictionary, and rainbow table attacks. In simple terms, the private key
@@ -5477,15 +5477,15 @@ The use of nondeterministic wallets is discouraged for anything other
 than simple tests. They are too cumbersome to back up and use for
 anything but the most basic of situations. Instead, use an
 industry-standard–based HD wallet with a mnemonic seed for
-backup.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+backup.
 
 </div>
 
 ### Deterministic (Seeded) Wallets
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Deterministic or "seeded" wallets are
+
+
+Deterministic or "seeded" wallets are
 wallets that contain private keys that are all derived from a single
 master key, or seed. The seed is a randomly generated number that is
 combined with other data, such as an index number or "chain code" (see
@@ -5504,8 +5504,8 @@ be seen as an advantage.
 
 ### Hierarchical Deterministic Wallets (BIP-32/BIP-44)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Deterministic
+
+Deterministic
 wallets were developed to make it easy to derive many keys from a single
 seed. Currently, the most advanced form of deterministic wallet is the
 *hierarchical deterministic* (HD) wallet defined by Bitcoin’s [*BIP-32
@@ -5537,11 +5537,11 @@ private keys that can spend the funds.
 
 ### Seeds and Mnemonic Codes (BIP-39)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There are many ways to encode a private
+
+
+
+
+There are many ways to encode a private
 key for secure backup and retrieval. The currently preferred method is
 using a sequence of words that, when taken together in the correct
 order, can uniquely recreate the private key. This is sometimes known as
@@ -5587,11 +5587,11 @@ earlier advice to back up with pen and paper.
 In summary, the use of a recovery word list to encode the seed for an HD
 wallet makes for the easiest way to safely export, transcribe, record on
 paper, read without error, and import a private key set into another
-wallet.<span class="indexterm"></span>
+wallet.
 
 ## Wallet Best Practices
 
-<span class="indexterm"></span> <span class="indexterm"></span>As
+ As
 cryptocurrency wallet technology has matured, certain common industry
 standards have emerged that make wallets broadly interoperable, easy to
 use, secure, and flexible. These standards also allow wallets to derive
@@ -5618,7 +5618,7 @@ another wallet, recovering all keys and addresses.
 
 Some examples of software wallets supporting these standards include
 (listed alphabetically) Jaxx, MetaMask, MyCrypto, and MyEtherWallet
-(MEW). <span class="indexterm"></span>Examples of hardware wallets
+(MEW). Examples of hardware wallets
 supporting these standards include Keepkey, Ledger, and Trezor.
 
 The following sections examine each of these technologies in detail.
@@ -5634,10 +5634,10 @@ following sections.
 
 ### Mnemonic Code Words (BIP-39)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Mnemonic code words are word sequences
+
+
+
+Mnemonic code words are word sequences
 that encode a random number used as a seed to derive a deterministic
 wallet. The sequence of words is sufficient to recreate the seed, and
 from there recreate the wallet and all the derived keys. A wallet
@@ -5651,7 +5651,7 @@ correctly transcribe.
 
 <div class="note">
 
-<span class="indexterm"></span>Mnemonic words are often confused with
+Mnemonic words are often confused with
 "brainwallets." They are not the same. The primary difference is that a
 brainwallet consists of words chosen by the user, whereas mnemonic words
 are created randomly by the wallet and presented to the user. This
@@ -5682,10 +5682,10 @@ words](#generating_mnemonic_words) and steps 7 through 9 are shown in
 
 #### Generating mnemonic words
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Mnemonic words are generated
+
+
+
+Mnemonic words are generated
 automatically by the wallet using the standardized process defined in
 BIP-39. The wallet starts from a source of entropy, adds a checksum, and
 then maps the entropy to a word list:
@@ -5733,15 +5733,15 @@ mnemonic words</figcaption>
 
 #### From mnemonic to seed
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The mnemonic words represent entropy with
+
+
+The mnemonic words represent entropy with
 a length of 128 to 256 bits. The entropy is then used to derive a longer
 (512-bit) seed through the use of the key-stretching function
-<span class="indexterm"></span>PBKDF2. The seed produced is used to
+PBKDF2. The seed produced is used to
 build a deterministic wallet and derive its keys.
 
-<span class="indexterm"></span><span class="indexterm"></span>The
+The
 key-stretching function takes two parameters: the mnemonic and a *salt*.
 The purpose of a salt in a key-stretching function is to make it
 difficult to build a lookup table enabling a brute-force attack. In the
@@ -5817,10 +5817,10 @@ seeds they produce.
 
 #### Optional passphrase in BIP-39
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The BIP-39 standard allows the use of an
+
+
+
+The BIP-39 standard allows the use of an
 optional passphrase in the derivation of the seed. If no passphrase is
 used, the mnemonic is stretched with a salt consisting of the constant
 string `"mnemonic"`, producing a specific 512-bit seed from any given
@@ -5846,8 +5846,8 @@ The optional passphrase creates two important features:
 - A second factor (something memorized) that makes a mnemonic useless on
   its own, protecting mnemonic backups from compromise by a thief.
 
-- <span class="indexterm"></span><span class="indexterm"></span>
-  <span class="indexterm"></span>A form of plausible deniability or
+- 
+  A form of plausible deniability or
   "duress wallet," where a chosen passphrase leads to a wallet with a
   small amount of funds, used to distract an attacker from the "real"
   wallet that contains the majority of funds.
@@ -5869,9 +5869,9 @@ recover the cryptocurrency.
 
 #### Working with mnemonic codes
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>BIP-39 is implemented as a library in
+
+
+BIP-39 is implemented as a library in
 many different programming languages. For example:
 
 [python-mnemonic](https://github.com/trezor/python-mnemonic)  
@@ -5891,7 +5891,7 @@ page](#a_bip39_generator_as_a_standalone_web_page)), which is extremely
 useful for testing and experimentation. The [Mnemonic Code
 Converter](https://iancoleman.io/bip39/) generates mnemonics, seeds, and
 extended private keys. It can be used offline in a browser, or accessed
-online.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+online.
 
 <figure id="a_bip39_generator_as_a_standalone_web_page">
 <img src="images/bip39_web.png" alt="BIP-39 generator web-page" />
@@ -5900,9 +5900,9 @@ online.<span class="indexterm"></span><span class="indexterm"></span><span class
 
 ### Creating an HD Wallet from the Seed
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>HD wallets are created from a single
+
+
+HD wallets are created from a single
 *root seed*, which is a 128-, 256-, or 512-bit random number. Most
 commonly, this seed is generated from a mnemonic as detailed in the
 previous section.
@@ -5916,10 +5916,10 @@ derived.
 
 ### HD Wallets (BIP-32) and Paths (BIP-43/44)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Most HD wallets follow the
-<span class="indexterm"></span> <span class="indexterm"></span>BIP-32
+
+
+Most HD wallets follow the
+ BIP-32
 standard, which has become a *de facto* industry standard for
 deterministic key generation.
 
@@ -5953,20 +5953,20 @@ should not use the keys produced by this site with real funds.
 
 #### Extended public and private keys
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In BIP-32 terminology, keys can be
+
+
+
+In BIP-32 terminology, keys can be
 "extended.” With the right mathematical operations, these extended
 "parent" keys can be used to derive "child" keys, thus producing the
 hierarchy of keys and addresses described earlier. A parent key doesn’t
 have to be at the top of the tree. It can be picked out from anywhere in
-the tree hierarchy. <span class="indexterm"></span>Extending a key
+the tree hierarchy. Extending a key
 involves taking the key itself and appending a special *chain code* to
 it. A chain code is a 256-bit binary string that is mixed with each key
 to produce child keys.
 
-<span class="indexterm"></span> <span class="indexterm"></span>If the
+ If the
 key is a private key, it becomes an *extended private key* distinguished
 by the prefix `xprv`:
 
@@ -5974,7 +5974,7 @@ by the prefix `xprv`:
 xprv9s21ZrQH143K2JF8RafpqtKiTbsbaxEeUaMnNHsm5o6wCW3z8ySyH4UxFVSfZ8n7ESu7fgir8i...
 ```
 
-<span class="indexterm"></span> <span class="indexterm"></span>An
+ An
 *extended public key* is distinguished by the prefix `xpub`:
 
 ```
@@ -6009,10 +6009,10 @@ the ecommerce server. That approach is cumbersome and requires constant
 maintenance to ensure that the server doesn’t run out of keys, hence the
 preference to use extended public keys from HD wallets.
 
-<span class="indexterm"></span>Another common application of this
+Another common application of this
 solution is for
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>cold-storage or hardware wallets. In that
+
+cold-storage or hardware wallets. In that
 scenario, the extended private key can be stored in a hardware wallet,
 while the extended public key can be kept online. The user can create
 "receive" addresses at will, while the private keys are safely stored
@@ -6022,11 +6022,11 @@ hardware wallet device.
 
 #### Hardened child key derivation
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The ability to derive a branch of public
+
+
+
+
+The ability to derive a branch of public
 keys from an extended public key, or *xpub*, is very useful, but it
 comes with a potential risk. Access to an xpub does not give access to
 child private keys. However, because the xpub contains the chain code
@@ -6054,7 +6054,7 @@ compromise of the master keys.
 
 #### Index numbers for normal and hardened derivation
 
-<span class="indexterm"></span> <span class="indexterm"></span>It is
+ It is
 clearly desirable to be able to derive more than one child key from a
 given parent key. To manage this, an index number is used. Each index
 number, when combined with a parent key using the special child
@@ -6077,13 +6077,13 @@ whereas the first hardened child (index `0x80000000`) is displayed as
 `0'`. In sequence, then, the second hardened key would have index of
 `0x80000001` and would be displayed as `1'`, and so on. When you see an
 HD wallet index `i'`, that means 2<sup>31</sup> +
-`i`.<span class="indexterm"></span>
+`i`.
 
 #### HD wallet key identifier (path)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Keys in an HD wallet are identified using
+
+
+Keys in an HD wallet are identified using
 a "path" naming convention, with each level of the tree separated by a
 slash (/) character (see [HD wallet path examples](#hd_path_table)).
 Private keys derived from the master private key start with `m`. Public
@@ -6109,8 +6109,8 @@ HD wallet path examples
 
 #### Navigating the HD wallet tree structure
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The HD
+
+The HD
 wallet tree structure is tremendously flexible. The flip side of this is
 that it also allows for unbounded complexity: each parent extended key
 can have 4 billion children: 2 billion normal children and 2 billion
@@ -6121,7 +6121,7 @@ can become quite difficult to navigate these very large trees.
 
 Two BIPs offer a way to manage this potential complexity by creating
 standards for the structure of HD wallet trees.
-<span class="indexterm"></span>BIP-43 proposes the use of the first
+BIP-43 proposes the use of the first
 hardened child index as a special identifier that signifies the
 "purpose" of the tree structure. Based on BIP-43, an HD wallet should
 use only one level-1 branch of the tree, with the index number defining
@@ -6130,7 +6130,7 @@ the rest of the tree. More specifically, an HD wallet using only branch
 `m/i'/…` is intended to signify a specific purpose and that purpose is
 identified by index number `i`.
 
-<span class="indexterm"></span>Extending that specification, BIP-44
+Extending that specification, BIP-44
 proposes a multicurrency multiaccount structure signified by setting the
 "purpose" number to `44'`. All HD wallets following the BIP-44 structure
 are identified by the fact that they only use one branch of the tree:
@@ -6172,7 +6172,7 @@ tree the `address_index`. For example, the third receiving address for
 Ethereum payments in the primary account would be `M/44'/60'/0'/0/2`.
 [BIP-44 HD wallet structure examples](#bip44_path_examples) shows a few
 more
-examples<span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span>
+examples.
 
 | HD path            | Key described                                                                        |
 |--------------------|--------------------------------------------------------------------------------------|
@@ -6188,11 +6188,11 @@ Wallets are the foundation of any user-facing blockchain application.
 They allow users to manage collections of keys and addresses. Wallets
 also allow users to demonstrate their ownership of ether, and authorize
 transactions, by applying digital signatures, as we will see in
-[Transactions](#tx_chapter).<span class="indexterm"></span>
+[Transactions](#tx_chapter).
 
 # Transactions
 
-<span class="indexterm"></span>Transactions are signed messages
+Transactions are signed messages
 originated by an externally owned account (EOA), transmitted by the
 Ethereum network, and recorded on the Ethereum blockchain. This basic
 definition conceals a lot of surprising and fascinating details. Another
@@ -6212,7 +6212,7 @@ although you may find the details interesting!
 
 ## The Structure of a Transaction
 
-<span class="indexterm"></span> <span class="indexterm"></span>First
+ First
 let’s take a look at the basic structure of a transaction, as it is
 serialized and transmitted on the Ethereum network. Each client and
 application that receives a serialized transaction will store it
@@ -6249,7 +6249,7 @@ v,r,s
 The three components of an ECDSA digital signature of the originating
 EOA
 
-<span class="indexterm"></span><span class="indexterm"></span>The
+The
 transaction message’s structure is serialized using the Recursive Length
 Prefix (RLP) encoding scheme, which was created specifically for simple,
 byte-perfect data serialization in Ethereum. All numbers in Ethereum are
@@ -6280,8 +6280,8 @@ form part of the transaction message itself.
 
 ## The Transaction Nonce
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The nonce is one of the most important
+
+The nonce is one of the most important
 and least understood components of a transaction. The definition in the
 Yellow Paper (see [Further Reading](#references)) reads:
 
@@ -6351,7 +6351,7 @@ actually vital for an *account-based* protocol, in contrast to the
 
 ### Keeping Track of Nonces
 
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 practical terms, the nonce is an up-to-date count of the number of
 *confirmed* (i.e., on-chain) transactions that have originated from an
 account. To find out what the nonce is, you can interrogate the
@@ -6460,7 +6460,7 @@ confirmed) can you trust the output of `getTransactionCount` to start
 your nonce counter. Thereafter, keep track of the nonce in your
 application until each transaction confirms.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Parity’s
+ Parity’s
 JSON RPC interface offers the `parity_nextNonce` function, which returns
 the next nonce that should be used in a transaction. The
 `parity_nextNonce` function counts nonces correctly, even if you
@@ -6485,7 +6485,7 @@ we are using a command-line HTTP client to access it.
 
 ### Gaps in Nonces, Duplicate Nonces, and Confirmation
 
-<span class="indexterm"></span> <span class="indexterm"></span>It is
+ It is
 important to keep track of nonces if you are creating transactions
 programmatically, especially if you are doing so from multiple
 independent processes simultaneously.
@@ -6514,9 +6514,9 @@ nonce is validated by the network, all the broadcast transactions with
 subsequent nonces will incrementally become valid; it is not possible to
 "recall" a transaction!
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If, on the other hand, you accidentally
+
+
+If, on the other hand, you accidentally
 duplicate a nonce, for example by transmitting two transactions with the
 same nonce but different recipients or values, then one of them will be
 confirmed and one will be rejected. Which one is confirmed will be
@@ -6530,9 +6530,9 @@ trying to do this concurrently, as we will see in the next section.
 
 ### Concurrency, Transaction Origination, and Nonces
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Concurrency is a complex aspect of
+
+
+Concurrency is a complex aspect of
 computer science, and it crops up unexpectedly sometimes, especially in
 decentralized and distributed real-time systems like Ethereum.
 
@@ -6582,13 +6582,13 @@ creating bottlenecks such as a single process handling all withdrawal
 transactions in an exchange, or setting up multiple hot wallets that can
 work completely independently for withdrawals and only need to be
 intermittently
-rebalanced.<span class="indexterm"></span><span class="indexterm"></span>
+rebalanced.
 
 ## Transaction Gas
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>We talked about gas a little in earlier
+
+
+We talked about gas a little in earlier
 chapters, and we discuss it in more detail in [Gas](#gas). However,
 let’s cover some basics about the role of the `gasPrice` and `gasLimit`
 components of a transaction.
@@ -6607,7 +6607,7 @@ ether, and also as a way to manage the important and sensitive ratios
 between the costs of the various resources that gas pays for (namely,
 computation, memory, and storage).
 
-<span class="indexterm"></span>The `gasPrice` field in a transaction
+The `gasPrice` field in a transaction
 allows the transaction originator to set the price they are willing to
 pay in exchange for gas. The price is measured in wei per gas unit. For
 example, in the sample transaction in [Ethereum Basics](#intro_chapter)
@@ -6649,7 +6649,7 @@ web3.eth.getGasPrice(console.log)
 
 \> null BigNumber { s: 1, e: 10, c: \[ 10000000000 \] }
 
-<span class="indexterm"></span>The second important field related to gas
+The second important field related to gas
 is `gasLimit`. In simple terms, `gasLimit` gives the maximum number of
 units of gas the transaction originator is willing to buy in order to
 complete the transaction. For simple payments, meaning transactions that
@@ -6702,11 +6702,11 @@ deducted from your account until the transaction finishes executing. You
 are only billed for gas actually consumed by your transaction, but you
 have to have enough balance for the maximum amount you are willing to
 pay before you send your
-transaction.<span class="indexterm"></span><span class="indexterm"></span>
+transaction.
 
 ## Transaction Recipient
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 recipient of a transaction is specified in the `to` field. This contains
 a 20-byte Ethereum address. The address can be an EOA or a contract
 address.
@@ -6728,7 +6728,7 @@ level.
 
 </div>
 
-<span class="indexterm"></span>Sending a transaction to the wrong
+Sending a transaction to the wrong
 address will probably *burn* the ether sent, rendering it forever
 inaccessible (unspendable), since most addresses do not have a known
 private key and therefore no signature can be generated to spend it. It
@@ -6742,14 +6742,14 @@ ether holders (in proportion to the amount of ether they hold).
 
 ## Transaction Value and Data
 
-<span class="indexterm"></span> <span class="indexterm"></span>The main
+ The main
 "payload" of a transaction is contained in
-<span class="indexterm"></span><span class="indexterm"></span>two
+two
 fields: `value` and `data`. Transactions can have both value and data,
 only value, only data, or neither value nor data. All four combinations
 are valid.
 
-<span class="indexterm"></span><span class="indexterm"></span>A
+A
 transaction with only value is a *payment*. A transaction with only data
 is an *invocation*. A transaction with both value and data is both a
 payment and an invocation. A transaction with neither value nor
@@ -6839,10 +6839,10 @@ no value, and no data</figcaption>
 
 ### Transmitting Value to EOAs and Contracts
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>When you construct an Ethereum
+
+
+
+When you construct an Ethereum
 transaction that contains a value, it is the equivalent of a *payment*.
 Such transactions behave differently depending on whether the
 destination address is a contract or not.
@@ -6869,14 +6869,14 @@ immediately when a function is called, or as determined by conditions
 coded in a function. If the function terminates successfully (without an
 exception), then the contract’s state is updated to reflect an increase
 in the contract’s ether
-balance.<span class="indexterm"></span><span class="indexterm"></span>
+balance.
 
 ### Transmitting a Data Payload to an EOA or Contract
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>When your transaction contains data, it
+
+
+
+When your transaction contains data, it
 is most likely addressed to a contract address. That doesn’t mean you
 cannot send a data payload to an EOA—that is completely valid in the
 Ethereum protocol. However, in that case, the interpretation of the data
@@ -6891,9 +6891,9 @@ rules, unlike a contract execution.
 
 For now, let’s assume your transaction is delivering data to a contract
 address.
-<span class="indexterm"></span><span class="indexterm"></span>In that
+In that
 case, the data will be interpreted by the EVM as a *contract
-invocation*. <span class="indexterm"></span>Most contracts use this data
+invocation*. Most contracts use this data
 more specifically as a *function invocation*, calling the named function
 and passing any encoded arguments to the function.
 
@@ -6916,7 +6916,7 @@ withdrawals:
 function withdraw(uint withdraw_amount) public {
 ```
 
-<span class="indexterm"></span>The *prototype* of a function is defined
+The *prototype* of a function is defined
 as the string containing the name of the function, followed by the data
 types of each of its arguments, enclosed in parentheses and separated by
 commas. The function name here is `withdraw` and it takes a single
@@ -6959,15 +6959,15 @@ Now, we add the function selector to the amount (padded to 32 bytes):
 
 That’s the data payload for our transaction, invoking the `withdraw`
 function and requesting 0.01 ether as the
-`withdraw_amount`<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span>
+`withdraw_amount`.
 
 ## Special Transaction: Contract Creation
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>One special case that we should mention
+
+One special case that we should mention
 is a transaction that *creates a new contract* on the blockchain,
-deploying it for future use. <span class="indexterm"></span>
-<span class="indexterm"></span>Contract creation transactions are sent
+deploying it for future use. 
+Contract creation transactions are sent
 to a special destination address called the *zero address*; the `to`
 field in a contract registration transaction contains the address `0x0`.
 This address represents neither an EOA (there is no corresponding
@@ -6977,7 +6977,7 @@ special meaning "create this contract."
 
 While the zero address is intended only for contract creation, it
 sometimes receives payments from various addresses.
-<span class="indexterm"></span>There are two explanations for this:
+There are two explanations for this:
 either it is by accident, resulting in the loss of ether, or it is an
 intentional *ether burn* (deliberately destroying ether by sending it to
 an address from which it can never be spent). However, if you want to do
@@ -7096,7 +7096,7 @@ data: \\
 
 After a while, both transactions are visible on Etherscan, as shown in
 [Etherscan showing the transactions for sending and receiving
-funds](#publish_contract_transactions).<span class="indexterm"></span><span class="indexterm"></span>
+funds](#publish_contract_transactions).
 
 <figure id="publish_contract_transactions">
 <img src="images/published_contract_transactions.png"
@@ -7107,17 +7107,17 @@ sending and receiving funds</figcaption>
 
 ## Digital Signatures
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>So far, we have not delved into any
+
+So far, we have not delved into any
 detail about digital signatures. In this section, we look at how digital
 signatures work and how they can be used to present proof of ownership
 of a private key without revealing that private key.
 
 ### The Elliptic Curve Digital Signature Algorithm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The digital signature algorithm used in
+
+
+The digital signature algorithm used in
 Ethereum is the *Elliptic Curve Digital Signature Algorithm* (ECDSA).
 It’s based on elliptic curve private–public key pairs, as described in
 [Elliptic Curve Cryptography Explained](#elliptic_curve).
@@ -7126,12 +7126,12 @@ A digital signature serves three purposes in Ethereum (see the following
 sidebar). First, the signature proves that the owner of the private key,
 who is by implication the owner of an Ethereum account, has *authorized*
 the spending of ether, or execution of a contract.
-<span class="indexterm"></span>Secondly, it guarantees
+Secondly, it guarantees
 *non-repudiation*: the proof of authorization is undeniable. Thirdly,
 the signature proves that the transaction data has not been and *cannot
 be modified* by anyone after the transaction has been signed.
 
-<span class="indexterm"></span> <span class="indexterm"></span>A
+ A
 *digital signature* is a mathematical scheme for presenting the
 authenticity of digital messages or documents. A valid digital signature
 gives a recipient reason to believe that the message was created by a
@@ -7143,7 +7143,7 @@ transit (integrity).
 
 ### How Digital Signatures Work
 
-<span class="indexterm"></span> <span class="indexterm"></span>A digital
+ A digital
 signature is a mathematical scheme that consists of two parts. The first
 part is an algorithm for creating a signature, using a private key (the
 signing key), from a message (which in our case is the transaction). The
@@ -7152,9 +7152,9 @@ by only using the message and a public key.
 
 #### Creating a digital signature
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In Ethereum’s implementation of ECDSA,
+
+
+In Ethereum’s implementation of ECDSA,
 the "message" being signed is the transaction, or more accurately, the
 Keccak-256 hash of the RLP-encoded data from the transaction. The
 signing key is the EOA’s private key. The result is the signature:
@@ -7240,7 +7240,7 @@ s
 
 ### Verifying the Signature
 
-<span class="indexterm"></span> <span class="indexterm"></span>To verify
+ To verify
 the signature, one must have the signature (*r* and *s*), the serialized
 transaction, and the public key that corresponds to the private key used
 to create the signature. Essentially, verification of a signature means
@@ -7254,14 +7254,14 @@ valid for this message and public key.
 
 ### ECDSA Math
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As mentioned previously, signatures are
+
+
+As mentioned previously, signatures are
 created by a mathematical function *F*<sub>*sig*</sub> that produces a
 signature composed of two values, *r* and *s*. In this section we look
 at the function *F*<sub>*sig*</sub> in more detail.
 
-<span class="indexterm"></span>The signature algorithm first generates
+The signature algorithm first generates
 an *ephemeral* (temporary) private key in a cryptographically secure
 way. This temporary key is used in the calculation of the *r* and *s*
 values to ensure that the sender’s actual private key can’t be
@@ -7365,16 +7365,16 @@ ECDSA is necessarily a fairly complicated piece of math; a full
 explanation is beyond the scope of this book. A number of great guides
 online take you through it step by step: search for "ECDSA explained" or
 try this one:
-<http://bit.ly/2r0HhGB>.<span class="indexterm"></span><span class="indexterm"></span>
+<http://bit.ly/2r0HhGB>.
 
 </div>
 
 ### Transaction Signing in Practice
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>To produce a valid transaction, the
+
+
+
+To produce a valid transaction, the
 originator must digitally sign the message, using the Elliptic Curve
 Digital Signature Algorithm. When we say "sign the transaction" we
 actually mean "sign the Keccak-256 hash of the RLP-serialized
@@ -7410,7 +7410,7 @@ Value (v) and Public Key Recovery](#sign_prefix) for more details).
 
 <div class="note">
 
-<span class="indexterm"></span>At block \#2,675,000 Ethereum implemented
+At block \#2,675,000 Ethereum implemented
 the "Spurious Dragon" hard fork, which, among other changes, introduced
 a new signing scheme that includes transaction replay protection
 (preventing transactions meant for one network being replayed on
@@ -7424,8 +7424,8 @@ transaction message being hashed.
 
 ### Raw Transaction Creation and Signing
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In this section we’ll create a raw
+
+In this section we’ll create a raw
 transaction and sign it, using the `ethereumjs-tx` library, which can be
 installed with npm. This demonstrates the functions that would normally
 be used inside a wallet, or an application that signs transactions on
@@ -7450,8 +7450,8 @@ Signed Raw Transaction:
 
 ### Raw Transaction Creation with EIP-155
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The EIP-155 "Simple Replay Attack
+
+The EIP-155 "Simple Replay Attack
 Protection" standard specifies a replay-attack-protected transaction
 encoding, which includes a *chain identifier* inside the transaction
 data, prior to signing. This ensures that transactions created for one
@@ -7494,13 +7494,13 @@ The signature algorithm is modified slightly to encode the chain
 identifier in the `v` prefix too.
 
 For more details, see [the EIP-155
-specification](http://bit.ly/2CQUgne).<span class="indexterm"></span><span class="indexterm"></span>
+specification](http://bit.ly/2CQUgne).
 
 ## The Signature Prefix Value (v) and Public Key Recovery
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As mentioned in [The Structure of a
+
+
+As mentioned in [The Structure of a
 Transaction](#tx_struct), the transaction message doesn’t include a
 "from" field. That’s because the originator’s public key can be computed
 directly from the ECDSA signature. Once you have the public key, you can
@@ -7593,9 +7593,9 @@ calculate only one value for *R* and only one value for *K*.
 
 ## Separating Signing and Transmission (Offline Signing)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Once a transaction is signed, it is ready
+
+
+Once a transaction is signed, it is ready
 to transmit to the Ethereum network. The three steps of creating,
 signing, and broadcasting a transaction normally happen as a single
 operation, for example using `web3.eth.sendTransaction`. However, as you
@@ -7641,7 +7641,7 @@ Depending on the level of security you need, your "offline signing"
 computer can have varying degrees of separation from the online
 computer, ranging from an isolated and firewalled subnet (online but
 segregated) to a completely offline system known as an *air-gapped*
-system. <span class="indexterm"></span>In an air-gapped system there is
+system. In an air-gapped system there is
 no network connectivity at all—the computer is separated from the online
 environment by a gap of "air." To sign transactions you transfer them to
 and from the air-gapped computer using data storage media or (better) a
@@ -7653,7 +7653,7 @@ a small degree of isolation has significant security benefits. For
 example, an isolated subnet with a firewall that only allows a
 message-queue protocol through can offer a much-reduced attack surface
 and much higher security than signing on the online system.
-<span class="indexterm"></span>Many companies use a protocol such as
+Many companies use a protocol such as
 ZeroMQ (0MQ) for this purpose. With a setup like that, transactions are
 serialized and queued for signing. The queuing protocol transmits the
 serialized message, in a way similar to a TCP socket, to the signing
@@ -7662,13 +7662,13 @@ the queue (carefully), applies a signature with the appropriate key, and
 places them on an outgoing queue. The outgoing queue transmits the
 signed transactions to a computer with an Ethereum client that dequeues
 them and transmits
-them.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+them.
 
 ## Transaction Propagation
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Ethereum network uses a "flood
+
+
+The Ethereum network uses a "flood
 routing" protocol. Each Ethereum client acts as a *node* in a
 *peer-to-peer (P2P)* network, which (ideally) forms a *mesh* network. No
 network node is special: they all act as equal peers. We will use the
@@ -7679,7 +7679,7 @@ Transaction propagation starts with the originating Ethereum node
 creating (or receiving from offline) a signed transaction. The
 transaction is validated and then transmitted to all the other Ethereum
 nodes that are *directly* connected to the originating node.
-<span class="indexterm"></span>On average, each Ethereum node maintains
+On average, each Ethereum node maintains
 connections to at least 13 other nodes, called its *neighbors*. Each
 neighbor node validates the transaction as soon as they receive it. If
 they agree that it is valid, they store a copy and propagate it to all
@@ -7701,9 +7701,9 @@ applied to blockchain networks.
 
 ## Recording on the Blockchain
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>While all the nodes in Ethereum are equal
+
+
+While all the nodes in Ethereum are equal
 peers, some of them are operated by *miners* and are feeding
 transactions and blocks to *mining farms*, which are computers with
 high-performance graphics processing units (GPUs). The mining computers
@@ -7727,8 +7727,8 @@ of the singleton and left an indelible mark on the blockchain.
 
 ## Multiple-Signature (Multisig) Transactions
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If you are familiar with Bitcoin’s
+
+If you are familiar with Bitcoin’s
 scripting capabilities, you know that it is possible to create a Bitcoin
 multisig account which can only spend funds when multiple parties sign
 the transaction (e.g., 2 of 2 or 3 of 4 signatures). Ethereum’s basic
@@ -7769,19 +7769,19 @@ system. Transactions are the "inputs" that cause the Ethereum Virtual
 Machine to evaluate contracts, update balances, and more generally
 modify the state of the Ethereum blockchain. Next, we will work with
 smart contracts in a lot more detail and learn how to program in the
-Solidity contract-oriented language.<span class="indexterm"></span>
+Solidity contract-oriented language.
 
 # Smart Contracts and Solidity
 
-<span class="indexterm"></span>As we discussed in [Ethereum
+As we discussed in [Ethereum
 Basics](#intro_chapter), there are two different types of accounts in
-Ethereum: <span class="indexterm"></span>
-<span class="indexterm"></span>externally owned accounts (EOAs) and
+Ethereum: 
+externally owned accounts (EOAs) and
 contract accounts. EOAs are controlled by users, often via software such
 as a wallet application that is external to the Ethereum platform.
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In contrast, contract accounts are
+
+
+In contrast, contract accounts are
 controlled by program code (also commonly referred to as “smart
 contracts”) that is executed by the Ethereum Virtual Machine. In short,
 EOAs are simple accounts without any associated code or data storage,
@@ -7796,10 +7796,10 @@ program code that controls them.
 
 ## What Is a Smart Contract?
 
-<span class="indexterm"></span> <span class="indexterm"></span>The term
+ The term
 *smart contract* has been used over the years to describe a wide variety
 of different things.
-<span class="indexterm"></span><span class="indexterm"></span>In the
+In the
 1990s, cryptographer Nick Szabo coined the term and defined it as “a set
 of promises, specified in digital form, including protocols within which
 the parties perform on the other promises.” Since then, the concept of
@@ -7843,7 +7843,7 @@ computer."
 
 ## Life Cycle of a Smart Contract
 
-<span class="indexterm"></span> <span class="indexterm"></span>Smart
+ Smart
 contracts are typically written in a high-level language, such as
 Solidity. But in order to run, they must be compiled to the low-level
 bytecode that runs in the EVM. Once compiled, they are deployed on the
@@ -7862,8 +7862,8 @@ code them into the smart contract). You certainly don’t receive the
 private key for the contract account, which in fact does not exist—we
 can say that smart contract accounts own themselves.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Importantly, contracts *only run if they
+
+Importantly, contracts *only run if they
 are called by a transaction*. All smart contracts in Ethereum are
 executed, ultimately, because of a transaction initiated from an EOA. A
 contract can call another contract that can call another contract, and
@@ -7875,8 +7875,8 @@ part of a chain of contract calls. It is also worth noting that smart
 contracts are not executed "in parallel" in any sense—the Ethereum world
 computer can be considered to be a single-threaded machine.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Transactions are *atomic*, they are
+
+Transactions are *atomic*, they are
 either successfully terminated or reverted. A successful termination of
 a transaction means different things under different scenarios: (1) if a
 transaction is sent from an EOA to another EOA then any changes to the
@@ -7899,16 +7899,16 @@ still recorded as having been attempted, and the ether spent on gas for
 the execution is deducted from the originating account, but it otherwise
 has no other effects on contract or account state.
 
-<span class="indexterm"></span> <span class="indexterm"></span>As
+ As
 mentioned previously, it is important to remember that a contract’s code
 cannot be changed. However, a contract can be “deleted,” removing the
 code and its internal state (storage) from its address, leaving a blank
 account. Any transactions sent to that account address after the
 contract has been deleted do not result in any code execution, because
 there is no longer any code there to execute.
-<span class="indexterm"></span>To delete a contract, you execute an EVM
+To delete a contract, you execute an EVM
 opcode called `SELFDESTRUCT` (previously called `SUICIDE`).
-<span class="indexterm"></span>That operation costs “negative gas,” a
+That operation costs “negative gas,” a
 gas refund, thereby incentivizing the release of network client
 resources from the deletion of stored state. Deleting a contract in this
 way does not remove the transaction history (past) of the contract,
@@ -7920,10 +7920,10 @@ opcode, or it is inaccessible, the smart contract cannot be deleted.
 
 ## Introduction to Ethereum High-Level Languages
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The EVM is a virtual machine that runs a
-<span class="indexterm"></span>special form of code called *EVM
+
+
+The EVM is a virtual machine that runs a
+special form of code called *EVM
 bytecode*, analogous to your computer’s CPU, which runs machine code
 such as x86_64. We will examine the operation and language of the EVM in
 much more detail in [The Ethereum Virtual Machine](#evm_chapter). In
@@ -7949,16 +7949,16 @@ emerged for programming smart contracts. Ethereum has several such
 languages, together with the compilers needed to produce EVM-executable
 bytecode.
 
-<span class="indexterm"></span>In general, programming languages can be
+In general, programming languages can be
 classified into two broad programming paradigms: *declarative* and
 *imperative*, also known as *functional* and *procedural*, respectively.
 In declarative programming, we write functions that express the *logic*
 of a program, but not its *flow*.
-<span class="indexterm"></span>Declarative programming is used to create
+Declarative programming is used to create
 programs where there are no *side effects*, meaning that there are no
 changes to state outside of a function. Declarative programming
 languages include Haskell and SQL.
-<span class="indexterm"></span><span class="indexterm"></span>Imperative
+Imperative
 programming, by contrast, is where a programmer writes a set of
 procedures that combine the logic and flow of a program. Imperative
 programming languages include C++ and Java. Some languages are “hybrid,”
@@ -7992,29 +7992,29 @@ Currently supported high-level programming languages for smart contracts
 include (ordered by approximate age):
 
 LLL  
-<span class="indexterm"></span>A functional (declarative) programming
+A functional (declarative) programming
 language, with Lisp-like syntax. It was the first high-level language
 for Ethereum smart contracts but is rarely used today.
 
 Serpent  
-<span class="indexterm"></span>A procedural (imperative) programming
+A procedural (imperative) programming
 language with a syntax similar to Python. Can also be used to write
 functional (declarative) code, though it is not entirely free of side
 effects.
 
 Solidity  
-<span class="indexterm"></span>A procedural (imperative) programming
+A procedural (imperative) programming
 language with a syntax similar to JavaScript, C++, or Java. The most
 popular and frequently used language for Ethereum smart contracts.
 
 Vyper  
-<span class="indexterm"></span>A more recently developed language,
+A more recently developed language,
 similar to Serpent and again with Python-like syntax. Intended to get
 closer to a pure-functional Python-like language than Serpent, but not
 to replace Serpent.
 
 Bamboo  
-<span class="indexterm"></span>A newly developed language, influenced by
+A newly developed language, influenced by
 Erlang, with explicit state transitions and without iterative flows
 (loops). Intended to reduce side effects and increase auditability. Very
 new and yet to be widely adopted.
@@ -8025,16 +8025,16 @@ of these Solidity is by far the most popular, to the point of being the
 blockchains. We will spend most of our time using Solidity, but will
 also explore some of the examples in other high-level languages to gain
 an understanding of their different
-philosophies.<span class="indexterm"></span><span class="indexterm"></span>
+philosophies.
 
 ## Building a Smart Contract with Solidity
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Solidity <span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>was created by
-<span class="indexterm"></span> <span class="indexterm"></span>Dr. Gavin
+
+
+Solidity 
+
+was created by
+ Dr. Gavin
 Wood (coauthor of this book) as a language explicitly for writing smart
 contracts with features to directly support execution in the
 decentralized environment of the Ethereum world computer. The resulting
@@ -8059,8 +8059,8 @@ Basics](#intro_chapter).
 
 ### Selecting a Version of Solidity
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Solidity follows a versioning model
+
+Solidity follows a versioning model
 called [*semantic versioning*](https://semver.org/), which specifies
 version numbers structured as three numbers separated by dots:
 *`MAJOR.MINOR.PATCH`*. The "major" number is incremented for major and
@@ -8087,7 +8087,7 @@ latest release.
 
 ### Download and Install
 
-<span class="indexterm"></span> <span class="indexterm"></span>There are
+ There are
 a number of methods you can use to download and install Solidity, either
 as a binary release or by compiling from source code. You can find
 detailed instructions in [the Solidity
@@ -8124,7 +8124,7 @@ code directly. For more information see
 
 ### Development Environment
 
-<span class="indexterm"></span> <span class="indexterm"></span>To
+ To
 develop in Solidity, you can use any text editor and `solc` on the
 command line. However, you might find that some text editors designed
 for development, such as Emacs, Vim, and Atom, offer additional features
@@ -8145,7 +8145,7 @@ Solidity program.
 
 ### Writing a Simple Solidity Program
 
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 [Ethereum Basics](#intro_chapter), we wrote our first Solidity program.
 When we first built the `Faucet` contract, we used the Remix IDE to
 compile and deploy the contract. In this section, we will revisit,
@@ -8158,8 +8158,8 @@ Our first attempt looked like [example_title](#original_sol_faucet).
 
 ### Compiling with the Solidity Compiler (solc)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Now,
+
+Now,
 we will use the Solidity compiler on the command line to compile our
 contract directly. The Solidity compiler `solc` offers a variety of
 options, which you can see by passing the `--help` argument.
@@ -8181,12 +8181,12 @@ solc --optimize --bin Faucet.sol
 
 The result that `solc` produces is a hex-serialized binary that can be
 submitted to the Ethereum
-blockchain.<span class="indexterm"></span><span class="indexterm"></span>
+blockchain.
 
 ## The Ethereum Contract ABI
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In computer software, an *application
+
+In computer software, an *application
 binary interface* is an interface between two program modules; often,
 between the operating system and user programs. An ABI defines how data
 structures and functions are accessed in *machine code*; this is not to
@@ -8235,7 +8235,7 @@ ABI and the address where the contract has been deployed.
 
 ### Selecting a Solidity Compiler and Language Version
 
-<span class="indexterm"></span> <span class="indexterm"></span>As we saw
+ As we saw
 in the previous code, our `Faucet` contract compiles successfully with
 Solidity version 0.6.4. But what if we had used a different version of
 the Solidity compiler? The language is still in constant flux and things
@@ -8243,7 +8243,7 @@ may change in unexpected ways. Our contract is fairly simple, but what
 if our program used a feature that was only added in Solidity version
 0.6.1 and we tried to compile it with 0.6.0?
 
-<span class="indexterm"></span><span class="indexterm"></span>To resolve
+To resolve
 such issues, Solidity offers a *compiler directive* known as a *version
 pragma* that instructs the compiler that the program expects a specific
 compiler (and language) version. Let’s look at an example:
@@ -8271,11 +8271,11 @@ these examples starting in [example_title](#add_pragma_to_faucet).
 Adding a version pragma is a best practice, as it avoids problems with
 mismatched compiler and language versions. We will explore other best
 practices and continue to improve the `Faucet` contract throughout this
-chapter.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+chapter.
 
 ## Programming with Solidity
 
-<span class="indexterm"></span> <span class="indexterm"></span>In this
+ In this
 section, we will look at some of the capabilities of the Solidity
 language. As we mentioned in [Ethereum Basics](#intro_chapter), our
 first contract example was very simple and also flawed in various ways.
@@ -8288,7 +8288,7 @@ website](https://solidity.readthedocs.io/en/latest/).
 
 ### Data Types
 
-<span class="indexterm"></span> <span class="indexterm"></span>First,
+ First,
 let’s look at some of the basic data types offered in Solidity:
 
 Boolean (`bool`)  
@@ -8356,13 +8356,13 @@ withdrawal, expressing the limit in wei, the base unit of ether:
 
 That’s not very easy to read. We can improve our code by using the unit
 multiplier `ether`, to express the value in ether instead of
-wei:<span class="indexterm"></span>
+wei:
 
     require(withdraw_amount <= 0.1 ether);
 
 ### Predefined Global Variables and Functions
 
-<span class="indexterm"></span> <span class="indexterm"></span>When a
+ When a
 contract is executed in the EVM, it has access to a small set of global
 objects. These include the `block`, `msg`, and `tx` objects. In
 addition, Solidity exposes a number of EVM opcodes as predefined
@@ -8371,7 +8371,7 @@ you can access from within a smart contract in Solidity.
 
 #### Transaction/message call context
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>The
+The
 `msg` object is the transaction call (EOA originated) or message call
 (contract originated) that launched this contract execution. It contains
 a number of useful attributes:
@@ -8409,7 +8409,7 @@ code of another contract/library within the original `msg` context.
 
 #### Transaction context
 
-<span class="indexterm"></span>The `tx` object provides a means of
+The `tx` object provides a means of
 accessing transaction-related information:
 
 `tx.gasprice`  
@@ -8421,7 +8421,7 @@ unsafe!
 
 #### Block context
 
-<span class="indexterm"></span>The `block` object contains information
+The `block` object contains information
 about the current block:
 
 `block.blockhash(blockNumber)`  
@@ -8449,7 +8449,7 @@ seconds since the Unix epoch).
 
 #### address object
 
-<span class="indexterm"></span>Any address, either passed as an input or
+Any address, either passed as an input or
 cast from a contract object, has a number of attributes and methods:
 
 `address.balance`  
@@ -8497,12 +8497,12 @@ to the recipient address.
 
 `this`  
 The address of the currently executing contract
-account.<span class="indexterm"></span>
+account.
 
 ### Contract Definition
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Solidity’s principal data type is
+
+Solidity’s principal data type is
 `contract`; our `Faucet` example simply defines a `contract` object.
 Similar to any object in an object-oriented language, the contract is a
 container that includes data and methods.
@@ -8510,7 +8510,7 @@ container that includes data and methods.
 Solidity offers two other object types that are similar to a contract:
 
 `interface`  
-<span class="indexterm"></span><span class="indexterm"></span>An
+An
 interface definition is structured exactly like a contract, except none
 of the functions are defined, they are only declared. This type of
 declaration is often called a *stub*; it tells you the functions'
@@ -8519,18 +8519,18 @@ specifies the "shape" of a contract; when inherited, each of the
 functions declared by the interface must be defined by the child.
 
 `library`  
-<span class="indexterm"></span>A library contract is one that is meant
+A library contract is one that is meant
 to be deployed only once and used by other contracts, using the
 `delegatecall` method (see [address object](#solidity_address_object)).
 
 ### Functions
 
-<span class="indexterm"></span> <span class="indexterm"></span>Within a
+ Within a
 contract, we define functions that can be called by an EOA transaction
 or another contract. In our `Faucet` example, we have two functions:
 `withdraw` and the (unnamed) *fallback* function.
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 syntax we use to declare a function in Solidity is as follows:
 
 function FunctionName(\[
@@ -8552,7 +8552,7 @@ Let’s look at each of these components:
 `FunctionName`  
 The name of the function, which is used to call the function in a
 transaction (from an EOA), from another contract, or even from within
-the same contract. <span class="indexterm"></span>One function in each
+the same contract. One function in each
 contract may be defined as a fallback function using the "fallback"
 keyword or a receive ether function defined using the "receive" keyword.
 If present, the receive ether function is called whenever the call data
@@ -8569,23 +8569,23 @@ The next set of keywords (`public`, `private`, `internal`, `external`)
 specify the function’s *visibility*:
 
 `public`  
-<span class="indexterm"></span>Public is the default; such functions can
+Public is the default; such functions can
 be called by other contracts or EOA transactions, or from within the
 contract. In our `Faucet` example, both functions are defined as public.
 
 `external`  
-<span class="indexterm"></span>External functions are like public
+External functions are like public
 functions, except they cannot be called from within the contract unless
 explicitly prefixed with the keyword `this`.
 
 `internal`  
-<span class="indexterm"></span>Internal functions are only accessible
+Internal functions are only accessible
 from within the contract—they cannot be called by another contract or
 EOA transaction. They can be called by derived contracts (those that
 inherit this one).
 
 `private`  
-<span class="indexterm"></span>Private functions are like internal
+Private functions are like internal
 functions but cannot be called by derived contracts.
 
 Keep in mind that the terms *internal* and *private* are somewhat
@@ -8598,22 +8598,22 @@ The second set of keywords (`pure`, `constant`, `view`, `payable`)
 affect the behavior of the function:
 
 `constant` or `view`  
-<span class="indexterm"></span>A function marked as a *view* promises
-not to modify any state. <span class="indexterm"></span>The term
+A function marked as a *view* promises
+not to modify any state. The term
 *constant* is an alias for view that will be deprecated in a future
 release. At this time, the compiler does not enforce the `view`
 modifier, only producing a warning, but this is expected to become an
 enforced keyword in v0.5 of Solidity.
 
 `pure`  
-<span class="indexterm"></span>A pure function is one that neither reads
+A pure function is one that neither reads
 nor writes any variables in storage. It can only operate on arguments
 and return data, without reference to any stored data. Pure functions
 are intended to encourage declarative-style programming without side
 effects or state.
 
 `payable`  
-<span class="indexterm"></span>A payable function is one that can accept
+A payable function is one that can accept
 incoming payments. Functions not declared as `payable` will reject
 incoming payments. There are two exceptions, due to design decisions in
 the EVM: coinbase payments and `SELFDESTRUCT` inheritance will be paid
@@ -8622,13 +8622,13 @@ makes sense because code execution is not part of those payments anyway.
 
 As you can see in our `Faucet` example, we have one payable function
 (the fallback function), which is the only function that can receive
-incoming payments.<span class="indexterm"></span>
+incoming payments.
 
 ### Contract Constructor and selfdestruct
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There is a special function that is only
+
+
+There is a special function that is only
 used once. When a contract is created, it also runs the *constructor
 function* if one exists, to initialize the state of the contract. The
 constructor is run in the same transaction as the contract creation. The
@@ -8681,11 +8681,11 @@ from an EOA or contract account. If there is a constructor, it is
 executed as part of contract creation, to initialize the state of the
 contract as it is being created, and is then discarded.
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The other end of the contract’s life
+
+
+The other end of the contract’s life
 cycle is *contract destruction*.
-<span class="indexterm"></span>Contracts are destroyed by a special EVM
+Contracts are destroyed by a special EVM
 opcode called `SELFDESTRUCT`. It used to be called `SUICIDE`, but that
 name was deprecated due to the negative associations of the word. In
 Solidity, this opcode is exposed as a high-level built-in function
@@ -8704,10 +8704,10 @@ contract can’t be deleted if it doesn’t contain a `SELFDESTRUCT` opcode.
 
 ### Adding a Constructor and selfdestruct to Our Faucet Example
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The `Faucet` example contract we
+
+
+
+The `Faucet` example contract we
 introduced in [Ethereum Basics](#intro_chapter) does not have any
 constructor or `selfdestruct` functions. It is an eternal contract that
 cannot be deleted. Let’s change that, by adding a constructor and
@@ -8772,8 +8772,8 @@ contract without your permission.
 
 ### Function Modifiers
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Solidity offers a special type of
+
+Solidity offers a special type of
 function called a *function modifier*. You apply modifiers to functions
 by adding the modifier name in the function declaration. Modifiers are
 most often used to create conditions that apply to many functions within
@@ -8834,9 +8834,9 @@ variables inside the modified function.
 
 ### Contract Inheritance
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Solidity’s `contract` object supports
+
+
+Solidity’s `contract` object supports
 *inheritance*, which is a mechanism for extending a base contract with
 additional functionality. To use inheritance, specify a parent contract
 with the keyword `is`:
@@ -8929,12 +8929,12 @@ owner. The functionality is the same as when those functions were within
 `Faucet`, but now we can reuse those functions in other contracts
 without writing them again. Code reuse and modularity make our code
 cleaner, easier to read, and easier to
-audit.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+audit.
 
 ### Error Handling (assert, require, revert)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>A contract call can terminate and return
+
+A contract call can terminate and return
 an error. Error handling in Solidity is handled by four functions:
 `assert`, `require`, `revert`, and `throw` (now deprecated).
 
@@ -8944,8 +8944,8 @@ contract calls if more than one contract was called. This ensures that
 transactions are *atomic*, meaning they either complete successfully or
 have no effect on state and are reverted entirely.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The
+
+The
 `assert` and `require` functions operate in the same way, evaluating a
 condition and stopping execution with an error if the condition is
 false. By convention, `assert` is used when the outcome is expected to
@@ -8974,7 +8974,7 @@ an error message in our `require` function:
 require(msg.sender == owner, "Only the contract owner can call this function");
 ```
 
-<span class="indexterm"></span><span class="indexterm"></span>The
+The
 `revert` and `throw` functions halt the execution of the contract and
 revert any state changes. The `throw` function is obsolete and will be
 removed in future versions of Solidity; you should use `revert` instead.
@@ -9012,9 +9012,9 @@ contract we’d choose to be frugal with our gas usage instead.
 
 ### Events
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>When <span class="indexterm"></span>a
+
+
+When a
 transaction completes (successfully or not), it produces a *transaction
 receipt*, as we will see in [The Ethereum Virtual
 Machine](#evm_chapter). The transaction receipt contains *log* entries
@@ -9032,7 +9032,7 @@ transaction logs, in the blockchain. You can supply the keyword
 `indexed` before an argument, to make the value part of an indexed table
 (hash table) that can be searched or filtered by an application.
 
-<span class="indexterm"></span> <span class="indexterm"></span>We have
+ We have
 not added any events in our `Faucet` example so far, so let’s do that.
 We will add two events, one to log any withdrawals and one to log any
 deposits. We will call these events `Withdrawal` and `Deposit`,
@@ -9074,15 +9074,15 @@ The resulting *Faucet.sol* contract looks like
 
 #### Catching events
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>OK, so we’ve set up our contract to emit
+
+
+OK, so we’ve set up our contract to emit
 events. How do we see the results of a transaction and "catch" the
 events? The web3.js library provides a data structure that contains a
 transaction’s logs. Within those we can see the events generated by the
 transaction.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Let’s use
+ Let’s use
 `truffle` to run a test transaction on the revised `Faucet` contract.
 Follow the instructions in [Truffle](#truffle) to set up a project
 directory and compile the `Faucet` code. The source code can be found in
@@ -9153,13 +9153,13 @@ the event arguments.
 
 Events are a very useful mechanism, not only for intra-contract
 communication, but also for debugging during
-development<span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+development.
 
 ### Calling Other Contracts (send, call, callcode, delegatecall)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Calling other contracts from within your
+
+
+Calling other contracts from within your
 contract is a very useful but potentially dangerous operation. We’ll
 examine the various ways you can achieve this and evaluate the risks of
 each method. In short, the risks arise from the fact that you may not
@@ -9171,7 +9171,7 @@ and being called by your code.
 
 #### Creating a new instance
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 safest way to call another contract is if you create that other contract
 yourself. That way, you are certain of its interfaces and behavior. To
 do this, you can simply instantiate it, using the keyword `new`, as in
@@ -9248,7 +9248,7 @@ contract can destroy it.
 
 #### Addressing an existing instance
 
-<span class="indexterm"></span> <span class="indexterm"></span>Another
+ Another
 way you can call a contract is by casting the address of an existing
 instance of the contract. With this method, you apply a known interface
 to an existing instance. It is therefore critically important that you
@@ -9288,7 +9288,7 @@ allow us to construct a contract-to-contract call manually. As such,
 they represent the most flexible *and* the most dangerous mechanisms for
 calling other contracts.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Here’s
+ Here’s
 the same example, using a `call` method:
 
 ``` solidity
@@ -9299,10 +9299,10 @@ contract Token is Mortal {
 }
 ```
 
-<span class="indexterm"></span>As you can see, this type of `call` is a
+As you can see, this type of `call` is a
 *blind* call into a function, very much like constructing a raw
 transaction, only from within a contract’s context.
-<span class="indexterm"></span> <span class="indexterm"></span>It can
+ It can
 expose your contract to a number of security risks, most importantly
 *reentrancy*, which we will discuss in more detail in
 [Reentrancy](#reentrancy_security). The `call` function will return
@@ -9319,8 +9319,8 @@ contract Token is Mortal {
 }
 ```
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Another variant of `call` is
+
+Another variant of `call` is
 `delegatecall`, which replaced the more dangerous `callcode`. The
 `callcode` method will be deprecated soon, so it should not be used.
 
@@ -9451,15 +9451,15 @@ origin. That’s because when you call a library, the call is always
 
 The next two calls, using the low-level `call` and `delegatecall`,
 verify our expectations, emitting events that mirror what we
-just<span class="indexterm"></span>
-saw<span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span>
+just
+saw.
 
 ## Gas Considerations
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Gas, described in more detail in
+
+
+
+Gas, described in more detail in
 [Gas](#gas), is an incredibly important consideration in smart contract
 programming. Gas is a resource constraining the maximum amount of
 computation that Ethereum will allow a transaction to consume. If the
@@ -9482,8 +9482,8 @@ cost of a function call.
 
 ### Avoid Dynamically Sized Arrays
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Any loop through a dynamically sized
+
+Any loop through a dynamically sized
 array where a function performs operations on each element or searches
 for a particular element introduces the risk of using too much gas.
 Indeed, the contract may run out of gas before finding the desired
@@ -9492,7 +9492,7 @@ without giving any result at all.
 
 ### Avoid Calls to Other Contracts
 
-<span class="indexterm"></span> <span class="indexterm"></span>Calling
+ Calling
 other contracts, especially when the gas cost of their functions is not
 known, introduces the risk of running out of gas. Avoid using libraries
 that are not well tested and broadly used. The less scrutiny a library
@@ -9500,7 +9500,7 @@ has received from other programmers, the greater the risk of using it.
 
 ### Estimating Gas Cost
 
-<span class="indexterm"></span> <span class="indexterm"></span>If you
+ If you
 need to estimate the gas necessary to execute a certain method of a
 contract considering its arguments, you could use the following
 procedure:
@@ -9582,24 +9582,24 @@ estimation = 0.00062794 ether
 It is recommended that you evaluate the gas cost of functions as part of
 your development workflow, to avoid any surprises when deploying
 contracts to the
-mainnet<span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+mainnet.
 
 ## Conclusions
 
 In this chapter we started working with smart contracts in detail and
 explored the Solidity contract programming
-language.<span class="indexterm"></span><span class="indexterm"></span>
+language.
 We took a simple example contract, *Faucet.sol*, and gradually improved
 it and made it more complex, using it to explore various aspects of the
 Solidity language. In [Smart Contracts and Vyper](#vyper_chap) we will
 work with Vyper, another contract-oriented programming language. We will
 compare Vyper to Solidity, showing some of the differences in the design
 of these two languages and deepening our understanding of smart contract
-programming.<span class="indexterm"></span>
+programming.
 
 # Smart Contracts and Vyper
 
-<span class="indexterm"></span>Vyper is an experimental,
+Vyper is an experimental,
 contract-oriented programming language for the Ethereum Virtual Machine
 that strives to provide superior auditability, by making it easier for
 developers to produce intelligible code. In fact, one of the principles
@@ -9613,8 +9613,8 @@ Solidity, demonstrating the differences.
 ## Vulnerabilities and Vyper
 
 [A recent study](https://arxiv.org/pdf/1802.06038.pdf)
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>analyzed nearly one million deployed
+
+analyzed nearly one million deployed
 Ethereum smart contracts and found that many of these contracts
 contained serious vulnerabilities. During their analysis, the
 researchers outlined three basic categories of trace vulnerabilities:
@@ -9639,9 +9639,9 @@ write misleading or vulnerable code.
 
 ## Comparison to Solidity
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>One of the ways in which Vyper tries to
+
+
+One of the ways in which Vyper tries to
 make unsafe code harder to write is by deliberately *omitting* some of
 Solidity’s features. It is important for those considering developing
 smart contracts in Vyper to understand what features Vyper does *not*
@@ -9650,9 +9650,9 @@ features and provide justification for why they have been omitted.
 
 ### Modifiers
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As we saw in the previous chapter, in
+
+
+As we saw in the previous chapter, in
 Solidity you can write a function using modifiers. For example, the
 following function, `changeOwner`, will run the code in a modifier
 called `onlyBy` as part of its execution:
@@ -9743,9 +9743,9 @@ the modifier code around the function to see what it does.
 
 ### Class Inheritance
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Inheritance allows programmers to harness
+
+
+Inheritance allows programmers to harness
 the power of prewritten code by acquiring preexisting functionality,
 properties, and behaviors from existing software libraries. Inheritance
 is powerful and promotes the reuse of code. Solidity supports multiple
@@ -9760,8 +9760,8 @@ example of how multiple inheritance can be problematic.
 
 ### Inline Assembly
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Inline
+
+Inline
 assembly gives developers low-level access to the Ethereum Virtual
 Machine, allowing Solidity programs to perform operations by directly
 accessing EVM instructions. For example, the following inline assembly
@@ -9774,9 +9774,9 @@ for the extra power, and thus does not support inline assembly.
 
 ### Function Overloading
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Function overloading allows developers to
+
+
+Function overloading allows developers to
 write multiple functions of the same name. Which function is used on a
 given occasion depends on the types of the arguments supplied. Take the
 following two functions, for example:
@@ -9799,19 +9799,19 @@ does not support function overloading.
 
 ### Variable Typecasting
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There are two sorts of typecasting:
+
+
+There are two sorts of typecasting:
 *implicit* and *explicit*
 
-<span class="indexterm"></span>Implicit typecasting is often performed
+Implicit typecasting is often performed
 at compile time. For example, if a type conversion is semantically sound
 and no information is likely to be lost, the compiler can perform an
 implicit conversion, such as converting a variable of type `uint8` to
 `uint16`. The earliest versions of Vyper allowed implicit typecasting of
 variables, but recent versions do not.
 
-<span class="indexterm"></span>Explicit typecasts can be inserted in
+Explicit typecasts can be inserted in
 Solidity. Unfortunately, they can lead to unexpected behavior. For
 example, casting a `uint32` to the smaller type `uint16` simply removes
 the higher-order bits, as demonstrated here:
@@ -9822,7 +9822,7 @@ uint16 b = uint16(a);
 // Variable b is 0x5678 now
 ```
 
-<span class="indexterm"></span>Vyper instead has a `convert` function to
+Vyper instead has a `convert` function to
 perform explicit casts. The convert function (found on line 82 of
 [*convert.py*](https://bit.ly/2Nnjy3I)):
 
@@ -9885,9 +9885,9 @@ contracts.
 
 ### Infinite Loop
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Although there is no merit because of
+
+
+Although there is no merit because of
 gaslimit, developers can write an endless loop processing in Solidity.
 Infinite loop makes it impossible to set an upper bound on gas limits,
 opening the door for gas limit attacks. Therefore, Vyper doesn’t permit
@@ -9907,7 +9907,7 @@ Recursive calling can be written in Solidity, but not in Vyper.
 
 ### Preconditions and Postconditions
 
-<span class="indexterm"></span> <span class="indexterm"></span>Vyper
+ Vyper
 handles preconditions, postconditions, and state changes explicitly.
 While this produces redundant code, it also allows for maximal
 readability and safety. When writing a smart contract in Vyper, a
@@ -9932,12 +9932,12 @@ contracts.
 Ideally, each of these points should be carefully considered and then
 thoroughly documented in the code. Doing so will improve the design of
 the code, ultimately making it more readable and
-auditable.<span class="indexterm"></span><span class="indexterm"></span>
+auditable.
 
 ## Decorators
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The following decorators may be used at
+
+The following decorators may be used at
 the start of each function:
 
 `@private`  
@@ -9968,11 +9968,11 @@ both!).
 
 ## Function and Variable Ordering
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Each individual Vyper smart contract
+
+
+
+
+Each individual Vyper smart contract
 consists of a single Vyper file only. In other words, all of a given
 Vyper smart contract’s code, including all functions, variables, and so
 forth, exists in one place. Vyper requires that each smart contract’s
@@ -10044,9 +10044,9 @@ compile.
 
 ## Compilation
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Vyper has its own [online code editor and
+
+
+Vyper has its own [online code editor and
 compiler](https://vyper.online), which allows you to write and then
 compile your smart contracts into bytecode, ABI, and LLL using only your
 web browser. The Vyper online compiler has a variety of prewritten smart
@@ -10061,7 +10061,7 @@ smart contracts, now has a Vyper plugin available in the settings tab.
 
 <div class="note">
 
-<span class="indexterm"></span> <span class="indexterm"></span>Vyper
+ Vyper
 implements ERC20 as a precompiled contract, allowing these smart
 contracts to be easily used out of the box. Contracts in Vyper must be
 declared as global variables. An example for declaring the ERC20
@@ -10087,10 +10087,10 @@ by running the following command:
 
 ## Protecting Against Overflow Errors at the Compiler Level
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Overflow errors in software can be
+
+
+
+Overflow errors in software can be
 catastrophic when dealing with real value. For example, one [transaction
 from mid-April 2018](http://bit.ly/2yHfvoF) shows the malicious transfer
 of over
@@ -10116,13 +10116,13 @@ simplifies the development of Vyper itself.)
 
 ## Reading and Writing Data
 
-<span class="indexterm"></span> <span class="indexterm"></span>While it
+ While it
 is costly to store, read, and modify data, these storage operations are
 a necessary component of most smart contracts. Smart contracts can write
 data to two places:
 
 Global state  
-<span class="indexterm"></span>The state variables in a given smart
+The state variables in a given smart
 contract are stored in Ethereum’s global state trie; a smart contract
 can only store, read, and modify data in relation to that particular
 contract’s address (i.e., smart contracts cannot read or write to other
@@ -10148,12 +10148,12 @@ contracts and avoid certain pitfalls that cause serious vulnerabilities
 to arise. Next, we will look at smart contract security in more detail.
 Some of the nuances of Vyper design may become more apparent once you
 read about all the possible security problems that can arise in smart
-contracts.<span class="indexterm"></span>
+contracts.
 
 # Smart Contract Security
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Security is one of the most important
+
+Security is one of the most important
 considerations when writing smart contracts. In the field of smart
 contract programming, mistakes are costly and easily exploited. In this
 chapter we will look at security best practices and design patterns, as
@@ -10169,8 +10169,8 @@ critical to follow best practices and use well-tested design patterns.
 
 ## Security Best Practices
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>*Defensive programming* is a style of
+
+*Defensive programming* is a style of
 programming that is particularly well suited to smart contracts. It
 emphasizes the following, all of which are best practices:
 
@@ -10226,7 +10226,7 @@ formatted before allowing execution of your code to continue.
 
 ## Security Risks and Antipatterns
 
-<span class="indexterm"></span> <span class="indexterm"></span>As a
+ As a
 smart contract programmer, you should be familiar with the most common
 security risks, so as to be able to detect and avoid the programming
 patterns that leave your contracts exposed to these risks. In the next
@@ -10236,8 +10236,8 @@ solutions that can be used to address them.
 
 ## Reentrancy
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>One of the features of Ethereum smart
+
+One of the features of Ethereum smart
 contracts is their ability to call and utilize code from other external
 contracts. Contracts also typically handle ether, and as such often send
 ether to various external user addresses. These operations require the
@@ -10253,7 +10253,7 @@ Contract Best Practices](http://bit.ly/2ERDMxV).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>This type
+ This type
 of attack can occur when a contract sends ether to an unknown address.
 An attacker can carefully construct a contract at an external address
 that contains malicious code in the fallback function. Thus, when a
@@ -10395,21 +10395,21 @@ balance is `10 ether`. The following will then occur:
 
 The final result is that the attacker has withdrawn all but 1 ether from
 the `EtherStore` contract in a single
-transaction.<span class="indexterm"></span>
+transaction.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>There are
+ There are
 a number of common techniques that help avoid potential reentrancy
-vulnerabilities in smart contracts. <span class="indexterm"></span>
-<span class="indexterm"></span>The first is to (whenever possible) use
+vulnerabilities in smart contracts. 
+The first is to (whenever possible) use
 the built-in [`transfer`](http://bit.ly/2Ogvnng) function when sending
 ether to external contracts. The `transfer` function only sends 2300 gas
 with the external call, which is not enough for the destination
 address/contract to call another contract (i.e., reenter the sending
 contract).
 
-<span class="indexterm"></span>The second technique is to ensure that
+The second technique is to ensure that
 all logic that changes state variables happens before ether is sent out
 of the contract (or any external call). In the `EtherStore` example,
 lines 18 and 19 of *EtherStore.sol* should be put before line 17. It is
@@ -10418,7 +10418,7 @@ addresses to be the last operation in a localized function or piece of
 code execution. This is known as the [checks-effects-interactions
 pattern](http://bit.ly/2EVo70v).
 
-<span class="indexterm"></span>A third technique is to introduce a
+A third technique is to introduce a
 mutex—that is, to add a state variable that locks the contract during
 code execution, preventing reentrant calls.
 
@@ -10459,9 +10459,9 @@ contract EtherStore {
 
 ### Real-World Example: The DAO
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The DAO (Decentralized Autonomous
+
+
+The DAO (Decentralized Autonomous
 Organization) attack was one of the major hacks that occurred in the
 early development of Ethereum. At the time, the contract held over \$150
 million. Reentrancy played a major role in the attack, which ultimately
@@ -10469,12 +10469,12 @@ led to the hard fork that created Ethereum Classic (ETC). For a good
 analysis of the DAO exploit, see <http://bit.ly/2EQaLCI>. More
 information on Ethereum’s fork history, the DAO hack timeline, and the
 birth of ETC in a hard fork can be found in
-[appendix_title](#ethereum_standards).<span class="indexterm"></span><span class="indexterm"></span>
+[appendix_title](#ethereum_standards).
 
 ## Arithmetic Over/Underflows
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The
+
+The
 Ethereum Virtual Machine specifies fixed-size data types for integers.
 This means that an integer variable can represent only a certain range
 of numbers. A `uint8`, for example, can only store numbers in the range
@@ -10491,12 +10491,12 @@ integer overflows: programming blockchains like
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>An
+ An
 over/underflow occurs when an operation is performed that requires a
 fixed-size variable to store a number (or piece of data) that is outside
 the range of the variable’s data type.
 
-<span class="indexterm"></span>For example, subtracting `1` from a
+For example, subtracting `1` from a
 `uint8` (unsigned integer of 8 bits; i.e., nonnegative) variable whose
 value is `0` will result in the number `255`. This is an *underflow*. We
 have assigned a number below the range of the `uint8`, so the result
@@ -10508,7 +10508,7 @@ measure distance traveled (they reset to 000000, after the largest
 number, i.e., 999999, is surpassed) and periodic mathematical functions
 (adding `2π` to the argument of `sin` leaves the value unchanged).
 
-<span class="indexterm"></span> <span class="indexterm"></span>Adding
+ Adding
 numbers larger than the data type’s range is called an *overflow*. For
 clarity, adding `257` to a `uint8` that currently has a value of `0`
 will result in the number `1`. It is sometimes instructive to think of
@@ -10616,18 +10616,18 @@ positive amount (excluding `2^256`) will result in a positive number, as
 described previously. This is also true for line 14, where the balance
 will be credited with a positive number. Thus, in this example, an
 attacker can achieve free tokens due to an underflow
-vulnerability.<span class="indexterm"></span>
+vulnerability.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 current conventional technique to guard against under/overflow
 vulnerabilities is to use or build mathematical libraries that replace
 the standard math operators addition, subtraction, and multiplication
 (division is excluded as it does not cause over/underflows and the EVM
 reverts on division by 0).
 
-<span class="indexterm"></span><span class="indexterm"></span>[OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-solidity)
+[OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-solidity)
 has done a great job of building and auditing secure libraries for the
 Ethereum community. In particular, its [`SafeMath`
 library](http://bit.ly/2ABhb4l) can be used to avoid under/overflow
@@ -10695,12 +10695,12 @@ contract TimeLock {
 Notice that all standard math operations have been replaced by those
 defined in the `SafeMath` library. The `TimeLock` contract no longer
 performs any operation that is capable of
-under/overflow.<span class="indexterm"></span>
+under/overflow.
 
 ### Real-World Examples: PoWHC and Batch Transfer Overflow (CVE-2018–10299)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Proof
+
+Proof
 of Weak Hands Coin (PoWHC), originally devised as a joke of sorts, was a
 Ponzi scheme written by an internet collective. Unfortunately it seems
 that the author(s) of the contract had not seen over/underflows before,
@@ -10713,14 +10713,14 @@ not too dissimilar to the Ethernaut challenge described earlier) in his
 of a `batchTransfer()` function into a group of ERC20 token contracts.
 The implementation contained an overflow vulnerability; you can read
 about the details in [PeckShield’s
-account](https://bit.ly/2HDlIs8).<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+account](https://bit.ly/2HDlIs8).
 
 ## Unexpected Ether
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Typically, when ether is sent to a
+
+
+
+Typically, when ether is sent to a
 contract it must execute either the fallback function or another
 function defined in the contract. There are two exceptions to this,
 where ether can exist in a contract without having executed any code.
@@ -10733,8 +10733,8 @@ Forcing Ether to a Contract”](http://bit.ly/2RjXmUWl).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>A
-<span class="indexterm"></span>common defensive programming technique
+ A
+common defensive programming technique
 that is useful in enforcing correct state transitions or validating
 operations is *invariant checking*. This technique involves defining a
 set of invariants (metrics or parameters that should not change) and
@@ -10760,7 +10760,7 @@ There are two ways in which ether can (forcibly) be sent to a contract
 without using a payable function or executing any code on the contract:
 
 Self-destruct/suicide  
-<span class="indexterm"></span>Any contract is able to implement the
+Any contract is able to implement the
 [`selfdestruct` function](http://bit.ly/2RovrDf), which removes all
 bytecode from the contract address and sends all ether stored there to
 the parameter-specified address. If this specified address is also a
@@ -10859,11 +10859,11 @@ contract’s balance above the `finalMileStone`), which would lock all
 rewards in the contract forever. This is because the `claimReward`
 function will always revert, due to the `require` on line 32 (i.e.,
 because `this.balance` is greater than
-`finalMileStone`).<span class="indexterm"></span>
+`finalMileStone`).
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>This sort
+ This sort
 of vulnerability typically arises from the misuse of `this.balance`.
 Contract logic, when possible, should avoid being dependent on exact
 values of the balance of the contract, because it can be artificially
@@ -10932,14 +10932,14 @@ Solidity Coding
 Contest](https://github.com/Arachnid/uscc/tree/master/submissions-2017/),
 which also provides extended examples of a number of the pitfalls raised
 in this
-section.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+section.
 
 ## DELEGATECALL
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The `CALL` and `DELEGATECALL` opcodes are
+
+The `CALL` and `DELEGATECALL` opcodes are
 useful in allowing Ethereum developers to modularize their code.
-<span class="indexterm"></span>Standard external message calls to
+Standard external message calls to
 contracts are handled by the `CALL` opcode, whereby code is run in the
 context of the external contract/function. The `DELEGATECALL` opcode is
 almost identical, except that the code executed at the targeted address
@@ -10958,12 +10958,12 @@ docs](http://bit.ly/2Oi7UlH).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>As a
+ As a
 result of the context-preserving nature of `DELEGATECALL`, building
 vulnerability-free custom libraries is not as easy as one might think.
 The code in libraries themselves can be secure and vulnerability-free;
 however, when run in the context of another application new
-vulnerabilities can arise. <span class="indexterm"></span>Let’s see a
+vulnerabilities can arise. Let’s see a
 fairly complex example of this, using Fibonacci numbers.
 
 Consider the library in [example_title](#fibonacci_security), which can
@@ -11153,18 +11153,18 @@ other storage slots they choose, to perform all kinds of attacks on this
 contract. We encourage you to put these contracts into
 [Remix](https://remix.ethereum.org) and experiment with different attack
 contracts and state changes through these `delegatecall`
-functions.<span class="indexterm"></span>
+functions.
 
 It is also important to notice that when we say that `delegatecall` is
 state-preserving, we are not talking about the variable names of the
 contract, but rather the actual storage slots to which those names
 point. As you can see from this example, a simple mistake can lead to an
 attacker hijacking the entire contract and its
-ether.<span class="indexterm"></span>
+ether.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>Solidity
+ Solidity
 provides the `library` keyword for implementing library contracts (see
 the [docs](http://bit.ly/2zjD8TI) for further details). This ensures the
 library contract is stateless and non-self-destructable. Forcing
@@ -11178,10 +11178,10 @@ contract, and whenever possible build stateless libraries.
 
 ### Real-World Example: Parity Multisig Wallet (Second Hack)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Second Parity Multisig Wallet hack is
+
+
+
+The Second Parity Multisig Wallet hack is
 an example of how well-written library code can be exploited if run
 outside its intended context. There are a number of good explanations of
 this hack, such as [“Parity Multisig Hacked.
@@ -11270,13 +11270,13 @@ method to change this reference, all of their functionality, including
 the ability to withdraw ether, was lost along with the `WalletLibrary`
 contract. As a result, all ether in all Parity multisig wallets of this
 type instantly became lost or permanently
-unrecoverable<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+unrecoverable.
 
 ## Default Visibilities
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Functions
+
+
+Functions
 in Solidity have visibility specifiers that dictate how they can be
 called. The visibility determines whether a function can be called
 externally by users, by other derived contracts, only internally, or
@@ -11288,7 +11288,7 @@ some devastating vulnerabilities in smart contracts.
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 default visibility for functions is `public`, so functions that do not
 specify their visibility will be callable by external users. The issue
 arises when developers mistakenly omit visibility specifiers on
@@ -11323,7 +11323,7 @@ and thus any address can call this function to steal the bounty.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>It is
+ It is
 good practice to always specify the visibility of all functions in a
 contract, even if they are intentionally `public`. Recent versions of
 `solc` show a warning for functions that have no explicit visibility
@@ -11331,10 +11331,10 @@ set, to encourage this practice.
 
 ### Real-World Example: Parity Multisig Wallet (First Hack)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In the first Parity multisig hack, about
+
+
+
+In the first Parity multisig hack, about
 \$31M worth of Ether was stolen, mostly from three wallets. A good recap
 of exactly how this was done is given by [Haseeb
 Qureshi](https://bit.ly/2vHiuJQ).
@@ -11389,12 +11389,12 @@ accidentally left `public`, an attacker was able to call these functions
 on deployed contracts, resetting the ownership to the attacker’s
 address. Being the owner, the attacker then drained the wallets of all
 their
-ether.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+ether.
 
 ## Entropy Illusion
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>All transactions on the Ethereum
+
+All transactions on the Ethereum
 blockchain are deterministic state transition operations. This means
 that every transaction modifies the global state of the Ethereum
 ecosystem in a calculable way, with no uncertainty. This has the
@@ -11408,7 +11408,7 @@ PoS”](https://vitalik.ca/files/randomness.html).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>Some of
+ Some of
 the first contracts built on the Ethereum platform were based around
 gambling. Fundamentally, gambling requires uncertainty (something to bet
 on), which makes building a gambling system on the blockchain (a
@@ -11438,7 +11438,7 @@ can multiply their wins by doing many transactions within a block
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 source of entropy (randomness) must be external to the blockchain. This
 can be done among peers with systems such as
 [commit–reveal](http://bit.ly/2CUh2KS), or via changing the trust model
@@ -11450,8 +11450,8 @@ entropy, as they can be manipulated by miners.
 
 ### Real-World Example: PRNG Contracts
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>In
+
+In
 February 2018 Arseny Reutov [blogged](http://bit.ly/2Q589lx) about his
 analysis of 3,649 live smart contracts that were using some sort of
 pseudorandom number generator (PRNG); he found 43 contracts that could
@@ -11459,8 +11459,8 @@ be exploited.
 
 ## External Contract Referencing
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>One of the benefits of the Ethereum
+
+One of the benefits of the Ethereum
 “world computer” is the ability to reuse code and interact with
 contracts already deployed on the network. As a result, a large number
 of contracts reference external contracts, usually via external message
@@ -11469,7 +11469,7 @@ intentions in some nonobvious ways, which we’ll now examine.
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 Solidity, any address can be cast to a contract, regardless of whether
 the code at the address represents the contract type being cast. This
 can cause problems, especially when the author of the contract is trying
@@ -11650,13 +11650,13 @@ unknowingly run arbitrary code.
 
 The contracts represented here are for demonstrative purposes only and
 do not represent proper encryption. They should not be used for
-encryption.<span class="indexterm"></span>
+encryption.
 
 </div>
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>As
+ As
 demonstrated previously, safe contracts can (in some cases) be deployed
 in such a way that they behave maliciously. An auditor could publicly
 verify a contract and have its owner deploy it in a malicious way,
@@ -11695,8 +11695,8 @@ with the new contract address.
 
 ### Real-World Example: Reentrancy Honey Pot
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>A
+
+A
 number of recent honey pots have been released on the mainnet. These
 contracts try to outsmart Ethereum hackers who try to exploit the
 contracts, but who in turn end up losing ether to the contract they
@@ -11773,12 +11773,12 @@ contract Log
 This [post](http://bit.ly/2Q58VyX) by one reddit user explains how they
 lost 1 ether to this contract by trying to exploit the reentrancy bug
 they expected to be present in the
-contract<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+contract.
 
 ## Short Address/Parameter Attack
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>This
+
+This
 attack is not performed on Solidity contracts themselves, but on
 third-party applications that may interact with them. This section is
 added for completeness and to give the reader an awareness of how
@@ -11791,7 +11791,7 @@ post](http://bit.ly/2CQjBhc).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>When
+ When
 passing parameters to a smart contract, the parameters are encoded
 according to the [ABI specification](http://bit.ly/2Q5VIG9). It is
 possible to send encoded parameters that are shorter than the expected
@@ -11858,7 +11858,7 @@ unsuspecting exchange.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>All input
+ All input
 parameters in external applications should be validated before sending
 them to the blockchain. It should also be noted that parameter ordering
 plays an important role here. As padding only occurs at the end, careful
@@ -11867,8 +11867,8 @@ this attack.
 
 ## Unchecked CALL Return Values
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>There are
+
+There are
 a number of ways of performing external calls in Solidity. Sending ether
 to external accounts is commonly performed via the `transfer` method.
 However, the `send` function can also be used, and for more versatile
@@ -11887,7 +11887,7 @@ for the ‘Unchecked-Send’ Bug”](http://bit.ly/2RnS1vA).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>Consider
+ Consider
 the following example:
 
 ``` solidity
@@ -11926,7 +11926,7 @@ case, anyone can withdraw the `winner`’s winnings via the
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>Whenever
+ Whenever
 possible, use the `transfer` function rather than `send`, as `transfer`
 will revert if the external transaction reverts. If `send` is required,
 always check the return value.
@@ -11942,8 +11942,8 @@ transaction on the end user calling the `withdraw` function.
 ### Real-World Example: Etherpot and King of the Ether
 
 [Etherpot](http://bit.ly/2OfHalK) was
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>a smart contract lottery, not too
+
+a smart contract lottery, not too
 dissimilar to the example contract mentioned earlier. The downfall of
 this contract was primarily due to incorrect use of block hashes (only
 the last 256 block hashes are usable; see Aakil Fernandes’s
@@ -11991,13 +11991,13 @@ A more serious version of this bug occurred in the [King of the
 Ether](http://bit.ly/2ACsfi1). An excellent
 [post-mortem](http://bit.ly/2ESoaub) of this contract has been written
 that details how an unchecked failed `send` could be used to attack the
-contract.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+contract.
 
 ## Race Conditions/Front Running
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The
-<span class="indexterm"></span>combination of external calls to other
+
+The
+combination of external calls to other
 contracts and the multiuser nature of the underlying blockchain gives
 rise to a variety of potential Solidity pitfalls whereby users *race*
 code execution to obtain unexpected states. Reentrancy (discussed
@@ -12011,7 +12011,7 @@ Practices](http://bit.ly/2Q6E4lP).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>As with
+ As with
 most blockchains, Ethereum nodes pool transactions and form them into
 blocks. The transactions are only considered valid once a miner has
 solved a consensus mechanism (currently [Ethash](http://bit.ly/2yI5Dv7)
@@ -12066,7 +12066,7 @@ attacker being a miner themselves should not be underestimated.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>There are
+ There are
 two classes of actor who can perform these kinds of front-running
 attacks: users (who modify the `gasPrice` of their transactions) and
 miners themselves (who can reorder the transactions in a block how they
@@ -12098,7 +12098,7 @@ value. During the reveal phase, users were refunded the difference
 between the amount sent in the transaction and the amount they were
 willing to spend.
 
-A further suggestion by <span class="indexterm"></span>Lorenz
+A further suggestion by Lorenz
 Breidenbach, Phil Daian, Ari Juels, and Florian Tramèr is to use
 [“submarine sends”](http://bit.ly/2SygqQx). An efficient implementation
 of this idea requires the `CREATE2` opcode, which currently hasn’t been
@@ -12106,9 +12106,9 @@ adopted but seems likely to be in upcoming hard forks.
 
 ### Real-World Examples: ERC20 and Bancor
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The [ERC20
+
+
+The [ERC20
 standard](http://bit.ly/2CUf7WG) is quite well-known for building tokens
 on Ethereum. This standard has a potential front-running vulnerability
 that comes about due to the `approve` function. [Mikhail Vladimirov and
@@ -12134,7 +12134,7 @@ would allow Bob to transfer his 100 tokens and then, when Alice’s
 transaction is committed, reset Bob’s approval to 50 tokens, in effect
 giving Bob access to 150 tokens.
 
-<span class="indexterm"></span>Another prominent real-world example is
+Another prominent real-world example is
 [Bancor](https://www.bancor.network/). Ivan Bogatyy and his team
 documented a profitable attack on the initial Bancor implementation. His
 [blog post](http://bit.ly/2EUlLzb) and [DevCon3
@@ -12143,12 +12143,12 @@ Essentially, prices of tokens are determined based on transaction value;
 users can watch the transaction pool for Bancor transactions and
 front-run them to profit from the price differences. This attack has
 been addressed by the Bancor
-team.<span class="indexterm"></span><span class="indexterm"></span>
+team.
 
 ## Denial of Service (DoS)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>This category is very broad, but
+
+This category is very broad, but
 fundamentally consists of attacks where users can render a contract
 inoperable for a period of time, or in some cases permanently. This can
 trap ether in these contracts forever, as was the case in [Real-World
@@ -12156,7 +12156,7 @@ Example: Parity Multisig Wallet (Second Hack)](#multisig_secondhack).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>There are
+ There are
 various ways a contract can become inoperable. Here we highlight just a
 few less-obvious Solidity coding patterns that can lead to DoS
 vulnerabilities:
@@ -12197,7 +12197,7 @@ gas required to execute the `for` loop exceeds the block gas limit,
 essentially making the `distribute` function inoperable.
 
 Owner operations  
-<span class="indexterm"></span> <span class="indexterm"></span>Another
+ Another
 common pattern is where owners have specific privileges in contracts and
 must perform some task in order for the contract to proceed to the next
 state. One example would be an Initial Coin Offering (ICO) contract that
@@ -12243,7 +12243,7 @@ that does not accept ether.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>In the
+ In the
 first example, contracts should not loop through data structures that
 can be artificially manipulated by external users. A withdrawal pattern
 is recommended, whereby each of the investors call a `withdraw` function
@@ -12273,9 +12273,9 @@ have trust issues, because of the power of such an entity.
 ### Real-World Examples: GovernMental
 
 [GovernMental](http://governmental.github.io/GovernMental/)
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>was an old Ponzi scheme that accumulated
+
+
+was an old Ponzi scheme that accumulated
 quite a large amount of ether (1,100 ether, at one point).
 Unfortunately, it was susceptible to the DoS vulnerabilities mentioned
 in this section. A [Reddit post](http://bit.ly/2DcgvFc) by etherik
@@ -12288,12 +12288,12 @@ and you can see from transaction
 [`0x0d80d67202bd9cb6773df8dd2020e719 0a1b0793e8ec4fc105257e8128f0506b`](http://bit.ly/2Ogzrnn)
 that the 1,100 ether were finally obtained with a transaction that used
 2.5M gas (when the block gas limit had risen enough to allow such a
-transaction).<span class="indexterm"></span><span class="indexterm"></span>
+transaction).
 
 ## Block Timestamp Manipulation
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Block timestamps have historically been
+
+Block timestamps have historically been
 used for a variety of applications, such as entropy for random numbers
 (see the [Entropy Illusion](#entropyillusion_security) for further
 details), locking funds for periods of time, and various state-changing
@@ -12307,8 +12307,8 @@ question](http://bit.ly/2CQ8gh4) on the topic.
 
 ### The Vulnerability
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>`block.timestamp` and its alias `now` can
+
+`block.timestamp` and its alias `now` can
 be manipulated by miners if they have some incentive to do so. Let’s
 construct a simple game, shown in [example_title](#roulette_security),
 that would be vulnerable to miner exploitation.
@@ -12354,7 +12354,7 @@ in the future, as these blocks will likely be rejected by the network
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>Block
+ Block
 timestamps should not be used for entropy or generating random
 numbers—i.e., they should not be the deciding factor (either directly or
 through some derivation) for winning a game or changing an important
@@ -12377,9 +12377,9 @@ aware of when developing contracts.
 ### Real-World Example: GovernMental
 
 [GovernMental](http://governmental.github.io/GovernMental/),
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>the old Ponzi scheme mentioned above, was
+
+
+the old Ponzi scheme mentioned above, was
 also vulnerable to a timestamp-based attack. The contract paid out to
 the player who was the last player to join (for at least one minute) in
 a round. Thus, a miner who was a player could adjust the timestamp (to a
@@ -12388,13 +12388,13 @@ appear that they were the last player to join for over a minute (even
 though this was not true in reality). More detail on this can be found
 in the [“History of Ethereum Security Vulnerabilities, Hacks and Their
 Fixes” post](http://bit.ly/2Q1AMA6) by Tanya
-Bahrynovska.<span class="indexterm"></span><span class="indexterm"></span>
+Bahrynovska.
 
 ## Constructors with Care
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Constructors are special functions that
+
+
+Constructors are special functions that
 often perform critical, privileged tasks when initializing contracts.
 Before Solidity v0.4.22, constructors were defined as functions that had
 the same name as the contract that contained them. In such cases, when
@@ -12408,9 +12408,9 @@ particular the Fallout level).
 
 ### The Vulnerability
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If the contract name is modified, or
+
+
+If the contract name is modified, or
 there is a typo in the constructor’s name such that it does not match
 the name of the contract, the constructor will behave like a normal
 function. This can lead to dire consequences, especially if the
@@ -12445,9 +12445,9 @@ by calling `withdraw`.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>This issue has been addressed in version
+
+
+This issue has been addressed in version
 0.4.22 of the Solidity compiler. This version introduced a `constructor`
 keyword that specifies the constructor, rather than requiring the name
 of the function to match the contract name. Using this keyword to
@@ -12455,9 +12455,9 @@ specify constructors is recommended to prevent naming issues.
 
 ### Real-World Example: Rubixi
 
-[Rubixi](http://bit.ly/2ESWG7t) <span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>was
+[Rubixi](http://bit.ly/2ESWG7t) 
+
+was
 another pyramid scheme that exhibited this kind of vulnerability. It was
 originally called `DynamicPyramid`, but the contract name was changed
 before deployment to `Rubixi`. The constructor’s name wasn’t changed,
@@ -12471,8 +12471,8 @@ Fixes”](http://bit.ly/2Q1AMA6).
 
 ## Uninitialized Storage Pointers
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>The
+
+The
 EVM stores data either as storage or as memory. Understanding exactly
 how this is done and the default types for local variables of functions
 is highly recommended when developing contracts. This is because it is
@@ -12494,7 +12494,7 @@ by Stefan, can be found in this [Reddit thread](http://bit.ly/2OgxPtG).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>Local
+ Local
 variables within functions default to storage or memory depending on
 their type. Uninitialized local storage variables may contain the value
 of other storage variables in the contract; this fact can cause
@@ -12571,13 +12571,13 @@ last byte of `_name` is nonzero, it will modify the last byte of storage
 `slot[0]` and directly change `unlocked` to `true`. Such `_name` values
 will cause the `require` call on line 25 to succeed, as we have set
 `unlocked` to `true`. Try this in Remix. Note the function will pass if
-you use a `_name` of the form:<span class="indexterm"></span>
+you use a `_name` of the form:
 
     0x0000000000000000000000000000000000000000000000000000000000000001
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 Solidity compiler shows a warning for unintialized storage variables;
 developers should pay careful attention to these warnings when building
 smart contracts. The current version of Mist (0.10) doesn’t allow these
@@ -12587,25 +12587,25 @@ ensure they behave as expected.
 
 ### Real-World Examples: OpenAddressLottery and CryptoRoulette Honey Pots
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>A honey pot named
+
+A honey pot named
 [`OpenAddressLottery`](http://bit.ly/2AAVnWD) was deployed that used
 this uninitialized storage variable quirk to collect ether from some
 would-be hackers. The contract is rather involved, so we will leave the
 analysis to the [Reddit thread](http://bit.ly/2OgxPtG) where the attack
 is quite clearly explained.
 
-<span class="indexterm"></span>Another honey pot,
+Another honey pot,
 [`CryptoRoulette`](http://bit.ly/2OfNGJ2), also utilized this trick to
 try and collect some ether. If you can’t figure out how the attack
 works, see [“An Analysis of a Couple Ethereum Honeypot
 Contracts”](http://bit.ly/2OVkSL4) for an overview of this contract and
-others.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+others.
 
 ## Floating Point and Precision
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As of this writing (v0.4.24), Solidity
+
+As of this writing (v0.4.24), Solidity
 does not support fixed-point and floating-point numbers. This means that
 floating-point representations must be constructed with integer types in
 Solidity. This can lead to errors and vulnerabilities if not implemented
@@ -12620,7 +12620,7 @@ Tips wiki](http://bit.ly/2Ogp2Ia).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>As there
+ As there
 is no fixed-point type in Solidity, developers are required to implement
 their own using the standard integer data types. There are a number of
 pitfalls developers can run into during this process. We will try to
@@ -12668,7 +12668,7 @@ tokens when you need higher precision.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>Keeping
+ Keeping
 the right precision in your smart contracts is very important,
 especially when dealing with ratios and rates that reflect economic
 decisions.
@@ -12704,8 +12704,8 @@ uses some funky naming (“wads” and “rays”), but the concept is useful.
 
 ### Real-World Example: Ethstick
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The [`Ethstick`
+
+The [`Ethstick`
 contract](http://bit.ly/2Qb7PSB) does not use extended precision;
 however, it deals with wei. So, this contract will have issues of
 rounding, but only at the wei level of precision. It has some more
@@ -12714,11 +12714,11 @@ entropy on the blockchain (see [Entropy
 Illusion](#entropyillusion_security)). For a further discussion of the
 `Ethstick` contract, we’ll refer you to another post by Peter Vessenes,
 [“Ethereum Contracts Are Going to Be Candy for
-Hackers”](http://bit.ly/2SwDnE0).<span class="indexterm"></span><span class="indexterm"></span>
+Hackers”](http://bit.ly/2SwDnE0).
 
 ## Tx.Origin Authentication
 
-<span class="indexterm"></span> <span class="indexterm"></span>Solidity
+ Solidity
 has a global variable, `tx.origin`, which traverses the entire call
 stack and contains the address of the account that originally sent the
 call (or transaction). Using this variable for authentication in a smart
@@ -12735,7 +12735,7 @@ Origin Attacks”](http://bit.ly/2P3KVA4) by Chris Coverdale.
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>Contracts
+ Contracts
 that authorize users using the `tx.origin` variable are typically
 vulnerable to phishing attacks that can trick users into performing
 authenticated actions on the vulnerable contract.
@@ -12803,8 +12803,8 @@ contract will pass.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>`tx.origin` should not be used for
+
+`tx.origin` should not be used for
 authorization in smart contracts. This isn’t to say that the `tx.origin`
 variable should never be used. It does have some legitimate use cases in
 smart contracts. For example, if one wanted to deny external contracts
@@ -12812,13 +12812,13 @@ from calling the current contract, one could implement a `require` of
 the form `require(tx.origin == msg.sender)`. This prevents intermediate
 contracts being used to call the current contract, limiting the contract
 to regular codeless
-addresses<span class="indexterm"></span>.<span class="indexterm"></span>
+addresses.
 
 ## Contract Libraries
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There is a lot of existing code available
+
+
+There is a lot of existing code available
 for reuse, both deployed on-chain as callable libraries and off-chain as
 code template libraries. On-platform libraries, having been deployed,
 exist as bytecode smart contracts, so great care should be taken before
@@ -12828,8 +12828,8 @@ benefit from the latest upgrades, and saves you money and benefits the
 Ethereum ecosystem by reducing the total number of live contracts in
 Ethereum.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>In
+
+In
 Ethereum, the most widely used resource is the [OpenZeppelin
 suite](https://openzeppelin.org/), an ample library of contracts ranging
 from implementations of ERC20 and ERC721 tokens, to many flavors of
@@ -12840,8 +12840,8 @@ as *de facto* standard implementations. They are free to use, and are
 built and maintained by [Zeppelin](https://zeppelin.solutions) together
 with an ever-growing list of external contributors.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Also from
+
+Also from
 Zeppelin is [ZeppelinOS](https://zeppelinos.org/), an open source
 platform of services and tools to develop and manage smart contract
 applications securely. ZeppelinOS provides a layer on top of the EVM
@@ -12853,7 +12853,7 @@ improvements in different directions. A set of off-chain tools to debug,
 test, deploy, and monitor decentralized applications is also provided by
 the platform.
 
-<span class="indexterm"></span>The project `ethpm` aims to organize the
+The project `ethpm` aims to organize the
 various resources that are developing in the ecosystem by providing a
 package management system. As such, their registry provides more
 examples for you to browse:
@@ -12877,11 +12877,11 @@ reuse of trusted code. In cryptography, this is so important it has been
 condensed into an adage: "Don’t roll your own crypto." In the case of
 smart contracts, this amounts to gaining as much as possible from freely
 available libraries that have been thoroughly vetted by the
-community.<span class="indexterm"></span><span class="indexterm"></span>
+community.
 
 # Tokens
 
-<span class="indexterm"></span>The word "token" derives from the Old
+The word "token" derives from the Old
 English "tācen," meaning a sign or symbol. It is commonly used to refer
 to privately issued special-purpose coin-like items of insignificant
 intrinsic value, such as transportation tokens, laundry tokens, and
@@ -12909,7 +12909,7 @@ they are based on, and experiment by building our own tokens.
 
 ## How Tokens Are Used
 
-<span class="indexterm"></span> <span class="indexterm"></span>The most
+ The most
 obvious use of tokens is as digital private currencies. However, this is
 only one possible use. Tokens can be programmed to serve many different
 functions, often overlapping. For example, a token can simultaneously
@@ -12964,12 +12964,12 @@ always been inextricably linked. For example, in the physical world, a
 driver’s license (attestation) is also an identity document (identity)
 and the two cannot be separated. In the digital realm, previously
 commingled functions can be separated and developed independently (e.g.,
-an anonymous attestation).<span class="indexterm"></span>
+an anonymous attestation).
 
 ## Tokens and Fungibility
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>[Wikipedia](https://en.wikipedia.org/wiki/Fungibility)
+
+[Wikipedia](https://en.wikipedia.org/wiki/Fungibility)
 says: "In economics, fungibility is the property of a good or a
 commodity whose individual units are essentially interchangeable."
 
@@ -12981,7 +12981,7 @@ then it is not entirely fungible. The ability to track provenance can
 lead to blacklisting and whitelisting, reducing or eliminating
 fungibility.
 
-<span class="indexterm"></span>Non-fungible tokens are tokens that each
+Non-fungible tokens are tokens that each
 represent a unique tangible or intangible item and therefore are not
 interchangeable. For example, a token that represents ownership of a
 *specific* Van Gogh painting is not equivalent to another token that
@@ -13005,8 +13005,8 @@ word here.
 
 ## Counterparty Risk
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Counterparty risk is the risk that the
+
+Counterparty risk is the risk that the
 *other* party in a transaction will fail to meet their obligations. Some
 types of transactions suffer additional counterparty risk because there
 are more than two parties involved. For example, if you hold a
@@ -13027,7 +13027,7 @@ underlying asset.
 
 ## Tokens and Intrinsicality
 
-<span class="indexterm"></span> <span class="indexterm"></span>The word
+ The word
 "intrinsic" derives from the Latin "intra," meaning "from within."
 
 Some tokens represent digital items that are intrinsic to the
@@ -13057,7 +13057,7 @@ similar (intrinsic) organization.
 
 ## Using Tokens: Utility or Equity
 
-<span class="indexterm"></span> <span class="indexterm"></span>Almost
+ Almost
 all projects in Ethereum today launch with some kind of token. But do
 all these projects really need tokens? Are there any disadvantages to
 using a token, or will we see the slogan "tokenize all the things" come
@@ -13072,13 +13072,13 @@ majority of projects are using tokens in one of two ways: either as
 "utility tokens" or as "equity tokens." Very often, those two roles are
 conflated.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Utility
+ Utility
 tokens are those where the use of the token is required to gain access
 to a service, application, or resource. Examples of utility tokens
 include tokens that represent resources such as shared storage, or
 access to services such as social media networks.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Equity
+ Equity
 tokens are those that represent shares in the control or ownership of
 something, such as a startup. Equity tokens can be as limited as
 nonvoting shares for distribution of dividends and profits, or as
@@ -13088,9 +13088,9 @@ system based on votes by the token holders.
 
 ### It’s a Duck!
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Many startups face a difficult problem:
+
+
+Many startups face a difficult problem:
 tokens are a great fundraising mechanism, but offering securities
 (equity) to the public is a regulated activity in most jurisdictions. By
 disguising equity tokens as utility tokens, many startups hope to get
@@ -13107,7 +13107,7 @@ such legal sophistry as an attempt to deceive the public.
 
 ### Utility Tokens: Who Needs Them?
 
-<span class="indexterm"></span> <span class="indexterm"></span>The real
+ The real
 problem is that utility tokens introduce significant risks and adoption
 barriers for startups. Perhaps in a distant future "tokenize all the
 things" will become reality, but at present the set of people who have
@@ -13180,26 +13180,26 @@ liquidity and utility of tokens.
 
 </div>
 
-<span class="indexterm"></span> <span class="indexterm"></span>Make this
+ Make this
 decision for the right reasons. Adopt a token because your application
 *cannot work without a token*. Adopt it because the token lifts a
 fundamental market barrier or solves an access problem. Don’t introduce
 a utility token because it is the only way you can raise money fast and
 you need to pretend it’s not a public securities
-offering<span class="indexterm"></span>.<span class="indexterm"></span>
+offering.
 
 ## Tokens on Ethereum
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Blockchain tokens existed before
-Ethereum. <span class="indexterm"></span>
-<span class="indexterm"></span>In some ways, the first blockchain
+
+Blockchain tokens existed before
+Ethereum. 
+In some ways, the first blockchain
 currency, Bitcoin, is a token itself. Many token platforms were also
 developed on Bitcoin and other cryptocurrencies before Ethereum.
 However, the introduction of the first token standard on Ethereum led to
 an explosion of tokens.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Vitalik
+ Vitalik
 Buterin suggested tokens as one of the most obvious and useful
 applications of a generalized programmable blockchain such as Ethereum.
 In fact, in the first year of Ethereum, it was common to see Vitalik and
@@ -13224,8 +13224,8 @@ standards at the end of the chapter.
 
 ### The ERC20 Token Standard
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The first standard was introduced in
+
+The first standard was introduced in
 November 2015 by Fabian Vogelsteller as an Ethereum Request for Comments
 (ERC). It was automatically assigned GitHub issue number 20, giving rise
 to the name "ERC20 token." The vast majority of tokens are currently
@@ -13245,7 +13245,7 @@ added by developers.
 
 #### ERC20 required functions and events
 
-<span class="indexterm"></span> <span class="indexterm"></span>An
+ An
 ERC20-compliant token contract must provide at least the following
 functions and events:
 
@@ -13282,7 +13282,7 @@ Event logged upon a successful call to `approve`.
 
 #### ERC20 optional functions
 
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 addition to the required functions listed in the previous section, the
 following optional functions are also defined by the standard:
 
@@ -13299,7 +13299,7 @@ to get its user representation.
 
 #### The ERC20 interface defined in Solidity
 
-<span class="indexterm"></span> <span class="indexterm"></span>Here’s
+ Here’s
 what an ERC20 interface specification looks like in Solidity:
 
 ``` solidity
@@ -13319,8 +13319,8 @@ contract ERC20 {
 
 #### ERC20 data structures
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If you examine any ERC20 implementation
+
+If you examine any ERC20 implementation
 you will see that it contains two data structures, one to track balances
 and one to track allowances. In Solidity, they are implemented with a
 *data mapping*.
@@ -13348,9 +13348,9 @@ mapping (address => mapping (address => uint256)) public allowed;
 
 #### ERC20 workflows: "transfer" and "approve & transferFrom"
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The ERC20 token standard has two transfer
+
+
+The ERC20 token standard has two transfer
 functions. You might be wondering why.
 
 ERC20 allows for two different workflows. The first is a
@@ -13365,13 +13365,13 @@ address, calling the `transfer` function with Bob’s address and `10` as
 the arguments. The token contract adjusts Alice’s balance (–10) and
 Bob’s balance (+10) and issues a `Transfer` event.
 
-<span class="indexterm"></span>The second workflow is a two-transaction
+The second workflow is a two-transaction
 workflow that uses `approve` followed by `transferFrom`. This workflow
 allows a token owner to delegate their control to another address. It is
 most often used to delegate control to a contract for distribution of
 tokens, but it can also be used by exchanges.
 
-<span class="indexterm"></span> <span class="indexterm"></span>For
+ For
 example, if a company is selling tokens for an ICO, they can `approve` a
 crowdsale contract address to distribute a certain amount of tokens. The
 crowdsale contract can then `transferFrom` the token contract owner’s
@@ -13381,7 +13381,7 @@ tokens](#approve_transferFrom_workflow).
 
 <div class="note">
 
-<span class="indexterm"></span> <span class="indexterm"></span>An
+ An
 *Initial Coin Offering* (ICO) is a crowdfunding mechanism used by
 companies and organizations to raise money by selling tokens. The term
 is derived from Initial Public Offering (IPO), which is the process by
@@ -13426,7 +13426,7 @@ can call `transferFrom` an unlimited number of times, as long as it
 doesn’t exceed the approval limit Alice set. The `AliceICO` contract can
 keep track of how many AliceCoin tokens it can sell by calling the
 `allowance`
-function.<span class="indexterm"></span><span class="indexterm"></span>
+function.
 
 #### ERC20 implementations
 
@@ -13443,13 +13443,13 @@ This implementation is ERC20-compatible, with additional security
 precautions. It forms the basis of OpenZeppelin libraries implementing
 more complex ERC20-compatible tokens with fundraising caps, auctions,
 vesting schedules, and other
-features.<span class="indexterm"></span><span class="indexterm"></span>
+features.
 
 ### Launching Our Own ERC20 Token
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Let’s create and launch our own token.
+
+
+Let’s create and launch our own token.
 For this example, we will use the Truffle framework. The example assumes
 you have already installed `truffle` and configured it, and are familiar
 with its basic operation (for details, see [Truffle](#truffle)).
@@ -13635,9 +13635,9 @@ alt="METoken deployment on Ganache" />
 
 #### Interacting with METoken using the Truffle console
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>We can interact with our contract on the
+
+
+We can interact with our contract on the
 `ganache` blockchain using the Truffle console. This is an interactive
 JavaScript environment that provides access to the Truffle environment
 and, via web3, to the blockchain. In this case, we will connect the
@@ -13761,7 +13761,7 @@ and `accounts[1]` has 1,000 MET.
 If you switch to the `ganache` graphical user interface, as shown in
 [METoken transfer on ganache](#ganache_METoken_transfer), you will see
 the transaction that called the `transfer`
-function.<span class="indexterm"></span><span class="indexterm"></span>
+function.
 
 <figure id="ganache_METoken_transfer">
 <img src="images/ganache_metoken_transfer.png"
@@ -13771,9 +13771,9 @@ alt="METoken transfer on Ganache" />
 
 #### Sending ERC20 tokens to contract addresses
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>So far, we’ve set up an ERC20 token and
+
+
+So far, we’ve set up an ERC20 token and
 transferred some tokens from one account to another. All the accounts we
 used for these demonstrations are externally owned accounts, meaning
 they are controlled by a private key, not a contract. What happens if we
@@ -13882,13 +13882,13 @@ contracts are only meant to receive ether, not ERC20 tokens, most often
 sweeping all funds sent to them to "cold storage" or another centralized
 wallet. Despite the many warnings saying "do not send tokens to this
 address," lots of tokens are lost this
-way.<span class="indexterm"></span><span class="indexterm"></span>
+way.
 
 #### Demonstrating the “approve & transferFrom” workflow
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Our `Faucet` contract couldn’t handle
+
+
+Our `Faucet` contract couldn’t handle
 ERC20 tokens. Sending tokens to it using the `transfer` function
 resulted in the loss of those tokens. Let’s rewrite the contract now and
 make it handle ERC20 tokens. Specifically, we will turn it into a faucet
@@ -14041,11 +14041,11 @@ However, the burden of managing ERC20 tokens correctly is pushed to the
 user interface. If a user incorrectly attempts to transfer ERC20 tokens
 to a contract address and that contract is not equipped to receive ERC20
 tokens, the tokens will be
-lost<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+lost.
 
 ### Issues with ERC20 Tokens
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 adoption of the ERC20 token standard has been truly explosive. Thousands
 of tokens have been launched, both to experiment with new capabilities
 and to raise funds in various "crowdfund" auctions and ICOs. However,
@@ -14090,9 +14090,9 @@ contract. Tokens are meant to function just like a cryptocurrency such
 as ether, but they come with certain differences that break that
 illusion.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Consider another issue. To send ether or
+
+
+Consider another issue. To send ether or
 use any Ethereum contract you need ether to pay for gas. To send tokens,
 you *also need ether*. You cannot pay for a transaction’s gas with a
 token and the token contract can’t pay for the gas for you. This may
@@ -14122,8 +14122,8 @@ address some of these issues.
 
 ### ERC223: A Proposed Token Contract Interface Standard
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The ERC223 proposal attempts to solve the
+
+The ERC223 proposal attempts to solve the
 problem of inadvertent transfer of tokens to a contract (that may or may
 not support tokens) by detecting whether the destination address is a
 contract or not. ERC223 requires that contracts designed to accept
@@ -14176,8 +14176,8 @@ continues.
 
 ### ERC777: A Proposed Token Contract Interface Standard
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Another proposal for an improved token
+
+Another proposal for an improved token
 contract standard is [ERC777](https://eips.ethereum.org/EIPS/eip-777).
 This proposal has several goals, including:
 
@@ -14296,20 +14296,20 @@ in the proposal. ERC777 depends on a parallel proposal for a registry
 contract, specified in ERC820. Some of the debate on ERC777 is about the
 complexity of adopting two big changes at once: a new token standard and
 a registry standard. The discussion
-continues.<span class="indexterm"></span><span class="indexterm"></span>
+continues.
 
 ### ERC721: Non-fungible Token (Deed) Standard
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>All the token standards we have looked at
+
+
+
+All the token standards we have looked at
 so far are for *fungible* tokens, meaning that units of a token are
 interchangeable. The ERC20 token standard only tracks the final balance
 of each account and does not (explicitly) track the provenance of any
 token.
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 [ERC721 proposal](http://bit.ly/2Ogs7Im) is for a standard for
 *non-fungible* tokens, also known as *deeds*.
 
@@ -14390,7 +14390,7 @@ interface ERC721Metadata /* is ERC721 */ {
 ```
 
 The ERC721 optional interface for enumeration
-is<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>:<span class="indexterm"></span>
+is:
 
 ``` solidity
 interface ERC721Enumerable /* is ERC721 */ {
@@ -14405,8 +14405,8 @@ interface ERC721Enumerable /* is ERC721 */ {
 
 ## Using Token Standards
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In the previous section we reviewed
+
+In the previous section we reviewed
 several proposed standards and a couple of widely deployed standards for
 token contracts. What exactly do these standards do? Should you use
 these standards? How should you use them? Should you add functionality
@@ -14415,14 +14415,14 @@ some of those questions next.
 
 ### What Are Token Standards? What Is Their Purpose?
 
-<span class="indexterm"></span> <span class="indexterm"></span>Token
+ Token
 standards are the *minimum* specifications for an implementation. What
 that means is that in order to be compliant with, say, ERC20, you need
 to at minimum implement the functions and behavior specified by the
 ERC20 standard. You are also free to *add* to the functionality by
 implementing functions that are not part of the standard.
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 primary purpose of these standards is to encourage *interoperability*
 between contracts. Thus, all wallets, exchanges, user interfaces, and
 other infrastructure components can *interface* in a predictable manner
@@ -14441,7 +14441,7 @@ zero.
 
 ### Should You Use These Standards?
 
-<span class="indexterm"></span> <span class="indexterm"></span>Given all
+ Given all
 these standards, each developer faces a dilemma: use the existing
 standards or innovate beyond the restrictions they impose?
 
@@ -14475,9 +14475,9 @@ because of their external origins and costs, such as royalties.
 
 ### Security by Maturity
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Beyond the choice of standard, there is
+
+
+Beyond the choice of standard, there is
 the parallel choice of *implementation*. When you decide to use a
 standard such as ERC20, you have to then decide how to implement a
 compatible design. There are a number of existing "reference"
@@ -14497,7 +14497,7 @@ the ground up.
 
 If you use an existing implementation you can also extend it. Again,
 however, be careful with this impulse. Complexity is the enemy of
-security. <span class="indexterm"></span>Every single line of code you
+security. Every single line of code you
 add expands the *attack surface* of your contract and could represent a
 vulnerability lying in wait. You may not notice a problem until you put
 a lot of value on top of the contract and someone breaks it.
@@ -14507,13 +14507,13 @@ a lot of value on top of the contract and someone breaks it.
 Standards and implementation choices are important parts of overall
 secure smart contract design, but they’re not the only considerations.
 See [Smart Contract
-Security](#smart_contract_security).<span class="indexterm"></span><span class="indexterm"></span>
+Security](#smart_contract_security).
 
 </div>
 
 ## Extensions to Token Interface Standards
 
-<span class="indexterm"></span> <span class="indexterm"></span>The token
+ The token
 standards discussed in this chapter provide a very minimal interface,
 with limited functionality. Many projects have created extended
 implementations to support features that they need for their
@@ -14566,9 +14566,9 @@ and interoperability/security.
 
 ## Tokens and ICOs
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Tokens have been an explosive development
+
+
+Tokens have been an explosive development
 in the Ethereum ecosystem. It is likely that they will become a very
 important component of all smart contract platforms like Ethereum.
 
@@ -14593,23 +14593,23 @@ the different types of tokens and token standards, and you built your
 first token and related application. We will revisit tokens again in
 [Decentralized Applications (DApps)](#decentralized_applications_chap),
 where you will use a non-fungible token as the basis for an auction
-DApp.<span class="indexterm"></span>
+DApp.
 
 # Oracles
 
-<span class="indexterm"></span>In this chapter we discuss *oracles*,
+In this chapter we discuss *oracles*,
 which are systems that can provide external data sources to Ethereum
 smart contracts. The term "oracle" comes from Greek mythology, where it
 referred to a person in communication with the gods who could see
 visions of the future. In the context of blockchains, an oracle is a
 system that can answer questions that are external to Ethereum.
-<span class="indexterm"></span>Ideally oracles are systems that are
+Ideally oracles are systems that are
 *trustless*, meaning that they do not need to be trusted because they
 operate on decentralized principles.
 
 ## Why Oracles Are Needed
 
-<span class="indexterm"></span> <span class="indexterm"></span>A key
+ A key
 component of the Ethereum platform is the Ethereum Virtual Machine, with
 its ability to execute programs and update the state of Ethereum,
 constrained by consensus rules, on any node in the decentralized
@@ -14655,7 +14655,7 @@ detail, in the rest of this chapter.
 
 ## Oracle Use Cases and Examples
 
-<span class="indexterm"></span> <span class="indexterm"></span>Oracles,
+ Oracles,
 ideally, provide a trustless (or at least near-trustless) way of getting
 extrinsic (i.e., "real-world" or off-chain) information, such as the
 results of football games, the price of gold, or truly random numbers,
@@ -14736,7 +14736,7 @@ decentralized oracles, and oracle client implementations in Solidity.
 
 ## Oracle Design Patterns
 
-<span class="indexterm"></span> <span class="indexterm"></span>All
+ All
 oracles provide a few key functions, by definition. These include the
 ability to:
 
@@ -14755,8 +14755,8 @@ accessed by Ethereum nodes or network-enabled clients directly by
 The three main ways to set up an oracle can be categorized as
 *request–response*, publish-subscribe, and *immediate-read*.
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Starting with the simplest,
+
+Starting with the simplest,
 *immediate-read* oracles are those that provide data that is only needed
 for an immediate decision, like "What is the address for
 *ethereumbook.info*?" or "Is this person over 18?" Those wishing to
@@ -14786,8 +14786,8 @@ kept private. Again, hashing the data (more carefully, in Merkle trees
 with salts) and only storing the root hash in the smart contract’s
 storage would be an efficient way to organize such a service.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The next
+
+The next
 setup is *publish–subscribe*, where an oracle that effectively provides
 a broadcast service for data that is expected to change (perhaps both
 regularly and frequently) is either polled by a smart contract on-chain,
@@ -14810,8 +14810,8 @@ which might be necessary for some decentralized applications (e.g.,
 where activation incentives are not possible), then significant gas
 expenditure may be incurred.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The
+
+The
 *request–response* category is the most complicated: this is where the
 data space is too huge to be stored in a smart contract and users are
 expected to only need a small part of the overall dataset at a time. It
@@ -14883,8 +14883,8 @@ changes. Multiple subscribed DApps can simply read it from the oracle
 contract, thereby reducing the impact on network bandwidth while
 minimizing storage costs.
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In a broadcast or multicast pattern, an
+
+In a broadcast or multicast pattern, an
 oracle would post all messages to a channel and subscribing contracts
 would listen to the channel under a variety of subscription modes. For
 example, an oracle might publish messages to a cryptocurrency exchange
@@ -14893,13 +14893,13 @@ content of the channel if it required the time series for, e.g., a
 moving average calculation; another might require only the latest rate
 for a spot price calculation. A broadcast pattern is appropriate where
 the oracle does not need to know the identity of the subscribing
-contract.<span class="indexterm"></span>
+contract.
 
 ## Data Authentication
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If we assume that the source of data
+
+
+If we assume that the source of data
 being queried by a DApp is both authoritative and trustworthy (a not
 insignificant assumption), an outstanding question remains: given that
 the oracle and the request–response mechanism may be operated by
@@ -14909,16 +14909,16 @@ critical that off-chain methods are able to attest to the returned
 data’s integrity. Two common approaches to data authentication are
 *authenticity proofs* and *trusted execution environments* (TEEs).
 
-<span class="indexterm"></span>Authenticity proofs are cryptographic
+Authenticity proofs are cryptographic
 guarantees that data has not been tampered with. Based on a variety of
 attestation techniques (e.g., digitally signed proofs), they effectively
 shift the trust from the data carrier to the attestor (i.e., the
 provider of the attestation). By verifying the authenticity proof
 on-chain, smart contracts are able to verify the integrity of the data
 before operating upon it.
-<span class="indexterm"></span>[Oraclize](http://www.oraclize.it/) is an
+[Oraclize](http://www.oraclize.it/) is an
 example of an oracle service leveraging a variety of authenticity
-proofs. <span class="indexterm"></span>One such proof that is currently
+proofs. One such proof that is currently
 available for data queries from the Ethereum main network is the
 TLSNotary proof. TLSNotary proofs allow a client to provide evidence to
 a third party that HTTPS web traffic occurred between the client and a
@@ -14935,11 +14935,11 @@ proofs. Although it offers higher assurances against data tampering than
 a pure request–response mechanism, this approach does require the
 assumption that Amazon itself will not tamper with the VM instance.
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>[Town
+[Town
 Crier](http://www.town-crier.org/) is an authenticated data feed oracle
 system based on the TEE approach; such methods utilize hardware-based
 secure enclaves to ensure data integrity. Town Crier uses Intel’s
-<span class="indexterm"></span><span class="indexterm"></span>Software
+Software
 Guard eXtensions (SGX) to ensure that responses from HTTPS queries can
 be verified as authentic. SGX provides guarantees of integrity, ensuring
 that applications running within an enclave are protected by the CPU
@@ -14962,7 +14962,7 @@ data is returned untampered with (assuming that we trust Intel/SGX).
 
 ## Computation Oracles
 
-<span class="indexterm"></span> <span class="indexterm"></span>So far,
+ So far,
 we have only discussed oracles in the context of requesting and
 delivering data. However, oracles can also be used to perform arbitrary
 computation, a function that can be especially useful given Ethereum’s
@@ -14974,7 +14974,7 @@ For example, one might use a computation oracle to perform a
 computationally intensive regression calculation in order to estimate
 the yield of a bond contract.
 
-<span class="indexterm"></span>If you are willing to trust a centralized
+If you are willing to trust a centralized
 but auditable service, you can go again to Oraclize. They provide a
 service that allows decentralized applications to request the output of
 a computation performed in a sandboxed AWS virtual machine. The AWS
@@ -14992,7 +14992,7 @@ if the computation is of some nontrivial value, it is possible to check
 that the correct Docker container was executed. Nonetheless, this is not
 a truly decentralized solution.
 
-<span class="indexterm"></span>The concept of a *cryptlet* as a standard
+The concept of a *cryptlet* as a standard
 for verifiable oracle truths has been formalized as part of Microsoft’s
 wider ESC Framework. Cryptlets execute within an encrypted capsule that
 abstracts away the infrastructure, such as I/O, and has the
@@ -15015,7 +15015,7 @@ public class SampleContractCryptlet : Cryptlet
                 new SampleContractConstructor())
 ```
 
-<span class="indexterm"></span>For a more decentralized solution, we can
+For a more decentralized solution, we can
 turn to [TrueBit](https://truebit.io/), which offers a solution for
 scalable and verifiable off-chain computation. They use a system of
 solvers and verifiers who are incentivized to perform computations and
@@ -15041,11 +15041,11 @@ computationally intensive function that cannot be computed within the
 Ethereum block gas limit. By performing this verification on TrueBit, it
 has been possible to securely verify Dogecoin transactions within a
 smart contract on Ethereum’s Rinkeby
-testnet.<span class="indexterm"></span>
+testnet.
 
 ## Decentralized Oracles
 
-<span class="indexterm"></span> <span class="indexterm"></span>While
+ While
 centralized data or computation oracles suffice for many applications,
 they represent single points of failure in the Ethereum network. A
 number of schemes have been proposed around the idea of decentralized
@@ -15053,7 +15053,7 @@ oracles as a means of ensuring data availability and the creation of a
 network of individual data providers with an on-chain data aggregation
 system.
 
-<span class="indexterm"></span>[ChainLink](https://www.smartcontract.com/link)
+[ChainLink](https://www.smartcontract.com/link)
 has proposed a decentralized oracle network consisting of three key
 smart contracts—a reputation contract, an order-matching contract, and
 an aggregation contract—and an off-chain registry of data providers. The
@@ -15080,7 +15080,7 @@ ones. Therefore, ChainLink offers a standard set of aggregation
 contracts, but also allows customized aggregation contracts to be
 specified.
 
-<span class="indexterm"></span>A related idea is the SchellingCoin
+A related idea is the SchellingCoin
 protocol. Here, multiple participants report values and the median is
 taken as the “correct” answer. Reporters are required to provide a
 deposit that is redistributed in favor of values that are closer to the
@@ -15101,9 +15101,9 @@ data after the registration period ends.
 
 ## Oracle Client Interfaces in Solidity
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>[example_title](#using_oraclize_to_update_the_eth_usd)
+
+
+[example_title](#using_oraclize_to_update_the_eth_usd)
 is a Solidity example demonstrating how Oraclize can be used to
 continuously poll for the ETH/USD price from an API and store the result
 in a usable manner.
@@ -15195,7 +15195,7 @@ in the response value and a unique `queryId` argument, which, for
 example, can be used to handle and track multiple pending callbacks from
 Oraclize.
 
-<span class="indexterm"></span>Financial data provider Thomson Reuters
+Financial data provider Thomson Reuters
 also provides an oracle service for Ethereum, called BlockOne IQ,
 allowing market and reference data to be requested by smart contracts
 running on private or permissioned networks.
@@ -15280,7 +15280,7 @@ allowing the resulting data to be retrieved; in the event of retrieval
 failure, the `onFailure` callback will return an error code instead. The
 available fields that can be retrieved on success include `open`,
 `high`, `low`, `close` (OHLC), and `bid`/`ask`
-prices.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+prices.
 
 ## Conclusions
 
@@ -15299,14 +15299,14 @@ security assumptions are carefully considered.
 Decentralized oracles can resolve some of these concerns and offer
 Ethereum smart contracts trustless external data. Choose carefully and
 you can start exploring the bridge between Ethereum and the "real world"
-that oracles offer.<span class="indexterm"></span>
+that oracles offer.
 
 # Decentralized Applications (DApps)
 
-<span class="indexterm"></span>In this chapter we will explore the world
+In this chapter we will explore the world
 of *decentralized applications*, or *DApps*. From the early days of
 Ethereum, the founders' vision was much broader than "smart contracts":
-<span class="indexterm"></span>no less than reinventing the web and
+no less than reinventing the web and
 creating a new world of DApps, aptly called *web3*. Smart contracts are
 a way to decentralize the controlling logic and payment functions of
 applications. Web3 DApps are about decentralizing all other aspects of
@@ -15339,7 +15339,7 @@ at the defining characteristics and advantages of DApps.
 
 ## What Is a DApp?
 
-<span class="indexterm"></span> <span class="indexterm"></span>A DApp is
+ A DApp is
 an application that is mostly or entirely decentralized.
 
 Consider all the possible aspects of an application that may be
@@ -15391,9 +15391,9 @@ decentralized way.
 
 ### Backend (Smart Contract)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In a DApp, smart contracts are used to
+
+
+In a DApp, smart contracts are used to
 store the business logic (program code) and the related state of your
 application. You can think of a smart contract replacing a server-side
 (aka "backend") component in a regular application. This is an
@@ -15426,8 +15426,8 @@ have to trust these external resources.
 
 ### Frontend (Web User Interface)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Unlike
+
+Unlike
 the business logic of the DApp, which requires a developer to understand
 the EVM and new languages such as Solidity, the client-side interface of
 a DApp can use standard web technologies (HTML, CSS, JavaScript, etc.).
@@ -15448,9 +15448,9 @@ browser by a web server.
 
 ### Data Storage
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Due to high gas costs and the currently
+
+
+Due to high gas costs and the currently
 low block gas limit, smart contracts are not well suited to storing or
 processing large amounts of data. Hence, most DApps utilize off-chain
 data storage services, meaning they store the bulky data off the
@@ -15466,9 +15466,9 @@ We’ll look at a few of the options next.
 
 #### IPFS
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The
+
+
+The
 *Inter-Planetary File System* (IPFS) is a decentralized
 content-addressable storage system that distributes stored objects among
 peers in a P2P network. "Content addressable" means that each piece of
@@ -15484,9 +15484,9 @@ More information about IPFS can be found at <https://ipfs.io>.
 
 #### Swarm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Swarm is
+
+
+Swarm is
 another content-addressable P2P storage system, similar to IPFS. Swarm
 was created by the Ethereum Foundation, as part of the Go-Ethereum suite
 of tools. Like IPFS, it allows you to store files that get disseminated
@@ -15500,33 +15500,33 @@ Swarm node or a gateway:
 
 ### Decentralized Message Communications Protocols
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Another
+
+Another
 major component of any application is inter-process communication. That
 means being able to exchange messages between applications, between
 different instances of the application, or between users of the
 application. Traditionally, this is achieved by reliance on a
 centralized server. However, there are a variety of decentralized
 alternatives to server-based protocols, offering messaging over a P2P
-network. <span class="indexterm"></span>The most notable P2P messaging
+network. The most notable P2P messaging
 protocol for DApps is [*Whisper*](http://bit.ly/2CSls5h), which is part
 of the Ethereum Foundation’s Go-Ethereum suite of tools.
 
 The final aspect of an application that can be decentralized is name
 resolution. We’ll take a close look at Ethereum’s name service later in
 this chapter; now, though, let’s dig into an
-example.<span class="indexterm"></span>
+example.
 
 ## A Basic DApp Example: Auction DApp
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In this section we will start building an
+
+In this section we will start building an
 example DApp, to explore the various decentralization tools. Our DApp
 will implement a decentralized auction.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Auction DApp allows a user to
+
+
+The Auction DApp allows a user to
 register a "deed" token, which represents some unique asset, such as a
 house, a car, a trademark, etc. Once a token has been registered, the
 ownership of the token is transferred to the Auction DApp, allowing it
@@ -15569,9 +15569,9 @@ repository](http://bit.ly/2DcmjyA).
 
 ### Auction DApp: Backend Smart Contracts
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Our Auction DApp example is supported by
+
+
+Our Auction DApp example is supported by
 two smart contracts that we need to deploy on an Ethereum blockchain in
 order to support the application: `AuctionRepository` and
 `DeedRepository`.
@@ -15686,8 +15686,8 @@ represents a double-edged sword. On the one side, privileged accounts
 are dangerous; if compromised, they can subvert the security of the
 DApp. On the other side, without any privileged account, there are no
 recovery options if a bug is found. We have seen both of these risks
-manifest in Ethereum DApps. <span class="indexterm"></span>
-<span class="indexterm"></span>In the case of The DAO ([Real-World
+manifest in Ethereum DApps. 
+In the case of The DAO ([Real-World
 Example: The DAO](#real_world_example_the_dao) and
 [appendix_title](#ethereum_fork_history)), there were some privileged
 accounts called the "curators," but they were very limited in their
@@ -15702,11 +15702,11 @@ contracts truly independent, launching them and then having no control,
 or create privileged accounts and run the risk of those being
 compromised. Either choice carries risk, but in the long run, true DApps
 cannot have specialized access for privileged accounts—that’s not
-decentralized.<span class="indexterm"></span><span class="indexterm"></span>
+decentralized.
 
 ### Auction DApp: Frontend User Interface
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once the
+ Once the
 Auction DApp’s contracts are deployed, you can interact with them using
 your favorite JavaScript console and web3.js, or another web3 library.
 However, most users will need an easy-to-use interface. Our Auction DApp
@@ -15783,7 +15783,7 @@ alt="Auction DApp User interface" />
 
 ## Further Decentralizing the Auction DApp
 
-<span class="indexterm"></span> <span class="indexterm"></span>Our DApp
+ Our DApp
 is already quite decentralized, but we can improve things.
 
 The `AuctionRepository` contract operates independently of any
@@ -15813,9 +15813,9 @@ the second in [The Ethereum Name Service
 
 ## Storing the Auction DApp on Swarm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>We introduced Swarm in
+
+
+We introduced Swarm in
 [Swarm](#swarm_sec), earlier in this chapter. Our Auction DApp already
 uses Swarm to store the icon image for each auction. This is a much more
 efficient solution than attempting to store data on Ethereum, which is
@@ -15828,7 +15828,7 @@ directly, instead of running a web server.
 
 ### Preparing Swarm
 
-<span class="indexterm"></span> <span class="indexterm"></span>To get
+ To get
 started, you need to install Swarm and initialize your Swarm node. Swarm
 is part of the Ethereum Foundation’s Go-Ethereum suite of tools. Refer
 to the instructions for installing Go-Ethereum in [Go-Ethereum
@@ -15883,7 +15883,7 @@ ENS name.
 
 ### Uploading Files to Swarm
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once you
+ Once you
 have your local Swarm node and gateway running, you can upload to Swarm
 and the files will be accessible on any Swarm node, simply by reference
 to the file hash.
@@ -15970,7 +15970,7 @@ http://localhost:8500
 ab164cf37dc10647e43a233486cdeffa8334b026e32a480dd9cbd020c12d4581
 
 Now, our entire Auction DApp is hosted on Swarm and accessible by the
-Swarm URL:<span class="indexterm"></span>
+Swarm URL:
 
 bzz://ab164cf37dc10647e43a233486cdeffa8334b026e32a480dd9cbd020c12d4581
 
@@ -15980,13 +15980,13 @@ name like *auction_dapp.com*. Are we forced to sacrifice usability in
 order to gain decentralization? Not necessarily. In the next section we
 will examine Ethereum’s name service, which allows us to use
 easy-to-read names but still preserves the decentralized nature of our
-application.<span class="indexterm"></span><span class="indexterm"></span>
+application.
 
 ## The Ethereum Name Service (ENS)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>You can design the best smart contract in
+
+
+You can design the best smart contract in
 the world, but if you don’t provide a good interface for users, they
 won’t be able to access it.
 
@@ -16014,7 +16014,7 @@ your DApp resources to make them easier to use.
 
 ### History of Ethereum Name Services
 
-<span class="indexterm"></span> <span class="indexterm"></span>Name
+ Name
 registration was the first noncurrency application of blockchains,
 pioneered by Namecoin. The Ethereum [White Paper](http://bit.ly/2Of1gfZ)
 gave a two-line Namecoin-like registration system as one of its example
@@ -16031,8 +16031,8 @@ to launch it on Pi Day, March 15).
 
 ### The ENS Specification
 
-<span class="indexterm"></span> <span class="indexterm"></span>ENS is
-<span class="indexterm"></span> <span class="indexterm"></span>specified
+ ENS is
+ specified
 mainly in three Ethereum Improvement Proposals: EIP-137, which specifies
 the basic functions of ENS; EIP-162, which describes the auction system
 for the `.eth` root; and EIP-181, which specifies reverse resolution of
@@ -16044,7 +16044,7 @@ very simple top layer that keeps all the funds in separate accounts.
 
 ### Bottom Layer: Name Owners and Resolvers
 
-<span class="indexterm"></span> <span class="indexterm"></span>The ENS
+ The ENS
 operates on "nodes" instead of human-readable names: a human-readable
 name is converted to a node using the "Namehash" algorithm.
 
@@ -16060,8 +16060,8 @@ subnodes.
 
 #### The Namehash algorithm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Namehash
+
+Namehash
 is a recursive algorithm that can convert any name into a hash that
 identifies the name.
 
@@ -16120,7 +16120,7 @@ name.
 
 #### How to choose a valid name
 
-<span class="indexterm"></span> <span class="indexterm"></span>Names
+ Names
 consist of a series of dot-separated labels. Although upper- and
 lowercase letters are allowed, all labels should follow a UTS \#46
 normalization process that case-folds labels before hashing them, so
@@ -16138,7 +16138,7 @@ compatibility with legacy DNS, the following rules are recommended:
 
 #### Root node ownership
 
-<span class="indexterm"></span> <span class="indexterm"></span>One of
+ One of
 the results of this hierarchical system is that it relies on the owners
 of the root node, who are able to create top-level domains (TLDs).
 
@@ -16165,19 +16165,19 @@ consensus with the community to:
 
 #### Resolvers
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The basic
+
+The basic
 ENS contract can’t add metadata to names; that is the job of so-called
 "resolver contracts." These are user-created contracts that can answer
 questions about the name, such as what Swarm address is associated with
 the app, what address receives payments to the app (in ether or tokens),
 or what the hash of the app is (to verify its
-integrity).<span class="indexterm"></span>
+integrity).
 
 ### Middle Layer: The .eth Nodes
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>At the
+
+At the
 time of writing, the only top-level domain that is uniquely registrable
 in a smart contract is `.eth`.
 
@@ -16199,8 +16199,8 @@ without risk to the funds—more on that later.
 
 #### Vickrey auctions
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Names are
+
+Names are
 distributed via a modified Vickrey auction. In a traditional Vickrey
 auction, every bidder submits a sealed bid, and all of them are revealed
 simultaneously, at which point the highest bidder wins the auction but
@@ -16256,9 +16256,9 @@ Therefore, the auction is a four-step process:
 
 ### Top Layer: The Deeds
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The top layer of ENS is yet another
+
+
+The top layer of ENS is yet another
 super-simple contract with a single purpose: to hold the funds.
 
 When you win a name, the funds are not actually sent anywhere, but are
@@ -16275,12 +16275,12 @@ code), and it only allows the funds to be transferred back to a single
 account (the deed owner) and to be called by a single entity (the
 registrar contract). This approach drastically reduces the attack
 surface where bugs can put the funds at
-risk.<span class="indexterm"></span>
+risk.
 
 ### Registering a Name
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Registering
+
+Registering
 a name in ENS is a four-step process, as we saw in [Vickrey
 auctions](#vickrey_auction). First we place a bid for any available
 name, then we reveal our bid after 48 hours to secure the name. [ENS
@@ -16365,11 +16365,11 @@ bid</figcaption>
 If all goes well, after submitting a transaction in this way you can
 return and reveal the bid in 48 hours, and the name you requested will
 be registered to your Ethereum
-address.<span class="indexterm"></span><span class="indexterm"></span>
+address.
 
 ### Managing Your ENS Name
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once you
+ Once you
 have registered an ENS name, you can manage it using another
 user-friendly interface: [ENS Manager](https://manager.ens.domains/).
 
@@ -16409,7 +16409,7 @@ managed the domain `ethereumbook.eth` previously.
 
 ### ENS Resolvers
 
-<span class="indexterm"></span> <span class="indexterm"></span>In ENS,
+ In ENS,
 resolving a name is a two-step process:
 
 1.  The ENS registry is called with the name to resolve after hashing
@@ -16448,9 +16448,9 @@ auction.ethereumbook.eth</figcaption>
 
 ### Resolving a Name to a Swarm Hash (Content)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Once the
+
+
+Once the
 resolver for `auction.ethereumbook.eth` is set to be the public
 resolver, we can set it to return the Swarm hash as the content of our
 name (see [Setting the to return for
@@ -16479,7 +16479,7 @@ http://swarm-gateways.net/bzz:/auction.ethereumbook.eth/
 
 We can also find it by searching for "auction.ethereumbook.eth" in any
 ENS-compatible wallet or DApp browser (e.g.,
-Mist)<span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+Mist).
 
 ## From App to DApp
 
@@ -16506,7 +16506,7 @@ authority, no central point of failure, and expresses the "web3" vision.
 
 [Auction DApp architecture](#auction_dapp_final_architecture) shows the
 complete architecture of the Auction
-DApp.<span class="indexterm"></span><span class="indexterm"></span>
+DApp.
 
 <figure id="auction_dapp_final_architecture">
 <img src="images/auction_dapp_final_architecture.png"
@@ -16523,11 +16523,11 @@ decentralized. However, it is already possible to construct applications
 that are almost completely decentralized. Over time, as the technology
 matures further, more and more of our applications can be decentralized,
 resulting in a more resilient, censorship-resistant, and free
-web.<span class="indexterm"></span>
+web.
 
 # The Ethereum Virtual Machine
 
-<span class="indexterm"></span>At the heart of the Ethereum protocol and
+At the heart of the Ethereum protocol and
 operation is the Ethereum Virtual Machine, or EVM for short. As you
 might guess from the name, it is a computation engine, not hugely
 dissimilar to the virtual machines of Microsoft’s .NET Framework, or
@@ -16538,7 +16538,7 @@ Ethereum state updates.
 
 ## What Is the EVM?
 
-<span class="indexterm"></span> <span class="indexterm"></span>The EVM
+ The EVM
 is the part of Ethereum that handles smart contract deployment and
 execution. Simple value transfer transactions from one EOA to another
 don’t need to involve it, practically speaking, but everything else will
@@ -16547,7 +16547,7 @@ running on the Ethereum blockchain can be thought of as a global
 decentralized computer containing millions of executable objects, each
 with its own permanent data store.
 
-<span class="indexterm"></span> <span class="indexterm"></span>The EVM
+ The EVM
 is a quasi–Turing-complete state machine; "quasi" because all execution
 processes are limited to a finite number of computational steps by the
 amount of gas available for any given smart contract execution. As such,
@@ -16587,7 +16587,7 @@ Architecture and Execution Context</figcaption>
 
 ### Comparison with Existing Technology
 
-<span class="indexterm"></span> <span class="indexterm"></span>The term
+ The term
 "virtual machine" is often applied to the virtualization of a real
 computer, typically by a "hypervisor" such as VirtualBox or QEMU, or of
 an entire operating system instance, such as Linux’s KVM. These must
@@ -16618,9 +16618,9 @@ virtual.
 
 ### The EVM Instruction Set (Bytecode Operations)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The EVM instruction set offers most of
+
+
+The EVM instruction set offers most of
 the operations you might expect, including:
 
 - Arithmetic and bitwise logic operations
@@ -16773,7 +16773,7 @@ RETURNDATACOPY //Copy data output from the previous call to memory
 
 Block operations  
 Opcodes for accessing information on the current
-block:<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+block:
 
 ```
 BLOCKHASH  //Get the hash of one of the 256 most recently completed
@@ -16787,7 +16787,7 @@ GASLIMIT   //Get the block's gas limit
 
 ### Ethereum State
 
-<span class="indexterm"></span> <span class="indexterm"></span>The job
+ The job
 of the EVM is to update the Ethereum state by computing valid state
 transitions as a result of smart contract code execution, as defined by
 the Ethereum protocol. This aspect leads to the description of Ethereum
@@ -16796,12 +16796,12 @@ external actors (i.e., account holders and miners) initiate state
 transitions by creating, accepting, and ordering transactions. It is
 useful at this point to consider what constitutes the Ethereum state.
 
-<span class="indexterm"></span>At the top level, we have the Ethereum
+At the top level, we have the Ethereum
 *world state*. The world state is a mapping of Ethereum addresses
-(160-bit values) to <span class="indexterm"></span>
-<span class="indexterm"></span>*accounts*.
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>At the lower level, each Ethereum address
+(160-bit values) to 
+*accounts*.
+
+At the lower level, each Ethereum address
 represents an account comprising an ether *balance* (stored as the
 number of wei owned by the account), a *nonce* (representing the number
 of transactions successfully sent from this account if it is an EOA, or
@@ -16850,10 +16850,10 @@ at the level above.
 
 ### Compiling Solidity to EVM Bytecode
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Compiling a Solidity source file to EVM
+
+
+
+Compiling a Solidity source file to EVM
 bytecode can be accomplished via several methods. In [Ethereum
 Basics](#intro_chapter) we used the online Remix compiler. In this
 chapter, we will use the `solc` executable at the command line. For a
@@ -17037,13 +17037,13 @@ We could continue to step through this program in this way until we had
 a full understanding of the low-level state changes that this code
 effects, but it wouldn’t help us at this stage. We’ll come back to it
 later in the
-chapter.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+chapter.
 
 ### Contract Deployment Code
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There is an important but subtle
+
+
+There is an important but subtle
 difference between the code used when creating and deploying a new
 contract on the Ethereum platform and the code of the contract itself.
 In order to create a new contract, a special transaction is needed that
@@ -17063,13 +17063,13 @@ When compiling a contract offline, e.g., using `solc` on the command
 line, you can either get the *deployment bytecode* or the *runtime
 bytecode*.
 
-<span class="indexterm"></span>The deployment bytecode is used for every
+The deployment bytecode is used for every
 aspect of the initialization of a new contract account, including the
 bytecode that will actually end up being executed when transactions call
 this new contract (i.e., the runtime bytecode) and the code to
 initialize everything based on the contract’s constructor.
 
-<span class="indexterm"></span>The runtime bytecode, on the other hand,
+The runtime bytecode, on the other hand,
 is exactly the bytecode that ends up being executed when the new
 contract is called, and nothing more; it does not include the bytecode
 needed to initialize the contract during deployment.
@@ -17107,13 +17107,13 @@ we instead wanted just the runtime bytecode, we would run
 If you compare the output of these commands, you will see that the
 runtime bytecode is a subset of the deployment bytecode. In other words,
 the runtime bytecode is entirely contained within the deployment
-bytecode.<span class="indexterm"></span><span class="indexterm"></span>
+bytecode.
 
 ### Disassembling the Bytecode
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Disassembling EVM bytecode is a great way
+
+
+Disassembling EVM bytecode is a great way
 to understand how high-level Solidity acts in the EVM. There are a few
 disassemblers you can use to do this:
 
@@ -17350,20 +17350,20 @@ elements on the stack as arguments. In this case, we have
 `jumpi(0x41, 1)`, which tells the EVM to execute the jump to the
 location of the `withdraw(uint256)` function, and the execution of that
 function’s code can
-proceed.<span class="indexterm"></span><span class="indexterm"></span>
+proceed.
 
 ## Turing Completeness and Gas
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As we have already touched on, in simple
+
+
+As we have already touched on, in simple
 terms, a system or programming language is *Turing complete* if it can
 run any program. This capability, however, comes with a very important
 caveat: some programs take forever to run. An important aspect of this
 is that we can’t tell, just by looking at a program, whether it will
 take forever or not to execute. We have to actually go through with the
 execution of the program and wait for it to finish to find out.
-<span class="indexterm"></span>Of course, if it is going to take forever
+Of course, if it is going to take forever
 to execute, we will have to wait forever to find out. This is called the
 *halting problem* and would be a huge problem for Ethereum if it were
 not addressed.
@@ -17390,9 +17390,9 @@ in detail.
 
 ## Gas
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>*Gas* is Ethereum’s unit for measuring
+
+
+*Gas* is Ethereum’s unit for measuring
 the computational and storage resources required to perform actions on
 the Ethereum blockchain. In contrast to Bitcoin, whose transaction fees
 only take into account the size of a transaction in kilobytes, Ethereum
@@ -17421,9 +17421,9 @@ computational, bandwidth, and storage resources that they consume.
 
 ### Gas Accounting During Execution
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>When an EVM is needed to complete a
+
+
+When an EVM is needed to complete a
 transaction, in the first instance it is given a gas supply equal to the
 amount specified by the gas limit in the transaction. Every opcode that
 is executed has a cost in gas, and so the EVM’s gas supply is reduced as
@@ -17453,9 +17453,9 @@ up to that point and must be compensated for doing so.
 
 ### Gas Accounting Considerations
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The relative gas costs of the various
+
+
+The relative gas costs of the various
 operations that can be performed by the EVM have been carefully chosen
 to best protect the Ethereum blockchain from attack. You can see a
 detailed table of gas costs for different EVM opcodes in [EVM opcodes
@@ -17477,9 +17477,9 @@ Whistle") that tweaked the relative gas costs.
 
 ### Gas Cost Versus Gas Price
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>While the
+
+
+While the
 gas *cost* is a measure of computation and storage used in the EVM, the
 gas itself also has a *price* measured in ether. When performing a
 transaction, the sender specifies the gas price they are willing to pay
@@ -17521,7 +17521,7 @@ transaction fee paid to the miners.
 
 #### Negative gas costs
 
-<span class="indexterm"></span> <span class="indexterm"></span>Ethereum
+ Ethereum
 encourages the deletion of used storage variables and accounts by
 refunding some of the gas used during contract execution.
 
@@ -17537,9 +17537,9 @@ transaction is set to half the total amount of gas used (rounded down).
 
 ### Block Gas Limit
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The block gas limit is the maximum amount
+
+
+The block gas limit is the maximum amount
 of gas that may be consumed by all the transactions in a block, and
 constrains how many transactions can fit into a block.
 
@@ -17575,7 +17575,7 @@ the time. This mechanism is coupled with a default mining strategy where
 miners vote on a gas limit that is at least 4.7 million gas, but which
 targets a value of 150% of the average of recent total gas usage per
 block (using a 1,024-block exponential moving
-average).<span class="indexterm"></span><span class="indexterm"></span>
+average).
 
 ## Conclusions
 
@@ -17585,11 +17585,11 @@ executes bytecode. We also looked at gas, the EVM’s accounting
 mechanism, and saw how it solves the halting problem and protects
 Ethereum from denial-of-service attacks. Next, in
 [Consensus](#consensus), we will look at the mechanism used by Ethereum
-to achieve decentralized consensus.<span class="indexterm"></span>
+to achieve decentralized consensus.
 
 # Consensus
 
-<span class="indexterm"></span>Throughout this book we have talked about
+Throughout this book we have talked about
 "consensus rules”—the rules that everyone must agree to for the system
 to operate in a decentralized, yet deterministic, manner. In computer
 science, the term *consensus* predates blockchains and is related to the
@@ -17640,9 +17640,9 @@ works to use the internet.
 
 ## Consensus via Proof of Work
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The creator of the original blockchain,
+
+
+The creator of the original blockchain,
 Bitcoin, invented a *consensus algorithm* called *proof of work* (PoW).
 Arguably, PoW is the most important invention underpinning Bitcoin. The
 colloquial term for PoW is "mining," which creates a misunderstanding
@@ -17674,9 +17674,9 @@ PoW algorithm, which is still under development at the time of writing.
 
 ## Consensus via Proof of Stake (PoS)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Historically, proof of work was not the
+
+
+Historically, proof of work was not the
 first consensus algorithm proposed. Preceding the introduction of proof
 of work, many researchers had proposed variations of consensus
 algorithms based on financial stake, now called *proof of stake* (PoS).
@@ -17718,14 +17718,14 @@ spent on electricity).
 
 ## Ethash: Ethereum’s Proof-of-Work Algorithm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethash is the Ethereum PoW algorithm. It
+
+
+
+Ethash is the Ethereum PoW algorithm. It
 uses an evolution of the Dagger–Hashimoto algorithm, which is a
 combination of Vitalik Buterin’s Dagger algorithm and Thaddeus Dryja’s
 Hashimoto algorithm.
-<span class="indexterm"></span><span class="indexterm"></span>Ethash is
+Ethash is
 dependent on the generation and analysis of a large dataset, known as a
 *directed acyclic graph* (or, more simply, “the DAG”). The DAG had an
 initial size of about 1 GB and will continue to slowly and linearly grow
@@ -17734,7 +17734,7 @@ hours).
 
 The purpose of the DAG is to make the Ethash PoW algorithm dependent on
 maintaining a large, frequently accessed data structure.
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>This
+This
 in turn is intended to make Ethash "ASIC resistant," which means that it
 is more difficult to make *application-specific integrated circuits*
 (ASIC) mining equipment that is orders of magnitude faster than a fast
@@ -17771,13 +17771,13 @@ network while is it still operating on PoW consensus.
 
 ## Casper: Ethereum’s Proof-of-Stake Algorithm
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Casper is the proposed name for
+
+
+Casper is the proposed name for
 Ethereum’s PoS consensus algorithm. It is still under active research
 and development and is not implemented on the Ethereum blockchain at the
 time of publication of this book.
-<span class="indexterm"></span><span class="indexterm"></span>Casper is
+Casper is
 being developed in two competing "flavors":
 
 - Casper FFG: "The Friendly Finality Gadget"
@@ -17786,7 +17786,7 @@ being developed in two competing "flavors":
 
 Initially, Casper FFG was proposed as a hybrid PoW/PoS algorithm to be
 implemented as a transition to a more permanent "pure PoS" algorithm.
-<span class="indexterm"></span> <span class="indexterm"></span>But in
+ But in
 June 2018, Vitalik Buterin, who was leading the research work on Casper
 FFG, decided to "scrap" the hybrid model in favor of a pure PoS
 algorithm. Now, Casper FFG and Casper CBC are both being developed in
@@ -17812,7 +17812,7 @@ plans can be found at the following links:
 
 ## Principles of Consensus
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 principles and assumptions of consensus algorithms can be more clearly
 understood by asking a few key questions:
 
@@ -17833,7 +17833,7 @@ questions in increasingly innovative ways.
 
 ## Controversy and Competition
 
-<span class="indexterm"></span> <span class="indexterm"></span>At this
+ At this
 point you might be wondering: Why do we need so many different consensus
 algorithms? Which one works better? The answer to the latter question is
 at the center of the most exciting area of research in distributed
@@ -17865,12 +17865,12 @@ detail about Casper and other related technologies as these mature and
 are deployed on Ethereum. This chapter represents the end of our
 journey, completing *Mastering Ethereum*. Additional reference material
 follows in the appendixes. Thank you for reading this book, and
-congratulations on reaching the end\!<span class="indexterm"></span>
+congratulations on reaching the end\!
 
 # Ethereum Fork History
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Most
+
+Most
 hard forks are planned as part of an upgrade roadmap and consist of
 updates that the community generally agrees to (i.e., there is social
 consensus). However, some hard forks lack consensus, which leads to
@@ -17880,10 +17880,10 @@ this appendix.
 
 ## Ethereum Classic (ETC)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum Classic came to be after members
+
+
+
+Ethereum Classic came to be after members
 of the Ethereum community implemented a time-sensitive hard fork
 (codenamed “DAO”). On July 20, 2016, at a block height of 1.92 million,
 Ethereum introduced an irregular state change via a hard fork in an
@@ -17904,9 +17904,9 @@ entities.
 
 ## The Decentralized Autonomous Organization (The DAO)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The <span class="indexterm"></span>DAO
+
+
+The DAO
 was created by Slock.it, with the aim of providing community-based
 funding and governance for projects. The core idea was that proposals
 would be submitted, curators would manage proposals, funds would be
@@ -17926,8 +17926,8 @@ time.
 
 ## The Reentrancy Bug
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>On June 9,
+
+On June 9,
 2016, developers Peter Vessenes and Chriseth reported that most
 Ethereum-based contracts that managed funds were potentially [vulnerable
 to an exploit](http://bit.ly/2AAaDmA) that could empty contract funds. A
@@ -17952,7 +17952,7 @@ secure the bulk of the community’s ether.
 
 ### Technical Details
 
-<span class="indexterm"></span> <span class="indexterm"></span>While a
+ While a
 more detailed and thorough explanation of the bug is given by [Phil
 Daian](http://bit.ly/2EQaLCI), the short explanation is that a crucial
 function in the DAO had two lines of code in the wrong order, meaning
@@ -17963,7 +17963,7 @@ withdrawal was completed. This type of vulnerability is described in
 
 ### Attack Flow
 
-<span class="indexterm"></span> <span class="indexterm"></span>Imagine
+ Imagine
 you had \$100 in your bank account and you could bring your bank teller
 any number of withdrawal slips. The teller would give you money for each
 slip in order, and only after processing all the slips would they record
@@ -17984,9 +17984,9 @@ The DAO attack worked like this:
 
 ## The DAO Hard Fork
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Fortunately,
+
+
+Fortunately,
 there were several safeguards built into The DAO: notably, all
 withdrawal requests were subject to a 28-day delay. This gave the
 community a little while to discuss what to do about the exploit,
@@ -18031,7 +18031,7 @@ On July 20, at block height [1,920,000](http://bit.ly/2zfaIKB), Ethereum
 Ethereum networks were created: one including the state change, and the
 other ignoring it.
 
-<span class="indexterm"></span> <span class="indexterm"></span>When the
+ When the
 DAO hard-forked Ethereum (present-day Ethereum) gained a majority of the
 mining power, many assumed that consensus was achieved and the minority
 chain would fade away, as in previous forks. Despite this, a sizable
@@ -18120,16 +18120,16 @@ established with [Poloniex](http://bit.ly/2qhuNvP) listing ETC on July
   replay issues; the chains are now functionally separate.
 
 - February 20, 2017: The ETCDEVTeam forms, led by early ETC developer
-  Igor Artamonov<span class="indexterm"></span>
-  (splix).<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+  Igor Artamonov
+  (splix).
 
 ## Ethereum and Ethereum Classic
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>While the initial split was centered
+
+
+
+
+While the initial split was centered
 around The DAO, the two networks, Ethereum and Ethereum Classic, are now
 separate projects, although most development is still done by the
 Ethereum community and simply ported to Ethereum Classic codebases.
@@ -18141,7 +18141,7 @@ next.
 
 ### The EVM
 
-<span class="indexterm"></span>For the most part (at the time of
+For the most part (at the time of
 writing), the two networks remain highly compatible: contract code
 produced for one chain runs as expected on the other; but there are some
 small differences in EVM OPCODES (see EIPs [140](http://bit.ly/2yIajkF),
@@ -18158,7 +18158,7 @@ On Ethereum Classic, it’s done by ETCDEV, IOHK, and volunteers.
 
 ## Other Notable Ethereum Forks
 
-<span class="indexterm"></span>[Ellaism](https://ellaism.org/about/) is
+[Ellaism](https://ellaism.org/about/) is
 an Ethereum-based network that intends to use PoW exclusively to secure
 the blockchain. It has no pre-mine and no mandatory developer fees, with
 all support and development donated freely by the community. Its
@@ -18206,7 +18206,7 @@ life of Ethereum.
 
 There are also several other projects that claim to be Ethereum forks
 but are actually based on ERC20 tokens and run on the Ethereum network.
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Two
+Two
 examples of these are EtherBTC (ETHB) and Ethereum Modification (EMOD).
 These are not forks in the traditional sense, and may sometimes be
 called “airdrops.”
@@ -18214,7 +18214,7 @@ called “airdrops.”
 Here’s a brief rundown of some of the more notable forks that have
 occurred:
 
-- <span class="indexterm"></span>*Expanse* was the first fork of the
+- *Expanse* was the first fork of the
   Ethereum blockchain to gain traction. It was announced via the Bitcoin
   Talk forum on September 7, 2015. The actual fork occurred a week later
   on September 14, 2015, at a block height of 800,000. It was originally
@@ -18222,14 +18222,14 @@ occurred:
   was to create an advanced chain for: "identity, governance, charity,
   commerce, and equity".
 
-- <span class="indexterm"></span><span class="indexterm"></span>*EthereumFog*
+- *EthereumFog*
   (ETF) was launched on December 14, 2017, and forked at a block height
   of 4,730,660. The project’s stated aim is to develop "world
   decentralized fog computing" by focusing on fog computing and
   decentralized storage. There is still little information on what this
   will actually entail.
 
-- *EtherZero* (ETZ) <span class="indexterm"></span>was launched on
+- *EtherZero* (ETZ) was launched on
   January 19, 2018, at a block height of 4,936,270. Its notable
   innovations were the introduction of a masternode architecture and the
   removal of transaction fees for smart contracts to enable a wider
@@ -18238,7 +18238,7 @@ occurred:
   the lack of clarity surrounding development and some accusations of
   possible phishing.
 
-- <span class="indexterm"></span><span class="indexterm"></span>*EtherInc*
+- *EtherInc*
   (ETI) was launched on February 13, 2018, at a block height of
   5,078,585, with a focus on building decentralized organizations.
   Stated goals include the reduction of block times, increased miner
@@ -18246,17 +18246,17 @@ occurred:
   coins. EtherInc uses the same private keys as Ethereum and has
   implemented replay protection to protect ether on the original
   non-forked
-  chain.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+  chain.
 
 # Ethereum Standards
 
 ## Ethereum Improvement Proposals (EIPs)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Ethereum Improvement Proposal
+
+
+The Ethereum Improvement Proposal
 repository is located at <https://github.com/ethereum/EIPs/>.
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 workflow is illustrated in [Ethereum Improvement Proposal
 workflow](#eip_workflow).
 
@@ -18331,9 +18331,9 @@ Important EIPs and ERCs
 
 # Ethereum EVM Opcodes and Gas Consumption
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>This appendix is based on the
+
+
+This appendix is based on the
 consolidation work done by the people of
 <https://github.com/trailofbits/evm-opcodes> as a reference for Ethereum
 VM (EVM) opcodes and instruction information licensed under the [Apache
@@ -18637,7 +18637,7 @@ Web3("https://eth-mainnet.alchemyapi.io/v2/your-api-key");
 
 ## Frameworks
 
-<span class="indexterm"></span>Frameworks can be used to ease Ethereum
+Frameworks can be used to ease Ethereum
 smart contract development. By doing everything yourself you get a
 better understanding of how everything fits together, but it’s a lot of
 tedious, repetitive work. The frameworks described in this section can
@@ -18645,8 +18645,8 @@ automate certain tasks and make development easier.
 
 ### Truffle
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/trufflesuite/truffle>
 
 Website: <https://trufflesuite.com>
@@ -18659,8 +18659,8 @@ Truffle Boxes: <http://trufflesuite.com/boxes/>
 
 #### Installing the Truffle framework
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Truffle framework comprises several
+
+The Truffle framework comprises several
 Node.js packages. Before you install `Truffle`, you need to have an
 up-to-date and working installation of Node.js and the Node Package
 Manager (`npm`).
@@ -18717,8 +18717,8 @@ added 26 packages from 438 contributors and updated 1 package in 24.229s
 
 #### Integrating a prebuilt Truffle project (Truffle Box)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>If you
+
+If you
 want to use or create a DApp that builds upon prebuilt boilerplate, go
 to the Truffle Boxes website, choose an existing Truffle project, and
 then run the following command to download and extract it:
@@ -18731,7 +18731,7 @@ BOX_NAME
 
 #### Creating a Truffle project directory
 
-<span class="indexterm"></span> <span class="indexterm"></span>For each
+ For each
 project where you will use `Truffle`, create a project directory and
 initialize `Truffle` within that directory. `Truffle` will create the
 necessary directory structure inside your project directory. It’s
@@ -18799,11 +18799,11 @@ integration environment, it is important to specify the `engines` field
 so that your DApp is built with the correct Node.js version and its
 associated dependencies are installed. For details on configuring this
 field, see the
-[documentation](http://bit.ly/2zp2GPF).<span class="indexterm"></span>
+[documentation](http://bit.ly/2zp2GPF).
 
 #### Configuring Truffle
 
-<span class="indexterm"></span> <span class="indexterm"></span>`Truffle`
+ `Truffle`
 creates an empty configuration file, *truffle-config.js*. Now we edit
 *truffle-config.js* and replace the contents with the sample
 configuration shown here:
@@ -18837,9 +18837,9 @@ options for our testing and development workflow.
 
 #### Using Truffle to deploy a contract
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>We now have a basic working directory for
+
+
+We now have a basic working directory for
 our *Faucet* project, and we have `Truffle` and its dependencies
 configured. Contracts go in the *contracts* subdirectory of our project.
 The directory already contains a "helper" contract, *Migrations.sol*,
@@ -18867,8 +18867,8 @@ Compiling ./contracts/Faucet.sol... Compiling
 
 #### Truffle migrations—understanding deployment scripts
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Truffle offers a deployment system called
+
+Truffle offers a deployment system called
 a *migration*. If you have worked in other frameworks, you may have seen
 something similar: Ruby on Rails, Python Django, and many other
 languages and frameworks have a `migrate` command.
@@ -18942,7 +18942,7 @@ to update the deployments counter to `2`.
 
 Truffle will show the migrations completing, show each of the
 transactions, and show the contract
-addresses:<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+addresses:
 
 \$
 
@@ -18964,7 +18964,7 @@ Saving artifacts...
 
 #### Using the Truffle console
 
-<span class="indexterm"></span> <span class="indexterm"></span>Truffle
+ Truffle
 offers a JavaScript console that we can use to interact with the
 Ethereum network (via the local node), interact with deployed contracts,
 and interact with the wallet provider. In our current configuration
@@ -19090,7 +19090,7 @@ Faucet.deployed().then(instance =\>
 Again, we’ll need to approve the transaction in the Parity web
 interface. If we check again we’ll see that the balance of the `Faucet`
 contract has decreased, and our test wallet has received 0.1
-ether<span class="indexterm"></span>:<span class="indexterm"></span><span class="indexterm"></span>
+ether:
 
 truffle(localnode)\>
 
@@ -19106,8 +19106,8 @@ an error (status 0).
 
 ### Embark
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/embark-framework/embark/>
 
 Documentation: <https://embark.status.im/docs/>
@@ -19142,8 +19142,8 @@ npm -g install embark
 
 ### OpenZeppelin
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/OpenZeppelin/openzeppelin-solidity>
 
 Website: <https://openzeppelin.org/>
@@ -19283,14 +19283,14 @@ scripts](#truffle_migrations_understanding_deployment_scripts):
 This was just a quick overview of a few of the contracts that are part
 of the OpenZeppelin framework. You are welcome to join the OpenZeppelin
 development community to learn and
-contribute.<span class="indexterm"></span><span class="indexterm"></span>
+contribute.
 
 </div>
 
 ### ZeppelinOS
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/zeppelinos>
 
 Website: <https://zeppelinos.org>
@@ -19310,7 +19310,7 @@ ZeppelinOS, an application interacts with the token’s on-chain
 implementation directly, in much the same way as a desktop application
 interacts with the components of its underlying OS.
 
-<span class="indexterm"></span>At the core of ZeppelinOS sits a very
+At the core of ZeppelinOS sits a very
 clever contract known as a *proxy*. A proxy is a contract that is
 capable of wrapping any other contract, exposing its interface without
 having to manually implement setters and getters for it, and can upgrade
@@ -19339,14 +19339,14 @@ automates background operations within contracts, development bounties,
 a marketplace that facilitates communication and exchange of value
 between applications, and much more. All of this is described in
 ZeppelinOS’s
-[whitepaper](http://bit.ly/2QcxV7K).<span class="indexterm"></span>
+[whitepaper](http://bit.ly/2QcxV7K).
 
 ## Utilities
 
 ### EthereumJS helpeth: A Command-Line Utility
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/ethereumjs/helpeth>
 
 `helpeth` is a command-line tool for key and transaction manipulation
@@ -19385,8 +19385,8 @@ and tools:
 
 ### dapp.tools
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Website: <https://dapp.tools/>
+
+Website: <https://dapp.tools/>
 
 dapp.tools is a comprehensive suite of blockchain-oriented developer
 tools created in the spirit of the Unix philosophy. The tools included
@@ -19414,8 +19414,8 @@ operations.
 ### SputnikVM
 
 [SputnikVM](https://github.com/etcdevteam/sputnikvm)
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>is a standalone pluggable virtual machine
+
+is a standalone pluggable virtual machine
 for different Ethereum-based blockchains. It’s written in Rust and can
 be used as a binary, cargo crate, or shared library, or integrated
 through FFI, Protobuf, and JSON interfaces. It has a separate binary,
@@ -19426,8 +19426,8 @@ the JSON-RPC API and block mining.
 
 ### web3.js
 
-<span class="indexterm"></span>web3.js <span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>is the
+web3.js 
+is the
 Ethereum-compatible JavaScript API for communicating with clients via
 JSON-RPC, developed by the Ethereum Foundation.
 
@@ -19441,8 +19441,8 @@ Documentation for web3.js API 1.0.0-beta.xx: <http://bit.ly/2CT33p0>
 
 ### web3.py
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>web3.py is
+
+web3.py is
 a Python library for interacting with the Ethereum blockchain,
 maintained by the Ethereum Foundation.
 
@@ -19454,7 +19454,7 @@ Documentation: <https://web3py.readthedocs.io/>
 
 ### EthereumJS
 
-<span class="indexterm"></span>EthereumJS is collection of libraries and
+EthereumJS is collection of libraries and
 utilities for Ethereum.
 
 GitHub: <https://github.com/ethereumjs>
@@ -19463,8 +19463,8 @@ Website: <https://ethereumjs.github.io/>
 
 ### web3j
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>web3j is a
+
+web3j is a
 Java and Android library for integrating with Ethereum clients and
 working with smart contracts.
 
@@ -19476,8 +19476,8 @@ Documentation: <https://docs.web3j.io>
 
 ### EtherJar
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>EtherJar is another Java library for
+
+EtherJar is another Java library for
 integrating with Ethereum and working with smart contracts. It’s
 designed for server-side projects based on Java 8+ and provides
 low-level access and a high-level wrapper around RPC, Ethereum data
@@ -19487,8 +19487,8 @@ GitHub: <https://github.com/infinitape/etherjar>
 
 ### Nethereum
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Nethereum
+
+Nethereum
 is the .Net integration library for Ethereum.
 
 GitHub: <https://github.com/Nethereum/Nethereum>
@@ -19499,8 +19499,8 @@ Documentation: <https://nethereum.readthedocs.io/en/latest/>
 
 ### ethers.js
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The ethers.js library is a compact,
+
+The ethers.js library is a compact,
 complete, full-featured, extensively tested MIT-licensed Ethereum
 library, which has received a DevEx grant from the Ethereum Foundation
 toward its extension and maintenance.
@@ -19511,15 +19511,15 @@ Documentation: <https://docs.ethers.io>
 
 ### Emerald Platform
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Emerald Platform provides libraries and
+
+Emerald Platform provides libraries and
 UI components to build DApps on top of Ethereum. Emerald JS and Emerald
 JS UI provide sets of modules and React components to build JavaScript
 applications and websites; Emerald SVG Icons is a set of
 blockchain-related icons. In addition to JavaScript libraries Emerald
 has a Rust library to operate private keys and transaction signatures.
 All Emerald libraries and components are licensed under the Apache
-License, version 2.0.<span class="indexterm"></span>
+License, version 2.0.
 
 GitHub: <https://github.com/etcdevteam/emerald-platform>
 
@@ -19527,10 +19527,10 @@ Documentation: <https://docs.etcdevteam.com>
 
 ## Testing Smart Contracts
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There are several commonly used test
+
+
+
+There are several commonly used test
 frameworks for smart contract development, summarized in [Smart contract
 test frameworks summary](#testing_frameworks_table):
 
@@ -19544,12 +19544,12 @@ test frameworks summary](#testing_frameworks_table):
 Smart contract test frameworks summary
 
 Truffle  
-<span class="indexterm"></span> <span class="indexterm"></span>Truffle
+ Truffle
 allows for unit tests to be written in JavaScript (Mocha-based) or
 Solidity. These tests are run against Ganache.
 
 Embark  
-<span class="indexterm"></span>Embark integrates with Mocha to run unit
+Embark integrates with Mocha to run unit
 tests written in JavaScript. The tests are in turn run against contracts
 deployed on Ganache (formerly called TestRPC). The Embark framework
 automatically deploys smart contracts, and will automatically redeploy
@@ -19560,7 +19560,7 @@ functions like `assert.equal`. The command `embark test` will run any
 test files under the directory *test*.
 
 Dapp  
-<span class="indexterm"></span>Dapp uses native Solidity code (a library
+Dapp uses native Solidity code (a library
 called `ds-test`) and a Parity-built Rust library called `ethrun` to
 execute Ethereum bytecode and then assert correctness. The `ds-test`
 library provides assertion functions for validating correctness and
@@ -19589,7 +19589,7 @@ useful for debugging:
     log_named_decimal_uint(bytes32 key, uint val, uint decimals)
 
 Populus  
-<span class="indexterm"></span>Populus uses Python and its own chain
+Populus uses Python and its own chain
 emulator to run contracts written in Solidity. Unit tests are written in
 Python with the `pytest` library. Populus supports writing contracts
 specifically for testing. These contract filenames should match the glob
@@ -19598,9 +19598,9 @@ directory, *tests*.
 
 ### On-Blockchain Testing
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Although most testing shouldn’t occur on
+
+
+Although most testing shouldn’t occur on
 deployed contracts, a contract’s behavior can be checked via Ethereum
 clients. The following commands can be used to assess a smart contract’s
 state. These commands should be typed at the `geth` terminal, although
@@ -19648,7 +19648,7 @@ position
 
 ### Ganache: A Local Test Blockchain
 
-<span class="indexterm"></span> <span class="indexterm"></span>Ganache
+ Ganache
 is a local test blockchain that you can use to deploy contracts, develop
 your applications, and run tests. It is available as a desktop
 application (with a graphical user interface) for Windows, macOS, and
@@ -19685,13 +19685,13 @@ A few notes on this command line:
 
 - \[ \] You can optionally enter a `--mnemonic` flag value to restore a
   previous HD wallet and associated
-  addresses.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+  addresses.
 
 # web3.js Tutorial
 
 ## Description
 
-<span class="indexterm"></span> <span class="indexterm"></span>This
+ This
 tutorial is based on <web3@1.0.0-beta.29> web3.js. It is intended as an
 introduction to web3.js.
 
@@ -19707,7 +19707,7 @@ API](https://alchemyapi.io) and [Infura](https://infura.io).
 
 ## web3.js Contract Basic Interaction in a Nonblocked (Async) Fashion
 
-<span class="indexterm"></span> <span class="indexterm"></span>Check you
+ Check you
 have a valid `npm` version:
 
 \$
@@ -19741,7 +19741,7 @@ dependencies.
 
 ### Node.js Script Execution
 
-<span class="indexterm"></span> <span class="indexterm"></span>Basic
+ Basic
 execution:
 
 \$
@@ -19769,7 +19769,7 @@ command-line argument to the actual command.
 
 ## Reviewing the Demo Script
 
-<span class="indexterm"></span> <span class="indexterm"></span>Next,
+ Next,
 let’s review our demo script, *web3-contract-basic-interaction*.
 
 We use the `Web3` object to obtain a basic web3 provider:
@@ -19805,7 +19805,7 @@ web3.eth.getBlockNumber().then(function(blockNumber) {
 
 ## Contract Interaction
 
-<span class="indexterm"></span> <span class="indexterm"></span>Now let’s
+ Now let’s
 try some basic interactions with a contract. For these examples, we’ll
 use the [`WETH9_` contract](https://bit.ly/2MPZZLx) on the Kovan
 testnet.
@@ -19922,7 +19922,7 @@ our_contract.methods.totalSupply().call(function(err, totalSupply) {
 ```
 
 Or we can use the returned promise instead of passing in the
-callback:<span class="indexterm"></span>
+callback:
 
 ``` solidity
 our_contract.methods.totalSupply().call().then(function(totalSupply){
@@ -19934,11 +19934,11 @@ our_contract.methods.totalSupply().call().then(function(totalSupply){
 
 ## Asynchronous Operation with Await
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Now that you’ve seen the basic tutorial,
+
+Now that you’ve seen the basic tutorial,
 you can try the same interactions using an asynchronous `await`
 construct. Review the *web3-contract-basic-interaction-async-await.js*
 script in [*code/web3js*](http://bit.ly/2ABrFkl) and compare it to this
 tutorial to see how they differ. Async-await is easier to read, as it
 makes the asynchronous interaction behave more like a sequence of
-blocking calls.<span class="indexterm"></span>
+blocking calls.

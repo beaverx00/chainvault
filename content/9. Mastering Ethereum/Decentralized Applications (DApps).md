@@ -1,9 +1,9 @@
-# Decentralized Applications (DApps)
+# Chapter 12 - [Decentralized Applications (DApps)](content/9.%20Mastering%20Ethereum/Decentralized%20Applications%20(DApps).md)
 
-<span class="indexterm"></span>In this chapter we will explore the world
+In this chapter we will explore the world
 of *decentralized applications*, or *DApps*. From the early days of
 Ethereum, the founders' vision was much broader than "smart contracts":
-<span class="indexterm"></span>no less than reinventing the web and
+no less than reinventing the web and
 creating a new world of DApps, aptly called *web3*. Smart contracts are
 a way to decentralize the controlling logic and payment functions of
 applications. Web3 DApps are about decentralizing all other aspects of
@@ -36,7 +36,7 @@ at the defining characteristics and advantages of DApps.
 
 ## What Is a DApp?
 
-<span class="indexterm"></span> <span class="indexterm"></span>A DApp is
+ A DApp is
 an application that is mostly or entirely decentralized.
 
 Consider all the possible aspects of an application that may be
@@ -88,9 +88,9 @@ decentralized way.
 
 ### Backend (Smart Contract)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In a DApp, smart contracts are used to
+
+
+In a DApp, smart contracts are used to
 store the business logic (program code) and the related state of your
 application. You can think of a smart contract replacing a server-side
 (aka "backend") component in a regular application. This is an
@@ -123,8 +123,8 @@ have to trust these external resources.
 
 ### Frontend (Web User Interface)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Unlike
+
+Unlike
 the business logic of the DApp, which requires a developer to understand
 the EVM and new languages such as Solidity, the client-side interface of
 a DApp can use standard web technologies (HTML, CSS, JavaScript, etc.).
@@ -145,9 +145,9 @@ browser by a web server.
 
 ### Data Storage
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Due to high gas costs and the currently
+
+
+Due to high gas costs and the currently
 low block gas limit, smart contracts are not well suited to storing or
 processing large amounts of data. Hence, most DApps utilize off-chain
 data storage services, meaning they store the bulky data off the
@@ -163,9 +163,9 @@ We’ll look at a few of the options next.
 
 #### IPFS
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The
+
+
+The
 *Inter-Planetary File System* (IPFS) is a decentralized
 content-addressable storage system that distributes stored objects among
 peers in a P2P network. "Content addressable" means that each piece of
@@ -181,9 +181,9 @@ More information about IPFS can be found at <https://ipfs.io>.
 
 #### Swarm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Swarm is
+
+
+Swarm is
 another content-addressable P2P storage system, similar to IPFS. Swarm
 was created by the Ethereum Foundation, as part of the Go-Ethereum suite
 of tools. Like IPFS, it allows you to store files that get disseminated
@@ -197,33 +197,33 @@ Swarm node or a gateway:
 
 ### Decentralized Message Communications Protocols
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Another
+
+Another
 major component of any application is inter-process communication. That
 means being able to exchange messages between applications, between
 different instances of the application, or between users of the
 application. Traditionally, this is achieved by reliance on a
 centralized server. However, there are a variety of decentralized
 alternatives to server-based protocols, offering messaging over a P2P
-network. <span class="indexterm"></span>The most notable P2P messaging
+network. The most notable P2P messaging
 protocol for DApps is [*Whisper*](http://bit.ly/2CSls5h), which is part
 of the Ethereum Foundation’s Go-Ethereum suite of tools.
 
 The final aspect of an application that can be decentralized is name
 resolution. We’ll take a close look at Ethereum’s name service later in
 this chapter; now, though, let’s dig into an
-example.<span class="indexterm"></span>
+example.
 
 ## A Basic DApp Example: Auction DApp
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In this section we will start building an
+
+In this section we will start building an
 example DApp, to explore the various decentralization tools. Our DApp
 will implement a decentralized auction.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Auction DApp allows a user to
+
+
+The Auction DApp allows a user to
 register a "deed" token, which represents some unique asset, such as a
 house, a car, a trademark, etc. Once a token has been registered, the
 ownership of the token is transferred to the Auction DApp, allowing it
@@ -266,9 +266,9 @@ repository](http://bit.ly/2DcmjyA).
 
 ### Auction DApp: Backend Smart Contracts
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Our Auction DApp example is supported by
+
+
+Our Auction DApp example is supported by
 two smart contracts that we need to deploy on an Ethereum blockchain in
 order to support the application: `AuctionRepository` and
 `DeedRepository`.
@@ -382,8 +382,8 @@ represents a double-edged sword. On the one side, privileged accounts
 are dangerous; if compromised, they can subvert the security of the
 DApp. On the other side, without any privileged account, there are no
 recovery options if a bug is found. We have seen both of these risks
-manifest in Ethereum DApps. <span class="indexterm"></span>
-<span class="indexterm"></span>In the case of The DAO
+manifest in Ethereum DApps. 
+In the case of The DAO
 ([???](#real_world_example_the_dao) and [???](#ethereum_fork_history)),
 there were some privileged accounts called the "curators," but they were
 very limited in their capabilities. Those accounts were not able to
@@ -397,11 +397,11 @@ contracts truly independent, launching them and then having no control,
 or create privileged accounts and run the risk of those being
 compromised. Either choice carries risk, but in the long run, true DApps
 cannot have specialized access for privileged accounts—that’s not
-decentralized.<span class="indexterm"></span><span class="indexterm"></span>
+decentralized.
 
 ### Auction DApp: Frontend User Interface
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once the
+ Once the
 Auction DApp’s contracts are deployed, you can interact with them using
 your favorite JavaScript console and web3.js, or another web3 library.
 However, most users will need an easy-to-use interface. Our Auction DApp
@@ -478,7 +478,7 @@ alt="Auction DApp User interface" />
 
 ## Further Decentralizing the Auction DApp
 
-<span class="indexterm"></span> <span class="indexterm"></span>Our DApp
+ Our DApp
 is already quite decentralized, but we can improve things.
 
 The `AuctionRepository` contract operates independently of any
@@ -508,9 +508,9 @@ the second in [The Ethereum Name Service
 
 ## Storing the Auction DApp on Swarm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>We introduced Swarm in
+
+
+We introduced Swarm in
 [Swarm](#swarm_sec), earlier in this chapter. Our Auction DApp already
 uses Swarm to store the icon image for each auction. This is a much more
 efficient solution than attempting to store data on Ethereum, which is
@@ -523,7 +523,7 @@ directly, instead of running a web server.
 
 ### Preparing Swarm
 
-<span class="indexterm"></span> <span class="indexterm"></span>To get
+ To get
 started, you need to install Swarm and initialize your Swarm node. Swarm
 is part of the Ethereum Foundation’s Go-Ethereum suite of tools. Refer
 to the instructions for installing Go-Ethereum in
@@ -578,7 +578,7 @@ ENS name.
 
 ### Uploading Files to Swarm
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once you
+ Once you
 have your local Swarm node and gateway running, you can upload to Swarm
 and the files will be accessible on any Swarm node, simply by reference
 to the file hash.
@@ -665,7 +665,7 @@ http://localhost:8500
 ab164cf37dc10647e43a233486cdeffa8334b026e32a480dd9cbd020c12d4581
 
 Now, our entire Auction DApp is hosted on Swarm and accessible by the
-Swarm URL:<span class="indexterm"></span>
+Swarm URL:
 
 bzz://ab164cf37dc10647e43a233486cdeffa8334b026e32a480dd9cbd020c12d4581
 
@@ -675,13 +675,13 @@ name like *auction_dapp.com*. Are we forced to sacrifice usability in
 order to gain decentralization? Not necessarily. In the next section we
 will examine Ethereum’s name service, which allows us to use
 easy-to-read names but still preserves the decentralized nature of our
-application.<span class="indexterm"></span><span class="indexterm"></span>
+application.
 
 ## The Ethereum Name Service (ENS)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>You can design the best smart contract in
+
+
+You can design the best smart contract in
 the world, but if you don’t provide a good interface for users, they
 won’t be able to access it.
 
@@ -709,7 +709,7 @@ your DApp resources to make them easier to use.
 
 ### History of Ethereum Name Services
 
-<span class="indexterm"></span> <span class="indexterm"></span>Name
+ Name
 registration was the first noncurrency application of blockchains,
 pioneered by Namecoin. The Ethereum [White Paper](http://bit.ly/2Of1gfZ)
 gave a two-line Namecoin-like registration system as one of its example
@@ -726,8 +726,8 @@ to launch it on Pi Day, March 15).
 
 ### The ENS Specification
 
-<span class="indexterm"></span> <span class="indexterm"></span>ENS is
-<span class="indexterm"></span> <span class="indexterm"></span>specified
+ ENS is
+ specified
 mainly in three Ethereum Improvement Proposals: EIP-137, which specifies
 the basic functions of ENS; EIP-162, which describes the auction system
 for the `.eth` root; and EIP-181, which specifies reverse resolution of
@@ -739,7 +739,7 @@ very simple top layer that keeps all the funds in separate accounts.
 
 ### Bottom Layer: Name Owners and Resolvers
 
-<span class="indexterm"></span> <span class="indexterm"></span>The ENS
+ The ENS
 operates on "nodes" instead of human-readable names: a human-readable
 name is converted to a node using the "Namehash" algorithm.
 
@@ -755,8 +755,8 @@ subnodes.
 
 #### The Namehash algorithm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Namehash
+
+Namehash
 is a recursive algorithm that can convert any name into a hash that
 identifies the name.
 
@@ -815,7 +815,7 @@ name.
 
 #### How to choose a valid name
 
-<span class="indexterm"></span> <span class="indexterm"></span>Names
+ Names
 consist of a series of dot-separated labels. Although upper- and
 lowercase letters are allowed, all labels should follow a UTS \#46
 normalization process that case-folds labels before hashing them, so
@@ -833,7 +833,7 @@ compatibility with legacy DNS, the following rules are recommended:
 
 #### Root node ownership
 
-<span class="indexterm"></span> <span class="indexterm"></span>One of
+ One of
 the results of this hierarchical system is that it relies on the owners
 of the root node, who are able to create top-level domains (TLDs).
 
@@ -860,19 +860,19 @@ consensus with the community to:
 
 #### Resolvers
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The basic
+
+The basic
 ENS contract can’t add metadata to names; that is the job of so-called
 "resolver contracts." These are user-created contracts that can answer
 questions about the name, such as what Swarm address is associated with
 the app, what address receives payments to the app (in ether or tokens),
 or what the hash of the app is (to verify its
-integrity).<span class="indexterm"></span>
+integrity).
 
 ### Middle Layer: The .eth Nodes
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>At the
+
+At the
 time of writing, the only top-level domain that is uniquely registrable
 in a smart contract is `.eth`.
 
@@ -894,8 +894,8 @@ without risk to the funds—more on that later.
 
 #### Vickrey auctions
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Names are
+
+Names are
 distributed via a modified Vickrey auction. In a traditional Vickrey
 auction, every bidder submits a sealed bid, and all of them are revealed
 simultaneously, at which point the highest bidder wins the auction but
@@ -951,9 +951,9 @@ Therefore, the auction is a four-step process:
 
 ### Top Layer: The Deeds
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The top layer of ENS is yet another
+
+
+The top layer of ENS is yet another
 super-simple contract with a single purpose: to hold the funds.
 
 When you win a name, the funds are not actually sent anywhere, but are
@@ -970,12 +970,12 @@ code), and it only allows the funds to be transferred back to a single
 account (the deed owner) and to be called by a single entity (the
 registrar contract). This approach drastically reduces the attack
 surface where bugs can put the funds at
-risk.<span class="indexterm"></span>
+risk.
 
 ### Registering a Name
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Registering
+
+Registering
 a name in ENS is a four-step process, as we saw in [Vickrey
 auctions](#vickrey_auction). First we place a bid for any available
 name, then we reveal our bid after 48 hours to secure the name. [ENS
@@ -1060,11 +1060,11 @@ bid</figcaption>
 If all goes well, after submitting a transaction in this way you can
 return and reveal the bid in 48 hours, and the name you requested will
 be registered to your Ethereum
-address.<span class="indexterm"></span><span class="indexterm"></span>
+address.
 
 ### Managing Your ENS Name
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once you
+ Once you
 have registered an ENS name, you can manage it using another
 user-friendly interface: [ENS Manager](https://manager.ens.domains/).
 
@@ -1104,7 +1104,7 @@ managed the domain `ethereumbook.eth` previously.
 
 ### ENS Resolvers
 
-<span class="indexterm"></span> <span class="indexterm"></span>In ENS,
+ In ENS,
 resolving a name is a two-step process:
 
 1.  The ENS registry is called with the name to resolve after hashing
@@ -1143,9 +1143,9 @@ auction.ethereumbook.eth</figcaption>
 
 ### Resolving a Name to a Swarm Hash (Content)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Once the
+
+
+Once the
 resolver for `auction.ethereumbook.eth` is set to be the public
 resolver, we can set it to return the Swarm hash as the content of our
 name (see [Setting the to return for
@@ -1174,7 +1174,7 @@ http://swarm-gateways.net/bzz:/auction.ethereumbook.eth/
 
 We can also find it by searching for "auction.ethereumbook.eth" in any
 ENS-compatible wallet or DApp browser (e.g.,
-Mist)<span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+Mist).
 
 ## From App to DApp
 
@@ -1201,7 +1201,7 @@ authority, no central point of failure, and expresses the "web3" vision.
 
 [Auction DApp architecture](#auction_dapp_final_architecture) shows the
 complete architecture of the Auction
-DApp.<span class="indexterm"></span><span class="indexterm"></span>
+DApp.
 
 <figure id="auction_dapp_final_architecture">
 <img src="images/auction_dapp_final_architecture.png"
@@ -1218,4 +1218,4 @@ decentralized. However, it is already possible to construct applications
 that are almost completely decentralized. Over time, as the technology
 matures further, more and more of our applications can be decentralized,
 resulting in a more resilient, censorship-resistant, and free
-web.<span class="indexterm"></span>
+web.

@@ -131,7 +131,7 @@ Web3("https://eth-mainnet.alchemyapi.io/v2/your-api-key");
 
 # Frameworks
 
-<span class="indexterm"></span>Frameworks can be used to ease Ethereum
+Frameworks can be used to ease Ethereum
 smart contract development. By doing everything yourself you get a
 better understanding of how everything fits together, but it’s a lot of
 tedious, repetitive work. The frameworks described in this section can
@@ -139,8 +139,8 @@ automate certain tasks and make development easier.
 
 ## Truffle
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/trufflesuite/truffle>
 
 Website: <https://trufflesuite.com>
@@ -153,8 +153,8 @@ Truffle Boxes: <http://trufflesuite.com/boxes/>
 
 ### Installing the Truffle framework
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Truffle framework comprises several
+
+The Truffle framework comprises several
 Node.js packages. Before you install `Truffle`, you need to have an
 up-to-date and working installation of Node.js and the Node Package
 Manager (`npm`).
@@ -211,8 +211,8 @@ added 26 packages from 438 contributors and updated 1 package in 24.229s
 
 ### Integrating a prebuilt Truffle project (Truffle Box)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>If you
+
+If you
 want to use or create a DApp that builds upon prebuilt boilerplate, go
 to the Truffle Boxes website, choose an existing Truffle project, and
 then run the following command to download and extract it:
@@ -225,7 +225,7 @@ BOX_NAME
 
 ### Creating a Truffle project directory
 
-<span class="indexterm"></span> <span class="indexterm"></span>For each
+ For each
 project where you will use `Truffle`, create a project directory and
 initialize `Truffle` within that directory. `Truffle` will create the
 necessary directory structure inside your project directory. It’s
@@ -292,11 +292,11 @@ integration environment, it is important to specify the `engines` field
 so that your DApp is built with the correct Node.js version and its
 associated dependencies are installed. For details on configuring this
 field, see the
-[documentation](http://bit.ly/2zp2GPF).<span class="indexterm"></span>
+[documentation](http://bit.ly/2zp2GPF).
 
 ### Configuring Truffle
 
-<span class="indexterm"></span> <span class="indexterm"></span>`Truffle`
+ `Truffle`
 creates an empty configuration file, *truffle-config.js*. Now we edit
 *truffle-config.js* and replace the contents with the sample
 configuration shown here:
@@ -330,9 +330,9 @@ options for our testing and development workflow.
 
 ### Using Truffle to deploy a contract
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>We now have a basic working directory for
+
+
+We now have a basic working directory for
 our *Faucet* project, and we have `Truffle` and its dependencies
 configured. Contracts go in the *contracts* subdirectory of our project.
 The directory already contains a "helper" contract, *Migrations.sol*,
@@ -360,8 +360,8 @@ Compiling ./contracts/Faucet.sol... Compiling
 
 ### Truffle migrations—understanding deployment scripts
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Truffle offers a deployment system called
+
+Truffle offers a deployment system called
 a *migration*. If you have worked in other frameworks, you may have seen
 something similar: Ruby on Rails, Python Django, and many other
 languages and frameworks have a `migrate` command.
@@ -435,7 +435,7 @@ to update the deployments counter to `2`.
 
 Truffle will show the migrations completing, show each of the
 transactions, and show the contract
-addresses:<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+addresses:
 
 \$
 
@@ -457,7 +457,7 @@ Saving artifacts...
 
 ### Using the Truffle console
 
-<span class="indexterm"></span> <span class="indexterm"></span>Truffle
+ Truffle
 offers a JavaScript console that we can use to interact with the
 Ethereum network (via the local node), interact with deployed contracts,
 and interact with the wallet provider. In our current configuration
@@ -582,7 +582,7 @@ Faucet.deployed().then(instance =\>
 Again, we’ll need to approve the transaction in the Parity web
 interface. If we check again we’ll see that the balance of the `Faucet`
 contract has decreased, and our test wallet has received 0.1
-ether<span class="indexterm"></span>:<span class="indexterm"></span><span class="indexterm"></span>
+ether:
 
 truffle(localnode)\>
 
@@ -598,8 +598,8 @@ an error (status 0).
 
 ## Embark
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/embark-framework/embark/>
 
 Documentation: <https://embark.status.im/docs/>
@@ -634,8 +634,8 @@ npm -g install embark
 
 ## OpenZeppelin
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/OpenZeppelin/openzeppelin-solidity>
 
 Website: <https://openzeppelin.org/>
@@ -775,14 +775,14 @@ scripts](#truffle_migrations_understanding_deployment_scripts):
 This was just a quick overview of a few of the contracts that are part
 of the OpenZeppelin framework. You are welcome to join the OpenZeppelin
 development community to learn and
-contribute.<span class="indexterm"></span><span class="indexterm"></span>
+contribute.
 
 </div>
 
 ## ZeppelinOS
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/zeppelinos>
 
 Website: <https://zeppelinos.org>
@@ -802,7 +802,7 @@ ZeppelinOS, an application interacts with the token’s on-chain
 implementation directly, in much the same way as a desktop application
 interacts with the components of its underlying OS.
 
-<span class="indexterm"></span>At the core of ZeppelinOS sits a very
+At the core of ZeppelinOS sits a very
 clever contract known as a *proxy*. A proxy is a contract that is
 capable of wrapping any other contract, exposing its interface without
 having to manually implement setters and getters for it, and can upgrade
@@ -831,14 +831,14 @@ automates background operations within contracts, development bounties,
 a marketplace that facilitates communication and exchange of value
 between applications, and much more. All of this is described in
 ZeppelinOS’s
-[whitepaper](http://bit.ly/2QcxV7K).<span class="indexterm"></span>
+[whitepaper](http://bit.ly/2QcxV7K).
 
 # Utilities
 
 ## EthereumJS helpeth: A Command-Line Utility
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>GitHub:
+
+GitHub:
 <https://github.com/ethereumjs/helpeth>
 
 `helpeth` is a command-line tool for key and transaction manipulation
@@ -877,8 +877,8 @@ and tools:
 
 ## dapp.tools
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Website: <https://dapp.tools/>
+
+Website: <https://dapp.tools/>
 
 dapp.tools is a comprehensive suite of blockchain-oriented developer
 tools created in the spirit of the Unix philosophy. The tools included
@@ -906,8 +906,8 @@ operations.
 ## SputnikVM
 
 [SputnikVM](https://github.com/etcdevteam/sputnikvm)
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>is a standalone pluggable virtual machine
+
+is a standalone pluggable virtual machine
 for different Ethereum-based blockchains. It’s written in Rust and can
 be used as a binary, cargo crate, or shared library, or integrated
 through FFI, Protobuf, and JSON interfaces. It has a separate binary,
@@ -918,8 +918,8 @@ the JSON-RPC API and block mining.
 
 ## web3.js
 
-<span class="indexterm"></span>web3.js <span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>is the
+web3.js 
+is the
 Ethereum-compatible JavaScript API for communicating with clients via
 JSON-RPC, developed by the Ethereum Foundation.
 
@@ -933,8 +933,8 @@ Documentation for web3.js API 1.0.0-beta.xx: <http://bit.ly/2CT33p0>
 
 ## web3.py
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>web3.py is
+
+web3.py is
 a Python library for interacting with the Ethereum blockchain,
 maintained by the Ethereum Foundation.
 
@@ -946,7 +946,7 @@ Documentation: <https://web3py.readthedocs.io/>
 
 ## EthereumJS
 
-<span class="indexterm"></span>EthereumJS is collection of libraries and
+EthereumJS is collection of libraries and
 utilities for Ethereum.
 
 GitHub: <https://github.com/ethereumjs>
@@ -955,8 +955,8 @@ Website: <https://ethereumjs.github.io/>
 
 ## web3j
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>web3j is a
+
+web3j is a
 Java and Android library for integrating with Ethereum clients and
 working with smart contracts.
 
@@ -968,8 +968,8 @@ Documentation: <https://docs.web3j.io>
 
 ## EtherJar
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>EtherJar is another Java library for
+
+EtherJar is another Java library for
 integrating with Ethereum and working with smart contracts. It’s
 designed for server-side projects based on Java 8+ and provides
 low-level access and a high-level wrapper around RPC, Ethereum data
@@ -979,8 +979,8 @@ GitHub: <https://github.com/infinitape/etherjar>
 
 ## Nethereum
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Nethereum
+
+Nethereum
 is the .Net integration library for Ethereum.
 
 GitHub: <https://github.com/Nethereum/Nethereum>
@@ -991,8 +991,8 @@ Documentation: <https://nethereum.readthedocs.io/en/latest/>
 
 ## ethers.js
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The ethers.js library is a compact,
+
+The ethers.js library is a compact,
 complete, full-featured, extensively tested MIT-licensed Ethereum
 library, which has received a DevEx grant from the Ethereum Foundation
 toward its extension and maintenance.
@@ -1003,15 +1003,15 @@ Documentation: <https://docs.ethers.io>
 
 ## Emerald Platform
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Emerald Platform provides libraries and
+
+Emerald Platform provides libraries and
 UI components to build DApps on top of Ethereum. Emerald JS and Emerald
 JS UI provide sets of modules and React components to build JavaScript
 applications and websites; Emerald SVG Icons is a set of
 blockchain-related icons. In addition to JavaScript libraries Emerald
 has a Rust library to operate private keys and transaction signatures.
 All Emerald libraries and components are licensed under the Apache
-License, version 2.0.<span class="indexterm"></span>
+License, version 2.0.
 
 GitHub: <https://github.com/etcdevteam/emerald-platform>
 
@@ -1019,10 +1019,10 @@ Documentation: <https://docs.etcdevteam.com>
 
 # Testing Smart Contracts
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There are several commonly used test
+
+
+
+There are several commonly used test
 frameworks for smart contract development, summarized in [Smart contract
 test frameworks summary](#testing_frameworks_table):
 
@@ -1036,12 +1036,12 @@ test frameworks summary](#testing_frameworks_table):
 Smart contract test frameworks summary
 
 Truffle  
-<span class="indexterm"></span> <span class="indexterm"></span>Truffle
+ Truffle
 allows for unit tests to be written in JavaScript (Mocha-based) or
 Solidity. These tests are run against Ganache.
 
 Embark  
-<span class="indexterm"></span>Embark integrates with Mocha to run unit
+Embark integrates with Mocha to run unit
 tests written in JavaScript. The tests are in turn run against contracts
 deployed on Ganache (formerly called TestRPC). The Embark framework
 automatically deploys smart contracts, and will automatically redeploy
@@ -1052,7 +1052,7 @@ functions like `assert.equal`. The command `embark test` will run any
 test files under the directory *test*.
 
 Dapp  
-<span class="indexterm"></span>Dapp uses native Solidity code (a library
+Dapp uses native Solidity code (a library
 called `ds-test`) and a Parity-built Rust library called `ethrun` to
 execute Ethereum bytecode and then assert correctness. The `ds-test`
 library provides assertion functions for validating correctness and
@@ -1081,7 +1081,7 @@ useful for debugging:
     log_named_decimal_uint(bytes32 key, uint val, uint decimals)
 
 Populus  
-<span class="indexterm"></span>Populus uses Python and its own chain
+Populus uses Python and its own chain
 emulator to run contracts written in Solidity. Unit tests are written in
 Python with the `pytest` library. Populus supports writing contracts
 specifically for testing. These contract filenames should match the glob
@@ -1090,9 +1090,9 @@ directory, *tests*.
 
 ## On-Blockchain Testing
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Although most testing shouldn’t occur on
+
+
+Although most testing shouldn’t occur on
 deployed contracts, a contract’s behavior can be checked via Ethereum
 clients. The following commands can be used to assess a smart contract’s
 state. These commands should be typed at the `geth` terminal, although
@@ -1140,7 +1140,7 @@ position
 
 ## Ganache: A Local Test Blockchain
 
-<span class="indexterm"></span> <span class="indexterm"></span>Ganache
+ Ganache
 is a local test blockchain that you can use to deploy contracts, develop
 your applications, and run tests. It is available as a desktop
 application (with a graphical user interface) for Windows, macOS, and
@@ -1177,4 +1177,4 @@ A few notes on this command line:
 
 - \[ \] You can optionally enter a `--mnemonic` flag value to restore a
   previous HD wallet and associated
-  addresses.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+  addresses.

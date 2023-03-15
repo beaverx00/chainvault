@@ -1,6 +1,6 @@
-# Consensus
+# Chapter 14 - [Consensus](content/9.%20Mastering%20Ethereum/Consensus.md)
 
-<span class="indexterm"></span>Throughout this book we have talked about
+Throughout this book we have talked about
 "consensus rules”—the rules that everyone must agree to for the system
 to operate in a decentralized, yet deterministic, manner. In computer
 science, the term *consensus* predates blockchains and is related to the
@@ -51,9 +51,9 @@ works to use the internet.
 
 ## Consensus via Proof of Work
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The creator of the original blockchain,
+
+
+The creator of the original blockchain,
 Bitcoin, invented a *consensus algorithm* called *proof of work* (PoW).
 Arguably, PoW is the most important invention underpinning Bitcoin. The
 colloquial term for PoW is "mining," which creates a misunderstanding
@@ -85,9 +85,9 @@ PoW algorithm, which is still under development at the time of writing.
 
 ## Consensus via Proof of Stake (PoS)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Historically, proof of work was not the
+
+
+Historically, proof of work was not the
 first consensus algorithm proposed. Preceding the introduction of proof
 of work, many researchers had proposed variations of consensus
 algorithms based on financial stake, now called *proof of stake* (PoS).
@@ -129,14 +129,14 @@ spent on electricity).
 
 ## Ethash: Ethereum’s Proof-of-Work Algorithm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethash is the Ethereum PoW algorithm. It
+
+
+
+Ethash is the Ethereum PoW algorithm. It
 uses an evolution of the Dagger–Hashimoto algorithm, which is a
 combination of Vitalik Buterin’s Dagger algorithm and Thaddeus Dryja’s
 Hashimoto algorithm.
-<span class="indexterm"></span><span class="indexterm"></span>Ethash is
+Ethash is
 dependent on the generation and analysis of a large dataset, known as a
 *directed acyclic graph* (or, more simply, “the DAG”). The DAG had an
 initial size of about 1 GB and will continue to slowly and linearly grow
@@ -145,7 +145,7 @@ hours).
 
 The purpose of the DAG is to make the Ethash PoW algorithm dependent on
 maintaining a large, frequently accessed data structure.
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>This
+This
 in turn is intended to make Ethash "ASIC resistant," which means that it
 is more difficult to make *application-specific integrated circuits*
 (ASIC) mining equipment that is orders of magnitude faster than a fast
@@ -182,13 +182,13 @@ network while is it still operating on PoW consensus.
 
 ## Casper: Ethereum’s Proof-of-Stake Algorithm
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Casper is the proposed name for
+
+
+Casper is the proposed name for
 Ethereum’s PoS consensus algorithm. It is still under active research
 and development and is not implemented on the Ethereum blockchain at the
 time of publication of this book.
-<span class="indexterm"></span><span class="indexterm"></span>Casper is
+Casper is
 being developed in two competing "flavors":
 
 - Casper FFG: "The Friendly Finality Gadget"
@@ -197,7 +197,7 @@ being developed in two competing "flavors":
 
 Initially, Casper FFG was proposed as a hybrid PoW/PoS algorithm to be
 implemented as a transition to a more permanent "pure PoS" algorithm.
-<span class="indexterm"></span> <span class="indexterm"></span>But in
+ But in
 June 2018, Vitalik Buterin, who was leading the research work on Casper
 FFG, decided to "scrap" the hybrid model in favor of a pure PoS
 algorithm. Now, Casper FFG and Casper CBC are both being developed in
@@ -223,7 +223,7 @@ plans can be found at the following links:
 
 ## Principles of Consensus
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 principles and assumptions of consensus algorithms can be more clearly
 understood by asking a few key questions:
 
@@ -244,7 +244,7 @@ questions in increasingly innovative ways.
 
 ## Controversy and Competition
 
-<span class="indexterm"></span> <span class="indexterm"></span>At this
+ At this
 point you might be wondering: Why do we need so many different consensus
 algorithms? Which one works better? The answer to the latter question is
 at the center of the most exciting area of research in distributed
@@ -276,4 +276,4 @@ detail about Casper and other related technologies as these mature and
 are deployed on Ethereum. This chapter represents the end of our
 journey, completing *Mastering Ethereum*. Additional reference material
 follows in the appendixes. Thank you for reading this book, and
-congratulations on reaching the end\!<span class="indexterm"></span>
+congratulations on reaching the end\!

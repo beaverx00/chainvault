@@ -1,7 +1,7 @@
-# Smart Contract Security
+# Chapter 9 - [Smart Contract Security](content/9.%20Mastering%20Ethereum/Smart%20Contract%20Security.md)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Security is one of the most important
+
+Security is one of the most important
 considerations when writing smart contracts. In the field of smart
 contract programming, mistakes are costly and easily exploited. In this
 chapter we will look at security best practices and design patterns, as
@@ -17,8 +17,8 @@ critical to follow best practices and use well-tested design patterns.
 
 ## Security Best Practices
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>*Defensive programming* is a style of
+
+*Defensive programming* is a style of
 programming that is particularly well suited to smart contracts. It
 emphasizes the following, all of which are best practices:
 
@@ -74,7 +74,7 @@ formatted before allowing execution of your code to continue.
 
 ## Security Risks and Antipatterns
 
-<span class="indexterm"></span> <span class="indexterm"></span>As a
+ As a
 smart contract programmer, you should be familiar with the most common
 security risks, so as to be able to detect and avoid the programming
 patterns that leave your contracts exposed to these risks. In the next
@@ -84,8 +84,8 @@ solutions that can be used to address them.
 
 ## Reentrancy
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>One of the features of Ethereum smart
+
+One of the features of Ethereum smart
 contracts is their ability to call and utilize code from other external
 contracts. Contracts also typically handle ether, and as such often send
 ether to various external user addresses. These operations require the
@@ -101,7 +101,7 @@ Contract Best Practices](http://bit.ly/2ERDMxV).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>This type
+ This type
 of attack can occur when a contract sends ether to an unknown address.
 An attacker can carefully construct a contract at an external address
 that contains malicious code in the fallback function. Thus, when a
@@ -243,21 +243,21 @@ balance is `10 ether`. The following will then occur:
 
 The final result is that the attacker has withdrawn all but 1 ether from
 the `EtherStore` contract in a single
-transaction.<span class="indexterm"></span>
+transaction.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>There are
+ There are
 a number of common techniques that help avoid potential reentrancy
-vulnerabilities in smart contracts. <span class="indexterm"></span>
-<span class="indexterm"></span>The first is to (whenever possible) use
+vulnerabilities in smart contracts. 
+The first is to (whenever possible) use
 the built-in [`transfer`](http://bit.ly/2Ogvnng) function when sending
 ether to external contracts. The `transfer` function only sends 2300 gas
 with the external call, which is not enough for the destination
 address/contract to call another contract (i.e., reenter the sending
 contract).
 
-<span class="indexterm"></span>The second technique is to ensure that
+The second technique is to ensure that
 all logic that changes state variables happens before ether is sent out
 of the contract (or any external call). In the `EtherStore` example,
 lines 18 and 19 of *EtherStore.sol* should be put before line 17. It is
@@ -266,7 +266,7 @@ addresses to be the last operation in a localized function or piece of
 code execution. This is known as the [checks-effects-interactions
 pattern](http://bit.ly/2EVo70v).
 
-<span class="indexterm"></span>A third technique is to introduce a
+A third technique is to introduce a
 mutex—that is, to add a state variable that locks the contract during
 code execution, preventing reentrant calls.
 
@@ -307,9 +307,9 @@ contract EtherStore {
 
 ### Real-World Example: The DAO
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The DAO (Decentralized Autonomous
+
+
+The DAO (Decentralized Autonomous
 Organization) attack was one of the major hacks that occurred in the
 early development of Ethereum. At the time, the contract held over \$150
 million. Reentrancy played a major role in the attack, which ultimately
@@ -317,12 +317,12 @@ led to the hard fork that created Ethereum Classic (ETC). For a good
 analysis of the DAO exploit, see <http://bit.ly/2EQaLCI>. More
 information on Ethereum’s fork history, the DAO hack timeline, and the
 birth of ETC in a hard fork can be found in
-[???](#ethereum_standards).<span class="indexterm"></span><span class="indexterm"></span>
+[???](#ethereum_standards).
 
 ## Arithmetic Over/Underflows
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The
+
+The
 Ethereum Virtual Machine specifies fixed-size data types for integers.
 This means that an integer variable can represent only a certain range
 of numbers. A `uint8`, for example, can only store numbers in the range
@@ -339,12 +339,12 @@ integer overflows: programming blockchains like
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>An
+ An
 over/underflow occurs when an operation is performed that requires a
 fixed-size variable to store a number (or piece of data) that is outside
 the range of the variable’s data type.
 
-<span class="indexterm"></span>For example, subtracting `1` from a
+For example, subtracting `1` from a
 `uint8` (unsigned integer of 8 bits; i.e., nonnegative) variable whose
 value is `0` will result in the number `255`. This is an *underflow*. We
 have assigned a number below the range of the `uint8`, so the result
@@ -356,7 +356,7 @@ measure distance traveled (they reset to 000000, after the largest
 number, i.e., 999999, is surpassed) and periodic mathematical functions
 (adding `2π` to the argument of `sin` leaves the value unchanged).
 
-<span class="indexterm"></span> <span class="indexterm"></span>Adding
+ Adding
 numbers larger than the data type’s range is called an *overflow*. For
 clarity, adding `257` to a `uint8` that currently has a value of `0`
 will result in the number `1`. It is sometimes instructive to think of
@@ -464,18 +464,18 @@ positive amount (excluding `2^256`) will result in a positive number, as
 described previously. This is also true for line 14, where the balance
 will be credited with a positive number. Thus, in this example, an
 attacker can achieve free tokens due to an underflow
-vulnerability.<span class="indexterm"></span>
+vulnerability.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 current conventional technique to guard against under/overflow
 vulnerabilities is to use or build mathematical libraries that replace
 the standard math operators addition, subtraction, and multiplication
 (division is excluded as it does not cause over/underflows and the EVM
 reverts on division by 0).
 
-<span class="indexterm"></span><span class="indexterm"></span>[OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-solidity)
+[OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-solidity)
 has done a great job of building and auditing secure libraries for the
 Ethereum community. In particular, its [`SafeMath`
 library](http://bit.ly/2ABhb4l) can be used to avoid under/overflow
@@ -543,12 +543,12 @@ contract TimeLock {
 Notice that all standard math operations have been replaced by those
 defined in the `SafeMath` library. The `TimeLock` contract no longer
 performs any operation that is capable of
-under/overflow.<span class="indexterm"></span>
+under/overflow.
 
 ### Real-World Examples: PoWHC and Batch Transfer Overflow (CVE-2018–10299)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>Proof
+
+Proof
 of Weak Hands Coin (PoWHC), originally devised as a joke of sorts, was a
 Ponzi scheme written by an internet collective. Unfortunately it seems
 that the author(s) of the contract had not seen over/underflows before,
@@ -561,14 +561,14 @@ not too dissimilar to the Ethernaut challenge described earlier) in his
 of a `batchTransfer()` function into a group of ERC20 token contracts.
 The implementation contained an overflow vulnerability; you can read
 about the details in [PeckShield’s
-account](https://bit.ly/2HDlIs8).<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+account](https://bit.ly/2HDlIs8).
 
 ## Unexpected Ether
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Typically, when ether is sent to a
+
+
+
+Typically, when ether is sent to a
 contract it must execute either the fallback function or another
 function defined in the contract. There are two exceptions to this,
 where ether can exist in a contract without having executed any code.
@@ -581,8 +581,8 @@ Forcing Ether to a Contract”](http://bit.ly/2RjXmUWl).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>A
-<span class="indexterm"></span>common defensive programming technique
+ A
+common defensive programming technique
 that is useful in enforcing correct state transitions or validating
 operations is *invariant checking*. This technique involves defining a
 set of invariants (metrics or parameters that should not change) and
@@ -608,7 +608,7 @@ There are two ways in which ether can (forcibly) be sent to a contract
 without using a payable function or executing any code on the contract:
 
 Self-destruct/suicide  
-<span class="indexterm"></span>Any contract is able to implement the
+Any contract is able to implement the
 [`selfdestruct` function](http://bit.ly/2RovrDf), which removes all
 bytecode from the contract address and sends all ether stored there to
 the parameter-specified address. If this specified address is also a
@@ -707,11 +707,11 @@ contract’s balance above the `finalMileStone`), which would lock all
 rewards in the contract forever. This is because the `claimReward`
 function will always revert, due to the `require` on line 32 (i.e.,
 because `this.balance` is greater than
-`finalMileStone`).<span class="indexterm"></span>
+`finalMileStone`).
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>This sort
+ This sort
 of vulnerability typically arises from the misuse of `this.balance`.
 Contract logic, when possible, should avoid being dependent on exact
 values of the balance of the contract, because it can be artificially
@@ -780,14 +780,14 @@ Solidity Coding
 Contest](https://github.com/Arachnid/uscc/tree/master/submissions-2017/),
 which also provides extended examples of a number of the pitfalls raised
 in this
-section.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+section.
 
 ## DELEGATECALL
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The `CALL` and `DELEGATECALL` opcodes are
+
+The `CALL` and `DELEGATECALL` opcodes are
 useful in allowing Ethereum developers to modularize their code.
-<span class="indexterm"></span>Standard external message calls to
+Standard external message calls to
 contracts are handled by the `CALL` opcode, whereby code is run in the
 context of the external contract/function. The `DELEGATECALL` opcode is
 almost identical, except that the code executed at the targeted address
@@ -806,12 +806,12 @@ docs](http://bit.ly/2Oi7UlH).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>As a
+ As a
 result of the context-preserving nature of `DELEGATECALL`, building
 vulnerability-free custom libraries is not as easy as one might think.
 The code in libraries themselves can be secure and vulnerability-free;
 however, when run in the context of another application new
-vulnerabilities can arise. <span class="indexterm"></span>Let’s see a
+vulnerabilities can arise. Let’s see a
 fairly complex example of this, using Fibonacci numbers.
 
 Consider the library in [example_title](#fibonacci_security), which can
@@ -1001,18 +1001,18 @@ other storage slots they choose, to perform all kinds of attacks on this
 contract. We encourage you to put these contracts into
 [Remix](https://remix.ethereum.org) and experiment with different attack
 contracts and state changes through these `delegatecall`
-functions.<span class="indexterm"></span>
+functions.
 
 It is also important to notice that when we say that `delegatecall` is
 state-preserving, we are not talking about the variable names of the
 contract, but rather the actual storage slots to which those names
 point. As you can see from this example, a simple mistake can lead to an
 attacker hijacking the entire contract and its
-ether.<span class="indexterm"></span>
+ether.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>Solidity
+ Solidity
 provides the `library` keyword for implementing library contracts (see
 the [docs](http://bit.ly/2zjD8TI) for further details). This ensures the
 library contract is stateless and non-self-destructable. Forcing
@@ -1026,10 +1026,10 @@ contract, and whenever possible build stateless libraries.
 
 ### Real-World Example: Parity Multisig Wallet (Second Hack)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Second Parity Multisig Wallet hack is
+
+
+
+The Second Parity Multisig Wallet hack is
 an example of how well-written library code can be exploited if run
 outside its intended context. There are a number of good explanations of
 this hack, such as [“Parity Multisig Hacked.
@@ -1118,13 +1118,13 @@ method to change this reference, all of their functionality, including
 the ability to withdraw ether, was lost along with the `WalletLibrary`
 contract. As a result, all ether in all Parity multisig wallets of this
 type instantly became lost or permanently
-unrecoverable<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+unrecoverable.
 
 ## Default Visibilities
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Functions
+
+
+Functions
 in Solidity have visibility specifiers that dictate how they can be
 called. The visibility determines whether a function can be called
 externally by users, by other derived contracts, only internally, or
@@ -1136,7 +1136,7 @@ some devastating vulnerabilities in smart contracts.
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 default visibility for functions is `public`, so functions that do not
 specify their visibility will be callable by external users. The issue
 arises when developers mistakenly omit visibility specifiers on
@@ -1171,7 +1171,7 @@ and thus any address can call this function to steal the bounty.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>It is
+ It is
 good practice to always specify the visibility of all functions in a
 contract, even if they are intentionally `public`. Recent versions of
 `solc` show a warning for functions that have no explicit visibility
@@ -1179,10 +1179,10 @@ set, to encourage this practice.
 
 ### Real-World Example: Parity Multisig Wallet (First Hack)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In the first Parity multisig hack, about
+
+
+
+In the first Parity multisig hack, about
 \$31M worth of Ether was stolen, mostly from three wallets. A good recap
 of exactly how this was done is given by [Haseeb
 Qureshi](https://bit.ly/2vHiuJQ).
@@ -1237,12 +1237,12 @@ accidentally left `public`, an attacker was able to call these functions
 on deployed contracts, resetting the ownership to the attacker’s
 address. Being the owner, the attacker then drained the wallets of all
 their
-ether.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+ether.
 
 ## Entropy Illusion
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>All transactions on the Ethereum
+
+All transactions on the Ethereum
 blockchain are deterministic state transition operations. This means
 that every transaction modifies the global state of the Ethereum
 ecosystem in a calculable way, with no uncertainty. This has the
@@ -1256,7 +1256,7 @@ PoS”](https://vitalik.ca/files/randomness.html).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>Some of
+ Some of
 the first contracts built on the Ethereum platform were based around
 gambling. Fundamentally, gambling requires uncertainty (something to bet
 on), which makes building a gambling system on the blockchain (a
@@ -1286,7 +1286,7 @@ can multiply their wins by doing many transactions within a block
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 source of entropy (randomness) must be external to the blockchain. This
 can be done among peers with systems such as
 [commit–reveal](http://bit.ly/2CUh2KS), or via changing the trust model
@@ -1298,8 +1298,8 @@ entropy, as they can be manipulated by miners.
 
 ### Real-World Example: PRNG Contracts
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>In
+
+In
 February 2018 Arseny Reutov [blogged](http://bit.ly/2Q589lx) about his
 analysis of 3,649 live smart contracts that were using some sort of
 pseudorandom number generator (PRNG); he found 43 contracts that could
@@ -1307,8 +1307,8 @@ be exploited.
 
 ## External Contract Referencing
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>One of the benefits of the Ethereum
+
+One of the benefits of the Ethereum
 “world computer” is the ability to reuse code and interact with
 contracts already deployed on the network. As a result, a large number
 of contracts reference external contracts, usually via external message
@@ -1317,7 +1317,7 @@ intentions in some nonobvious ways, which we’ll now examine.
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 Solidity, any address can be cast to a contract, regardless of whether
 the code at the address represents the contract type being cast. This
 can cause problems, especially when the author of the contract is trying
@@ -1498,13 +1498,13 @@ unknowingly run arbitrary code.
 
 The contracts represented here are for demonstrative purposes only and
 do not represent proper encryption. They should not be used for
-encryption.<span class="indexterm"></span>
+encryption.
 
 </div>
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>As
+ As
 demonstrated previously, safe contracts can (in some cases) be deployed
 in such a way that they behave maliciously. An auditor could publicly
 verify a contract and have its owner deploy it in a malicious way,
@@ -1543,8 +1543,8 @@ with the new contract address.
 
 ### Real-World Example: Reentrancy Honey Pot
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>A
+
+A
 number of recent honey pots have been released on the mainnet. These
 contracts try to outsmart Ethereum hackers who try to exploit the
 contracts, but who in turn end up losing ether to the contract they
@@ -1621,12 +1621,12 @@ contract Log
 This [post](http://bit.ly/2Q58VyX) by one reddit user explains how they
 lost 1 ether to this contract by trying to exploit the reentrancy bug
 they expected to be present in the
-contract<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+contract.
 
 ## Short Address/Parameter Attack
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>This
+
+This
 attack is not performed on Solidity contracts themselves, but on
 third-party applications that may interact with them. This section is
 added for completeness and to give the reader an awareness of how
@@ -1639,7 +1639,7 @@ post](http://bit.ly/2CQjBhc).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>When
+ When
 passing parameters to a smart contract, the parameters are encoded
 according to the [ABI specification](http://bit.ly/2Q5VIG9). It is
 possible to send encoded parameters that are shorter than the expected
@@ -1706,7 +1706,7 @@ unsuspecting exchange.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>All input
+ All input
 parameters in external applications should be validated before sending
 them to the blockchain. It should also be noted that parameter ordering
 plays an important role here. As padding only occurs at the end, careful
@@ -1715,8 +1715,8 @@ this attack.
 
 ## Unchecked CALL Return Values
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>There are
+
+There are
 a number of ways of performing external calls in Solidity. Sending ether
 to external accounts is commonly performed via the `transfer` method.
 However, the `send` function can also be used, and for more versatile
@@ -1735,7 +1735,7 @@ for the ‘Unchecked-Send’ Bug”](http://bit.ly/2RnS1vA).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>Consider
+ Consider
 the following example:
 
 ``` solidity
@@ -1774,7 +1774,7 @@ case, anyone can withdraw the `winner`’s winnings via the
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>Whenever
+ Whenever
 possible, use the `transfer` function rather than `send`, as `transfer`
 will revert if the external transaction reverts. If `send` is required,
 always check the return value.
@@ -1790,8 +1790,8 @@ transaction on the end user calling the `withdraw` function.
 ### Real-World Example: Etherpot and King of the Ether
 
 [Etherpot](http://bit.ly/2OfHalK) was
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>a smart contract lottery, not too
+
+a smart contract lottery, not too
 dissimilar to the example contract mentioned earlier. The downfall of
 this contract was primarily due to incorrect use of block hashes (only
 the last 256 block hashes are usable; see Aakil Fernandes’s
@@ -1839,13 +1839,13 @@ A more serious version of this bug occurred in the [King of the
 Ether](http://bit.ly/2ACsfi1). An excellent
 [post-mortem](http://bit.ly/2ESoaub) of this contract has been written
 that details how an unchecked failed `send` could be used to attack the
-contract.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+contract.
 
 ## Race Conditions/Front Running
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The
-<span class="indexterm"></span>combination of external calls to other
+
+The
+combination of external calls to other
 contracts and the multiuser nature of the underlying blockchain gives
 rise to a variety of potential Solidity pitfalls whereby users *race*
 code execution to obtain unexpected states. Reentrancy (discussed
@@ -1859,7 +1859,7 @@ Practices](http://bit.ly/2Q6E4lP).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>As with
+ As with
 most blockchains, Ethereum nodes pool transactions and form them into
 blocks. The transactions are only considered valid once a miner has
 solved a consensus mechanism (currently [Ethash](http://bit.ly/2yI5Dv7)
@@ -1914,7 +1914,7 @@ attacker being a miner themselves should not be underestimated.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>There are
+ There are
 two classes of actor who can perform these kinds of front-running
 attacks: users (who modify the `gasPrice` of their transactions) and
 miners themselves (who can reorder the transactions in a block how they
@@ -1946,7 +1946,7 @@ value. During the reveal phase, users were refunded the difference
 between the amount sent in the transaction and the amount they were
 willing to spend.
 
-A further suggestion by <span class="indexterm"></span>Lorenz
+A further suggestion by Lorenz
 Breidenbach, Phil Daian, Ari Juels, and Florian Tramèr is to use
 [“submarine sends”](http://bit.ly/2SygqQx). An efficient implementation
 of this idea requires the `CREATE2` opcode, which currently hasn’t been
@@ -1954,9 +1954,9 @@ adopted but seems likely to be in upcoming hard forks.
 
 ### Real-World Examples: ERC20 and Bancor
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The [ERC20
+
+
+The [ERC20
 standard](http://bit.ly/2CUf7WG) is quite well-known for building tokens
 on Ethereum. This standard has a potential front-running vulnerability
 that comes about due to the `approve` function. [Mikhail Vladimirov and
@@ -1982,7 +1982,7 @@ would allow Bob to transfer his 100 tokens and then, when Alice’s
 transaction is committed, reset Bob’s approval to 50 tokens, in effect
 giving Bob access to 150 tokens.
 
-<span class="indexterm"></span>Another prominent real-world example is
+Another prominent real-world example is
 [Bancor](https://www.bancor.network/). Ivan Bogatyy and his team
 documented a profitable attack on the initial Bancor implementation. His
 [blog post](http://bit.ly/2EUlLzb) and [DevCon3
@@ -1991,12 +1991,12 @@ Essentially, prices of tokens are determined based on transaction value;
 users can watch the transaction pool for Bancor transactions and
 front-run them to profit from the price differences. This attack has
 been addressed by the Bancor
-team.<span class="indexterm"></span><span class="indexterm"></span>
+team.
 
 ## Denial of Service (DoS)
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>This category is very broad, but
+
+This category is very broad, but
 fundamentally consists of attacks where users can render a contract
 inoperable for a period of time, or in some cases permanently. This can
 trap ether in these contracts forever, as was the case in [Real-World
@@ -2004,7 +2004,7 @@ Example: Parity Multisig Wallet (Second Hack)](#multisig_secondhack).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>There are
+ There are
 various ways a contract can become inoperable. Here we highlight just a
 few less-obvious Solidity coding patterns that can lead to DoS
 vulnerabilities:
@@ -2045,7 +2045,7 @@ gas required to execute the `for` loop exceeds the block gas limit,
 essentially making the `distribute` function inoperable.
 
 Owner operations  
-<span class="indexterm"></span> <span class="indexterm"></span>Another
+ Another
 common pattern is where owners have specific privileges in contracts and
 must perform some task in order for the contract to proceed to the next
 state. One example would be an Initial Coin Offering (ICO) contract that
@@ -2091,7 +2091,7 @@ that does not accept ether.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>In the
+ In the
 first example, contracts should not loop through data structures that
 can be artificially manipulated by external users. A withdrawal pattern
 is recommended, whereby each of the investors call a `withdraw` function
@@ -2121,9 +2121,9 @@ have trust issues, because of the power of such an entity.
 ### Real-World Examples: GovernMental
 
 [GovernMental](http://governmental.github.io/GovernMental/)
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>was an old Ponzi scheme that accumulated
+
+
+was an old Ponzi scheme that accumulated
 quite a large amount of ether (1,100 ether, at one point).
 Unfortunately, it was susceptible to the DoS vulnerabilities mentioned
 in this section. A [Reddit post](http://bit.ly/2DcgvFc) by etherik
@@ -2136,12 +2136,12 @@ and you can see from transaction
 [`0x0d80d67202bd9cb6773df8dd2020e719 0a1b0793e8ec4fc105257e8128f0506b`](http://bit.ly/2Ogzrnn)
 that the 1,100 ether were finally obtained with a transaction that used
 2.5M gas (when the block gas limit had risen enough to allow such a
-transaction).<span class="indexterm"></span><span class="indexterm"></span>
+transaction).
 
 ## Block Timestamp Manipulation
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Block timestamps have historically been
+
+Block timestamps have historically been
 used for a variety of applications, such as entropy for random numbers
 (see the [Entropy Illusion](#entropyillusion_security) for further
 details), locking funds for periods of time, and various state-changing
@@ -2155,8 +2155,8 @@ question](http://bit.ly/2CQ8gh4) on the topic.
 
 ### The Vulnerability
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>`block.timestamp` and its alias `now` can
+
+`block.timestamp` and its alias `now` can
 be manipulated by miners if they have some incentive to do so. Let’s
 construct a simple game, shown in [example_title](#roulette_security),
 that would be vulnerable to miner exploitation.
@@ -2202,7 +2202,7 @@ in the future, as these blocks will likely be rejected by the network
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>Block
+ Block
 timestamps should not be used for entropy or generating random
 numbers—i.e., they should not be the deciding factor (either directly or
 through some derivation) for winning a game or changing an important
@@ -2225,9 +2225,9 @@ aware of when developing contracts.
 ### Real-World Example: GovernMental
 
 [GovernMental](http://governmental.github.io/GovernMental/),
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>the old Ponzi scheme mentioned above, was
+
+
+the old Ponzi scheme mentioned above, was
 also vulnerable to a timestamp-based attack. The contract paid out to
 the player who was the last player to join (for at least one minute) in
 a round. Thus, a miner who was a player could adjust the timestamp (to a
@@ -2236,13 +2236,13 @@ appear that they were the last player to join for over a minute (even
 though this was not true in reality). More detail on this can be found
 in the [“History of Ethereum Security Vulnerabilities, Hacks and Their
 Fixes” post](http://bit.ly/2Q1AMA6) by Tanya
-Bahrynovska.<span class="indexterm"></span><span class="indexterm"></span>
+Bahrynovska.
 
 ## Constructors with Care
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Constructors are special functions that
+
+
+Constructors are special functions that
 often perform critical, privileged tasks when initializing contracts.
 Before Solidity v0.4.22, constructors were defined as functions that had
 the same name as the contract that contained them. In such cases, when
@@ -2256,9 +2256,9 @@ particular the Fallout level).
 
 ### The Vulnerability
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If the contract name is modified, or
+
+
+If the contract name is modified, or
 there is a typo in the constructor’s name such that it does not match
 the name of the contract, the constructor will behave like a normal
 function. This can lead to dire consequences, especially if the
@@ -2293,9 +2293,9 @@ by calling `withdraw`.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>This issue has been addressed in version
+
+
+This issue has been addressed in version
 0.4.22 of the Solidity compiler. This version introduced a `constructor`
 keyword that specifies the constructor, rather than requiring the name
 of the function to match the contract name. Using this keyword to
@@ -2303,9 +2303,9 @@ specify constructors is recommended to prevent naming issues.
 
 ### Real-World Example: Rubixi
 
-[Rubixi](http://bit.ly/2ESWG7t) <span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>was
+[Rubixi](http://bit.ly/2ESWG7t) 
+
+was
 another pyramid scheme that exhibited this kind of vulnerability. It was
 originally called `DynamicPyramid`, but the contract name was changed
 before deployment to `Rubixi`. The constructor’s name wasn’t changed,
@@ -2319,8 +2319,8 @@ Fixes”](http://bit.ly/2Q1AMA6).
 
 ## Uninitialized Storage Pointers
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>The
+
+The
 EVM stores data either as storage or as memory. Understanding exactly
 how this is done and the default types for local variables of functions
 is highly recommended when developing contracts. This is because it is
@@ -2342,7 +2342,7 @@ by Stefan, can be found in this [Reddit thread](http://bit.ly/2OgxPtG).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>Local
+ Local
 variables within functions default to storage or memory depending on
 their type. Uninitialized local storage variables may contain the value
 of other storage variables in the contract; this fact can cause
@@ -2419,13 +2419,13 @@ last byte of `_name` is nonzero, it will modify the last byte of storage
 `slot[0]` and directly change `unlocked` to `true`. Such `_name` values
 will cause the `require` call on line 25 to succeed, as we have set
 `unlocked` to `true`. Try this in Remix. Note the function will pass if
-you use a `_name` of the form:<span class="indexterm"></span>
+you use a `_name` of the form:
 
     0x0000000000000000000000000000000000000000000000000000000000000001
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 Solidity compiler shows a warning for unintialized storage variables;
 developers should pay careful attention to these warnings when building
 smart contracts. The current version of Mist (0.10) doesn’t allow these
@@ -2435,25 +2435,25 @@ ensure they behave as expected.
 
 ### Real-World Examples: OpenAddressLottery and CryptoRoulette Honey Pots
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>A honey pot named
+
+A honey pot named
 [`OpenAddressLottery`](http://bit.ly/2AAVnWD) was deployed that used
 this uninitialized storage variable quirk to collect ether from some
 would-be hackers. The contract is rather involved, so we will leave the
 analysis to the [Reddit thread](http://bit.ly/2OgxPtG) where the attack
 is quite clearly explained.
 
-<span class="indexterm"></span>Another honey pot,
+Another honey pot,
 [`CryptoRoulette`](http://bit.ly/2OfNGJ2), also utilized this trick to
 try and collect some ether. If you can’t figure out how the attack
 works, see [“An Analysis of a Couple Ethereum Honeypot
 Contracts”](http://bit.ly/2OVkSL4) for an overview of this contract and
-others.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+others.
 
 ## Floating Point and Precision
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As of this writing (v0.4.24), Solidity
+
+As of this writing (v0.4.24), Solidity
 does not support fixed-point and floating-point numbers. This means that
 floating-point representations must be constructed with integer types in
 Solidity. This can lead to errors and vulnerabilities if not implemented
@@ -2468,7 +2468,7 @@ Tips wiki](http://bit.ly/2Ogp2Ia).
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>As there
+ As there
 is no fixed-point type in Solidity, developers are required to implement
 their own using the standard integer data types. There are a number of
 pitfalls developers can run into during this process. We will try to
@@ -2516,7 +2516,7 @@ tokens when you need higher precision.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span> <span class="indexterm"></span>Keeping
+ Keeping
 the right precision in your smart contracts is very important,
 especially when dealing with ratios and rates that reflect economic
 decisions.
@@ -2552,8 +2552,8 @@ uses some funky naming (“wads” and “rays”), but the concept is useful.
 
 ### Real-World Example: Ethstick
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The [`Ethstick`
+
+The [`Ethstick`
 contract](http://bit.ly/2Qb7PSB) does not use extended precision;
 however, it deals with wei. So, this contract will have issues of
 rounding, but only at the wei level of precision. It has some more
@@ -2562,11 +2562,11 @@ entropy on the blockchain (see [Entropy
 Illusion](#entropyillusion_security)). For a further discussion of the
 `Ethstick` contract, we’ll refer you to another post by Peter Vessenes,
 [“Ethereum Contracts Are Going to Be Candy for
-Hackers”](http://bit.ly/2SwDnE0).<span class="indexterm"></span><span class="indexterm"></span>
+Hackers”](http://bit.ly/2SwDnE0).
 
 ## Tx.Origin Authentication
 
-<span class="indexterm"></span> <span class="indexterm"></span>Solidity
+ Solidity
 has a global variable, `tx.origin`, which traverses the entire call
 stack and contains the address of the account that originally sent the
 call (or transaction). Using this variable for authentication in a smart
@@ -2583,7 +2583,7 @@ Origin Attacks”](http://bit.ly/2P3KVA4) by Chris Coverdale.
 
 ### The Vulnerability
 
-<span class="indexterm"></span> <span class="indexterm"></span>Contracts
+ Contracts
 that authorize users using the `tx.origin` variable are typically
 vulnerable to phishing attacks that can trick users into performing
 authenticated actions on the vulnerable contract.
@@ -2651,8 +2651,8 @@ contract will pass.
 
 ### Preventative Techniques
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>`tx.origin` should not be used for
+
+`tx.origin` should not be used for
 authorization in smart contracts. This isn’t to say that the `tx.origin`
 variable should never be used. It does have some legitimate use cases in
 smart contracts. For example, if one wanted to deny external contracts
@@ -2660,13 +2660,13 @@ from calling the current contract, one could implement a `require` of
 the form `require(tx.origin == msg.sender)`. This prevents intermediate
 contracts being used to call the current contract, limiting the contract
 to regular codeless
-addresses<span class="indexterm"></span>.<span class="indexterm"></span>
+addresses.
 
 ## Contract Libraries
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There is a lot of existing code available
+
+
+There is a lot of existing code available
 for reuse, both deployed on-chain as callable libraries and off-chain as
 code template libraries. On-platform libraries, having been deployed,
 exist as bytecode smart contracts, so great care should be taken before
@@ -2676,8 +2676,8 @@ benefit from the latest upgrades, and saves you money and benefits the
 Ethereum ecosystem by reducing the total number of live contracts in
 Ethereum.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>In
+
+In
 Ethereum, the most widely used resource is the [OpenZeppelin
 suite](https://openzeppelin.org/), an ample library of contracts ranging
 from implementations of ERC20 and ERC721 tokens, to many flavors of
@@ -2688,8 +2688,8 @@ as *de facto* standard implementations. They are free to use, and are
 built and maintained by [Zeppelin](https://zeppelin.solutions) together
 with an ever-growing list of external contributors.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Also from
+
+Also from
 Zeppelin is [ZeppelinOS](https://zeppelinos.org/), an open source
 platform of services and tools to develop and manage smart contract
 applications securely. ZeppelinOS provides a layer on top of the EVM
@@ -2701,7 +2701,7 @@ improvements in different directions. A set of off-chain tools to debug,
 test, deploy, and monitor decentralized applications is also provided by
 the platform.
 
-<span class="indexterm"></span>The project `ethpm` aims to organize the
+The project `ethpm` aims to organize the
 various resources that are developing in the ecosystem by providing a
 package management system. As such, their registry provides more
 examples for you to browse:
@@ -2725,4 +2725,4 @@ reuse of trusted code. In cryptography, this is so important it has been
 condensed into an adage: "Don’t roll your own crypto." In the case of
 smart contracts, this amounts to gaining as much as possible from freely
 available libraries that have been thoroughly vetted by the
-community.<span class="indexterm"></span><span class="indexterm"></span>
+community.

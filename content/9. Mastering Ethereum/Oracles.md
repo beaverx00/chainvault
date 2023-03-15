@@ -1,18 +1,18 @@
-# Oracles
+# Chapter 11 - [Oracles](content/9.%20Mastering%20Ethereum/Oracles.md)
 
-<span class="indexterm"></span>In this chapter we discuss *oracles*,
+In this chapter we discuss *oracles*,
 which are systems that can provide external data sources to Ethereum
 smart contracts. The term "oracle" comes from Greek mythology, where it
 referred to a person in communication with the gods who could see
 visions of the future. In the context of blockchains, an oracle is a
 system that can answer questions that are external to Ethereum.
-<span class="indexterm"></span>Ideally oracles are systems that are
+Ideally oracles are systems that are
 *trustless*, meaning that they do not need to be trusted because they
 operate on decentralized principles.
 
 ## Why Oracles Are Needed
 
-<span class="indexterm"></span> <span class="indexterm"></span>A key
+ A key
 component of the Ethereum platform is the Ethereum Virtual Machine, with
 its ability to execute programs and update the state of Ethereum,
 constrained by consensus rules, on any node in the decentralized
@@ -58,7 +58,7 @@ detail, in the rest of this chapter.
 
 ## Oracle Use Cases and Examples
 
-<span class="indexterm"></span> <span class="indexterm"></span>Oracles,
+ Oracles,
 ideally, provide a trustless (or at least near-trustless) way of getting
 extrinsic (i.e., "real-world" or off-chain) information, such as the
 results of football games, the price of gold, or truly random numbers,
@@ -139,7 +139,7 @@ decentralized oracles, and oracle client implementations in Solidity.
 
 ## Oracle Design Patterns
 
-<span class="indexterm"></span> <span class="indexterm"></span>All
+ All
 oracles provide a few key functions, by definition. These include the
 ability to:
 
@@ -158,8 +158,8 @@ accessed by Ethereum nodes or network-enabled clients directly by
 The three main ways to set up an oracle can be categorized as
 *request–response*, publish-subscribe, and *immediate-read*.
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Starting with the simplest,
+
+Starting with the simplest,
 *immediate-read* oracles are those that provide data that is only needed
 for an immediate decision, like "What is the address for
 *ethereumbook.info*?" or "Is this person over 18?" Those wishing to
@@ -189,8 +189,8 @@ kept private. Again, hashing the data (more carefully, in Merkle trees
 with salts) and only storing the root hash in the smart contract’s
 storage would be an efficient way to organize such a service.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The next
+
+The next
 setup is *publish–subscribe*, where an oracle that effectively provides
 a broadcast service for data that is expected to change (perhaps both
 regularly and frequently) is either polled by a smart contract on-chain,
@@ -213,8 +213,8 @@ which might be necessary for some decentralized applications (e.g.,
 where activation incentives are not possible), then significant gas
 expenditure may be incurred.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>The
+
+The
 *request–response* category is the most complicated: this is where the
 data space is too huge to be stored in a smart contract and users are
 expected to only need a small part of the overall dataset at a time. It
@@ -286,8 +286,8 @@ changes. Multiple subscribed DApps can simply read it from the oracle
 contract, thereby reducing the impact on network bandwidth while
 minimizing storage costs.
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In a broadcast or multicast pattern, an
+
+In a broadcast or multicast pattern, an
 oracle would post all messages to a channel and subscribing contracts
 would listen to the channel under a variety of subscription modes. For
 example, an oracle might publish messages to a cryptocurrency exchange
@@ -296,13 +296,13 @@ content of the channel if it required the time series for, e.g., a
 moving average calculation; another might require only the latest rate
 for a spot price calculation. A broadcast pattern is appropriate where
 the oracle does not need to know the identity of the subscribing
-contract.<span class="indexterm"></span>
+contract.
 
 ## Data Authentication
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If we assume that the source of data
+
+
+If we assume that the source of data
 being queried by a DApp is both authoritative and trustworthy (a not
 insignificant assumption), an outstanding question remains: given that
 the oracle and the request–response mechanism may be operated by
@@ -312,16 +312,16 @@ critical that off-chain methods are able to attest to the returned
 data’s integrity. Two common approaches to data authentication are
 *authenticity proofs* and *trusted execution environments* (TEEs).
 
-<span class="indexterm"></span>Authenticity proofs are cryptographic
+Authenticity proofs are cryptographic
 guarantees that data has not been tampered with. Based on a variety of
 attestation techniques (e.g., digitally signed proofs), they effectively
 shift the trust from the data carrier to the attestor (i.e., the
 provider of the attestation). By verifying the authenticity proof
 on-chain, smart contracts are able to verify the integrity of the data
 before operating upon it.
-<span class="indexterm"></span>[Oraclize](http://www.oraclize.it/) is an
+[Oraclize](http://www.oraclize.it/) is an
 example of an oracle service leveraging a variety of authenticity
-proofs. <span class="indexterm"></span>One such proof that is currently
+proofs. One such proof that is currently
 available for data queries from the Ethereum main network is the
 TLSNotary proof. TLSNotary proofs allow a client to provide evidence to
 a third party that HTTPS web traffic occurred between the client and a
@@ -338,11 +338,11 @@ proofs. Although it offers higher assurances against data tampering than
 a pure request–response mechanism, this approach does require the
 assumption that Amazon itself will not tamper with the VM instance.
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>[Town
+[Town
 Crier](http://www.town-crier.org/) is an authenticated data feed oracle
 system based on the TEE approach; such methods utilize hardware-based
 secure enclaves to ensure data integrity. Town Crier uses Intel’s
-<span class="indexterm"></span><span class="indexterm"></span>Software
+Software
 Guard eXtensions (SGX) to ensure that responses from HTTPS queries can
 be verified as authentic. SGX provides guarantees of integrity, ensuring
 that applications running within an enclave are protected by the CPU
@@ -365,7 +365,7 @@ data is returned untampered with (assuming that we trust Intel/SGX).
 
 ## Computation Oracles
 
-<span class="indexterm"></span> <span class="indexterm"></span>So far,
+ So far,
 we have only discussed oracles in the context of requesting and
 delivering data. However, oracles can also be used to perform arbitrary
 computation, a function that can be especially useful given Ethereum’s
@@ -377,7 +377,7 @@ For example, one might use a computation oracle to perform a
 computationally intensive regression calculation in order to estimate
 the yield of a bond contract.
 
-<span class="indexterm"></span>If you are willing to trust a centralized
+If you are willing to trust a centralized
 but auditable service, you can go again to Oraclize. They provide a
 service that allows decentralized applications to request the output of
 a computation performed in a sandboxed AWS virtual machine. The AWS
@@ -395,7 +395,7 @@ computation is of some nontrivial value, it is possible to check that
 the correct Docker container was executed. Nonetheless, this is not a
 truly decentralized solution.
 
-<span class="indexterm"></span>The concept of a *cryptlet* as a standard
+The concept of a *cryptlet* as a standard
 for verifiable oracle truths has been formalized as part of Microsoft’s
 wider ESC Framework. Cryptlets execute within an encrypted capsule that
 abstracts away the infrastructure, such as I/O, and has the
@@ -418,7 +418,7 @@ public class SampleContractCryptlet : Cryptlet
                 new SampleContractConstructor())
 ```
 
-<span class="indexterm"></span>For a more decentralized solution, we can
+For a more decentralized solution, we can
 turn to [TrueBit](https://truebit.io/), which offers a solution for
 scalable and verifiable off-chain computation. They use a system of
 solvers and verifiers who are incentivized to perform computations and
@@ -444,11 +444,11 @@ computationally intensive function that cannot be computed within the
 Ethereum block gas limit. By performing this verification on TrueBit, it
 has been possible to securely verify Dogecoin transactions within a
 smart contract on Ethereum’s Rinkeby
-testnet.<span class="indexterm"></span>
+testnet.
 
 ## Decentralized Oracles
 
-<span class="indexterm"></span> <span class="indexterm"></span>While
+ While
 centralized data or computation oracles suffice for many applications,
 they represent single points of failure in the Ethereum network. A
 number of schemes have been proposed around the idea of decentralized
@@ -456,7 +456,7 @@ oracles as a means of ensuring data availability and the creation of a
 network of individual data providers with an on-chain data aggregation
 system.
 
-<span class="indexterm"></span>[ChainLink](https://www.smartcontract.com/link)
+[ChainLink](https://www.smartcontract.com/link)
 has proposed a decentralized oracle network consisting of three key
 smart contracts—a reputation contract, an order-matching contract, and
 an aggregation contract—and an off-chain registry of data providers. The
@@ -483,7 +483,7 @@ ones. Therefore, ChainLink offers a standard set of aggregation
 contracts, but also allows customized aggregation contracts to be
 specified.
 
-<span class="indexterm"></span>A related idea is the SchellingCoin
+A related idea is the SchellingCoin
 protocol. Here, multiple participants report values and the median is
 taken as the “correct” answer. Reporters are required to provide a
 deposit that is redistributed in favor of values that are closer to the
@@ -504,9 +504,9 @@ data after the registration period ends.
 
 ## Oracle Client Interfaces in Solidity
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>[example_title](#using_oraclize_to_update_the_eth_usd)
+
+
+[example_title](#using_oraclize_to_update_the_eth_usd)
 is a Solidity example demonstrating how Oraclize can be used to
 continuously poll for the ETH/USD price from an API and store the result
 in a usable manner.
@@ -598,7 +598,7 @@ in the response value and a unique `queryId` argument, which, for
 example, can be used to handle and track multiple pending callbacks from
 Oraclize.
 
-<span class="indexterm"></span>Financial data provider Thomson Reuters
+Financial data provider Thomson Reuters
 also provides an oracle service for Ethereum, called BlockOne IQ,
 allowing market and reference data to be requested by smart contracts
 running on private or permissioned networks.
@@ -683,7 +683,7 @@ allowing the resulting data to be retrieved; in the event of retrieval
 failure, the `onFailure` callback will return an error code instead. The
 available fields that can be retrieved on success include `open`,
 `high`, `low`, `close` (OHLC), and `bid`/`ask`
-prices.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+prices.
 
 ## Conclusions
 
@@ -702,4 +702,4 @@ security assumptions are carefully considered.
 Decentralized oracles can resolve some of these concerns and offer
 Ethereum smart contracts trustless external data. Choose carefully and
 you can start exploring the bridge between Ethereum and the "real world"
-that oracles offer.<span class="indexterm"></span>
+that oracles offer.

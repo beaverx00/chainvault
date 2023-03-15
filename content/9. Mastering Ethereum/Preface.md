@@ -1,9 +1,6 @@
-# Preface
+# [Preface](content/9.%20Mastering%20Ethereum/Preface.md)
 
-This book is a collaboration between Andreas M. Antonopoulos and Dr.
-Gavin Wood. A series of fortunate coincidences brought these two authors
-together in an effort that galvanized hundreds of contributors to
-produce this book, in the best spirit of open source and the creative
+This book is a collaboration between Andreas M. Antonopoulos and Dr. Gavin Wood. A series of fortunate coincidences brought these two authors together in an effort that galvanized hundreds of contributors to produce this book, in the best spirit of open source and the creative
 commons culture.
 
 Gavin had been wishing to write a book that expanded on the Yellow Paper
@@ -52,7 +49,7 @@ and the relevant sections with ease, by keyword.
 
 # Intended Audience
 
-<span class="indexterm"></span>This book is mostly intended for coders.
+This book is mostly intended for coders.
 If you can use a programming language, this book will teach you how
 smart contract blockchains work, how to use them, and how to develop
 smart contracts and decentralized applications with them. The first few
@@ -61,7 +58,7 @@ noncoders.
 
 # Conventions Used in This Book
 
-<span class="indexterm"></span>The following typographical conventions
+The following typographical conventions
 are used in this book:
 
 *Italic*  
@@ -100,7 +97,7 @@ This icon indicates a warning or caution.
 
 # Code Examples
 
-<span class="indexterm"></span>The examples are illustrated in Solidity,
+The examples are illustrated in Solidity,
 Vyper, and JavaScript, and using the command line of a Unix-like
 operating system. All code snippets are available in the GitHub
 repository under the *code* subdirectory. Fork the book code, try the
@@ -140,13 +137,13 @@ citing this book and quoting example code does not require permission.
 Incorporating a significant amount of example code from this book into
 your product’s documentation does require permission.
 
-<span class="indexterm"></span>We appreciate, but do not require,
+We appreciate, but do not require,
 attribution. An attribution usually includes the title, author,
 publisher, ISBN, and copyright. For example: “*Mastering Ethereum* by
 Andreas M. Antonopoulos and Dr. Gavin Wood (O’Reilly). Copyright 2019
 The Ethereum Book LLC and Gavin Wood, 978-1-491-97194-9."
 
-<span class="indexterm"></span>*Mastering Ethereum* is offered under the
+*Mastering Ethereum* is offered under the
 Creative Commons Attribution-Noncommercial-No Derivative Works 4.0
 International License (CC BY-NC-ND 4.0).
 
@@ -164,16 +161,16 @@ this book. Use them at your own risk!
 
 # Ethereum Addresses and Transactions in this Book
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Ethereum addresses, transactions,
+
+
+
+The Ethereum addresses, transactions,
 keys, QR codes, and blockchain data used in this book are, for the most
 part, real. That means you can browse the blockchain, look at the
 transactions offered as examples, retrieve them with your own scripts or
 programs, etc.
 
-<span class="indexterm"></span> <span class="indexterm"></span>However,
+ However,
 note that the private keys used to construct the addresses printed in
 this book have been "burned." This means that if you send money to any
 of these addresses, the money will either be lost forever or (more
@@ -213,7 +210,7 @@ For more information, please visit http://oreilly.com/safari.
 Information about *Mastering Ethereum* is available at
 <https://ethereumbook.info/>.
 
-<span class="indexterm"></span><span class="indexterm"></span>Please
+Please
 address comments and questions concerning this book to the publisher:
 
 O'Reilly Media, Inc.

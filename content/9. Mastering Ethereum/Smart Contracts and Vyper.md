@@ -1,6 +1,6 @@
-# Smart Contracts and Vyper
+# Chapter 8 - [Smart Contracts and Vyper](content/9.%20Mastering%20Ethereum/Smart%20Contracts%20and%20Vyper.md)
 
-<span class="indexterm"></span>Vyper is an experimental,
+Vyper is an experimental,
 contract-oriented programming language for the Ethereum Virtual Machine
 that strives to provide superior auditability, by making it easier for
 developers to produce intelligible code. In fact, one of the principles
@@ -14,8 +14,8 @@ Solidity, demonstrating the differences.
 ## Vulnerabilities and Vyper
 
 [A recent study](https://arxiv.org/pdf/1802.06038.pdf)
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>analyzed nearly one million deployed
+
+analyzed nearly one million deployed
 Ethereum smart contracts and found that many of these contracts
 contained serious vulnerabilities. During their analysis, the
 researchers outlined three basic categories of trace vulnerabilities:
@@ -40,9 +40,9 @@ write misleading or vulnerable code.
 
 ## Comparison to Solidity
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>One of the ways in which Vyper tries to
+
+
+One of the ways in which Vyper tries to
 make unsafe code harder to write is by deliberately *omitting* some of
 Solidity’s features. It is important for those considering developing
 smart contracts in Vyper to understand what features Vyper does *not*
@@ -51,9 +51,9 @@ features and provide justification for why they have been omitted.
 
 ### Modifiers
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As we saw in the previous chapter, in
+
+
+As we saw in the previous chapter, in
 Solidity you can write a function using modifiers. For example, the
 following function, `changeOwner`, will run the code in a modifier
 called `onlyBy` as part of its execution:
@@ -144,9 +144,9 @@ the modifier code around the function to see what it does.
 
 ### Class Inheritance
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Inheritance allows programmers to harness
+
+
+Inheritance allows programmers to harness
 the power of prewritten code by acquiring preexisting functionality,
 properties, and behaviors from existing software libraries. Inheritance
 is powerful and promotes the reuse of code. Solidity supports multiple
@@ -161,8 +161,8 @@ example of how multiple inheritance can be problematic.
 
 ### Inline Assembly
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Inline
+
+Inline
 assembly gives developers low-level access to the Ethereum Virtual
 Machine, allowing Solidity programs to perform operations by directly
 accessing EVM instructions. For example, the following inline assembly
@@ -175,9 +175,9 @@ for the extra power, and thus does not support inline assembly.
 
 ### Function Overloading
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Function overloading allows developers to
+
+
+Function overloading allows developers to
 write multiple functions of the same name. Which function is used on a
 given occasion depends on the types of the arguments supplied. Take the
 following two functions, for example:
@@ -200,19 +200,19 @@ does not support function overloading.
 
 ### Variable Typecasting
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>There are two sorts of typecasting:
+
+
+There are two sorts of typecasting:
 *implicit* and *explicit*
 
-<span class="indexterm"></span>Implicit typecasting is often performed
+Implicit typecasting is often performed
 at compile time. For example, if a type conversion is semantically sound
 and no information is likely to be lost, the compiler can perform an
 implicit conversion, such as converting a variable of type `uint8` to
 `uint16`. The earliest versions of Vyper allowed implicit typecasting of
 variables, but recent versions do not.
 
-<span class="indexterm"></span>Explicit typecasts can be inserted in
+Explicit typecasts can be inserted in
 Solidity. Unfortunately, they can lead to unexpected behavior. For
 example, casting a `uint32` to the smaller type `uint16` simply removes
 the higher-order bits, as demonstrated here:
@@ -223,7 +223,7 @@ uint16 b = uint16(a);
 // Variable b is 0x5678 now
 ```
 
-<span class="indexterm"></span>Vyper instead has a `convert` function to
+Vyper instead has a `convert` function to
 perform explicit casts. The convert function (found on line 82 of
 [*convert.py*](https://bit.ly/2Nnjy3I)):
 
@@ -286,9 +286,9 @@ contracts.
 
 ### Infinite Loop
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Although there is no merit because of
+
+
+Although there is no merit because of
 gaslimit, developers can write an endless loop processing in Solidity.
 Infinite loop makes it impossible to set an upper bound on gas limits,
 opening the door for gas limit attacks. Therefore, Vyper doesn’t permit
@@ -308,7 +308,7 @@ Recursive calling can be written in Solidity, but not in Vyper.
 
 ### Preconditions and Postconditions
 
-<span class="indexterm"></span> <span class="indexterm"></span>Vyper
+ Vyper
 handles preconditions, postconditions, and state changes explicitly.
 While this produces redundant code, it also allows for maximal
 readability and safety. When writing a smart contract in Vyper, a
@@ -333,12 +333,12 @@ contracts.
 Ideally, each of these points should be carefully considered and then
 thoroughly documented in the code. Doing so will improve the design of
 the code, ultimately making it more readable and
-auditable.<span class="indexterm"></span><span class="indexterm"></span>
+auditable.
 
 ## Decorators
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The following decorators may be used at
+
+The following decorators may be used at
 the start of each function:
 
 `@private`  
@@ -369,11 +369,11 @@ both!).
 
 ## Function and Variable Ordering
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Each individual Vyper smart contract
+
+
+
+
+Each individual Vyper smart contract
 consists of a single Vyper file only. In other words, all of a given
 Vyper smart contract’s code, including all functions, variables, and so
 forth, exists in one place. Vyper requires that each smart contract’s
@@ -445,9 +445,9 @@ compile.
 
 ## Compilation
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Vyper has its own [online code editor and
+
+
+Vyper has its own [online code editor and
 compiler](https://vyper.online), which allows you to write and then
 compile your smart contracts into bytecode, ABI, and LLL using only your
 web browser. The Vyper online compiler has a variety of prewritten smart
@@ -462,7 +462,7 @@ smart contracts, now has a Vyper plugin available in the settings tab.
 
 <div class="note">
 
-<span class="indexterm"></span> <span class="indexterm"></span>Vyper
+ Vyper
 implements ERC20 as a precompiled contract, allowing these smart
 contracts to be easily used out of the box. Contracts in Vyper must be
 declared as global variables. An example for declaring the ERC20
@@ -488,10 +488,10 @@ by running the following command:
 
 ## Protecting Against Overflow Errors at the Compiler Level
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Overflow errors in software can be
+
+
+
+Overflow errors in software can be
 catastrophic when dealing with real value. For example, one [transaction
 from mid-April 2018](http://bit.ly/2yHfvoF) shows the malicious transfer
 of over
@@ -517,13 +517,13 @@ simplifies the development of Vyper itself.)
 
 ## Reading and Writing Data
 
-<span class="indexterm"></span> <span class="indexterm"></span>While it
+ While it
 is costly to store, read, and modify data, these storage operations are
 a necessary component of most smart contracts. Smart contracts can write
 data to two places:
 
 Global state  
-<span class="indexterm"></span>The state variables in a given smart
+The state variables in a given smart
 contract are stored in Ethereum’s global state trie; a smart contract
 can only store, read, and modify data in relation to that particular
 contract’s address (i.e., smart contracts cannot read or write to other
@@ -549,4 +549,4 @@ contracts and avoid certain pitfalls that cause serious vulnerabilities
 to arise. Next, we will look at smart contract security in more detail.
 Some of the nuances of Vyper design may become more apparent once you
 read about all the possible security problems that can arise in smart
-contracts.<span class="indexterm"></span>
+contracts.

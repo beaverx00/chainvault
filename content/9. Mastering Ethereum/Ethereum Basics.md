@@ -1,13 +1,13 @@
-# Ethereum Basics
+# Chapter 2 - [Ethereum Basics](content/9.%20Mastering%20Ethereum/Ethereum%20Basics.md)
 
-<span class="indexterm"></span> <span class="indexterm"></span>In this
+ In this
 chapter we will start exploring Ethereum, learning how to use wallets,
 how to create transactions, and also how to run a basic smart contract.
 
 ## Ether Currency Units
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum’s currency unit is called
+
+Ethereum’s currency unit is called
 *ether*, identified also as "ETH" or with the symbols Ξ (from the Greek
 letter "Xi" that looks like a stylized capital E) or, less often, ♦: for
 example, 1 ether, or 1 ETH, or Ξ1, or ♦1.
@@ -54,10 +54,10 @@ Ether denominations and unit names
 
 ## Choosing an Ethereum Wallet
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The term "wallet" has come to mean many
+
+
+
+The term "wallet" has come to mean many
 things, although they are all related and on a day-to-day basis boil
 down to pretty much the same thing. We will use the term "wallet" to
 mean a software application that helps you manage your Ethereum account.
@@ -83,7 +83,7 @@ range of complexity and features. However, the selection of these
 wallets is not an endorsement of their quality or security. They are
 simply a good starting place for demonstrations and testing.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Remember
+ Remember
 that for a wallet application to work, it must have access to your
 private keys, so it is vital that you only download and use wallet
 applications from sources you trust. Fortunately, in general, the more
@@ -95,31 +95,31 @@ wallets.
 The following are some good starter wallets:
 
 MetaMask  
-<span class="indexterm"></span>MetaMask is a browser extension wallet
+MetaMask is a browser extension wallet
 that runs in your browser (Chrome, Firefox, Opera, or Brave Browser). It
 is easy to use and convenient for testing, as it is able to connect to a
 variety of Ethereum nodes and test blockchains. MetaMask is a web-based
 wallet that also includes mobile apps for both iOS and Android.
 
 Jaxx  
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Jaxx is a multiplatform and multicurrency
+
+Jaxx is a multiplatform and multicurrency
 wallet that runs on a variety of operating systems, including Android,
 iOS, Windows, macOS, and Linux. It is often a good choice for new users
 as it is designed for simplicity and ease of use. Jaxx is either a
 mobile or a desktop wallet, depending on where you install it.
 
 MyEtherWallet (MEW)  
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>MyEtherWallet is primarily a web-based
+
+MyEtherWallet is primarily a web-based
 wallet that runs in any browser. It is also available on Android and
 iOS. It has multiple sophisticated features we will explore in many of
 our examples.
 
 Emerald Wallet  
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Emerald
+
+
+Emerald
 Wallet is designed to work with the Ethereum Classic blockchain, but is
 compatible with other Ethereum-based blockchains. It’s an open source
 desktop application and works under Windows, macOS, and Linux. Emerald
@@ -132,7 +132,7 @@ discuss controlling and managing keys.
 
 ## Control and Responsibility
 
-<span class="indexterm"></span> <span class="indexterm"></span>Open
+ Open
 blockchains like Ethereum are important because they operate as a
 *decentralized* system. That means lots of things, but one crucial
 aspect is that each user of Ethereum can—and should—control their own
@@ -164,7 +164,7 @@ you manage this responsibility:
   Fortunately, most user interfaces today won’t even let you see the raw
   private key.
 
-- <span class="indexterm"></span> <span class="indexterm"></span>Private
+-  Private
   keys can be stored in an encrypted form, as a digital "keystore" file.
   Being encrypted, they need a password to unlock. When you are prompted
   to choose a password, make it strong (i.e., long and random), back it
@@ -205,13 +205,13 @@ you manage this responsibility:
 
 Now that we’ve covered some basic best practices for key management and
 security, let’s get to work using
-MetaMask\!<span class="indexterm"></span>
+MetaMask\!
 
 ## Getting Started with MetaMask
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Open the Google Chrome browser and
+
+
+Open the Google Chrome browser and
 navigate to <https://chrome.google.com/webstore/category/extensions>.
 
 Search for "MetaMask" and click on the logo of a fox. You should see
@@ -241,7 +241,7 @@ Chrome" to install it.
 
 ### Creating a Wallet
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once
+ Once
 MetaMask is installed you should see a new icon (the head of a fox) in
 your browser’s toolbar. Click on it to get started. You will be asked to
 accept the terms and conditions and then to create your new Ethereum
@@ -261,7 +261,7 @@ anyone with access to your browser.
 
 </div>
 
-<span class="indexterm"></span> <span class="indexterm"></span>Once
+ Once
 you’ve set a password, MetaMask will generate a wallet for you and show
 you a *mnemonic backup* consisting of 12 English words (see [The
 mnemonic backup of your wallet, created by
@@ -289,7 +289,7 @@ MetaMask</figcaption>
 Once you have confirmed that you have stored the mnemonic securely,
 you’ll be able to see the details of your Ethereum account, as shown in
 [Your Ethereum account in
-MetaMask](#metamask_account).<span class="indexterm"></span>
+MetaMask](#metamask_account).
 
 <figure id="metamask_account">
 <img src="images/metamask_account.png" alt="MetaMask Account Page" />
@@ -303,11 +303,11 @@ accounts. At the top of the account page, you can see which Ethereum
 network you are currently working on ("Main Network" in the example).
 
 Congratulations! You have set up your first Ethereum
-wallet.<span class="indexterm"></span>
+wallet.
 
 ### Switching Networks
 
-<span class="indexterm"></span> <span class="indexterm"></span>As you
+ As you
 can see on the MetaMask account page, you can choose between multiple
 Ethereum networks. By default, MetaMask will try to connect to the main
 network. The other choices are public testnets, any Ethereum node of
@@ -355,17 +355,17 @@ and contracts on Ropsten, for example, but not on the main network.
 
 ### Getting Some Test Ether
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Your first task is to get your wallet
+
+
+
+
+
+Your first task is to get your wallet
 funded. You won’t be doing that on the main network because real ether
 costs money and handling it requires a bit more experience. For now,
 you’ll load your wallet with some testnet ether.
 
-<span class="indexterm"></span>Switch MetaMask to the *Ropsten Test
+Switch MetaMask to the *Ropsten Test
 Network*. Click Deposit, then click Ropsten Test Faucet. MetaMask will
 open a new web page, as shown in [MetaMask Ropsten Test
 Faucet](#metamask_ropsten_faucet).
@@ -419,9 +419,9 @@ Try visiting that link, or entering the transaction hash into the
 
 ### Sending Ether from MetaMask
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Once you’ve received your first test
+
+
+Once you’ve received your first test
 ether from the Ropsten Test Faucet, you can experiment with sending
 ether by trying to send some back to the faucet. As you can see on the
 Ropsten Test Faucet page, there is an option to "donate" 1 ETH to the
@@ -449,7 +449,7 @@ says you have an insufficient balance. At first glance this may seem
 confusing: you have 1 ETH, you want to send 1 ETH, so why is MetaMask
 saying you have insufficient funds?
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 answer is because of the cost of *gas*. Every Ethereum transaction
 requires payment of a fee, which is collected by the miners to validate
 the transaction. The fees in Ethereum are charged in a virtual currency
@@ -457,7 +457,7 @@ called gas. You pay for the gas with ether, as part of the transaction.
 
 <div class="note">
 
-<span class="indexterm"></span> <span class="indexterm"></span>Fees are
+ Fees are
 required on the test networks too. Without fees, a test network would
 behave differently from the main network, making it an inadequate
 testing platform. Fees also protect the test networks from DoS attacks
@@ -491,13 +491,13 @@ click the orange "1 ether" donation button, you have sufficient balance
 to complete the transaction. Click Submit when MetaMask pops up the
 payment window. After all of this, you should see a balance of 0.999937
 ETH because you sent 1 ETH to the faucet with 0.000063 ETH in
-gas.<span class="indexterm"></span><span class="indexterm"></span>
+gas.
 
 ### Exploring the Transaction History of an Address
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>By now you have become an expert in using
+
+
+By now you have become an expert in using
 MetaMask to send and receive test ether. Your wallet has received at
 least two payments and sent at least one. You can view all these
 transactions using the *ropsten.etherscan.io* block explorer. You can
@@ -538,18 +538,18 @@ more transactions. Before long you will be lost in the maze of
 interconnected data. Public blockchains contain an enormous wealth of
 information, all of which can be explored programmatically, as we will
 see in future
-examples<span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+examples.
 
 ## Introducing the World Computer
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>You’ve now
+
+
+You’ve now
 created a wallet and sent and received ether. So far, we’ve treated
 Ethereum as a cryptocurrency. But Ethereum is much, much more. In fact,
 the cryptocurrency function is subservient to Ethereum’s function as a
-decentralized world computer. <span class="indexterm"></span>
-<span class="indexterm"></span>Ether is meant to be used to pay for
+decentralized world computer. 
+Ether is meant to be used to pay for
 running *smart contracts*, which are computer programs that run on an
 emulated computer called the *Ethereum Virtual Machine* (EVM).
 
@@ -562,10 +562,10 @@ We’ll discuss this in much greater detail in [???](#evm_chapter).
 
 ## Externally Owned Accounts (EOAs) and Contracts
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The type of account you created in the
+
+
+
+The type of account you created in the
 MetaMask wallet is called an *externally owned account* (EOA).
 Externally owned accounts are those that have a private key; having the
 private key means control over access to funds or contracts. Now, you’re
@@ -601,19 +601,19 @@ wallet and test ether on the Ropsten test network.
 
 ## A Simple Contract: A Test Ether Faucet
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum has many different high-level
+
+
+Ethereum has many different high-level
 languages, all of which can be used to write a contract and produce EVM
 bytecode. You can read about many of the most prominent and interesting
 ones in [???](#high_level_languages). One high-level language is by far
 the dominant choice for smart contract programming: Solidity.
-<span class="indexterm"></span> <span class="indexterm"></span>Solidity
+ Solidity
 was created by Dr. Gavin Wood, the coauthor of this book, and has become
 the most widely used language in Ethereum (and beyond). We’ll use
 Solidity to write our first contract.
 
-<span class="indexterm"></span> <span class="indexterm"></span>For our
+ For our
 first example ([example_title](#solidity_faucet_example)), we will write
 a contract that controls a *faucet*. You’ve already used a faucet to get
 test ether on the Ropsten test network. A faucet is a relatively simple
@@ -672,7 +672,7 @@ Next, we enable the contract to accept any incoming amount:
 receive () external payable {}
 ```
 
-<span class="indexterm"></span>The receive function is called if the
+The receive function is called if the
 transaction that triggered the contract didn’t name any of the declared
 functions in the contract, or didn’t contain data and thus was a plain
 Ether transfer. Contracts can have one such receive function (without a
@@ -735,13 +735,13 @@ definition of our `withdraw` function.
 
 Right below our default function is the final closing curly brace, which
 closes the definition of the contract `Faucet`. That’s
-it\!<span class="indexterm"></span><span class="indexterm"></span>
+it\!
 
 ## Compiling the Faucet Contract
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Now that we have our first example
+
+
+Now that we have our first example
 contract, we need to use a Solidity compiler to convert the Solidity
 code into EVM bytecode so it can be executed by the EVM on the
 blockchain itself.
@@ -751,7 +751,7 @@ various frameworks, and bundled in Integrated Development Environments
 (IDEs). To keep things simple, we will use one of the more popular IDEs,
 called *Remix*.
 
-<span class="indexterm"></span>Use your Chrome browser (with the
+Use your Chrome browser (with the
 MetaMask wallet you installed earlier) to navigate to the Remix IDE at
 <https://remix.ethereum.org>.
 
@@ -816,19 +816,19 @@ PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DU
 
 Aren’t you glad you are using a high-level language like Solidity
 instead of programming directly in EVM bytecode? Me
-too\!<span class="indexterm"></span><span class="indexterm"></span>
+too\!
 
 ## Creating the Contract on the Blockchain
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>So, we have a contract. We’ve compiled it
+
+
+So, we have a contract. We’ve compiled it
 into bytecode. Now, we need to "register" the contract on the Ethereum
 blockchain. We will be using the Ropsten testnet to test our contract,
 so that’s the blockchain we want to submit it to.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Registering a contract on the blockchain
+
+Registering a contract on the blockchain
 involves creating a special transaction whose destination is the address
 `0x0000000000000000000000000000000000000000`, also known as the *zero
 address*. The zero address is a special address that tells the Ethereum
@@ -836,7 +836,7 @@ blockchain that you want to register a contract. Fortunately, the Remix
 IDE will handle all of that for you and send the transaction to
 MetaMask.
 
-<span class="indexterm"></span>First, switch to the Run tab and select
+First, switch to the Run tab and select
 Injected Web3 in the Environment drop-down selection box. This connects
 the Remix IDE to the MetaMask wallet, and through MetaMask to the
 Ropsten test network. Once you do that, you can see Ropsten under
@@ -889,11 +889,11 @@ shows it as “Faucet at 0x72e…c7829” (although your address, the random
 letters and numbers, will be different). The small clipboard symbol to
 the right allows you to copy the contract address to your clipboard. We
 will use that in the next
-section.<span class="indexterm"></span><span class="indexterm"></span>
+section.
 
 ## Interacting with the Contract
 
-<span class="indexterm"></span> <span class="indexterm"></span>Let’s
+ Let’s
 recap what we’ve learned so far: Ethereum contracts are programs that
 control money, which run inside a virtual machine called the EVM. They
 are created by a special transaction that submits their bytecode to be
@@ -908,7 +908,7 @@ to the function.
 
 ### Viewing the Contract Address in a Block Explorer
 
-<span class="indexterm"></span> <span class="indexterm"></span>We now
+ We now
 have a contract recorded on the blockchain, and we can see it has an
 Ethereum address. Let’s check it out in the *ropsten.etherscan.io* block
 explorer and see what a contract looks like. In the Remix IDE, copy the
@@ -926,7 +926,7 @@ Keep Remix open; we’ll come back to it again later. Now, navigate your
 browser to *ropsten.etherscan.io* and paste the address into the search
 box. You should see the contract’s Ethereum address history, as shown in
 [View the Faucet contract address in the Etherscan block
-explorer](#etherscan_contract_address).<span class="indexterm"></span>
+explorer](#etherscan_contract_address).
 
 <figure id="etherscan_contract_address">
 <img src="images/etherscan_contract_address.png"
@@ -937,7 +937,7 @@ explorer</figcaption>
 
 ### Funding the Contract
 
-<span class="indexterm"></span> <span class="indexterm"></span>For now,
+ For now,
 the contract only has one transaction in its history: the contract
 creation transaction. As you can see, the contract also has no ether
 (zero balance). That’s because we didn’t send any ether to the contract
@@ -971,12 +971,12 @@ specifying which function to call, it called this default function.
 Because we declared it as `payable`, it accepted and deposited the 1
 ether into the contract’s account balance. Your transaction caused the
 contract to run in the EVM, updating its balance. You have funded your
-faucet\!<span class="indexterm"></span>
+faucet\!
 
 ### Withdrawing from Our Contract
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>Next,
+
+Next,
 let’s withdraw some funds from the faucet. To withdraw, we have to
 construct a transaction that calls the `withdraw` function and passes a
 `withdraw_amount` argument to it. To keep things simple for now, Remix
@@ -1057,7 +1057,7 @@ see an "OUT" transaction in the *contract address history*.
 
 Where’s the outgoing withdrawal? A new tab has appeared on the
 contract’s address history page, named Internal Transactions.
-<span class="indexterm"></span>Because the 0.1 ether transfer originated
+Because the 0.1 ether transfer originated
 from the contract code, it is an internal transaction (also called a
 *message*). Click on that tab to see it (see [Etherscan shows the
 internal transaction transferring ether out from the
@@ -1081,7 +1081,7 @@ function to send you the ether. Running the `transfer` function
 generated an internal transaction that deposited 0.1 ether into your
 wallet address, from the contract’s balance. That’s the one shown on the
 Internal Transactions tab in
-Etherscan<span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span>
+Etherscan.
 
 <figure id="etherscan_withdrawal_internal">
 <img src="images/etherscan_withdrawal_internal.png"
@@ -1111,4 +1111,4 @@ software that controls money on a decentralized world computer.
 We will do a lot more smart contract programming in
 [???](#smart_contracts_chapter) and learn about best practices and
 security considerations in
-[???](#smart_contract_security).<span class="indexterm"></span>
+[???](#smart_contract_security).

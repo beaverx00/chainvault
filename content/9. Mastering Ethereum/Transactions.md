@@ -1,6 +1,6 @@
-# Transactions
+# Chapter 6 - [Transactions](content/9.%20Mastering%20Ethereum/Transactions.md)
 
-<span class="indexterm"></span>Transactions are signed messages
+Transactions are signed messages
 originated by an externally owned account (EOA), transmitted by the
 Ethereum network, and recorded on the Ethereum blockchain. This basic
 definition conceals a lot of surprising and fascinating details. Another
@@ -20,7 +20,7 @@ although you may find the details interesting!
 
 ## The Structure of a Transaction
 
-<span class="indexterm"></span> <span class="indexterm"></span>First
+ First
 let’s take a look at the basic structure of a transaction, as it is
 serialized and transmitted on the Ethereum network. Each client and
 application that receives a serialized transaction will store it
@@ -57,7 +57,7 @@ v,r,s
 The three components of an ECDSA digital signature of the originating
 EOA
 
-<span class="indexterm"></span><span class="indexterm"></span>The
+The
 transaction message’s structure is serialized using the Recursive Length
 Prefix (RLP) encoding scheme, which was created specifically for simple,
 byte-perfect data serialization in Ethereum. All numbers in Ethereum are
@@ -88,8 +88,8 @@ form part of the transaction message itself.
 
 ## The Transaction Nonce
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The nonce is one of the most important
+
+The nonce is one of the most important
 and least understood components of a transaction. The definition in the
 Yellow Paper (see [???](#references)) reads:
 
@@ -159,7 +159,7 @@ actually vital for an *account-based* protocol, in contrast to the
 
 ### Keeping Track of Nonces
 
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 practical terms, the nonce is an up-to-date count of the number of
 *confirmed* (i.e., on-chain) transactions that have originated from an
 account. To find out what the nonce is, you can interrogate the
@@ -268,7 +268,7 @@ confirmed) can you trust the output of `getTransactionCount` to start
 your nonce counter. Thereafter, keep track of the nonce in your
 application until each transaction confirms.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Parity’s
+ Parity’s
 JSON RPC interface offers the `parity_nextNonce` function, which returns
 the next nonce that should be used in a transaction. The
 `parity_nextNonce` function counts nonces correctly, even if you
@@ -293,7 +293,7 @@ we are using a command-line HTTP client to access it.
 
 ### Gaps in Nonces, Duplicate Nonces, and Confirmation
 
-<span class="indexterm"></span> <span class="indexterm"></span>It is
+ It is
 important to keep track of nonces if you are creating transactions
 programmatically, especially if you are doing so from multiple
 independent processes simultaneously.
@@ -322,9 +322,9 @@ nonce is validated by the network, all the broadcast transactions with
 subsequent nonces will incrementally become valid; it is not possible to
 "recall" a transaction!
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If, on the other hand, you accidentally
+
+
+If, on the other hand, you accidentally
 duplicate a nonce, for example by transmitting two transactions with the
 same nonce but different recipients or values, then one of them will be
 confirmed and one will be rejected. Which one is confirmed will be
@@ -338,9 +338,9 @@ trying to do this concurrently, as we will see in the next section.
 
 ### Concurrency, Transaction Origination, and Nonces
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Concurrency is a complex aspect of
+
+
+Concurrency is a complex aspect of
 computer science, and it crops up unexpectedly sometimes, especially in
 decentralized and distributed real-time systems like Ethereum.
 
@@ -390,13 +390,13 @@ creating bottlenecks such as a single process handling all withdrawal
 transactions in an exchange, or setting up multiple hot wallets that can
 work completely independently for withdrawals and only need to be
 intermittently
-rebalanced.<span class="indexterm"></span><span class="indexterm"></span>
+rebalanced.
 
 ## Transaction Gas
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>We talked about gas a little in earlier
+
+
+We talked about gas a little in earlier
 chapters, and we discuss it in more detail in [???](#gas). However,
 let’s cover some basics about the role of the `gasPrice` and `gasLimit`
 components of a transaction.
@@ -415,7 +415,7 @@ ether, and also as a way to manage the important and sensitive ratios
 between the costs of the various resources that gas pays for (namely,
 computation, memory, and storage).
 
-<span class="indexterm"></span>The `gasPrice` field in a transaction
+The `gasPrice` field in a transaction
 allows the transaction originator to set the price they are willing to
 pay in exchange for gas. The price is measured in wei per gas unit. For
 example, in the sample transaction in [???](#intro_chapter) your wallet
@@ -457,7 +457,7 @@ web3.eth.getGasPrice(console.log)
 
 \> null BigNumber { s: 1, e: 10, c: \[ 10000000000 \] }
 
-<span class="indexterm"></span>The second important field related to gas
+The second important field related to gas
 is `gasLimit`. In simple terms, `gasLimit` gives the maximum number of
 units of gas the transaction originator is willing to buy in order to
 complete the transaction. For simple payments, meaning transactions that
@@ -510,11 +510,11 @@ deducted from your account until the transaction finishes executing. You
 are only billed for gas actually consumed by your transaction, but you
 have to have enough balance for the maximum amount you are willing to
 pay before you send your
-transaction.<span class="indexterm"></span><span class="indexterm"></span>
+transaction.
 
 ## Transaction Recipient
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 recipient of a transaction is specified in the `to` field. This contains
 a 20-byte Ethereum address. The address can be an EOA or a contract
 address.
@@ -536,7 +536,7 @@ level.
 
 </div>
 
-<span class="indexterm"></span>Sending a transaction to the wrong
+Sending a transaction to the wrong
 address will probably *burn* the ether sent, rendering it forever
 inaccessible (unspendable), since most addresses do not have a known
 private key and therefore no signature can be generated to spend it. It
@@ -549,14 +549,14 @@ ether holders (in proportion to the amount of ether they hold).
 
 ## Transaction Value and Data
 
-<span class="indexterm"></span> <span class="indexterm"></span>The main
+ The main
 "payload" of a transaction is contained in
-<span class="indexterm"></span><span class="indexterm"></span>two
+two
 fields: `value` and `data`. Transactions can have both value and data,
 only value, only data, or neither value nor data. All four combinations
 are valid.
 
-<span class="indexterm"></span><span class="indexterm"></span>A
+A
 transaction with only value is a *payment*. A transaction with only data
 is an *invocation*. A transaction with both value and data is both a
 payment and an invocation. A transaction with neither value nor
@@ -646,10 +646,10 @@ no value, and no data</figcaption>
 
 ### Transmitting Value to EOAs and Contracts
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>When you construct an Ethereum
+
+
+
+When you construct an Ethereum
 transaction that contains a value, it is the equivalent of a *payment*.
 Such transactions behave differently depending on whether the
 destination address is a contract or not.
@@ -676,14 +676,14 @@ immediately when a function is called, or as determined by conditions
 coded in a function. If the function terminates successfully (without an
 exception), then the contract’s state is updated to reflect an increase
 in the contract’s ether
-balance.<span class="indexterm"></span><span class="indexterm"></span>
+balance.
 
 ### Transmitting a Data Payload to an EOA or Contract
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>When your transaction contains data, it
+
+
+
+When your transaction contains data, it
 is most likely addressed to a contract address. That doesn’t mean you
 cannot send a data payload to an EOA—that is completely valid in the
 Ethereum protocol. However, in that case, the interpretation of the data
@@ -698,9 +698,9 @@ rules, unlike a contract execution.
 
 For now, let’s assume your transaction is delivering data to a contract
 address.
-<span class="indexterm"></span><span class="indexterm"></span>In that
+In that
 case, the data will be interpreted by the EVM as a *contract
-invocation*. <span class="indexterm"></span>Most contracts use this data
+invocation*. Most contracts use this data
 more specifically as a *function invocation*, calling the named function
 and passing any encoded arguments to the function.
 
@@ -723,7 +723,7 @@ withdrawals:
 function withdraw(uint withdraw_amount) public {
 ```
 
-<span class="indexterm"></span>The *prototype* of a function is defined
+The *prototype* of a function is defined
 as the string containing the name of the function, followed by the data
 types of each of its arguments, enclosed in parentheses and separated by
 commas. The function name here is `withdraw` and it takes a single
@@ -766,15 +766,15 @@ Now, we add the function selector to the amount (padded to 32 bytes):
 
 That’s the data payload for our transaction, invoking the `withdraw`
 function and requesting 0.01 ether as the
-`withdraw_amount`<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span>
+`withdraw_amount`.
 
 ## Special Transaction: Contract Creation
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>One special case that we should mention
+
+One special case that we should mention
 is a transaction that *creates a new contract* on the blockchain,
-deploying it for future use. <span class="indexterm"></span>
-<span class="indexterm"></span>Contract creation transactions are sent
+deploying it for future use. 
+Contract creation transactions are sent
 to a special destination address called the *zero address*; the `to`
 field in a contract registration transaction contains the address `0x0`.
 This address represents neither an EOA (there is no corresponding
@@ -784,7 +784,7 @@ special meaning "create this contract."
 
 While the zero address is intended only for contract creation, it
 sometimes receives payments from various addresses.
-<span class="indexterm"></span>There are two explanations for this:
+There are two explanations for this:
 either it is by accident, resulting in the loss of ether, or it is an
 intentional *ether burn* (deliberately destroying ether by sending it to
 an address from which it can never be spent). However, if you want to do
@@ -903,7 +903,7 @@ data: \\
 
 After a while, both transactions are visible on Etherscan, as shown in
 [Etherscan showing the transactions for sending and receiving
-funds](#publish_contract_transactions).<span class="indexterm"></span><span class="indexterm"></span>
+funds](#publish_contract_transactions).
 
 <figure id="publish_contract_transactions">
 <img src="images/published_contract_transactions.png"
@@ -914,17 +914,17 @@ sending and receiving funds</figcaption>
 
 ## Digital Signatures
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>So far, we have not delved into any
+
+So far, we have not delved into any
 detail about digital signatures. In this section, we look at how digital
 signatures work and how they can be used to present proof of ownership
 of a private key without revealing that private key.
 
 ### The Elliptic Curve Digital Signature Algorithm
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The digital signature algorithm used in
+
+
+The digital signature algorithm used in
 Ethereum is the *Elliptic Curve Digital Signature Algorithm* (ECDSA).
 It’s based on elliptic curve private–public key pairs, as described in
 [???](#elliptic_curve).
@@ -933,12 +933,12 @@ A digital signature serves three purposes in Ethereum (see the following
 sidebar). First, the signature proves that the owner of the private key,
 who is by implication the owner of an Ethereum account, has *authorized*
 the spending of ether, or execution of a contract.
-<span class="indexterm"></span>Secondly, it guarantees
+Secondly, it guarantees
 *non-repudiation*: the proof of authorization is undeniable. Thirdly,
 the signature proves that the transaction data has not been and *cannot
 be modified* by anyone after the transaction has been signed.
 
-<span class="indexterm"></span> <span class="indexterm"></span>A
+ A
 *digital signature* is a mathematical scheme for presenting the
 authenticity of digital messages or documents. A valid digital signature
 gives a recipient reason to believe that the message was created by a
@@ -950,7 +950,7 @@ transit (integrity).
 
 ### How Digital Signatures Work
 
-<span class="indexterm"></span> <span class="indexterm"></span>A digital
+ A digital
 signature is a mathematical scheme that consists of two parts. The first
 part is an algorithm for creating a signature, using a private key (the
 signing key), from a message (which in our case is the transaction). The
@@ -959,9 +959,9 @@ by only using the message and a public key.
 
 #### Creating a digital signature
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In Ethereum’s implementation of ECDSA,
+
+
+In Ethereum’s implementation of ECDSA,
 the "message" being signed is the transaction, or more accurately, the
 Keccak-256 hash of the RLP-encoded data from the transaction. The
 signing key is the EOA’s private key. The result is the signature:
@@ -1047,7 +1047,7 @@ s
 
 ### Verifying the Signature
 
-<span class="indexterm"></span> <span class="indexterm"></span>To verify
+ To verify
 the signature, one must have the signature (*r* and *s*), the serialized
 transaction, and the public key that corresponds to the private key used
 to create the signature. Essentially, verification of a signature means
@@ -1061,14 +1061,14 @@ valid for this message and public key.
 
 ### ECDSA Math
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As mentioned previously, signatures are
+
+
+As mentioned previously, signatures are
 created by a mathematical function *F*<sub>*sig*</sub> that produces a
 signature composed of two values, *r* and *s*. In this section we look
 at the function *F*<sub>*sig*</sub> in more detail.
 
-<span class="indexterm"></span>The signature algorithm first generates
+The signature algorithm first generates
 an *ephemeral* (temporary) private key in a cryptographically secure
 way. This temporary key is used in the calculation of the *r* and *s*
 values to ensure that the sender’s actual private key can’t be
@@ -1172,16 +1172,16 @@ ECDSA is necessarily a fairly complicated piece of math; a full
 explanation is beyond the scope of this book. A number of great guides
 online take you through it step by step: search for "ECDSA explained" or
 try this one:
-<http://bit.ly/2r0HhGB>.<span class="indexterm"></span><span class="indexterm"></span>
+<http://bit.ly/2r0HhGB>.
 
 </div>
 
 ### Transaction Signing in Practice
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>To produce a valid transaction, the
+
+
+
+To produce a valid transaction, the
 originator must digitally sign the message, using the Elliptic Curve
 Digital Signature Algorithm. When we say "sign the transaction" we
 actually mean "sign the Keccak-256 hash of the RLP-serialized
@@ -1217,7 +1217,7 @@ Value (v) and Public Key Recovery](#sign_prefix) for more details).
 
 <div class="note">
 
-<span class="indexterm"></span>At block \#2,675,000 Ethereum implemented
+At block \#2,675,000 Ethereum implemented
 the "Spurious Dragon" hard fork, which, among other changes, introduced
 a new signing scheme that includes transaction replay protection
 (preventing transactions meant for one network being replayed on
@@ -1231,8 +1231,8 @@ transaction message being hashed.
 
 ### Raw Transaction Creation and Signing
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In this section we’ll create a raw
+
+In this section we’ll create a raw
 transaction and sign it, using the `ethereumjs-tx` library, which can be
 installed with npm. This demonstrates the functions that would normally
 be used inside a wallet, or an application that signs transactions on
@@ -1257,8 +1257,8 @@ Signed Raw Transaction:
 
 ### Raw Transaction Creation with EIP-155
 
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The EIP-155 "Simple Replay Attack
+
+The EIP-155 "Simple Replay Attack
 Protection" standard specifies a replay-attack-protected transaction
 encoding, which includes a *chain identifier* inside the transaction
 data, prior to signing. This ensures that transactions created for one
@@ -1301,13 +1301,13 @@ The signature algorithm is modified slightly to encode the chain
 identifier in the `v` prefix too.
 
 For more details, see [the EIP-155
-specification](http://bit.ly/2CQUgne).<span class="indexterm"></span><span class="indexterm"></span>
+specification](http://bit.ly/2CQUgne).
 
 ## The Signature Prefix Value (v) and Public Key Recovery
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As mentioned in [The Structure of a
+
+
+As mentioned in [The Structure of a
 Transaction](#tx_struct), the transaction message doesn’t include a
 "from" field. That’s because the originator’s public key can be computed
 directly from the ECDSA signature. Once you have the public key, you can
@@ -1400,9 +1400,9 @@ calculate only one value for *R* and only one value for *K*.
 
 ## Separating Signing and Transmission (Offline Signing)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Once a transaction is signed, it is ready
+
+
+Once a transaction is signed, it is ready
 to transmit to the Ethereum network. The three steps of creating,
 signing, and broadcasting a transaction normally happen as a single
 operation, for example using `web3.eth.sendTransaction`. However, as you
@@ -1448,7 +1448,7 @@ Depending on the level of security you need, your "offline signing"
 computer can have varying degrees of separation from the online
 computer, ranging from an isolated and firewalled subnet (online but
 segregated) to a completely offline system known as an *air-gapped*
-system. <span class="indexterm"></span>In an air-gapped system there is
+system. In an air-gapped system there is
 no network connectivity at all—the computer is separated from the online
 environment by a gap of "air." To sign transactions you transfer them to
 and from the air-gapped computer using data storage media or (better) a
@@ -1460,7 +1460,7 @@ a small degree of isolation has significant security benefits. For
 example, an isolated subnet with a firewall that only allows a
 message-queue protocol through can offer a much-reduced attack surface
 and much higher security than signing on the online system.
-<span class="indexterm"></span>Many companies use a protocol such as
+Many companies use a protocol such as
 ZeroMQ (0MQ) for this purpose. With a setup like that, transactions are
 serialized and queued for signing. The queuing protocol transmits the
 serialized message, in a way similar to a TCP socket, to the signing
@@ -1469,13 +1469,13 @@ the queue (carefully), applies a signature with the appropriate key, and
 places them on an outgoing queue. The outgoing queue transmits the
 signed transactions to a computer with an Ethereum client that dequeues
 them and transmits
-them.<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
+them.
 
 ## Transaction Propagation
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The Ethereum network uses a "flood
+
+
+The Ethereum network uses a "flood
 routing" protocol. Each Ethereum client acts as a *node* in a
 *peer-to-peer (P2P)* network, which (ideally) forms a *mesh* network. No
 network node is special: they all act as equal peers. We will use the
@@ -1486,7 +1486,7 @@ Transaction propagation starts with the originating Ethereum node
 creating (or receiving from offline) a signed transaction. The
 transaction is validated and then transmitted to all the other Ethereum
 nodes that are *directly* connected to the originating node.
-<span class="indexterm"></span>On average, each Ethereum node maintains
+On average, each Ethereum node maintains
 connections to at least 13 other nodes, called its *neighbors*. Each
 neighbor node validates the transaction as soon as they receive it. If
 they agree that it is valid, they store a copy and propagate it to all
@@ -1508,9 +1508,9 @@ applied to blockchain networks.
 
 ## Recording on the Blockchain
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>While all the nodes in Ethereum are equal
+
+
+While all the nodes in Ethereum are equal
 peers, some of them are operated by *miners* and are feeding
 transactions and blocks to *mining farms*, which are computers with
 high-performance graphics processing units (GPUs). The mining computers
@@ -1534,8 +1534,8 @@ of the singleton and left an indelible mark on the blockchain.
 
 ## Multiple-Signature (Multisig) Transactions
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If you are familiar with Bitcoin’s
+
+If you are familiar with Bitcoin’s
 scripting capabilities, you know that it is possible to create a Bitcoin
 multisig account which can only spend funds when multiple parties sign
 the transaction (e.g., 2 of 2 or 3 of 4 signatures). Ethereum’s basic
@@ -1576,4 +1576,4 @@ system. Transactions are the "inputs" that cause the Ethereum Virtual
 Machine to evaluate contracts, update balances, and more generally
 modify the state of the Ethereum blockchain. Next, we will work with
 smart contracts in a lot more detail and learn how to program in the
-Solidity contract-oriented language.<span class="indexterm"></span>
+Solidity contract-oriented language.

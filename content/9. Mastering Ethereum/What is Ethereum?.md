@@ -1,7 +1,7 @@
-# What Is Ethereum?
+# Chapter 1 - [What is Ethereum?](content/9.%20Mastering%20Ethereum/What%20is%20Ethereum?.md)
 
-<span class="indexterm"></span> <span class="indexterm"></span>Ethereum
-<span class="indexterm"></span>is often described as "the world
+ Ethereum
+is often described as "the world
 computer.” But what does that mean? Let’s start with a computer
 science–focused description, and then try to decipher that with a more
 practical analysis of Ethereum’s capabilities and characteristics, while
@@ -15,7 +15,7 @@ state.
 
 From a more practical perspective, Ethereum is an open source, globally
 decentralized computing infrastructure that executes programs called
-*smart contracts*. It uses a blockchain to synchronize and store the
+*Smart Contracts*. It uses a blockchain to synchronize and store the
 system’s state changes, along with a cryptocurrency called *ether* to
 meter and constrain execution resource costs.
 
@@ -26,9 +26,8 @@ reduces or eliminates censorship and reduces certain counterparty risks.
 
 ## Compared to Bitcoin
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Many people will come to Ethereum with
+
+Many people will come to Ethereum with
 some prior experience of cryptocurrencies, specifically Bitcoin.
 Ethereum shares many common elements with other open blockchains: a
 peer-to-peer network connecting participants, a Byzantine fault–tolerant
@@ -40,9 +39,9 @@ Yet in many ways, both the purpose and construction of Ethereum are
 strikingly different from those of the open blockchains that preceded
 it, including Bitcoin.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum’s purpose is not primarily to be
-a digital currency payment network. <span class="indexterm"></span>While
+
+Ethereum’s purpose is not primarily to be
+a digital currency payment network. While
 the digital currency ether is both integral to and necessary for the
 operation of Ethereum, ether is intended as a *utility currency* to pay
 for use of the Ethereum platform as the world computer.
@@ -57,9 +56,8 @@ straightforwardly function as a general-purpose computer.
 
 ## Components of a Blockchain
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The components of an open, public
+
+The components of an open, public
 blockchain are (usually):
 
 - A peer-to-peer (P2P) network connecting participants and propagating
@@ -90,11 +88,11 @@ blockchain are (usually):
 
 All or most of these components are usually combined in a single
 software client. For example, in
-<span class="indexterm"></span><span class="indexterm"></span>Bitcoin,
+Bitcoin,
 the reference implementation is developed by the *Bitcoin Core* open
 source project and implemented as the *bitcoind* client. In Ethereum,
 rather than a reference implementation there is a
-<span class="indexterm"></span>*reference specification*, a mathematical
+*reference specification*, a mathematical
 description of the system in the Yellow Paper (see [Further
 Reading](#references)). There are a number of clients, which are built
 according to the reference specification.
@@ -118,13 +116,13 @@ exhibits the characteristics of being *open, public*, etc.
 
 ## The Birth of Ethereum
 
-<span class="indexterm"></span> <span class="indexterm"></span>All great
+ All great
 innovations solve real problems, and Ethereum is no exception. Ethereum
 was conceived at a time when people recognized the power of the Bitcoin
 model, and were trying to move beyond cryptocurrency applications. But
 developers faced a conundrum: they either needed to build on top of
-Bitcoin or start a new blockchain. <span class="indexterm"></span>
-<span class="indexterm"></span>Building upon Bitcoin meant living within
+Bitcoin or start a new blockchain. 
+Building upon Bitcoin meant living within
 the intentional constraints of the network and trying to find
 workarounds. The limited set of transaction types, data types, and sizes
 of data storage seemed to limit the sorts of applications that could run
@@ -135,7 +133,7 @@ staying on-chain, a new blockchain was the only option. But that meant a
 lot of work: bootstrapping all the infrastructure elements, exhaustive
 testing, etc.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Toward
+ Toward
 the end of 2013, Vitalik Buterin, a young programmer and Bitcoin
 enthusiast, started thinking about further extending the capabilities of
 Bitcoin and Mastercoin (an overlay protocol that extended Bitcoin to
@@ -158,8 +156,8 @@ blockchain to enforce consensus rules on smart contract execution and
 the implications of a Turing-complete language. Andreas continued to
 follow Ethereum’s progress with great interest but was in the early
 stages of writing his book *Mastering Bitcoin*, and did not participate
-directly in Ethereum until much later. <span class="indexterm"></span>
-<span class="indexterm"></span>Dr. Gavin Wood, however, was one of the
+directly in Ethereum until much later. 
+Dr. Gavin Wood, however, was one of the
 first people to reach out to Vitalik and offer to help with his C++
 programming skills. Gavin became Ethereum’s cofounder, codesigner, and
 CTO.
@@ -216,10 +214,10 @@ You can read it at
 
 ## Ethereum’s Four Stages of Development
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum’s development was planned over
+
+Ethereum’s development was planned over
 four distinct stages, with major changes occurring at each stage.
-<span class="indexterm"></span>A stage may include subreleases, known as
+A stage may include subreleases, known as
 "hard forks," that change functionality in a way that is not backward
 compatible.
 
@@ -232,57 +230,57 @@ intermediate hard forks are shown on the following timeline, which is
 "dated" by block number:
 
 Block \#0  
-<span class="indexterm"></span>*Frontier*—The initial stage of Ethereum,
+*Frontier*—The initial stage of Ethereum,
 lasting from July 30, 2015, to March 2016.
 
 Block \#200,000  
-<span class="indexterm"></span>*Ice Age*—A hard fork to introduce an
+*Ice Age*—A hard fork to introduce an
 exponential difficulty increase, to motivate a transition to PoS when
 ready.
 
 Block \#1,150,000  
-<span class="indexterm"></span>*Homestead*—The second stage of Ethereum,
+*Homestead*—The second stage of Ethereum,
 launched in March 2016.
 
 Block \#1,192,000  
-<span class="indexterm"></span>*DAO*—A hard fork that reimbursed victims
+*DAO*—A hard fork that reimbursed victims
 of the hacked DAO contract and caused Ethereum and Ethereum Classic to
 split into two competing systems.
 
 Block \#2,463,000  
-<span class="indexterm"></span>*Tangerine Whistle*—A hard fork to change
+*Tangerine Whistle*—A hard fork to change
 the gas calculation for certain I/O-heavy operations and to clear the
 accumulated state from a denial-of-service (DoS) attack that exploited
 the low gas cost of those operations.
 
 Block \#2,675,000  
-<span class="indexterm"></span>*Spurious Dragon*—A hard fork to address
+*Spurious Dragon*—A hard fork to address
 more DoS attack vectors, and another state clearing. Also, a replay
 attack protection mechanism.
 
 Block \#4,370,000  
-<span class="indexterm"></span><span class="indexterm"></span>*Metropolis
+*Metropolis
 Byzantium*—Metropolis is the third stage of Ethereum. Launched in
 October 2017, Byzantium is the first part of Metropolis, adding
 low-level functionalities and adjusting the block reward and difficulty.
 
 Block \#7,280,000  
-<span class="indexterm"></span><span class="indexterm"></span>*Constantinople
+*Constantinople
 / St. Petersburg*—Constantinople was planned to be the second part of
 Metropolis with similar improvements. A few hours before its activation,
 a [critical bug](https://bit.ly/2Ast7rz) was discovered. The hard fork
 was therefore postponed and renamed St. Petersburg.
 
 Block \#9,069,000  
-<span class="indexterm"></span>*Istanbul*—An additional hard fork with
+*Istanbul*—An additional hard fork with
 the same approach, and naming convention, as for the prior two.
 
 Block \#9,200,000  
-<span class="indexterm"></span>*Muir Glacier*—A hard fork whose sole
+*Muir Glacier*—A hard fork whose sole
 purpose was to adjust the difficulty again due to the exponential
 increase introduced by Ice Age.
 
-<span class="indexterm"></span><span class="indexterm"></span>Two hard
+Two hard
 forks, Berlin and London, have also been announced, and we are now in
 the final stage of Ethereum development, codenamed Serenity. Serenity
 involves a profound reorganization of the infrastructure that will make
@@ -291,11 +289,10 @@ presented as the second version of Ethereum, "Ethereum 2.0".
 
 ## Ethereum: A General-Purpose Blockchain
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The original blockchain, namely Bitcoin’s
+
+The original blockchain, namely Bitcoin’s
 blockchain, tracks the state of units of bitcoin and their ownership.
-<span class="indexterm"></span>You can think of Bitcoin as a distributed
+You can think of Bitcoin as a distributed
 consensus *state machine*, where transactions cause a global *state
 transition*, altering the ownership of coins. The state transitions are
 constrained by the rules of consensus, allowing all participants to
@@ -304,7 +301,7 @@ several blocks are mined.
 
 Ethereum is also a distributed state machine. But instead of tracking
 only the state of currency ownership,
-<span class="indexterm"></span>Ethereum tracks the state transitions of
+Ethereum tracks the state transitions of
 a general-purpose data store, i.e., a store that can hold any data
 expressible as a *key–value tuple*. A key–value data store holds
 arbitrary values, each referenced by some key; for example, the value
@@ -324,9 +321,8 @@ operating under consensus?"
 
 ## Ethereum’s Components
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In Ethereum, the components of a
+
+In Ethereum, the components of a
 blockchain system described in [Components of a
 Blockchain](#blockchain_components) are, more specifically:
 
@@ -403,14 +399,13 @@ technologies mentioned here:
 
 ## Ethereum and Turing Completeness
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>As soon as you start reading about
+
+As soon as you start reading about
 Ethereum, you will immediately encounter the term "Turing complete."
 Ethereum, they say, unlike Bitcoin, is Turing complete. What exactly
 does that mean?
 
-<span class="indexterm"></span>The term refers to English mathematician
+The term refers to English mathematician
 Alan Turing, who is considered the father of computer science. In 1936
 he created a mathematical model of a computer consisting of a state
 machine that manipulates symbols by reading and writing them on
@@ -419,12 +414,12 @@ construct, Turing went on to provide a mathematical foundation to answer
 (in the negative) questions about *universal computability*, meaning
 whether all problems are solvable. He proved that there are classes of
 problems that are uncomputable.
-<span class="indexterm"></span>Specifically, he proved that the *halting
+Specifically, he proved that the *halting
 problem* (whether it is possible, given an arbitrary program and its
 input, to determine whether the program will eventually stop running) is
 not solvable.
 
-<span class="indexterm"></span><span class="indexterm"></span>Alan
+Alan
 Turing further defined a system to be *Turing complete* if it can be
 used to simulate any Turing machine. Such a system is called a
 *Universal Turing machine* (UTM).
@@ -443,7 +438,7 @@ state that is secured by the rules of consensus.
 
 ### Turing Completeness as a "Feature"
 
-<span class="indexterm"></span> <span class="indexterm"></span>Hearing
+ Hearing
 that Ethereum is Turing complete, you might arrive at the conclusion
 that this is a *feature* that is somehow lacking in a system that is
 Turing incomplete. Rather, it is the opposite. Turing completeness is
@@ -465,11 +460,11 @@ with a public blockchain.
 
 ### Implications of Turing Completeness
 
-<span class="indexterm"></span> <span class="indexterm"></span>Turing
+ Turing
 proved that you cannot predict whether a program will terminate by
 simulating it on a computer. In simple terms, we cannot predict the path
 of a program without running it.
-<span class="indexterm"></span>Turing-complete systems can run in
+Turing-complete systems can run in
 "infinite loops," a term used (in oversimplification) to describe a
 program that does not terminate. It is trivial to create a program that
 runs a loop that never ends. But unintended never-ending loops can arise
@@ -489,9 +484,8 @@ gets to abuse the world’s resources. How does Ethereum constrain the
 resources used by a smart contract if it cannot predict resource use in
 advance?
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>To answer this challenge, Ethereum
+
+To answer this challenge, Ethereum
 introduces a metering mechanism called *gas*. As the EVM executes a
 smart contract, it carefully accounts for every instruction
 (computation, data access, etc.). Each instruction has a predetermined
@@ -505,7 +499,7 @@ any program can consume.
 
 The next question is, *how does one get gas to pay for computation on
 the Ethereum world computer?* You won’t find gas on any exchanges.
-<span class="indexterm"></span> <span class="indexterm"></span>It can
+ It can
 only be purchased as part of a transaction, and can only be bought with
 ether. Ether needs to be sent along with a transaction and it needs to
 be explicitly earmarked for the purchase of gas, along with an
@@ -516,9 +510,9 @@ transaction.
 
 ## From General-Purpose Blockchains to Decentralized Applications (DApps)
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Ethereum started as a way to make a
+
+
+Ethereum started as a way to make a
 general-purpose blockchain that could be programmed for a variety of
 uses. But very quickly, Ethereum’s vision expanded to become a platform
 for programming DApps. DApps represent a broader perspective than smart
@@ -549,9 +543,9 @@ entity `eth` (or decimal entity `#208`).
 
 ## The Third Age of the Internet
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>In 2004
+
+
+In 2004
 the term "Web 2.0" came to prominence, describing an evolution of the
 web toward user-generated content, responsive interfaces, and
 interactivity. Web 2.0 is not a technical specification, but rather a
@@ -561,8 +555,8 @@ The concept of DApps is meant to take the World Wide Web to its next
 natural evolutionary stage, introducing decentralization with
 peer-to-peer protocols into every aspect of a web application. The term
 used to describe this evolution is *web3*, meaning the third "version"
-of the web. <span class="indexterm"></span>
-<span class="indexterm"></span>First proposed by Dr. Gavin Wood, web3
+of the web. 
+First proposed by Dr. Gavin Wood, web3
 represents a new vision and focus for web applications: from centrally
 owned and managed applications, to applications built on decentralized
 protocols.
@@ -577,20 +571,20 @@ development suite that allows them to build web3 DApps.
 
 ## Ethereum’s Development Culture
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>So far we’ve talked about how Ethereum’s
+
+So far we’ve talked about how Ethereum’s
 goals and technology differ from those of other blockchains that
 preceded it, like Bitcoin. Ethereum also has a very different
 development culture.
 
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 Bitcoin, development is guided by conservative principles: all changes
 are carefully studied to ensure that none of the existing systems are
 disrupted. For the most part, changes are only implemented if they are
 backward compatible. Existing clients are allowed to opt-in, but will
 continue to operate if they decide not to upgrade.
 
-<span class="indexterm"></span>In Ethereum, by comparison, the
+In Ethereum, by comparison, the
 community’s development culture is focused on the future rather than the
 past. The (not entirely serious) mantra is "move fast and break things."
 If a change is needed, it is implemented, even if that means
@@ -631,9 +625,9 @@ for you.
 
 ## Why Learn Ethereum?
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Blockchains have a very steep learning
+
+
+Blockchains have a very steep learning
 curve, as they combine multiple disciplines into one domain:
 programming, information security, cryptography, economics, distributed
 systems, peer-to-peer networks, etc. Ethereum makes this learning curve
@@ -663,11 +657,11 @@ system.
 You will learn not only how to use Ethereum—how it works—but also why it
 is designed the way it is. You will be able to understand how each of
 the pieces works, and how they fit together and
-why.<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>
+why.
+
+
+
+
+
+
+

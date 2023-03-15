@@ -1,6 +1,6 @@
-# Tokens
+# Chapter 10 - [Tokens](content/9.%20Mastering%20Ethereum/Tokens.md)
 
-<span class="indexterm"></span>The word "token" derives from the Old
+The word "token" derives from the Old
 English "tācen," meaning a sign or symbol. It is commonly used to refer
 to privately issued special-purpose coin-like items of insignificant
 intrinsic value, such as transportation tokens, laundry tokens, and
@@ -28,7 +28,7 @@ they are based on, and experiment by building our own tokens.
 
 ## How Tokens Are Used
 
-<span class="indexterm"></span> <span class="indexterm"></span>The most
+ The most
 obvious use of tokens is as digital private currencies. However, this is
 only one possible use. Tokens can be programmed to serve many different
 functions, often overlapping. For example, a token can simultaneously
@@ -83,12 +83,12 @@ always been inextricably linked. For example, in the physical world, a
 driver’s license (attestation) is also an identity document (identity)
 and the two cannot be separated. In the digital realm, previously
 commingled functions can be separated and developed independently (e.g.,
-an anonymous attestation).<span class="indexterm"></span>
+an anonymous attestation).
 
 ## Tokens and Fungibility
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>[Wikipedia](https://en.wikipedia.org/wiki/Fungibility)
+
+[Wikipedia](https://en.wikipedia.org/wiki/Fungibility)
 says: "In economics, fungibility is the property of a good or a
 commodity whose individual units are essentially interchangeable."
 
@@ -100,7 +100,7 @@ then it is not entirely fungible. The ability to track provenance can
 lead to blacklisting and whitelisting, reducing or eliminating
 fungibility.
 
-<span class="indexterm"></span>Non-fungible tokens are tokens that each
+Non-fungible tokens are tokens that each
 represent a unique tangible or intangible item and therefore are not
 interchangeable. For example, a token that represents ownership of a
 *specific* Van Gogh painting is not equivalent to another token that
@@ -124,8 +124,8 @@ word here.
 
 ## Counterparty Risk
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Counterparty risk is the risk that the
+
+Counterparty risk is the risk that the
 *other* party in a transaction will fail to meet their obligations. Some
 types of transactions suffer additional counterparty risk because there
 are more than two parties involved. For example, if you hold a
@@ -146,7 +146,7 @@ underlying asset.
 
 ## Tokens and Intrinsicality
 
-<span class="indexterm"></span> <span class="indexterm"></span>The word
+ The word
 "intrinsic" derives from the Latin "intra," meaning "from within."
 
 Some tokens represent digital items that are intrinsic to the
@@ -176,7 +176,7 @@ similar (intrinsic) organization.
 
 ## Using Tokens: Utility or Equity
 
-<span class="indexterm"></span> <span class="indexterm"></span>Almost
+ Almost
 all projects in Ethereum today launch with some kind of token. But do
 all these projects really need tokens? Are there any disadvantages to
 using a token, or will we see the slogan "tokenize all the things" come
@@ -191,13 +191,13 @@ majority of projects are using tokens in one of two ways: either as
 "utility tokens" or as "equity tokens." Very often, those two roles are
 conflated.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Utility
+ Utility
 tokens are those where the use of the token is required to gain access
 to a service, application, or resource. Examples of utility tokens
 include tokens that represent resources such as shared storage, or
 access to services such as social media networks.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Equity
+ Equity
 tokens are those that represent shares in the control or ownership of
 something, such as a startup. Equity tokens can be as limited as
 nonvoting shares for distribution of dividends and profits, or as
@@ -207,9 +207,9 @@ system based on votes by the token holders.
 
 ### It’s a Duck!
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Many startups face a difficult problem:
+
+
+Many startups face a difficult problem:
 tokens are a great fundraising mechanism, but offering securities
 (equity) to the public is a regulated activity in most jurisdictions. By
 disguising equity tokens as utility tokens, many startups hope to get
@@ -226,7 +226,7 @@ such legal sophistry as an attempt to deceive the public.
 
 ### Utility Tokens: Who Needs Them?
 
-<span class="indexterm"></span> <span class="indexterm"></span>The real
+ The real
 problem is that utility tokens introduce significant risks and adoption
 barriers for startups. Perhaps in a distant future "tokenize all the
 things" will become reality, but at present the set of people who have
@@ -299,26 +299,26 @@ liquidity and utility of tokens.
 
 </div>
 
-<span class="indexterm"></span> <span class="indexterm"></span>Make this
+ Make this
 decision for the right reasons. Adopt a token because your application
 *cannot work without a token*. Adopt it because the token lifts a
 fundamental market barrier or solves an access problem. Don’t introduce
 a utility token because it is the only way you can raise money fast and
 you need to pretend it’s not a public securities
-offering<span class="indexterm"></span>.<span class="indexterm"></span>
+offering.
 
 ## Tokens on Ethereum
 
-<span class="indexterm"></span>
-<span class="indexterm"></span>Blockchain tokens existed before
-Ethereum. <span class="indexterm"></span>
-<span class="indexterm"></span>In some ways, the first blockchain
+
+Blockchain tokens existed before
+Ethereum. 
+In some ways, the first blockchain
 currency, Bitcoin, is a token itself. Many token platforms were also
 developed on Bitcoin and other cryptocurrencies before Ethereum.
 However, the introduction of the first token standard on Ethereum led to
 an explosion of tokens.
 
-<span class="indexterm"></span> <span class="indexterm"></span>Vitalik
+ Vitalik
 Buterin suggested tokens as one of the most obvious and useful
 applications of a generalized programmable blockchain such as Ethereum.
 In fact, in the first year of Ethereum, it was common to see Vitalik and
@@ -343,8 +343,8 @@ standards at the end of the chapter.
 
 ### The ERC20 Token Standard
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The first standard was introduced in
+
+The first standard was introduced in
 November 2015 by Fabian Vogelsteller as an Ethereum Request for Comments
 (ERC). It was automatically assigned GitHub issue number 20, giving rise
 to the name "ERC20 token." The vast majority of tokens are currently
@@ -364,7 +364,7 @@ added by developers.
 
 #### ERC20 required functions and events
 
-<span class="indexterm"></span> <span class="indexterm"></span>An
+ An
 ERC20-compliant token contract must provide at least the following
 functions and events:
 
@@ -401,7 +401,7 @@ Event logged upon a successful call to `approve`.
 
 #### ERC20 optional functions
 
-<span class="indexterm"></span> <span class="indexterm"></span>In
+ In
 addition to the required functions listed in the previous section, the
 following optional functions are also defined by the standard:
 
@@ -418,7 +418,7 @@ to get its user representation.
 
 #### The ERC20 interface defined in Solidity
 
-<span class="indexterm"></span> <span class="indexterm"></span>Here’s
+ Here’s
 what an ERC20 interface specification looks like in Solidity:
 
 ``` solidity
@@ -438,8 +438,8 @@ contract ERC20 {
 
 #### ERC20 data structures
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>If you examine any ERC20 implementation
+
+If you examine any ERC20 implementation
 you will see that it contains two data structures, one to track balances
 and one to track allowances. In Solidity, they are implemented with a
 *data mapping*.
@@ -467,9 +467,9 @@ mapping (address => mapping (address => uint256)) public allowed;
 
 #### ERC20 workflows: "transfer" and "approve & transferFrom"
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The ERC20 token standard has two transfer
+
+
+The ERC20 token standard has two transfer
 functions. You might be wondering why.
 
 ERC20 allows for two different workflows. The first is a
@@ -484,13 +484,13 @@ address, calling the `transfer` function with Bob’s address and `10` as
 the arguments. The token contract adjusts Alice’s balance (–10) and
 Bob’s balance (+10) and issues a `Transfer` event.
 
-<span class="indexterm"></span>The second workflow is a two-transaction
+The second workflow is a two-transaction
 workflow that uses `approve` followed by `transferFrom`. This workflow
 allows a token owner to delegate their control to another address. It is
 most often used to delegate control to a contract for distribution of
 tokens, but it can also be used by exchanges.
 
-<span class="indexterm"></span> <span class="indexterm"></span>For
+ For
 example, if a company is selling tokens for an ICO, they can `approve` a
 crowdsale contract address to distribute a certain amount of tokens. The
 crowdsale contract can then `transferFrom` the token contract owner’s
@@ -500,7 +500,7 @@ tokens](#approve_transferFrom_workflow).
 
 <div class="note">
 
-<span class="indexterm"></span> <span class="indexterm"></span>An
+ An
 *Initial Coin Offering* (ICO) is a crowdfunding mechanism used by
 companies and organizations to raise money by selling tokens. The term
 is derived from Initial Public Offering (IPO), which is the process by
@@ -545,7 +545,7 @@ can call `transferFrom` an unlimited number of times, as long as it
 doesn’t exceed the approval limit Alice set. The `AliceICO` contract can
 keep track of how many AliceCoin tokens it can sell by calling the
 `allowance`
-function.<span class="indexterm"></span><span class="indexterm"></span>
+function.
 
 #### ERC20 implementations
 
@@ -562,13 +562,13 @@ This implementation is ERC20-compatible, with additional security
 precautions. It forms the basis of OpenZeppelin libraries implementing
 more complex ERC20-compatible tokens with fundraising caps, auctions,
 vesting schedules, and other
-features.<span class="indexterm"></span><span class="indexterm"></span>
+features.
 
 ### Launching Our Own ERC20 Token
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Let’s create and launch our own token.
+
+
+Let’s create and launch our own token.
 For this example, we will use the Truffle framework. The example assumes
 you have already installed `truffle` and configured it, and are familiar
 with its basic operation (for details, see [???](#truffle)).
@@ -754,9 +754,9 @@ alt="METoken deployment on Ganache" />
 
 #### Interacting with METoken using the Truffle console
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>We can interact with our contract on the
+
+
+We can interact with our contract on the
 `ganache` blockchain using the Truffle console. This is an interactive
 JavaScript environment that provides access to the Truffle environment
 and, via web3, to the blockchain. In this case, we will connect the
@@ -880,7 +880,7 @@ and `accounts[1]` has 1,000 MET.
 If you switch to the `ganache` graphical user interface, as shown in
 [METoken transfer on ganache](#ganache_METoken_transfer), you will see
 the transaction that called the `transfer`
-function.<span class="indexterm"></span><span class="indexterm"></span>
+function.
 
 <figure id="ganache_METoken_transfer">
 <img src="images/ganache_metoken_transfer.png"
@@ -890,9 +890,9 @@ alt="METoken transfer on Ganache" />
 
 #### Sending ERC20 tokens to contract addresses
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>So far, we’ve set up an ERC20 token and
+
+
+So far, we’ve set up an ERC20 token and
 transferred some tokens from one account to another. All the accounts we
 used for these demonstrations are externally owned accounts, meaning
 they are controlled by a private key, not a contract. What happens if we
@@ -1001,13 +1001,13 @@ contracts are only meant to receive ether, not ERC20 tokens, most often
 sweeping all funds sent to them to "cold storage" or another centralized
 wallet. Despite the many warnings saying "do not send tokens to this
 address," lots of tokens are lost this
-way.<span class="indexterm"></span><span class="indexterm"></span>
+way.
 
 #### Demonstrating the “approve & transferFrom” workflow
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Our `Faucet` contract couldn’t handle
+
+
+Our `Faucet` contract couldn’t handle
 ERC20 tokens. Sending tokens to it using the `transfer` function
 resulted in the loss of those tokens. Let’s rewrite the contract now and
 make it handle ERC20 tokens. Specifically, we will turn it into a faucet
@@ -1160,11 +1160,11 @@ However, the burden of managing ERC20 tokens correctly is pushed to the
 user interface. If a user incorrectly attempts to transfer ERC20 tokens
 to a contract address and that contract is not equipped to receive ERC20
 tokens, the tokens will be
-lost<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>.<span class="indexterm"></span><span class="indexterm"></span>
+lost.
 
 ### Issues with ERC20 Tokens
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 adoption of the ERC20 token standard has been truly explosive. Thousands
 of tokens have been launched, both to experiment with new capabilities
 and to raise funds in various "crowdfund" auctions and ICOs. However,
@@ -1209,9 +1209,9 @@ contract. Tokens are meant to function just like a cryptocurrency such
 as ether, but they come with certain differences that break that
 illusion.
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Consider another issue. To send ether or
+
+
+Consider another issue. To send ether or
 use any Ethereum contract you need ether to pay for gas. To send tokens,
 you *also need ether*. You cannot pay for a transaction’s gas with a
 token and the token contract can’t pay for the gas for you. This may
@@ -1241,8 +1241,8 @@ address some of these issues.
 
 ### ERC223: A Proposed Token Contract Interface Standard
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>The ERC223 proposal attempts to solve the
+
+The ERC223 proposal attempts to solve the
 problem of inadvertent transfer of tokens to a contract (that may or may
 not support tokens) by detecting whether the destination address is a
 contract or not. ERC223 requires that contracts designed to accept
@@ -1295,8 +1295,8 @@ continues.
 
 ### ERC777: A Proposed Token Contract Interface Standard
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Another proposal for an improved token
+
+Another proposal for an improved token
 contract standard is [ERC777](https://eips.ethereum.org/EIPS/eip-777).
 This proposal has several goals, including:
 
@@ -1415,20 +1415,20 @@ in the proposal. ERC777 depends on a parallel proposal for a registry
 contract, specified in ERC820. Some of the debate on ERC777 is about the
 complexity of adopting two big changes at once: a new token standard and
 a registry standard. The discussion
-continues.<span class="indexterm"></span><span class="indexterm"></span>
+continues.
 
 ### ERC721: Non-fungible Token (Deed) Standard
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>All the token standards we have looked at
+
+
+
+All the token standards we have looked at
 so far are for *fungible* tokens, meaning that units of a token are
 interchangeable. The ERC20 token standard only tracks the final balance
 of each account and does not (explicitly) track the provenance of any
 token.
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 [ERC721 proposal](http://bit.ly/2Ogs7Im) is for a standard for
 *non-fungible* tokens, also known as *deeds*.
 
@@ -1509,7 +1509,7 @@ interface ERC721Metadata /* is ERC721 */ {
 ```
 
 The ERC721 optional interface for enumeration
-is<span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span><span class="indexterm"></span>:<span class="indexterm"></span>
+is:
 
 ``` solidity
 interface ERC721Enumerable /* is ERC721 */ {
@@ -1524,8 +1524,8 @@ interface ERC721Enumerable /* is ERC721 */ {
 
 ## Using Token Standards
 
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>In the previous section we reviewed
+
+In the previous section we reviewed
 several proposed standards and a couple of widely deployed standards for
 token contracts. What exactly do these standards do? Should you use
 these standards? How should you use them? Should you add functionality
@@ -1534,14 +1534,14 @@ some of those questions next.
 
 ### What Are Token Standards? What Is Their Purpose?
 
-<span class="indexterm"></span> <span class="indexterm"></span>Token
+ Token
 standards are the *minimum* specifications for an implementation. What
 that means is that in order to be compliant with, say, ERC20, you need
 to at minimum implement the functions and behavior specified by the
 ERC20 standard. You are also free to *add* to the functionality by
 implementing functions that are not part of the standard.
 
-<span class="indexterm"></span> <span class="indexterm"></span>The
+ The
 primary purpose of these standards is to encourage *interoperability*
 between contracts. Thus, all wallets, exchanges, user interfaces, and
 other infrastructure components can *interface* in a predictable manner
@@ -1560,7 +1560,7 @@ zero.
 
 ### Should You Use These Standards?
 
-<span class="indexterm"></span> <span class="indexterm"></span>Given all
+ Given all
 these standards, each developer faces a dilemma: use the existing
 standards or innovate beyond the restrictions they impose?
 
@@ -1594,9 +1594,9 @@ because of their external origins and costs, such as royalties.
 
 ### Security by Maturity
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Beyond the choice of standard, there is
+
+
+Beyond the choice of standard, there is
 the parallel choice of *implementation*. When you decide to use a
 standard such as ERC20, you have to then decide how to implement a
 compatible design. There are a number of existing "reference"
@@ -1616,7 +1616,7 @@ the ground up.
 
 If you use an existing implementation you can also extend it. Again,
 however, be careful with this impulse. Complexity is the enemy of
-security. <span class="indexterm"></span>Every single line of code you
+security. Every single line of code you
 add expands the *attack surface* of your contract and could represent a
 vulnerability lying in wait. You may not notice a problem until you put
 a lot of value on top of the contract and someone breaks it.
@@ -1626,13 +1626,13 @@ a lot of value on top of the contract and someone breaks it.
 Standards and implementation choices are important parts of overall
 secure smart contract design, but they’re not the only considerations.
 See
-[???](#smart_contract_security).<span class="indexterm"></span><span class="indexterm"></span>
+[???](#smart_contract_security).
 
 </div>
 
 ## Extensions to Token Interface Standards
 
-<span class="indexterm"></span> <span class="indexterm"></span>The token
+ The token
 standards discussed in this chapter provide a very minimal interface,
 with limited functionality. Many projects have created extended
 implementations to support features that they need for their
@@ -1685,9 +1685,9 @@ and interoperability/security.
 
 ## Tokens and ICOs
 
-<span class="indexterm"></span>
-<span class="indexterm"></span><span class="indexterm"></span>
-<span class="indexterm"></span>Tokens have been an explosive development
+
+
+Tokens have been an explosive development
 in the Ethereum ecosystem. It is likely that they will become a very
 important component of all smart contract platforms like Ethereum.
 
@@ -1712,4 +1712,4 @@ the different types of tokens and token standards, and you built your
 first token and related application. We will revisit tokens again in
 [???](#decentralized_applications_chap), where you will use a
 non-fungible token as the basis for an auction
-DApp.<span class="indexterm"></span>
+DApp.
