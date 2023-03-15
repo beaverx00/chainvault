@@ -113,7 +113,7 @@ associated with a unique identifier, such as a serial number.
 We will see examples of both fungible and non-fungible tokens later in
 this chapter.
 
-<div class="note">
+
 
 Note that "fungible" is often used to mean "directly exchangeable for
 money" (for example, a casino token can be "cashed in," while laundry
@@ -511,12 +511,8 @@ are not an endorsement of this type of fundraising.
 
 </div>
 
-<figure id="approve_transferFrom_workflow">
-<img src="images/approve_transferFrom_workflow.png"
-alt="The two-step approve &amp; transferFrom workflow of ERC20 tokens" />
-<figcaption aria-hidden="true">The two-step approve &amp; transferFrom
-workflow of ERC20 tokens</figcaption>
-</figure>
+![approve_transferFrom_workflow.png](images/approve_transferFrom_workflow.png)
+<figcaption aria-hidden="true">The two-step approve &amp; transferFromworkflow of ERC20 tokens</figcaption>
 
 For the `approve` & `transferFrom` workflow, two transactions are
 needed. Let’s say that Alice wants to allow the `AliceICO` contract to
@@ -746,11 +742,8 @@ On the `ganache` console, we should see that our deployment has created
 four new transactions, as depicted in [METoken deployment on
 ganache](#ganache_METoken).
 
-<figure id="ganache_METoken">
-<img src="images/ganache_metoken.png"
-alt="METoken deployment on Ganache" />
+![ganache_metoken.png](images/ganache_metoken.png)
 <figcaption>METoken deployment on ganache</figcaption>
-</figure>
 
 #### Interacting with METoken using the Truffle console
 
@@ -882,11 +875,8 @@ If you switch to the `ganache` graphical user interface, as shown in
 the transaction that called the `transfer`
 function.
 
-<figure id="ganache_METoken_transfer">
-<img src="images/ganache_metoken_transfer.png"
-alt="METoken transfer on Ganache" />
+![ganache_metoken_transfer.png](images/ganache_metoken_transfer.png)
 <figcaption>METoken transfer on ganache</figcaption>
-</figure>
 
 #### Sending ERC20 tokens to contract addresses
 
@@ -1628,7 +1618,7 @@ secure smart contract design, but they’re not the only considerations.
 See
 [???](#smart_contract_security).
 
-</div>
+
 
 ## Extensions to Token Interface Standards
 

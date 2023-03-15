@@ -11,14 +11,10 @@ an application: storage, messaging, naming, etc. (see [Web3: A
 decentralized web using smart contracts and P2P
 technologies](#image_web3_suite)).
 
-<figure id="image_web3_suite">
-<img src="images/web3suite.png"
-alt="Web3: A decentralized web using smart contracts and P2P Technologies" />
-<figcaption>Web3: A decentralized web using smart contracts and P2P
-technologies</figcaption>
-</figure>
+![web3suite.png](images/web3suite.png)
+<figcaption>Web3: A decentralized web using smart contracts and P2Ptechnologies</figcaption>
 
-<div class="warning">
+
 
 While "decentralized apps" are an audacious vision of the future, the
 term "DApp" is often applied to any smart contract with a web frontend.
@@ -254,12 +250,8 @@ The main components of our Auction DApp are:
 - A Whisper client, to create per-auction chat rooms for all
   participants
 
-<figure id="auction_dapp_overview">
-<img src="images/auction_diagram.png"
-alt="Auction DApp: A simple example auction DApp" />
-<figcaption aria-hidden="true">Auction DApp: A simple example auction
-DApp</figcaption>
-</figure>
+![auction_diagram.png](images/auction_diagram.png)
+<figcaption aria-hidden="true">Auction DApp: A simple example auctionDApp</figcaption>
 
 You can find the source code for the auction DApp [in the book’s
 repository](http://bit.ly/2DcmjyA).
@@ -470,11 +462,8 @@ If all goes well you should see the screen shown in [Auction DApp user
 interface](#auction_dapp_screen), which illustrates the Auction DApp
 running in a web browser.
 
-<figure id="auction_dapp_screen">
-<img src="images/auction_dapp_home_screen.png"
-alt="Auction DApp User interface" />
+![auction_dapp_home_screen.png](images/auction_dapp_home_screen.png)
 <figcaption>Auction DApp user interface</figcaption>
-</figure>
 
 ## Further Decentralizing the Auction DApp
 
@@ -571,10 +560,8 @@ You should see a screen like the one in [Swarm gateway on
 localhost](#image_swarm_gateway) and be able to query any Swarm hash or
 ENS name.
 
-<figure id="image_swarm_gateway">
-<img src="images/swarm-gateway.png" alt="Swarm gateway on localhost" />
+![swarm-gateway.png](images/swarm-gateway.png)
 <figcaption aria-hidden="true">Swarm gateway on localhost</figcaption>
-</figure>
 
 ### Uploading Files to Swarm
 
@@ -993,10 +980,8 @@ interact with the ENS DApp. For this example, we will use the [MyCrypto
 interface](https://mycrypto.com/), in conjunction with MetaMask as our
 wallet.
 
-<figure id="ens_registration_timeline">
-<img src="images/ens-flow.png" alt="images/ens-flow.png" />
+![ens-flow.png](images/ens-flow.png)
 <figcaption>ENS timeline for registration</figcaption>
-</figure>
 
 First, we need to make sure the name we want is available. While writing
 this book, we really wanted to register the name `mastering.eth`, but
@@ -1006,32 +991,21 @@ year, it might become possible to secure that name in the future. In the
 meantime, let’s search for `ethereumbook.eth` ([Searching for ENS names
 on MyCrypto.com](#ens-name-search)).
 
-<figure id="ens-name-search">
-<img src="images/ens-checkname.png"
-alt="Searching for ENS names on MyCrypto.com" />
-<figcaption aria-hidden="true">Searching for ENS names on
-MyCrypto.com</figcaption>
-</figure>
+![ens-checkname.png](images/ens-checkname.png)
+<figcaption aria-hidden="true">Searching for ENS names onMyCrypto.com</figcaption>
 
 Great! The name is available. In order to register it, we need to move
 forward with [Starting an auction for an ENS name](#ens-auction). Let’s
 unlock MetaMask and start an auction for `ethereumbook.eth`.
 
-<figure id="ens-auction">
-<img src="images/ens-auction.png"
-alt="Starting an auction for an ENS name" />
-<figcaption aria-hidden="true">Starting an auction for an ENS
-name</figcaption>
-</figure>
+![ens-auction.png](images/ens-auction.png)
+<figcaption aria-hidden="true">Starting an auction for an ENSname</figcaption>
 
 Let’s make our bid. In order to do that we need to follow the steps in
 [Placing a bid for an ENS name](#ens-bid).
 
-<figure id="ens-bid">
-<img src="images/ens-bid.png" alt="Placing a bid for an ENS name" />
-<figcaption aria-hidden="true">Placing a bid for an ENS
-name</figcaption>
-</figure>
+![ens-bid.png](images/ens-bid.png)
+<figcaption aria-hidden="true">Placing a bid for an ENSname</figcaption>
 
 <div class="warning">
 
@@ -1044,18 +1018,14 @@ Take a screenshot, save your secret phrase (as a backup for your bid),
 and add a reminder in your calendar for the reveal date and time, so you
 don’t forget and lose your funds.
 
-</div>
+
 
 Finally, we confirm the transaction by clicking the big green submit
 button shown in [MetaMask transaction containing your
 bid](#ens-metamask-bid).
 
-<figure id="ens-metamask-bid">
-<img src="images/ens-metamask-bid.png"
-alt="MetaMask transaction containing your bid" />
-<figcaption aria-hidden="true">MetaMask transaction containing your
-bid</figcaption>
-</figure>
+![ens-metamask-bid.png](images/ens-metamask-bid.png)
+<figcaption aria-hidden="true">MetaMask transaction containing yourbid</figcaption>
 
 If all goes well, after submitting a transaction in this way you can
 return and reveal the bid in 48 hours, and the name you requested will
@@ -1073,11 +1043,8 @@ Once there, enter the name you want to manage in the search box (see
 Ethereum wallet (e.g., MetaMask) unlocked, so that the ENS Manager DApp
 can manage the name on your behalf.
 
-<figure id="ens-manager">
-<img src="images/ens-manager.png" alt="The ENS Manager web interface" />
-<figcaption aria-hidden="true">The ENS Manager web
-interface</figcaption>
-</figure>
+![ens-manager.png](images/ens-manager.png)
+<figcaption aria-hidden="true">The ENS Manager webinterface</figcaption>
 
 From this interface, we can create subdomains, set a resolver contract
 (more on that later), and connect each name to the appropriate resource,
@@ -1091,12 +1058,8 @@ auction.ethereumbook.eth](#ens-manager-add-subdomain)). We will name the
 subdomain `auction`, so the fully qualified name will be
 `auction.ethereumbook.eth`.
 
-<figure id="ens-manager-add-subdomain">
-<img src="images/ens_manager_add_subdomain.png"
-alt="Adding the subdomain auction.ethereumbook.eth" />
-<figcaption aria-hidden="true">Adding the subdomain
-auction.ethereumbook.eth</figcaption>
-</figure>
+![ens_manager_add_subdomain.png](images/ens_manager_add_subdomain.png)
+<figcaption aria-hidden="true">Adding the subdomainauction.ethereumbook.eth</figcaption>
 
 Once we’ve created the subdomain, we can enter
 `auction.ethereumbook.eth` in the search box and manage it, just as we
@@ -1134,12 +1097,8 @@ the default public resolver for
 auction.ethereumbook.eth](#ens-manager-set-default-resolver); we don’t
 need to code or deploy a custom resolver.
 
-<figure id="ens-manager-set-default-resolver">
-<img src="images/ens-manager-set-default-resolver.png"
-alt="Set the default public resolver for auction.ethereumbook.eth" />
-<figcaption>Setting the default public resolver for
-auction.ethereumbook.eth</figcaption>
-</figure>
+![ens-manager-set-default-resolver.png](images/ens-manager-set-default-resolver.png)
+<figcaption>Setting the default public resolver forauction.ethereumbook.eth</figcaption>
 
 ### Resolving a Name to a Swarm Hash (Content)
 
@@ -1151,12 +1110,8 @@ resolver, we can set it to return the Swarm hash as the content of our
 name (see [Setting the to return for
 auction.ethereumbook.eth](#ens-set-content)).
 
-<figure id="ens-set-content">
-<img src="images/ens-manager-set-content.png"
-alt="Set the &#39;content&#39; return for auction.ethereumbook.eth" />
-<figcaption>Setting the <em>content</em> to return for
-auction.ethereumbook.eth</figcaption>
-</figure>
+![ens-manager-set-content.png](images/ens-manager-set-content.png)
+<figcaption>Setting the <em>content</em> to return forauction.ethereumbook.eth</figcaption>
 
 After waiting a short time for our transaction to be confirmed, we
 should be able to resolve the name correctly. Before setting a name, our
@@ -1203,11 +1158,8 @@ authority, no central point of failure, and expresses the "web3" vision.
 complete architecture of the Auction
 DApp.
 
-<figure id="auction_dapp_final_architecture">
-<img src="images/auction_dapp_final_architecture.png"
-alt="Auction DApp architecture" />
+![auction_dapp_final_architecture.png](images/auction_dapp_final_architecture.png)
 <figcaption aria-hidden="true">Auction DApp architecture</figcaption>
-</figure>
 
 ## Conclusions
 

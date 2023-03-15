@@ -21,11 +21,8 @@ From
 > for building consensus within the community and documenting dissenting
 > opinions.
 
-<figure id="eip_workflow">
-<img src="images/eip_workflow.png"
-alt="Ethereum Improvement Proposal Workflow" />
+![eip_workflow.png](images/eip_workflow.png)
 <figcaption>Ethereum Improvement Proposal workflow</figcaption>
-</figure>
 
 # Table of Most Important EIPs and ERCs
 

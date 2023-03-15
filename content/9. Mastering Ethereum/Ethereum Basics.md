@@ -12,7 +12,7 @@ Ethereum’s currency unit is called
 letter "Xi" that looks like a stylized capital E) or, less often, ♦: for
 example, 1 ether, or 1 ETH, or Ξ1, or ♦1.
 
-<div class="tip">
+
 
 Use Unicode character `U+039E` for Ξ and `U+2666` for ♦.
 
@@ -218,11 +218,8 @@ Search for "MetaMask" and click on the logo of a fox. You should see
 something like the result shown in [The detail page of the MetaMask
 Chrome extension](#metamask_download).
 
-<figure id="metamask_download">
-<img src="images/metamask_download.png" alt="MetaMask Detail Page" />
-<figcaption>The detail page of the MetaMask Chrome
-extension</figcaption>
-</figure>
+![metamask_download.png](images/metamask_download.png)
+<figcaption>The detail page of the MetaMask Chromeextension</figcaption>
 
 It’s important to verify that you are downloading the real MetaMask
 extension, as sometimes people are able to sneak malicious extensions
@@ -248,11 +245,8 @@ accept the terms and conditions and then to create your new Ethereum
 wallet by entering a password (see [The password page of the MetaMask
 Chrome extension](#metamask_password)).
 
-<figure id="metamask_password">
-<img src="images/metamask_password.png" alt="MetaMask Password Page" />
-<figcaption>The password page of the MetaMask Chrome
-extension</figcaption>
-</figure>
+![metamask_password.png](images/metamask_password.png)
+<figcaption>The password page of the MetaMask Chromeextension</figcaption>
 
 <div class="tip">
 
@@ -280,21 +274,16 @@ Anyone with access to these words can gain access and steal your money.
 
 </div>
 
-<figure id="metamask_mnemonic">
-<img src="images/metamask_mnemonic.png" alt="MetaMask Mnemonic Page" />
-<figcaption>The mnemonic backup of your wallet, created by
-MetaMask</figcaption>
-</figure>
+![metamask_mnemonic.png](images/metamask_mnemonic.png)
+<figcaption>The mnemonic backup of your wallet, created byMetaMask</figcaption>
 
 Once you have confirmed that you have stored the mnemonic securely,
 you’ll be able to see the details of your Ethereum account, as shown in
 [Your Ethereum account in
 MetaMask](#metamask_account).
 
-<figure id="metamask_account">
-<img src="images/metamask_account.png" alt="MetaMask Account Page" />
+![metamask_account.png](images/metamask_account.png)
 <figcaption>Your Ethereum account in MetaMask</figcaption>
-</figure>
 
 Your account page shows the name of your account ("Account 1" by
 default), an Ethereum address (`0x9E713…` in the example), and a
@@ -370,11 +359,8 @@ Network*. Click Deposit, then click Ropsten Test Faucet. MetaMask will
 open a new web page, as shown in [MetaMask Ropsten Test
 Faucet](#metamask_ropsten_faucet).
 
-<figure id="metamask_ropsten_faucet">
-<img src="images/metamask_ropsten_faucet.png"
-alt="MetaMask Ropsten Test Faucet" />
+![metamask_ropsten_faucet.png](images/metamask_ropsten_faucet.png)
 <figcaption aria-hidden="true">MetaMask Ropsten Test Faucet</figcaption>
-</figure>
 
 You may notice that the web page already contains your MetaMask wallet’s
 Ethereum address. MetaMask integrates Ethereum-enabled web pages with
@@ -404,11 +390,8 @@ explorers. The transaction containing the payment from the Ropsten Test
 Faucet is shown in [Etherscan Ropsten block
 explorer](#ropsten_block_explorer).
 
-<figure id="ropsten_block_explorer">
-<img src="images/ropsten_block_explorer.png"
-alt="Etherscan Ropsten Block Explorer" />
+![ropsten_block_explorer.png](images/ropsten_block_explorer.png)
 <figcaption>Etherscan Ropsten block explorer</figcaption>
-</figure>
 
 The transaction has been recorded on the Ropsten blockchain and can be
 viewed at any time by anyone, simply by searching for the transaction
@@ -437,12 +420,8 @@ ether. MetaMask will prepare a transaction and pop up a window with the
 confirmation, as shown in [Sending 1 ether to the
 faucet](#send_to_faucet).
 
-<figure id="send_to_faucet">
-<img src="images/send_to_faucet.png"
-alt="Sending 1 ether to the faucet" />
-<figcaption aria-hidden="true">Sending 1 ether to the
-faucet</figcaption>
-</figure>
+![send_to_faucet.png](images/send_to_faucet.png)
+<figcaption aria-hidden="true">Sending 1 ether to thefaucet</figcaption>
 
 Oops! You probably noticed you can’t complete the transaction—MetaMask
 says you have an insufficient balance. At first glance this may seem
@@ -507,22 +486,16 @@ icon in MetaMask, you will see a button showing three dots. Click on it
 to show a menu of account-related options (see [MetaMask account context
 menu](#metamask_account_context_menu)).
 
-<figure id="metamask_account_context_menu">
-<img src="images/metamask_account_context_menu.png"
-alt="MetaMask Account Context Menu" />
+![metamask_account_context_menu.png](images/metamask_account_context_menu.png)
 <figcaption>MetaMask account context menu</figcaption>
-</figure>
 
 Select "View account on Etherscan" to open a web page in the block
 explorer showing your account’s transaction history, as shown in
 [Address transaction history on
 Etherscan](#block_explorer_account_history).
 
-<figure id="block_explorer_account_history">
-<img src="images/block_explorer_account_history.png"
-alt="Address Transaction History on Etherscan" />
+![block_explorer_account_history.png](images/block_explorer_account_history.png)
 <figcaption>Address transaction history on Etherscan</figcaption>
-</figure>
 
 Here you can see the entire transaction history of your Ethereum
 address. It shows all the transactions recorded on the Ropsten
@@ -760,34 +733,22 @@ When you first load Remix, it will start with a sample contract called
 corner of the tab, as seen in [Close the default example
 tab](#remix_close_tab).
 
-<figure id="remix_close_tab">
-<img src="images/remix_close_tab.png"
-alt="Close the default example tab" />
-<figcaption aria-hidden="true">Close the default example
-tab</figcaption>
-</figure>
+![remix_close_tab.png](images/remix_close_tab.png)
+<figcaption aria-hidden="true">Close the default exampletab</figcaption>
 
 Now, add a new tab by clicking on the circular plus sign in the top-left
 toolbar, as seen in [Click the plus sign to open a new
 tab](#remix_toolbar). Name the new file *Faucet.sol*.
 
-<figure id="remix_toolbar">
-<img src="images/remix_toolbar.png"
-alt="Click the plus sign to open a new tab" />
-<figcaption aria-hidden="true">Click the plus sign to open a new
-tab</figcaption>
-</figure>
+![remix_toolbar.png](images/remix_toolbar.png)
+<figcaption aria-hidden="true">Click the plus sign to open a newtab</figcaption>
 
 Once you have the new tab open, copy and paste the code from our example
 *Faucet.sol*, as seen in [Copy the Faucet example code into the new
 tab](#remix_faucet_load).
 
-<figure id="remix_faucet_load">
-<img src="images/remix_faucet_load.png"
-alt="Copy the Faucet example code into the new tab" />
-<figcaption aria-hidden="true">Copy the Faucet example code into the new
-tab</figcaption>
-</figure>
+![remix_faucet_load.png](images/remix_faucet_load.png)
+<figcaption aria-hidden="true">Copy the Faucet example code into the newtab</figcaption>
 
 Once you have loaded the *Faucet.sol* contract into the Remix IDE, the
 IDE will automatically compile the code. If all goes well, you will see
@@ -795,11 +756,8 @@ a green box with "Faucet" in it appear on the right, under the Compile
 tab, confirming the successful compilation (see [Remix successfully
 compiles the Faucet.sol contract](#remix_compile)).
 
-<figure id="remix_compile">
-<img src="images/remix_compile.png" />
-<figcaption>Remix successfully compiles the Faucet.sol
-contract</figcaption>
-</figure>
+![remix_compile.png](images/remix_compile.png)
+<figcaption>Remix successfully compiles the Faucet.solcontract</figcaption>
 
 If something goes wrong, the most likely problem is that the Remix IDE
 is using a version of the Solidity compiler that is different from 0.6.
@@ -844,12 +802,8 @@ Environment. Also, in the Account selection box it shows the address of
 your wallet (see [Remix IDE Run tab, with Injected Web3 environment
 selected](#remix_run)).
 
-<figure id="remix_run">
-<img src="images/remix_run.png"
-alt="Remix IDE Run tab, with Injected Web3 environment selected" />
-<figcaption aria-hidden="true">Remix IDE Run tab, with Injected Web3
-environment selected</figcaption>
-</figure>
+![remix_run.png](images/remix_run.png)
+<figcaption aria-hidden="true">Remix IDE Run tab, with Injected Web3environment selected</figcaption>
 
 Right below the Run settings you just confirmed is the `Faucet`
 contract, ready to be created. Click on the Deploy button shown in
@@ -863,12 +817,8 @@ contract creation transaction has no ether in it, but it has 275 bytes
 of data (the compiled contract) and will consume 3 gwei in gas. Press
 Confirm to approve it.
 
-<figure id="remix_metamask_create">
-<img src="images/remix_metamask_create.png"
-alt="MetaMask showing the contract creation transaction" />
-<figcaption aria-hidden="true">MetaMask showing the contract creation
-transaction</figcaption>
-</figure>
+![remix_metamask_create.png](images/remix_metamask_create.png)
+<figcaption aria-hidden="true">MetaMask showing the contract creationtransaction</figcaption>
 
 Now you have to wait. It will take about 15 to 30 seconds for the
 contract to be mined on Ropsten. Remix won’t appear to be doing much,
@@ -877,12 +827,8 @@ but be patient.
 Once the contract is created, it appears at the bottom of the Run tab
 (see [The Faucet contract is ALIVE!](#remix_contract_interact)).
 
-<figure id="remix_contract_interact">
-<img src="images/remix_contract_interact.png"
-alt="The Faucet contract is ALIVE!" />
-<figcaption aria-hidden="true">The Faucet contract is
-ALIVE!</figcaption>
-</figure>
+![remix_contract_interact.png](images/remix_contract_interact.png)
+<figcaption aria-hidden="true">The Faucet contract isALIVE!</figcaption>
 
 Notice that the `Faucet` contract now has an address of its own: Remix
 shows it as “Faucet at 0x72e…c7829” (although your address, the random
@@ -915,12 +861,8 @@ explorer and see what a contract looks like. In the Remix IDE, copy the
 address of the contract by clicking the clipboard icon next to its name
 (see [Copy the contract address from Remix](#remix_contract_address)).
 
-<figure id="remix_contract_address">
-<img src="images/remix_contract_address.png"
-alt="Copy the contract address from Remix" />
-<figcaption aria-hidden="true">Copy the contract address from
-Remix</figcaption>
-</figure>
+![remix_contract_address.png](images/remix_contract_address.png)
+<figcaption aria-hidden="true">Copy the contract address fromRemix</figcaption>
 
 Keep Remix open; we’ll come back to it again later. Now, navigate your
 browser to *ropsten.etherscan.io* and paste the address into the search
@@ -928,12 +870,8 @@ box. You should see the contract’s Ethereum address history, as shown in
 [View the Faucet contract address in the Etherscan block
 explorer](#etherscan_contract_address).
 
-<figure id="etherscan_contract_address">
-<img src="images/etherscan_contract_address.png"
-alt="View the Faucet contract address in the etherscan block explorer" />
-<figcaption>View the Faucet contract address in the Etherscan block
-explorer</figcaption>
-</figure>
+![etherscan_contract_address.png](images/etherscan_contract_address.png)
+<figcaption>View the Faucet contract address in the Etherscan blockexplorer</figcaption>
 
 ### Funding the Contract
 
@@ -950,10 +888,8 @@ MetaMask, and send 1 ether to it, exactly as you would to any other
 Ethereum address (see [Send 1 ether to the contract
 address](#metamask_send_to_contract)).
 
-<figure id="metamask_send_to_contract">
-<img src="images/metamask_send_to_contract.png" />
+![metamask_send_to_contract.png](images/metamask_send_to_contract.png)
 <figcaption>Send 1 ether to the contract address</figcaption>
-</figure>
 
 In a minute, if you reload the Etherscan block explorer, it will show
 another transaction to the contract address and an updated balance of 1
@@ -988,12 +924,8 @@ should see a orange box labeled `withdraw` with a field entry labeled
 `uint256 withdraw_amount` (see [The withdraw function of Faucet.sol, in
 Remix](#remix_contract_withdraw)).
 
-<figure id="remix_contract_withdraw">
-<img src="images/remix_contract_interact.png"
-alt="The withdraw function of Faucet.sol, in Remix" />
-<figcaption aria-hidden="true">The withdraw function of Faucet.sol, in
-Remix</figcaption>
-</figure>
+![remix_contract_interact.png](images/remix_contract_interact.png)
+<figcaption aria-hidden="true">The withdraw function of Faucet.sol, inRemix</figcaption>
 
 This is the Remix interface to the contract. It allows us to construct
 transactions that call the functions defined in the contract. We will
@@ -1015,40 +947,29 @@ Remix to receive it as a string and manipulate it as a `BigNumber`. If
 we don’t enclose it in quotes, the Remix IDE will fail to process it and
 display "Error encoding arguments: Error: Assertion failed."
 
-</div>
+
 
 Type "100000000000000000" (with the quotes) into the `withdraw_amount`
 box and click on the withdraw button (see [Click "withdraw" in Remix to
 create a withdrawal transaction](#remix_withdraw)).
 
-<figure id="remix_withdraw">
-<img src="images/remix_withdraw.png" />
-<figcaption>Click "withdraw" in Remix to create a withdrawal
-transaction</figcaption>
-</figure>
+![remix_withdraw.png](images/remix_withdraw.png)
+<figcaption>Click "withdraw" in Remix to create a withdrawaltransaction</figcaption>
 
 MetaMask will pop up a transaction window for you to approve. Click
 Confirm to send your withdrawal call to the contract (see [MetaMask
 transaction to call the withdraw function](#metamask_withdraw)).
 
-<figure id="metamask_withdraw">
-<img src="images/metamask_withdraw.png"
-alt="MetaMask transaction to call the withdraw function" />
-<figcaption aria-hidden="true">MetaMask transaction to call the withdraw
-function</figcaption>
-</figure>
+![metamask_withdraw.png](images/metamask_withdraw.png)
+<figcaption aria-hidden="true">MetaMask transaction to call the withdrawfunction</figcaption>
 
 Wait a minute and then reload the Etherscan block explorer to see the
 transaction reflected in the `Faucet` contract address history (see
 [Etherscan shows the transaction calling the withdraw
 function](#etherscan_withdrawal_tx)).
 
-<figure id="etherscan_withdrawal_tx">
-<img src="images/etherscan_withdrawal_tx.png"
-alt="Etherscan shows the transaction calling the withdraw function" />
-<figcaption aria-hidden="true">Etherscan shows the transaction calling
-the withdraw function</figcaption>
-</figure>
+![etherscan_withdrawal_tx.png](images/etherscan_withdrawal_tx.png)
+<figcaption aria-hidden="true">Etherscan shows the transaction callingthe withdraw function</figcaption>
 
 We now see a new transaction with the contract address as the
 destination and a value of 0 ether. The contract balance has changed and
@@ -1083,12 +1004,8 @@ wallet address, from the contract’s balance. That’s the one shown on the
 Internal Transactions tab in
 Etherscan.
 
-<figure id="etherscan_withdrawal_internal">
-<img src="images/etherscan_withdrawal_internal.png"
-alt="Etherscan shows the internal transaction transferring ether out from the contract" />
-<figcaption aria-hidden="true">Etherscan shows the internal transaction
-transferring ether out from the contract</figcaption>
-</figure>
+![etherscan_withdrawal_internal.png](images/etherscan_withdrawal_internal.png)
+<figcaption aria-hidden="true">Etherscan shows the internal transactiontransferring ether out from the contract</figcaption>
 
 ## Conclusions
 

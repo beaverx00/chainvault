@@ -59,7 +59,7 @@ needing its wallet. Moreover, you can move your account handling from
 your current wallet to a different wallet, if you grow to dislike the
 wallet app you started out using.
 
-<div class="note">
+
 
 Ethereum wallets contain keys, not ether or tokens. Wallets are like
 keychains containing pairs of private and public keys. Users sign
@@ -215,11 +215,8 @@ keys, each of which can derive a sequence of grandchild keys, and so on.
 This tree structure is illustrated in [HD wallet: a tree of keys
 generated from a single seed](#hd_wallets_figure).
 
-<figure id="hd_wallets_figure">
-<img src="images/hd_wallet.png" alt="HD wallet" />
-<figcaption>HD wallet: a tree of keys generated from a single
-seed</figcaption>
-</figure>
+![hd_wallet.png](images/hd_wallet.png)
+<figcaption>HD wallet: a tree of keys generated from a singleseed</figcaption>
 
 HD wallets offer a few key advantages over simpler deterministic
 wallets. First, the tree structure can be used to express additional
@@ -424,12 +421,8 @@ mnemonic codes in words.
 
 Mnemonic codes: entropy and word length
 
-<figure id="generating_entropy_and_encoding">
-<img src="images/bip39-part1.png"
-alt="Generating entropy and encoding as mnemonic words" />
-<figcaption aria-hidden="true">Generating entropy and encoding as
-mnemonic words</figcaption>
-</figure>
+![bip39-part1.png](images/bip39-part1.png)
+<figcaption aria-hidden="true">Generating entropy and encoding asmnemonic words</figcaption>
 
 #### From mnemonic to seed
 
@@ -467,10 +460,8 @@ described in the previous section:
 [From mnemonic to seed](#mnemonic_to_seed_figure) shows how a mnemonic
 is used to generate a seed.
 
-<figure id="mnemonic_to_seed_figure">
-<img src="images/bip39-part2.png" alt="From mnemonic to seed" />
+![bip39-part2.png](images/bip39-part2.png)
 <figcaption aria-hidden="true">From mnemonic to seed</figcaption>
-</figure>
 
 <div class="note">
 
@@ -593,10 +584,8 @@ Converter](https://iancoleman.io/bip39/) generates mnemonics, seeds, and
 extended private keys. It can be used offline in a browser, or accessed
 online.
 
-<figure id="a_bip39_generator_as_a_standalone_web_page">
-<img src="images/bip39_web.png" alt="BIP-39 generator web-page" />
+![bip39_web.png](images/bip39_web.png)
 <figcaption>A BIP-39 generator as a standalone web page</figcaption>
-</figure>
 
 ### Creating an HD Wallet from the Seed
 
@@ -649,7 +638,7 @@ The standalone BIP-32 generator is not an HTTPS site. That’s to remind
 you that the use of this tool is not secure. It is only for testing. You
 should not use the keys produced by this site with real funds.
 
-</div>
+
 
 #### Extended public and private keys
 

@@ -106,7 +106,7 @@ Shows commands or other text that should be typed literally by the user.
 Shows text that should be replaced with user-supplied values or values
 determined by context.
 
-<div class="tip">
+
 
 This icon signifies a tip or suggestion.
 
@@ -2215,11 +2215,8 @@ Search for "MetaMask" and click on the logo of a fox. You should see
 something like the result shown in [The detail page of the MetaMask
 Chrome extension](#metamask_download).
 
-<figure id="metamask_download">
-<img src="images/metamask_download.png" alt="MetaMask Detail Page" />
-<figcaption>The detail page of the MetaMask Chrome
-extension</figcaption>
-</figure>
+![metamask_download.png](images/metamask_download.png)
+<figcaption>The detail page of the MetaMask Chromeextension</figcaption>
 
 It’s important to verify that you are downloading the real MetaMask
 extension, as sometimes people are able to sneak malicious extensions
@@ -2245,11 +2242,8 @@ accept the terms and conditions and then to create your new Ethereum
 wallet by entering a password (see [The password page of the MetaMask
 Chrome extension](#metamask_password)).
 
-<figure id="metamask_password">
-<img src="images/metamask_password.png" alt="MetaMask Password Page" />
-<figcaption>The password page of the MetaMask Chrome
-extension</figcaption>
-</figure>
+![metamask_password.png](images/metamask_password.png)
+<figcaption>The password page of the MetaMask Chromeextension</figcaption>
 
 <div class="tip">
 
@@ -2277,21 +2271,16 @@ Anyone with access to these words can gain access and steal your money.
 
 </div>
 
-<figure id="metamask_mnemonic">
-<img src="images/metamask_mnemonic.png" alt="MetaMask Mnemonic Page" />
-<figcaption>The mnemonic backup of your wallet, created by
-MetaMask</figcaption>
-</figure>
+![metamask_mnemonic.png](images/metamask_mnemonic.png)
+<figcaption>The mnemonic backup of your wallet, created byMetaMask</figcaption>
 
 Once you have confirmed that you have stored the mnemonic securely,
 you’ll be able to see the details of your Ethereum account, as shown in
 [Your Ethereum account in
 MetaMask](#metamask_account).
 
-<figure id="metamask_account">
-<img src="images/metamask_account.png" alt="MetaMask Account Page" />
+![metamask_account.png](images/metamask_account.png)
 <figcaption>Your Ethereum account in MetaMask</figcaption>
-</figure>
 
 Your account page shows the name of your account ("Account 1" by
 default), an Ethereum address (`0x9E713…` in the example), and a
@@ -2367,11 +2356,8 @@ Network*. Click Deposit, then click Ropsten Test Faucet. MetaMask will
 open a new web page, as shown in [MetaMask Ropsten Test
 Faucet](#metamask_ropsten_faucet).
 
-<figure id="metamask_ropsten_faucet">
-<img src="images/metamask_ropsten_faucet.png"
-alt="MetaMask Ropsten Test Faucet" />
+![metamask_ropsten_faucet.png](images/metamask_ropsten_faucet.png)
 <figcaption aria-hidden="true">MetaMask Ropsten Test Faucet</figcaption>
-</figure>
 
 You may notice that the web page already contains your MetaMask wallet’s
 Ethereum address. MetaMask integrates Ethereum-enabled web pages with
@@ -2401,11 +2387,8 @@ explorers. The transaction containing the payment from the Ropsten Test
 Faucet is shown in [Etherscan Ropsten block
 explorer](#ropsten_block_explorer).
 
-<figure id="ropsten_block_explorer">
-<img src="images/ropsten_block_explorer.png"
-alt="Etherscan Ropsten Block Explorer" />
+![ropsten_block_explorer.png](images/ropsten_block_explorer.png)
 <figcaption>Etherscan Ropsten block explorer</figcaption>
-</figure>
 
 The transaction has been recorded on the Ropsten blockchain and can be
 viewed at any time by anyone, simply by searching for the transaction
@@ -2434,12 +2417,8 @@ ether. MetaMask will prepare a transaction and pop up a window with the
 confirmation, as shown in [Sending 1 ether to the
 faucet](#send_to_faucet).
 
-<figure id="send_to_faucet">
-<img src="images/send_to_faucet.png"
-alt="Sending 1 ether to the faucet" />
-<figcaption aria-hidden="true">Sending 1 ether to the
-faucet</figcaption>
-</figure>
+![send_to_faucet.png](images/send_to_faucet.png)
+<figcaption aria-hidden="true">Sending 1 ether to thefaucet</figcaption>
 
 Oops! You probably noticed you can’t complete the transaction—MetaMask
 says you have an insufficient balance. At first glance this may seem
@@ -2504,22 +2483,16 @@ icon in MetaMask, you will see a button showing three dots. Click on it
 to show a menu of account-related options (see [MetaMask account context
 menu](#metamask_account_context_menu)).
 
-<figure id="metamask_account_context_menu">
-<img src="images/metamask_account_context_menu.png"
-alt="MetaMask Account Context Menu" />
+![metamask_account_context_menu.png](images/metamask_account_context_menu.png)
 <figcaption>MetaMask account context menu</figcaption>
-</figure>
 
 Select "View account on Etherscan" to open a web page in the block
 explorer showing your account’s transaction history, as shown in
 [Address transaction history on
 Etherscan](#block_explorer_account_history).
 
-<figure id="block_explorer_account_history">
-<img src="images/block_explorer_account_history.png"
-alt="Address Transaction History on Etherscan" />
+![block_explorer_account_history.png](images/block_explorer_account_history.png)
 <figcaption>Address transaction history on Etherscan</figcaption>
-</figure>
 
 Here you can see the entire transaction history of your Ethereum
 address. It shows all the transactions recorded on the Ropsten
@@ -2759,34 +2732,22 @@ When you first load Remix, it will start with a sample contract called
 corner of the tab, as seen in [Close the default example
 tab](#remix_close_tab).
 
-<figure id="remix_close_tab">
-<img src="images/remix_close_tab.png"
-alt="Close the default example tab" />
-<figcaption aria-hidden="true">Close the default example
-tab</figcaption>
-</figure>
+![remix_close_tab.png](images/remix_close_tab.png)
+<figcaption aria-hidden="true">Close the default exampletab</figcaption>
 
 Now, add a new tab by clicking on the circular plus sign in the top-left
 toolbar, as seen in [Click the plus sign to open a new
 tab](#remix_toolbar). Name the new file *Faucet.sol*.
 
-<figure id="remix_toolbar">
-<img src="images/remix_toolbar.png"
-alt="Click the plus sign to open a new tab" />
-<figcaption aria-hidden="true">Click the plus sign to open a new
-tab</figcaption>
-</figure>
+![remix_toolbar.png](images/remix_toolbar.png)
+<figcaption aria-hidden="true">Click the plus sign to open a newtab</figcaption>
 
 Once you have the new tab open, copy and paste the code from our example
 *Faucet.sol*, as seen in [Copy the Faucet example code into the new
 tab](#remix_faucet_load).
 
-<figure id="remix_faucet_load">
-<img src="images/remix_faucet_load.png"
-alt="Copy the Faucet example code into the new tab" />
-<figcaption aria-hidden="true">Copy the Faucet example code into the new
-tab</figcaption>
-</figure>
+![remix_faucet_load.png](images/remix_faucet_load.png)
+<figcaption aria-hidden="true">Copy the Faucet example code into the newtab</figcaption>
 
 Once you have loaded the *Faucet.sol* contract into the Remix IDE, the
 IDE will automatically compile the code. If all goes well, you will see
@@ -2794,11 +2755,8 @@ a green box with "Faucet" in it appear on the right, under the Compile
 tab, confirming the successful compilation (see [Remix successfully
 compiles the Faucet.sol contract](#remix_compile)).
 
-<figure id="remix_compile">
-<img src="images/remix_compile.png" />
-<figcaption>Remix successfully compiles the Faucet.sol
-contract</figcaption>
-</figure>
+![remix_compile.png](images/remix_compile.png)
+<figcaption>Remix successfully compiles the Faucet.solcontract</figcaption>
 
 If something goes wrong, the most likely problem is that the Remix IDE
 is using a version of the Solidity compiler that is different from 0.6.
@@ -2843,12 +2801,8 @@ Environment. Also, in the Account selection box it shows the address of
 your wallet (see [Remix IDE Run tab, with Injected Web3 environment
 selected](#remix_run)).
 
-<figure id="remix_run">
-<img src="images/remix_run.png"
-alt="Remix IDE Run tab, with Injected Web3 environment selected" />
-<figcaption aria-hidden="true">Remix IDE Run tab, with Injected Web3
-environment selected</figcaption>
-</figure>
+![remix_run.png](images/remix_run.png)
+<figcaption aria-hidden="true">Remix IDE Run tab, with Injected Web3environment selected</figcaption>
 
 Right below the Run settings you just confirmed is the `Faucet`
 contract, ready to be created. Click on the Deploy button shown in
@@ -2862,12 +2816,8 @@ contract creation transaction has no ether in it, but it has 275 bytes
 of data (the compiled contract) and will consume 3 gwei in gas. Press
 Confirm to approve it.
 
-<figure id="remix_metamask_create">
-<img src="images/remix_metamask_create.png"
-alt="MetaMask showing the contract creation transaction" />
-<figcaption aria-hidden="true">MetaMask showing the contract creation
-transaction</figcaption>
-</figure>
+![remix_metamask_create.png](images/remix_metamask_create.png)
+<figcaption aria-hidden="true">MetaMask showing the contract creationtransaction</figcaption>
 
 Now you have to wait. It will take about 15 to 30 seconds for the
 contract to be mined on Ropsten. Remix won’t appear to be doing much,
@@ -2876,12 +2826,8 @@ but be patient.
 Once the contract is created, it appears at the bottom of the Run tab
 (see [The Faucet contract is ALIVE!](#remix_contract_interact)).
 
-<figure id="remix_contract_interact">
-<img src="images/remix_contract_interact.png"
-alt="The Faucet contract is ALIVE!" />
-<figcaption aria-hidden="true">The Faucet contract is
-ALIVE!</figcaption>
-</figure>
+![remix_contract_interact.png](images/remix_contract_interact.png)
+<figcaption aria-hidden="true">The Faucet contract isALIVE!</figcaption>
 
 Notice that the `Faucet` contract now has an address of its own: Remix
 shows it as “Faucet at 0x72e…c7829” (although your address, the random
@@ -2914,12 +2860,8 @@ explorer and see what a contract looks like. In the Remix IDE, copy the
 address of the contract by clicking the clipboard icon next to its name
 (see [Copy the contract address from Remix](#remix_contract_address)).
 
-<figure id="remix_contract_address">
-<img src="images/remix_contract_address.png"
-alt="Copy the contract address from Remix" />
-<figcaption aria-hidden="true">Copy the contract address from
-Remix</figcaption>
-</figure>
+![remix_contract_address.png](images/remix_contract_address.png)
+<figcaption aria-hidden="true">Copy the contract address fromRemix</figcaption>
 
 Keep Remix open; we’ll come back to it again later. Now, navigate your
 browser to *ropsten.etherscan.io* and paste the address into the search
@@ -2927,12 +2869,8 @@ box. You should see the contract’s Ethereum address history, as shown in
 [View the Faucet contract address in the Etherscan block
 explorer](#etherscan_contract_address).
 
-<figure id="etherscan_contract_address">
-<img src="images/etherscan_contract_address.png"
-alt="View the Faucet contract address in the etherscan block explorer" />
-<figcaption>View the Faucet contract address in the Etherscan block
-explorer</figcaption>
-</figure>
+![etherscan_contract_address.png](images/etherscan_contract_address.png)
+<figcaption>View the Faucet contract address in the Etherscan blockexplorer</figcaption>
 
 ### Funding the Contract
 
@@ -2949,10 +2887,8 @@ MetaMask, and send 1 ether to it, exactly as you would to any other
 Ethereum address (see [Send 1 ether to the contract
 address](#metamask_send_to_contract)).
 
-<figure id="metamask_send_to_contract">
-<img src="images/metamask_send_to_contract.png" />
+![metamask_send_to_contract.png](images/metamask_send_to_contract.png)
 <figcaption>Send 1 ether to the contract address</figcaption>
-</figure>
 
 In a minute, if you reload the Etherscan block explorer, it will show
 another transaction to the contract address and an updated balance of 1
@@ -2987,12 +2923,8 @@ should see a orange box labeled `withdraw` with a field entry labeled
 `uint256 withdraw_amount` (see [The withdraw function of Faucet.sol, in
 Remix](#remix_contract_withdraw)).
 
-<figure id="remix_contract_withdraw">
-<img src="images/remix_contract_interact.png"
-alt="The withdraw function of Faucet.sol, in Remix" />
-<figcaption aria-hidden="true">The withdraw function of Faucet.sol, in
-Remix</figcaption>
-</figure>
+![remix_contract_interact.png](images/remix_contract_interact.png)
+<figcaption aria-hidden="true">The withdraw function of Faucet.sol, inRemix</figcaption>
 
 This is the Remix interface to the contract. It allows us to construct
 transactions that call the functions defined in the contract. We will
@@ -3020,34 +2952,23 @@ Type "100000000000000000" (with the quotes) into the `withdraw_amount`
 box and click on the withdraw button (see [Click "withdraw" in Remix to
 create a withdrawal transaction](#remix_withdraw)).
 
-<figure id="remix_withdraw">
-<img src="images/remix_withdraw.png" />
-<figcaption>Click "withdraw" in Remix to create a withdrawal
-transaction</figcaption>
-</figure>
+![remix_withdraw.png](images/remix_withdraw.png)
+<figcaption>Click "withdraw" in Remix to create a withdrawaltransaction</figcaption>
 
 MetaMask will pop up a transaction window for you to approve. Click
 Confirm to send your withdrawal call to the contract (see [MetaMask
 transaction to call the withdraw function](#metamask_withdraw)).
 
-<figure id="metamask_withdraw">
-<img src="images/metamask_withdraw.png"
-alt="MetaMask transaction to call the withdraw function" />
-<figcaption aria-hidden="true">MetaMask transaction to call the withdraw
-function</figcaption>
-</figure>
+![metamask_withdraw.png](images/metamask_withdraw.png)
+<figcaption aria-hidden="true">MetaMask transaction to call the withdrawfunction</figcaption>
 
 Wait a minute and then reload the Etherscan block explorer to see the
 transaction reflected in the `Faucet` contract address history (see
 [Etherscan shows the transaction calling the withdraw
 function](#etherscan_withdrawal_tx)).
 
-<figure id="etherscan_withdrawal_tx">
-<img src="images/etherscan_withdrawal_tx.png"
-alt="Etherscan shows the transaction calling the withdraw function" />
-<figcaption aria-hidden="true">Etherscan shows the transaction calling
-the withdraw function</figcaption>
-</figure>
+![etherscan_withdrawal_tx.png](images/etherscan_withdrawal_tx.png)
+<figcaption aria-hidden="true">Etherscan shows the transaction callingthe withdraw function</figcaption>
 
 We now see a new transaction with the contract address as the
 destination and a value of 0 ether. The contract balance has changed and
@@ -3082,12 +3003,8 @@ wallet address, from the contract’s balance. That’s the one shown on the
 Internal Transactions tab in
 Etherscan.
 
-<figure id="etherscan_withdrawal_internal">
-<img src="images/etherscan_withdrawal_internal.png"
-alt="Etherscan shows the internal transaction transferring ether out from the contract" />
-<figcaption aria-hidden="true">Etherscan shows the internal transaction
-transferring ether out from the contract</figcaption>
-</figure>
+![etherscan_withdrawal_internal.png](images/etherscan_withdrawal_internal.png)
+<figcaption aria-hidden="true">Etherscan shows the internal transactiontransferring ether out from the contract</figcaption>
 
 ## Conclusions
 
@@ -4513,10 +4430,8 @@ many of the elliptic curve libraries and tools from Bitcoin.
 
 </div>
 
-<figure id="ecc-curve">
-<img src="images/simple_elliptic_curve.png" alt="ecc-curve" />
+![simple_elliptic_curve.png](images/simple_elliptic_curve.png)
 <figcaption>A visualization of an elliptic curve</figcaption>
-</figure>
 
 Ethereum uses a specific elliptic curve and set of mathematical
 constants, as defined in a standard called `secp256k1`, established by
@@ -4596,12 +4511,8 @@ over a much smaller finite field of prime order 17, showing a pattern of
 dots on a grid. The `secp256k1` Ethereum elliptic curve can be thought
 of as a much more complex pattern of dots on an unfathomably large grid.
 
-<figure id="ecc-over-F17-math">
-<img src="images/ec_over_small_prime_field.png"
-alt="ecc-over-F17-math" />
-<figcaption>Elliptic curve cryptography: visualizing an elliptic curve
-over F(p), with p=17</figcaption>
-</figure>
+![ec_over_small_prime_field.png](images/ec_over_small_prime_field.png)
+<figcaption>Elliptic curve cryptography: visualizing an elliptic curveover F(p), with p=17</figcaption>
 
 So, for example, the following is a point *Q* with coordinates (*x*,*y*)
 that is a point on the `secp256k1` curve:
@@ -5515,11 +5426,8 @@ keys, each of which can derive a sequence of grandchild keys, and so on.
 This tree structure is illustrated in [HD wallet: a tree of keys
 generated from a single seed](#hd_wallets_figure).
 
-<figure id="hd_wallets_figure">
-<img src="images/hd_wallet.png" alt="HD wallet" />
-<figcaption>HD wallet: a tree of keys generated from a single
-seed</figcaption>
-</figure>
+![hd_wallet.png](images/hd_wallet.png)
+<figcaption>HD wallet: a tree of keys generated from a singleseed</figcaption>
 
 HD wallets offer a few key advantages over simpler deterministic
 wallets. First, the tree structure can be used to express additional
@@ -5724,12 +5632,8 @@ mnemonic codes in words.
 
 Mnemonic codes: entropy and word length
 
-<figure id="generating_entropy_and_encoding">
-<img src="images/bip39-part1.png"
-alt="Generating entropy and encoding as mnemonic words" />
-<figcaption aria-hidden="true">Generating entropy and encoding as
-mnemonic words</figcaption>
-</figure>
+![bip39-part1.png](images/bip39-part1.png)
+<figcaption aria-hidden="true">Generating entropy and encoding asmnemonic words</figcaption>
 
 #### From mnemonic to seed
 
@@ -5767,10 +5671,8 @@ described in the previous section:
 [From mnemonic to seed](#mnemonic_to_seed_figure) shows how a mnemonic
 is used to generate a seed.
 
-<figure id="mnemonic_to_seed_figure">
-<img src="images/bip39-part2.png" alt="From mnemonic to seed" />
+![bip39-part2.png](images/bip39-part2.png)
 <figcaption aria-hidden="true">From mnemonic to seed</figcaption>
-</figure>
 
 <div class="note">
 
@@ -5893,10 +5795,8 @@ Converter](https://iancoleman.io/bip39/) generates mnemonics, seeds, and
 extended private keys. It can be used offline in a browser, or accessed
 online.
 
-<figure id="a_bip39_generator_as_a_standalone_web_page">
-<img src="images/bip39_web.png" alt="BIP-39 generator web-page" />
+![bip39_web.png](images/bip39_web.png)
 <figcaption>A BIP-39 generator as a standalone web page</figcaption>
-</figure>
 
 ### Creating an HD Wallet from the Seed
 
@@ -6776,12 +6676,8 @@ Our wallet shows a confirmation screen indicating the value to send, as
 shown in [Parity wallet showing a transaction with value, but no
 data](#parity_txdemo_value_nodata).
 
-<figure id="parity_txdemo_value_nodata">
-<img src="images/parity_txdemo_value_nodata.png"
-alt="Parity wallet showing a transaction with value, but no data" />
-<figcaption aria-hidden="true">Parity wallet showing a transaction with
-value, but no data</figcaption>
-</figure>
+![parity_txdemo_value_nodata.png](images/parity_txdemo_value_nodata.png)
+<figcaption aria-hidden="true">Parity wallet showing a transaction withvalue, but no data</figcaption>
 
 The next example specifies both a value and a data payload:
 
@@ -6794,12 +6690,8 @@ Our wallet shows a confirmation screen indicating the value to send as
 well as the data payload, as shown in [Parity wallet showing a
 transaction with value and data](#parity_txdemo_value_data).
 
-<figure id="parity_txdemo_value_data">
-<img src="images/parity_txdemo_value_data.png"
-alt="Parity wallet showing a transaction with value and data" />
-<figcaption aria-hidden="true">Parity wallet showing a transaction with
-value and data</figcaption>
-</figure>
+![parity_txdemo_value_data.png](images/parity_txdemo_value_data.png)
+<figcaption aria-hidden="true">Parity wallet showing a transaction withvalue and data</figcaption>
 
 The next transaction includes a data payload but specifies a value of
 zero:
@@ -6812,12 +6704,8 @@ Our wallet shows a confirmation screen indicating the zero value and the
 data payload, as shown in [Parity wallet showing a transaction with no
 value, only data](#parity_txdemo_novalue_data).
 
-<figure id="parity_txdemo_novalue_data">
-<img src="images/parity_txdemo_novalue_data.png"
-alt="Parity wallet showing a transaction with no value, only data" />
-<figcaption aria-hidden="true">Parity wallet showing a transaction with
-no value, only data</figcaption>
-</figure>
+![parity_txdemo_novalue_data.png](images/parity_txdemo_novalue_data.png)
+<figcaption aria-hidden="true">Parity wallet showing a transaction withno value, only data</figcaption>
 
 Finally, the last transaction includes neither a value to send nor a
 data payload:
@@ -6830,12 +6718,8 @@ Our wallet shows a confirmation screen indicating zero value, as shown
 in [Parity wallet showing a transaction with no value, and no
 data](#parity_txdemo_novalue_nodata).
 
-<figure id="parity_txdemo_novalue_nodata">
-<img src="images/parity_txdemo_novalue_nodata.png"
-alt="Parity wallet showing a transaction with no value, and no data" />
-<figcaption aria-hidden="true">Parity wallet showing a transaction with
-no value, and no data</figcaption>
-</figure>
+![parity_txdemo_novalue_nodata.png](images/parity_txdemo_novalue_nodata.png)
+<figcaption aria-hidden="true">Parity wallet showing a transaction withno value, and no data</figcaption>
 
 ### Transmitting Value to EOAs and Contracts
 
@@ -7047,12 +6931,8 @@ Once the contract is mined we can see it on the Etherscan block
 explorer, as shown in [Etherscan showing the contract successfully
 mined](#publish_contract_from_web3).
 
-<figure id="publish_contract_from_web3">
-<img src="images/contract_published.png"
-alt="Etherscan showing the contract successfully mined" />
-<figcaption aria-hidden="true">Etherscan showing the contract
-successfully mined</figcaption>
-</figure>
+![contract_published.png](images/contract_published.png)
+<figcaption aria-hidden="true">Etherscan showing the contractsuccessfully mined</figcaption>
 
 We can look at the receipt of the transaction to get information about
 the contract:
@@ -7098,12 +6978,8 @@ After a while, both transactions are visible on Etherscan, as shown in
 [Etherscan showing the transactions for sending and receiving
 funds](#publish_contract_transactions).
 
-<figure id="publish_contract_transactions">
-<img src="images/published_contract_transactions.png"
-alt="Etherscan showing the transactions for sending and receiving funds" />
-<figcaption aria-hidden="true">Etherscan showing the transactions for
-sending and receiving funds</figcaption>
-</figure>
+![published_contract_transactions.png](images/published_contract_transactions.png)
+<figcaption aria-hidden="true">Etherscan showing the transactions forsending and receiving funds</figcaption>
 
 ## Digital Signatures
 
@@ -7630,12 +7506,8 @@ process:
     broadcast on the Ethereum blockchain, e.g., via QR code or USB flash
     drive.
 
-<figure id="offline_signing">
-<img src="images/offline_signing.png"
-alt="Offline signing of Ethereum transactions" />
-<figcaption aria-hidden="true">Offline signing of Ethereum
-transactions</figcaption>
-</figure>
+![offline_signing.png](images/offline_signing.png)
+<figcaption aria-hidden="true">Offline signing of Ethereumtransactions</figcaption>
 
 Depending on the level of security you need, your "offline signing"
 computer can have varying degrees of separation from the online
@@ -13392,12 +13264,8 @@ are not an endorsement of this type of fundraising.
 
 </div>
 
-<figure id="approve_transferFrom_workflow">
-<img src="images/approve_transferFrom_workflow.png"
-alt="The two-step approve &amp; transferFrom workflow of ERC20 tokens" />
-<figcaption aria-hidden="true">The two-step approve &amp; transferFrom
-workflow of ERC20 tokens</figcaption>
-</figure>
+![approve_transferFrom_workflow.png](images/approve_transferFrom_workflow.png)
+<figcaption aria-hidden="true">The two-step approve &amp; transferFromworkflow of ERC20 tokens</figcaption>
 
 For the `approve` & `transferFrom` workflow, two transactions are
 needed. Let’s say that Alice wants to allow the `AliceICO` contract to
@@ -13627,11 +13495,8 @@ On the `ganache` console, we should see that our deployment has created
 four new transactions, as depicted in [METoken deployment on
 ganache](#ganache_METoken).
 
-<figure id="ganache_METoken">
-<img src="images/ganache_metoken.png"
-alt="METoken deployment on Ganache" />
+![ganache_metoken.png](images/ganache_metoken.png)
 <figcaption>METoken deployment on ganache</figcaption>
-</figure>
 
 #### Interacting with METoken using the Truffle console
 
@@ -13763,11 +13628,8 @@ If you switch to the `ganache` graphical user interface, as shown in
 the transaction that called the `transfer`
 function.
 
-<figure id="ganache_METoken_transfer">
-<img src="images/ganache_metoken_transfer.png"
-alt="METoken transfer on Ganache" />
+![ganache_metoken_transfer.png](images/ganache_metoken_transfer.png)
 <figcaption>METoken transfer on ganache</figcaption>
-</figure>
 
 #### Sending ERC20 tokens to contract addresses
 
@@ -15314,12 +15176,8 @@ an application: storage, messaging, naming, etc. (see [Web3: A
 decentralized web using smart contracts and P2P
 technologies](#image_web3_suite)).
 
-<figure id="image_web3_suite">
-<img src="images/web3suite.png"
-alt="Web3: A decentralized web using smart contracts and P2P Technologies" />
-<figcaption>Web3: A decentralized web using smart contracts and P2P
-technologies</figcaption>
-</figure>
+![web3suite.png](images/web3suite.png)
+<figcaption>Web3: A decentralized web using smart contracts and P2Ptechnologies</figcaption>
 
 <div class="warning">
 
@@ -15557,12 +15415,8 @@ The main components of our Auction DApp are:
 - A Whisper client, to create per-auction chat rooms for all
   participants
 
-<figure id="auction_dapp_overview">
-<img src="images/auction_diagram.png"
-alt="Auction DApp: A simple example auction DApp" />
-<figcaption aria-hidden="true">Auction DApp: A simple example auction
-DApp</figcaption>
-</figure>
+![auction_diagram.png](images/auction_diagram.png)
+<figcaption aria-hidden="true">Auction DApp: A simple example auctionDApp</figcaption>
 
 You can find the source code for the auction DApp [in the book’s
 repository](http://bit.ly/2DcmjyA).
@@ -15775,11 +15629,8 @@ If all goes well you should see the screen shown in [Auction DApp user
 interface](#auction_dapp_screen), which illustrates the Auction DApp
 running in a web browser.
 
-<figure id="auction_dapp_screen">
-<img src="images/auction_dapp_home_screen.png"
-alt="Auction DApp User interface" />
+![auction_dapp_home_screen.png](images/auction_dapp_home_screen.png)
 <figcaption>Auction DApp user interface</figcaption>
-</figure>
 
 ## Further Decentralizing the Auction DApp
 
@@ -15876,10 +15727,8 @@ You should see a screen like the one in [Swarm gateway on
 localhost](#image_swarm_gateway) and be able to query any Swarm hash or
 ENS name.
 
-<figure id="image_swarm_gateway">
-<img src="images/swarm-gateway.png" alt="Swarm gateway on localhost" />
+![swarm-gateway.png](images/swarm-gateway.png)
 <figcaption aria-hidden="true">Swarm gateway on localhost</figcaption>
-</figure>
 
 ### Uploading Files to Swarm
 
@@ -16298,10 +16147,8 @@ interact with the ENS DApp. For this example, we will use the [MyCrypto
 interface](https://mycrypto.com/), in conjunction with MetaMask as our
 wallet.
 
-<figure id="ens_registration_timeline">
-<img src="images/ens-flow.png" alt="images/ens-flow.png" />
+![ens-flow.png](images/ens-flow.png)
 <figcaption>ENS timeline for registration</figcaption>
-</figure>
 
 First, we need to make sure the name we want is available. While writing
 this book, we really wanted to register the name `mastering.eth`, but
@@ -16311,32 +16158,21 @@ year, it might become possible to secure that name in the future. In the
 meantime, let’s search for `ethereumbook.eth` ([Searching for ENS names
 on MyCrypto.com](#ens-name-search)).
 
-<figure id="ens-name-search">
-<img src="images/ens-checkname.png"
-alt="Searching for ENS names on MyCrypto.com" />
-<figcaption aria-hidden="true">Searching for ENS names on
-MyCrypto.com</figcaption>
-</figure>
+![ens-checkname.png](images/ens-checkname.png)
+<figcaption aria-hidden="true">Searching for ENS names onMyCrypto.com</figcaption>
 
 Great! The name is available. In order to register it, we need to move
 forward with [Starting an auction for an ENS name](#ens-auction). Let’s
 unlock MetaMask and start an auction for `ethereumbook.eth`.
 
-<figure id="ens-auction">
-<img src="images/ens-auction.png"
-alt="Starting an auction for an ENS name" />
-<figcaption aria-hidden="true">Starting an auction for an ENS
-name</figcaption>
-</figure>
+![ens-auction.png](images/ens-auction.png)
+<figcaption aria-hidden="true">Starting an auction for an ENSname</figcaption>
 
 Let’s make our bid. In order to do that we need to follow the steps in
 [Placing a bid for an ENS name](#ens-bid).
 
-<figure id="ens-bid">
-<img src="images/ens-bid.png" alt="Placing a bid for an ENS name" />
-<figcaption aria-hidden="true">Placing a bid for an ENS
-name</figcaption>
-</figure>
+![ens-bid.png](images/ens-bid.png)
+<figcaption aria-hidden="true">Placing a bid for an ENSname</figcaption>
 
 <div class="warning">
 
@@ -16355,12 +16191,8 @@ Finally, we confirm the transaction by clicking the big green submit
 button shown in [MetaMask transaction containing your
 bid](#ens-metamask-bid).
 
-<figure id="ens-metamask-bid">
-<img src="images/ens-metamask-bid.png"
-alt="MetaMask transaction containing your bid" />
-<figcaption aria-hidden="true">MetaMask transaction containing your
-bid</figcaption>
-</figure>
+![ens-metamask-bid.png](images/ens-metamask-bid.png)
+<figcaption aria-hidden="true">MetaMask transaction containing yourbid</figcaption>
 
 If all goes well, after submitting a transaction in this way you can
 return and reveal the bid in 48 hours, and the name you requested will
@@ -16378,11 +16210,8 @@ Once there, enter the name you want to manage in the search box (see
 Ethereum wallet (e.g., MetaMask) unlocked, so that the ENS Manager DApp
 can manage the name on your behalf.
 
-<figure id="ens-manager">
-<img src="images/ens-manager.png" alt="The ENS Manager web interface" />
-<figcaption aria-hidden="true">The ENS Manager web
-interface</figcaption>
-</figure>
+![ens-manager.png](images/ens-manager.png)
+<figcaption aria-hidden="true">The ENS Manager webinterface</figcaption>
 
 From this interface, we can create subdomains, set a resolver contract
 (more on that later), and connect each name to the appropriate resource,
@@ -16396,12 +16225,8 @@ auction.ethereumbook.eth](#ens-manager-add-subdomain)). We will name the
 subdomain `auction`, so the fully qualified name will be
 `auction.ethereumbook.eth`.
 
-<figure id="ens-manager-add-subdomain">
-<img src="images/ens_manager_add_subdomain.png"
-alt="Adding the subdomain auction.ethereumbook.eth" />
-<figcaption aria-hidden="true">Adding the subdomain
-auction.ethereumbook.eth</figcaption>
-</figure>
+![ens_manager_add_subdomain.png](images/ens_manager_add_subdomain.png)
+<figcaption aria-hidden="true">Adding the subdomainauction.ethereumbook.eth</figcaption>
 
 Once we’ve created the subdomain, we can enter
 `auction.ethereumbook.eth` in the search box and manage it, just as we
@@ -16439,12 +16264,8 @@ the default public resolver for
 auction.ethereumbook.eth](#ens-manager-set-default-resolver); we don’t
 need to code or deploy a custom resolver.
 
-<figure id="ens-manager-set-default-resolver">
-<img src="images/ens-manager-set-default-resolver.png"
-alt="Set the default public resolver for auction.ethereumbook.eth" />
-<figcaption>Setting the default public resolver for
-auction.ethereumbook.eth</figcaption>
-</figure>
+![ens-manager-set-default-resolver.png](images/ens-manager-set-default-resolver.png)
+<figcaption>Setting the default public resolver forauction.ethereumbook.eth</figcaption>
 
 ### Resolving a Name to a Swarm Hash (Content)
 
@@ -16456,12 +16277,8 @@ resolver, we can set it to return the Swarm hash as the content of our
 name (see [Setting the to return for
 auction.ethereumbook.eth](#ens-set-content)).
 
-<figure id="ens-set-content">
-<img src="images/ens-manager-set-content.png"
-alt="Set the &#39;content&#39; return for auction.ethereumbook.eth" />
-<figcaption>Setting the <em>content</em> to return for
-auction.ethereumbook.eth</figcaption>
-</figure>
+![ens-manager-set-content.png](images/ens-manager-set-content.png)
+<figcaption>Setting the <em>content</em> to return forauction.ethereumbook.eth</figcaption>
 
 After waiting a short time for our transaction to be confirmed, we
 should be able to resolve the name correctly. Before setting a name, our
@@ -16508,11 +16325,8 @@ authority, no central point of failure, and expresses the "web3" vision.
 complete architecture of the Auction
 DApp.
 
-<figure id="auction_dapp_final_architecture">
-<img src="images/auction_dapp_final_architecture.png"
-alt="Auction DApp architecture" />
+![auction_dapp_final_architecture.png](images/auction_dapp_final_architecture.png)
 <figcaption aria-hidden="true">Auction DApp architecture</figcaption>
-</figure>
 
 ## Conclusions
 
@@ -16578,12 +16392,8 @@ chapter.
 Context](#evm_architecture) shows the EVM architecture and execution
 context.
 
-<figure id="evm_architecture">
-<img src="images/evm-architecture.png"
-alt="The Ethereum Virtual Machine (EVM) Architecture and Execution Context" />
-<figcaption aria-hidden="true">The Ethereum Virtual Machine (EVM)
-Architecture and Execution Context</figcaption>
-</figure>
+![evm-architecture.png](images/evm-architecture.png)
+<figcaption aria-hidden="true">The Ethereum Virtual Machine (EVM)Architecture and Execution Context</figcaption>
 
 ### Comparison with Existing Technology
 
@@ -17132,11 +16942,8 @@ bytecode](#Faucet_disassembled). After getting the runtime bytecode of
 *Faucet.sol*, we can feed it into Binary Ninja (after loading the
 Ethersplay plug-in) to see what the EVM instructions look like.
 
-<figure id="Faucet_disassembled">
-<img src="images/Faucet_disassembled.png"
-alt="Faucet.sol runtime bytecode disassembled" />
+![Faucet_disassembled.png](images/Faucet_disassembled.png)
 <figcaption>Disassembling the Faucet runtime bytecode</figcaption>
-</figure>
 
 When you send a transaction to an ABI-compatible smart contract (which
 you can assume all contracts are), the transaction first interacts with
@@ -17219,12 +17026,8 @@ instruction leading to fallback function](#Faucet_jumpi_instruction),
 had we not implemented a fallback function, the contract would throw an
 exception instead.
 
-<figure id="Faucet_jumpi_instruction">
-<img src="images/Faucet_jumpi_instruction.png"
-alt="JUMPI instruction leading to fallback function" />
-<figcaption aria-hidden="true">JUMPI instruction leading to fallback
-function</figcaption>
-</figure>
+![Faucet_jumpi_instruction.png](images/Faucet_jumpi_instruction.png)
+<figcaption aria-hidden="true">JUMPI instruction leading to fallbackfunction</figcaption>
 
 Let’s examine the central block of the dispatcher. Assuming we received
 calldata that was *greater* than 4 bytes in length, the `JUMPI`
@@ -18271,11 +18074,8 @@ From
 > for building consensus within the community and documenting dissenting
 > opinions.
 
-<figure id="eip_workflow">
-<img src="images/eip_workflow.png"
-alt="Ethereum Improvement Proposal Workflow" />
+![eip_workflow.png](images/eip_workflow.png)
 <figcaption>Ethereum Improvement Proposal workflow</figcaption>
-</figure>
 
 ## Table of Most Important EIPs and ERCs
 
@@ -18573,10 +18373,7 @@ To use Alchemy’s products, you need an API key to authenticate your
 requests. Create an Alchemy account, generate your first app, and select
 "View Key" in the dashboard for your chosen app to get your new key.
 
-<figure>
-<img src="images/alchemy-new-app.gif"
-alt="Retrieving the API key from a new Alchemy App" />
-</figure>
+![alchemy-new-app.gif](images/alchemy-new-app.gif)
 
 #### Making Requests
 
@@ -18929,12 +18726,8 @@ blockchain, so during the migration we’ll see a pop-up like the one in
 [Parity asking for confirmation to deploy
 Faucet](#parity_deployment_confirmation) on Parity’s web console.
 
-<figure id="parity_deployment_confirmation">
-<img src="images/parity_deployment_confirmation.png"
-alt="Parity asking for confirmation to deploy Faucet" />
-<figcaption aria-hidden="true">Parity asking for confirmation to deploy
-Faucet</figcaption>
-</figure>
+![parity_deployment_confirmation.png](images/parity_deployment_confirmation.png)
+<figcaption aria-hidden="true">Parity asking for confirmation to deployFaucet</figcaption>
 
 There are four transactions in total: one to deploy `Migrations`, one to
 update the deployments counter to `1`, one to deploy `Faucet`, and one
@@ -19285,7 +19078,7 @@ of the OpenZeppelin framework. You are welcome to join the OpenZeppelin
 development community to learn and
 contribute.
 
-</div>
+
 
 ### ZeppelinOS
 

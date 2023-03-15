@@ -301,7 +301,7 @@ It’s difficult to predict how fast a blockchain’s size will increase and
 when more disk space will be required, so it’s recommended to check the
 blockchain’s latest size before you start syncing.
 
-<div class="note">
+
 
 The disk size requirements listed here assume you will be running a node
 with default settings, where the blockchain is "pruned" of old state
@@ -970,7 +970,7 @@ browser-based JavaScript wallets, as they are frequent targets for
 phishing. Always use a bookmark and not a search engine or link to
 access the correct web URL.
 
-</div>
+
 
 #### MyCrypto
 

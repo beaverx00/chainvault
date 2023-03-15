@@ -201,7 +201,7 @@ The founders worked for years, building and refining the vision. And on
 July 30, 2015, the first Ethereum block was mined. The world’s computer
 started serving the world.
 
-<div class="note">
+
 
 Vitalik Buterin’s article "A Prehistory of Ethereum" was published in
 September 2017 and provides a fascinating first-person view of
@@ -539,7 +539,7 @@ character called "ETH," alluding to Ethereum. To display this character,
 use the Unicode codepoint `0xD0`, or if necessary the HTML character
 entity `eth` (or decimal entity `#208`).
 
-</div>
+
 
 ## The Third Age of the Internet
 

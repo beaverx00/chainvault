@@ -623,14 +623,14 @@ The data payload of this call into our contract.
 The first four bytes of the data payload, which is the function
 selector.
 
-<div class="note">
+
 
 Whenever a contract calls another contract, the values of all the
 attributes of `msg` change to reflect the new caller’s information. The
 only exception to this is the `delegatecall` function, which runs the
 code of another contract/library within the original `msg` context.
 
-</div>
+
 
 #### Transaction context
 

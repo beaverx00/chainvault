@@ -77,7 +77,7 @@ Shows commands or other text that should be typed literally by the user.
 Shows text that should be replaced with user-supplied values or values
 determined by context.
 
-<div class="tip">
+
 
 This icon signifies a tip or suggestion.
 
@@ -192,7 +192,7 @@ Safari (formerly Safari Books Online) is a membership-based training and
 reference platform for enterprise, government, educators, and
 individuals.
 
-</div>
+
 
 Members have access to thousands of books, training videos, Learning
 Paths, interactive tutorials, and curated playlists from over 250

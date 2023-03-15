@@ -1494,7 +1494,7 @@ then an event with the text `Here` would be emitted. Thus, if users can
 alter contract libraries, they can in principle get other users to
 unknowingly run arbitrary code.
 
-<div class="warning">
+
 
 The contracts represented here are for demonstrative purposes only and
 do not represent proper encryption. They should not be used for
@@ -2579,7 +2579,7 @@ question](http://bit.ly/2PxU1UM), [“Tx.Origin and Ethereum Oh
 My!”](http://bit.ly/2qm7ocJ) by Peter Vessenes, and [“Solidity: Tx
 Origin Attacks”](http://bit.ly/2P3KVA4) by Chris Coverdale.
 
-</div>
+
 
 ### The Vulnerability
 

@@ -132,7 +132,7 @@ trapdoors. *Elliptic curve cryptography* is used extensively in modern
 computer systems and is the basis of Ethereum’s (and other
 cryptocurrencies') use of private keys and digital signatures.
 
-<div class="note">
+
 
 Take a look at the following resources if you’re interested in reading
 more about cryptography and the mathematical functions that are used in
@@ -387,10 +387,8 @@ many of the elliptic curve libraries and tools from Bitcoin.
 
 </div>
 
-<figure id="ecc-curve">
-<img src="images/simple_elliptic_curve.png" alt="ecc-curve" />
+![simple_elliptic_curve.png](images/simple_elliptic_curve.png)
 <figcaption>A visualization of an elliptic curve</figcaption>
-</figure>
 
 Ethereum uses a specific elliptic curve and set of mathematical
 constants, as defined in a standard called `secp256k1`, established by
@@ -470,12 +468,8 @@ over a much smaller finite field of prime order 17, showing a pattern of
 dots on a grid. The `secp256k1` Ethereum elliptic curve can be thought
 of as a much more complex pattern of dots on an unfathomably large grid.
 
-<figure id="ecc-over-F17-math">
-<img src="images/ec_over_small_prime_field.png"
-alt="ecc-over-F17-math" />
-<figcaption>Elliptic curve cryptography: visualizing an elliptic curve
-over F(p), with p=17</figcaption>
-</figure>
+![ec_over_small_prime_field.png](images/ec_over_small_prime_field.png)
+<figcaption>Elliptic curve cryptography: visualizing an elliptic curveover F(p), with p=17</figcaption>
 
 So, for example, the following is a point *Q* with coordinates (*x*,*y*)
 that is a point on the `secp256k1` curve:
@@ -1028,7 +1022,7 @@ The chances of any Ethereum address starting with a zero byte are 1 in
 with 256 different random private keys before we find one that works as
 an IBAN-compatible "Direct" encoded ICAP address.
 
-</div>
+
 
 At this time, ICAP is unfortunately only supported by a few
 wallets.

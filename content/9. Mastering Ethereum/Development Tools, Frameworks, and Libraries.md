@@ -67,10 +67,7 @@ To use Alchemy’s products, you need an API key to authenticate your
 requests. Create an Alchemy account, generate your first app, and select
 "View Key" in the dashboard for your chosen app to get your new key.
 
-<figure>
-<img src="images/alchemy-new-app.gif"
-alt="Retrieving the API key from a new Alchemy App" />
-</figure>
+![alchemy-new-app.gif](images/alchemy-new-app.gif)
 
 ### Making Requests
 
@@ -422,12 +419,8 @@ blockchain, so during the migration we’ll see a pop-up like the one in
 [Parity asking for confirmation to deploy
 Faucet](#parity_deployment_confirmation) on Parity’s web console.
 
-<figure id="parity_deployment_confirmation">
-<img src="images/parity_deployment_confirmation.png"
-alt="Parity asking for confirmation to deploy Faucet" />
-<figcaption aria-hidden="true">Parity asking for confirmation to deploy
-Faucet</figcaption>
-</figure>
+![parity_deployment_confirmation.png](images/parity_deployment_confirmation.png)
+<figcaption aria-hidden="true">Parity asking for confirmation to deployFaucet</figcaption>
 
 There are four transactions in total: one to deploy `Migrations`, one to
 update the deployments counter to `1`, one to deploy `Faucet`, and one
@@ -474,7 +467,7 @@ truffle(localnode)\>
 Truffle presents a prompt, showing the selected network configuration
 (`localnode`).
 
-<div class="tip">
+
 
 It’s important to remember and be aware of which network you are using.
 You wouldn’t want to accidentally deploy a test contract or make a
@@ -777,7 +770,7 @@ of the OpenZeppelin framework. You are welcome to join the OpenZeppelin
 development community to learn and
 contribute.
 
-</div>
+
 
 ## ZeppelinOS
 

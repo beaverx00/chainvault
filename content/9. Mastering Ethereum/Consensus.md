@@ -38,7 +38,7 @@ continues to experiment with different models of consensus. This chapter
 explores these consensus models and their expected impact on smart
 contract blockchains such as Ethereum.
 
-<div class="note">
+
 
 While consensus algorithms are an important part of how blockchains
 work, they operate at a foundational layer, far below the abstraction of
@@ -47,7 +47,7 @@ hidden from the writers of smart contracts. You don’t need to know how
 they work to use Ethereum, any more than you need to know how routing
 works to use the internet.
 
-</div>
+
 
 ## Consensus via Proof of Work
 

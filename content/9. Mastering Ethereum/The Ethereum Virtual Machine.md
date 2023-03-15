@@ -51,12 +51,8 @@ chapter.
 Context](#evm_architecture) shows the EVM architecture and execution
 context.
 
-<figure id="evm_architecture">
-<img src="images/evm-architecture.png"
-alt="The Ethereum Virtual Machine (EVM) Architecture and Execution Context" />
-<figcaption aria-hidden="true">The Ethereum Virtual Machine (EVM)
-Architecture and Execution Context</figcaption>
-</figure>
+![evm-architecture.png](images/evm-architecture.png)
+<figcaption aria-hidden="true">The Ethereum Virtual Machine (EVM)Architecture and Execution Context</figcaption>
 
 ### Comparison with Existing Technology
 
@@ -115,7 +111,7 @@ available opcodes and what they do. As you might expect, all operands
 are taken from the stack, and the result (where applicable) is often put
 back on the top of the stack.
 
-<div class="note">
+
 
 A complete list of opcodes and their corresponding gas cost can be found
 in [???](#evm_opcodes).
@@ -605,11 +601,8 @@ bytecode](#Faucet_disassembled). After getting the runtime bytecode of
 *Faucet.sol*, we can feed it into Binary Ninja (after loading the
 Ethersplay plug-in) to see what the EVM instructions look like.
 
-<figure id="Faucet_disassembled">
-<img src="images/Faucet_disassembled.png"
-alt="Faucet.sol runtime bytecode disassembled" />
+![Faucet_disassembled.png](images/Faucet_disassembled.png)
 <figcaption>Disassembling the Faucet runtime bytecode</figcaption>
-</figure>
 
 When you send a transaction to an ABI-compatible smart contract (which
 you can assume all contracts are), the transaction first interacts with
@@ -692,12 +685,8 @@ instruction leading to fallback function](#Faucet_jumpi_instruction),
 had we not implemented a fallback function, the contract would throw an
 exception instead.
 
-<figure id="Faucet_jumpi_instruction">
-<img src="images/Faucet_jumpi_instruction.png"
-alt="JUMPI instruction leading to fallback function" />
-<figcaption aria-hidden="true">JUMPI instruction leading to fallback
-function</figcaption>
-</figure>
+![Faucet_jumpi_instruction.png](images/Faucet_jumpi_instruction.png)
+<figcaption aria-hidden="true">JUMPI instruction leading to fallbackfunction</figcaption>
 
 Let’s examine the central block of the dispatcher. Assuming we received
 calldata that was *greater* than 4 bytes in length, the `JUMPI`
@@ -990,7 +979,7 @@ performed. The sender is charged a transaction fee in ether, which is
 then converted to gas for EVM accounting and then back to ether as a
 transaction fee paid to the miners.
 
-</div>
+
 
 #### Negative gas costs
 

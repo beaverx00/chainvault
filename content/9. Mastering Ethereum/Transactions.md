@@ -173,7 +173,7 @@ web3.eth.getTransactionCount("0x9e713963a92c02317a681b9bb3065a8249de124f")
 
 40
 
-<div class="tip">
+
 
 The nonce is a zero-based counter, meaning the first transaction has
 nonce 0. In this example, we have a transaction count of 40, meaning
@@ -583,12 +583,8 @@ Our wallet shows a confirmation screen indicating the value to send, as
 shown in [Parity wallet showing a transaction with value, but no
 data](#parity_txdemo_value_nodata).
 
-<figure id="parity_txdemo_value_nodata">
-<img src="images/parity_txdemo_value_nodata.png"
-alt="Parity wallet showing a transaction with value, but no data" />
-<figcaption aria-hidden="true">Parity wallet showing a transaction with
-value, but no data</figcaption>
-</figure>
+![parity_txdemo_value_nodata.png](images/parity_txdemo_value_nodata.png)
+<figcaption aria-hidden="true">Parity wallet showing a transaction withvalue, but no data</figcaption>
 
 The next example specifies both a value and a data payload:
 
@@ -601,12 +597,8 @@ Our wallet shows a confirmation screen indicating the value to send as
 well as the data payload, as shown in [Parity wallet showing a
 transaction with value and data](#parity_txdemo_value_data).
 
-<figure id="parity_txdemo_value_data">
-<img src="images/parity_txdemo_value_data.png"
-alt="Parity wallet showing a transaction with value and data" />
-<figcaption aria-hidden="true">Parity wallet showing a transaction with
-value and data</figcaption>
-</figure>
+![parity_txdemo_value_data.png](images/parity_txdemo_value_data.png)
+<figcaption aria-hidden="true">Parity wallet showing a transaction withvalue and data</figcaption>
 
 The next transaction includes a data payload but specifies a value of
 zero:
@@ -619,12 +611,8 @@ Our wallet shows a confirmation screen indicating the zero value and the
 data payload, as shown in [Parity wallet showing a transaction with no
 value, only data](#parity_txdemo_novalue_data).
 
-<figure id="parity_txdemo_novalue_data">
-<img src="images/parity_txdemo_novalue_data.png"
-alt="Parity wallet showing a transaction with no value, only data" />
-<figcaption aria-hidden="true">Parity wallet showing a transaction with
-no value, only data</figcaption>
-</figure>
+![parity_txdemo_novalue_data.png](images/parity_txdemo_novalue_data.png)
+<figcaption aria-hidden="true">Parity wallet showing a transaction withno value, only data</figcaption>
 
 Finally, the last transaction includes neither a value to send nor a
 data payload:
@@ -637,12 +625,8 @@ Our wallet shows a confirmation screen indicating zero value, as shown
 in [Parity wallet showing a transaction with no value, and no
 data](#parity_txdemo_novalue_nodata).
 
-<figure id="parity_txdemo_novalue_nodata">
-<img src="images/parity_txdemo_novalue_nodata.png"
-alt="Parity wallet showing a transaction with no value, and no data" />
-<figcaption aria-hidden="true">Parity wallet showing a transaction with
-no value, and no data</figcaption>
-</figure>
+![parity_txdemo_novalue_nodata.png](images/parity_txdemo_novalue_nodata.png)
+<figcaption aria-hidden="true">Parity wallet showing a transaction withno value, and no data</figcaption>
 
 ### Transmitting Value to EOAs and Contracts
 
@@ -854,12 +838,8 @@ Once the contract is mined we can see it on the Etherscan block
 explorer, as shown in [Etherscan showing the contract successfully
 mined](#publish_contract_from_web3).
 
-<figure id="publish_contract_from_web3">
-<img src="images/contract_published.png"
-alt="Etherscan showing the contract successfully mined" />
-<figcaption aria-hidden="true">Etherscan showing the contract
-successfully mined</figcaption>
-</figure>
+![contract_published.png](images/contract_published.png)
+<figcaption aria-hidden="true">Etherscan showing the contractsuccessfully mined</figcaption>
 
 We can look at the receipt of the transaction to get information about
 the contract:
@@ -905,12 +885,8 @@ After a while, both transactions are visible on Etherscan, as shown in
 [Etherscan showing the transactions for sending and receiving
 funds](#publish_contract_transactions).
 
-<figure id="publish_contract_transactions">
-<img src="images/published_contract_transactions.png"
-alt="Etherscan showing the transactions for sending and receiving funds" />
-<figcaption aria-hidden="true">Etherscan showing the transactions for
-sending and receiving funds</figcaption>
-</figure>
+![published_contract_transactions.png](images/published_contract_transactions.png)
+<figcaption aria-hidden="true">Etherscan showing the transactions forsending and receiving funds</figcaption>
 
 ## Digital Signatures
 
@@ -1227,7 +1203,7 @@ be paid to the first of the three signature variables (i.e., `v`), which
 takes one of two forms and indicates the data fields included in the
 transaction message being hashed.
 
-</div>
+
 
 ### Raw Transaction Creation and Signing
 
@@ -1437,12 +1413,8 @@ process:
     broadcast on the Ethereum blockchain, e.g., via QR code or USB flash
     drive.
 
-<figure id="offline_signing">
-<img src="images/offline_signing.png"
-alt="Offline signing of Ethereum transactions" />
-<figcaption aria-hidden="true">Offline signing of Ethereum
-transactions</figcaption>
-</figure>
+![offline_signing.png](images/offline_signing.png)
+<figcaption aria-hidden="true">Offline signing of Ethereumtransactions</figcaption>
 
 Depending on the level of security you need, your "offline signing"
 computer can have varying degrees of separation from the online

@@ -460,7 +460,7 @@ you to select the compiler version. Also
 [Remix](https://remix.ethereum.org), originally designed for Solidity
 smart contracts, now has a Vyper plugin available in the settings tab.
 
-<div class="note">
+
 
  Vyper
 implements ERC20 as a precompiled contract, allowing these smart
@@ -472,7 +472,7 @@ variable is as follows:
 token: address(ERC20)
 ```
 
-</div>
+
 
 You can also compile a contract using the command line. Each Vyper
 contract is saved in a single file with the *.vy* extension. Once
